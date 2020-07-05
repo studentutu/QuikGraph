@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{7A2A3C07-B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{22937B93-4129-4F68-AB14-F7AFE020BA8F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{12337AA3-1429-4AD8-FBC5-CCAFDA20B38F}"
+EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "QuikGraph.CommonInternals", "src\QuikGraph.CommonInternals\QuikGraph.CommonInternals.shproj", "{CE984360-54F0-406F-B8A9-E75897DAED3B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuikGraph", "src\QuikGraph\QuikGraph.csproj", "{A9A5C115-0680-44B3-A87E-5ECF4C93814E}"
@@ -42,6 +44,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuikGraph.MSAGL.Tests", "tests\QuikGraph.MSAGL.Tests\QuikGraph.MSAGL.Tests.csproj", "{7160DDAB-12B0-491F-9A79-BF3B5E0CD872}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuikGraph.Petri.Tests", "tests\QuikGraph.Petri.Tests\QuikGraph.Petri.Tests.csproj", "{CD993F58-A275-4E67-9F8E-BAF3BE6F21B6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuikGraph.Samples", "samples\QuikGraph.Samples\QuikGraph.Samples.csproj", "{C32CDBBB-E963-4638-BD38-A621B2078083}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -105,6 +109,10 @@ Global
 		{CD993F58-A275-4E67-9F8E-BAF3BE6F21B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD993F58-A275-4E67-9F8E-BAF3BE6F21B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD993F58-A275-4E67-9F8E-BAF3BE6F21B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C32CDBBB-E963-4638-BD38-A621B2078083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C32CDBBB-E963-4638-BD38-A621B2078083}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C32CDBBB-E963-4638-BD38-A621B2078083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C32CDBBB-E963-4638-BD38-A621B2078083}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -125,6 +133,7 @@ Global
 		{908FE868-7ABE-4FE8-BFA6-C5E6572B780D} = {22937B93-4129-4F68-AB14-F7AFE020BA8F}
 		{7160DDAB-12B0-491F-9A79-BF3B5E0CD872} = {22937B93-4129-4F68-AB14-F7AFE020BA8F}
 		{CD993F58-A275-4E67-9F8E-BAF3BE6F21B6} = {22937B93-4129-4F68-AB14-F7AFE020BA8F}
+		{C32CDBBB-E963-4638-BD38-A621B2078083} = {12337AA3-1429-4AD8-FBC5-CCAFDA20B38F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C26EFBC1-5149-4422-AFD3-172667AA018F}
