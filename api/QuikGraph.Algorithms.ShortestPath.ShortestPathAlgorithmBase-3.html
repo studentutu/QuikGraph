@@ -208,8 +208,7 @@
   <h6><strong>Assembly</strong>: QuikGraph.dll</h6>
   <h5 id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-public abstract class ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt; : RootedAlgorithmBase&lt;TVertex, TGraph&gt;, IAlgorithm&lt;TGraph&gt;, IComputation, IAlgorithmComponent, IVertexColorizerAlgorithm&lt;TVertex&gt;, ITreeBuilderAlgorithm&lt;TVertex, TEdge&gt; where TEdge : IEdge&lt;TVertex&gt; where TGraph : IVertexSet&lt;TVertex&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt; : RootedAlgorithmBase&lt;TVertex, TGraph&gt;, IAlgorithm&lt;TGraph&gt;, IComputation, IAlgorithmComponent, IVertexColorizerAlgorithm&lt;TVertex&gt;, ITreeBuilderAlgorithm&lt;TVertex, TEdge&gt; where TEdge : IEdge&lt;TVertex&gt; where TGraph : IVertexSet&lt;TVertex&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -244,7 +243,7 @@ public abstract class ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt; : 
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3__ctor_QuikGraph_Algorithms_Services_IAlgorithmComponent__2_System_Func__1_System_Double__.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase%603.%23ctor(QuikGraph.Algorithms.Services.IAlgorithmComponent%2C%602%2CSystem.Func%7B%601%2CSystem.Double%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L31">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L28">View Source</a>
   </span>
   <a id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3__ctor_" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.#ctor*"></a>
   <h4 id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3__ctor_QuikGraph_Algorithms_Services_IAlgorithmComponent__2_System_Func__1_System_Double__" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.#ctor(QuikGraph.Algorithms.Services.IAlgorithmComponent,`2,System.Func{`1,System.Double})">ShortestPathAlgorithmBase(IAlgorithmComponent, TGraph, Func&lt;TEdge, Double&gt;)</h4>
@@ -290,7 +289,7 @@ public abstract class ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt; : 
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3__ctor_QuikGraph_Algorithms_Services_IAlgorithmComponent__2_System_Func__1_System_Double__QuikGraph_Algorithms_IDistanceRelaxer_.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase%603.%23ctor(QuikGraph.Algorithms.Services.IAlgorithmComponent%2C%602%2CSystem.Func%7B%601%2CSystem.Double%7D%2CQuikGraph.Algorithms.IDistanceRelaxer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L46">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L43">View Source</a>
   </span>
   <a id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3__ctor_" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.#ctor*"></a>
   <h4 id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3__ctor_QuikGraph_Algorithms_Services_IAlgorithmComponent__2_System_Func__1_System_Double__QuikGraph_Algorithms_IDistanceRelaxer_" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.#ctor(QuikGraph.Algorithms.Services.IAlgorithmComponent,`2,System.Func{`1,System.Double},QuikGraph.Algorithms.IDistanceRelaxer)">ShortestPathAlgorithmBase(IAlgorithmComponent, TGraph, Func&lt;TEdge, Double&gt;, IDistanceRelaxer)</h4>
@@ -344,7 +343,7 @@ public abstract class ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt; : 
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_DistanceRelaxer.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase%603.DistanceRelaxer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L97">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L94">View Source</a>
   </span>
   <a id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_DistanceRelaxer_" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.DistanceRelaxer*"></a>
   <h4 id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_DistanceRelaxer" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.DistanceRelaxer">DistanceRelaxer</h4>
@@ -375,7 +374,7 @@ public abstract class ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt; : 
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_Distances.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase%603.Distances%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L76">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L73">View Source</a>
   </span>
   <a id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_Distances_" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.Distances*"></a>
   <h4 id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_Distances" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.Distances">Distances</h4>
@@ -406,7 +405,7 @@ public abstract class ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt; : 
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_VerticesColors.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase%603.VerticesColors%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L116">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L113">View Source</a>
   </span>
   <a id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_VerticesColors_" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.VerticesColors*"></a>
   <h4 id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_VerticesColors" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.VerticesColors">VerticesColors</h4>
@@ -437,7 +436,7 @@ public abstract class ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt; : 
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_Weights.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase%603.Weights%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L91">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L88">View Source</a>
   </span>
   <a id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_Weights_" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.Weights*"></a>
   <h4 id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_Weights" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.Weights">Weights</h4>
@@ -470,7 +469,7 @@ public abstract class ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt; : 
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_DistancesIndexGetter.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase%603.DistancesIndexGetter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L81">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L78">View Source</a>
   </span>
   <a id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_DistancesIndexGetter_" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.DistancesIndexGetter*"></a>
   <h4 id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_DistancesIndexGetter" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.DistancesIndexGetter">DistancesIndexGetter()</h4>
@@ -501,7 +500,7 @@ public abstract class ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt; : 
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_GetVertexColor__0_.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase%603.GetVertexColor(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L121">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L118">View Source</a>
   </span>
   <a id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_GetVertexColor_" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.GetVertexColor*"></a>
   <h4 id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_GetVertexColor__0_" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.GetVertexColor(`0)">GetVertexColor(TVertex)</h4>
@@ -551,7 +550,7 @@ public abstract class ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt; : 
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_Initialize.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase%603.Initialize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L103">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L100">View Source</a>
   </span>
   <a id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_Initialize_" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.Initialize*"></a>
   <h4 id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_Initialize" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.Initialize">Initialize()</h4>
@@ -569,7 +568,7 @@ public abstract class ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt; : 
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_OnTreeEdge__1_.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase%603.OnTreeEdge(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L141">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L138">View Source</a>
   </span>
   <a id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_OnTreeEdge_" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.OnTreeEdge*"></a>
   <h4 id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_OnTreeEdge__1_" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.OnTreeEdge(`1)">OnTreeEdge(TEdge)</h4>
@@ -603,7 +602,7 @@ public abstract class ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt; : 
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_Relax__1_.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase%603.Relax(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L153">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L150">View Source</a>
   </span>
   <a id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_Relax_" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.Relax*"></a>
   <h4 id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_Relax__1_" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.Relax(`1)">Relax(TEdge)</h4>
@@ -653,7 +652,7 @@ public abstract class ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt; : 
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_TryGetDistance__0_System_Double__.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase%603.TryGetDistance(%600%2CSystem.Double%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L63">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L60">View Source</a>
   </span>
   <a id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_TryGetDistance_" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.TryGetDistance*"></a>
   <h4 id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_TryGetDistance__0_System_Double__" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.TryGetDistance(`0,System.Double@)">TryGetDistance(TVertex, out Double)</h4>
@@ -711,7 +710,7 @@ public abstract class ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt; : 
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_TreeEdge.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase%603.TreeEdge%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L135">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L132">View Source</a>
   </span>
   <h4 id="QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_TreeEdge" data-uid="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.TreeEdge">TreeEdge</h4>
   <div class="markdown level1 summary"><p>Fired when the distance label for the target vertex is decreased.
@@ -796,7 +795,7 @@ an edge in the shortest paths tree.</p>
                     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase%603%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/ShortestPathAlgorithmBase.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -96,6 +96,7 @@
     <div><a class="xref" href="QuikGraph.IVertexSet-1.html">IVertexSet</a>&lt;TVertex&gt;</div>
     <div><a class="xref" href="QuikGraph.IImplicitVertexSet-1.html">IImplicitVertexSet</a>&lt;TVertex&gt;</div>
     <div><span class="xref">System.ICloneable</span></div>
+    <div><span class="xref">System.Runtime.Serialization.ISerializable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -126,7 +127,7 @@
   <h5 id="QuikGraph_UndirectedGraph_2_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Serializable]
-public class UndirectedGraph&lt;TVertex, TEdge&gt; : IMutableUndirectedGraph&lt;TVertex, TEdge&gt;, IUndirectedGraph&lt;TVertex, TEdge&gt;, IImplicitUndirectedGraph&lt;TVertex, TEdge&gt;, IMutableVertexAndEdgeSet&lt;TVertex, TEdge&gt;, IMutableVertexSet&lt;TVertex&gt;, IMutableEdgeListGraph&lt;TVertex, TEdge&gt;, IMutableGraph&lt;TVertex, TEdge&gt;, IEdgeListGraph&lt;TVertex, TEdge&gt;, IGraph&lt;TVertex, TEdge&gt;, IEdgeSet&lt;TVertex, TEdge&gt;, IVertexSet&lt;TVertex&gt;, IImplicitVertexSet&lt;TVertex&gt;, ICloneable where TEdge : IEdge&lt;TVertex&gt;</code></pre>
+public class UndirectedGraph&lt;TVertex, TEdge&gt; : IMutableUndirectedGraph&lt;TVertex, TEdge&gt;, IUndirectedGraph&lt;TVertex, TEdge&gt;, IImplicitUndirectedGraph&lt;TVertex, TEdge&gt;, IMutableVertexAndEdgeSet&lt;TVertex, TEdge&gt;, IMutableVertexSet&lt;TVertex&gt;, IMutableEdgeListGraph&lt;TVertex, TEdge&gt;, IMutableGraph&lt;TVertex, TEdge&gt;, IEdgeListGraph&lt;TVertex, TEdge&gt;, IGraph&lt;TVertex, TEdge&gt;, IEdgeSet&lt;TVertex, TEdge&gt;, IVertexSet&lt;TVertex&gt;, IImplicitVertexSet&lt;TVertex&gt;, ICloneable, ISerializable where TEdge : IEdge&lt;TVertex&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,7 +157,7 @@ public class UndirectedGraph&lt;TVertex, TEdge&gt; : IMutableUndirectedGraph&lt;
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2__ctor.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L36">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L43">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2__ctor_" data-uid="QuikGraph.UndirectedGraph`2.#ctor*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2__ctor" data-uid="QuikGraph.UndirectedGraph`2.#ctor">UndirectedGraph()</h4>
@@ -175,7 +176,7 @@ public class UndirectedGraph&lt;TVertex, TEdge&gt; : IMutableUndirectedGraph&lt;
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2__ctor_System_Boolean_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.%23ctor(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L46">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L53">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2__ctor_" data-uid="QuikGraph.UndirectedGraph`2.#ctor*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2__ctor_System_Boolean_" data-uid="QuikGraph.UndirectedGraph`2.#ctor(System.Boolean)">UndirectedGraph(Boolean)</h4>
@@ -212,7 +213,7 @@ public class UndirectedGraph&lt;TVertex, TEdge&gt; : IMutableUndirectedGraph&lt;
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2__ctor_System_Boolean_QuikGraph_EdgeEqualityComparer__0__.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.%23ctor(System.Boolean%2CQuikGraph.EdgeEqualityComparer%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L57">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L64">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2__ctor_" data-uid="QuikGraph.UndirectedGraph`2.#ctor*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2__ctor_System_Boolean_QuikGraph_EdgeEqualityComparer__0__" data-uid="QuikGraph.UndirectedGraph`2.#ctor(System.Boolean,QuikGraph.EdgeEqualityComparer{`0})">UndirectedGraph(Boolean, EdgeEqualityComparer&lt;TVertex&gt;)</h4>
@@ -247,6 +248,44 @@ public class UndirectedGraph&lt;TVertex, TEdge&gt; : IMutableUndirectedGraph&lt;
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.%23ctor(System.Runtime.Serialization.SerializationInfo%2CSystem.Runtime.Serialization.StreamingContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L668">View Source</a>
+  </span>
+  <a id="QuikGraph_UndirectedGraph_2__ctor_" data-uid="QuikGraph.UndirectedGraph`2.#ctor*"></a>
+  <h4 id="QuikGraph_UndirectedGraph_2__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="QuikGraph.UndirectedGraph`2.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">UndirectedGraph(SerializationInfo, StreamingContext)</h4>
+  <div class="markdown level1 summary"><p>Constructor used during runtime serialization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UndirectedGraph(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.SerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.StreamingContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -254,7 +293,7 @@ public class UndirectedGraph&lt;TVertex, TEdge&gt; : IMutableUndirectedGraph&lt;
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_AllowParallelEdges.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.AllowParallelEdges%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L127">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L135">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_AllowParallelEdges_" data-uid="QuikGraph.UndirectedGraph`2.AllowParallelEdges*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_AllowParallelEdges" data-uid="QuikGraph.UndirectedGraph`2.AllowParallelEdges">AllowParallelEdges</h4>
@@ -285,7 +324,7 @@ public class UndirectedGraph&lt;TVertex, TEdge&gt; : IMutableUndirectedGraph&lt;
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_EdgeCapacity.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.EdgeCapacity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L98">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L105">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_EdgeCapacity_" data-uid="QuikGraph.UndirectedGraph`2.EdgeCapacity*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_EdgeCapacity" data-uid="QuikGraph.UndirectedGraph`2.EdgeCapacity">EdgeCapacity</h4>
@@ -316,7 +355,7 @@ public class UndirectedGraph&lt;TVertex, TEdge&gt; : IMutableUndirectedGraph&lt;
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_EdgeCount.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.EdgeCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L159">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L167">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_EdgeCount_" data-uid="QuikGraph.UndirectedGraph`2.EdgeCount*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_EdgeCount" data-uid="QuikGraph.UndirectedGraph`2.EdgeCount">EdgeCount</h4>
@@ -347,7 +386,7 @@ public class UndirectedGraph&lt;TVertex, TEdge&gt; : IMutableUndirectedGraph&lt;
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_EdgeEqualityComparer.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.EdgeEqualityComparer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L93">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L100">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_EdgeEqualityComparer_" data-uid="QuikGraph.UndirectedGraph`2.EdgeEqualityComparer*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_EdgeEqualityComparer" data-uid="QuikGraph.UndirectedGraph`2.EdgeEqualityComparer">EdgeEqualityComparer</h4>
@@ -378,7 +417,7 @@ public class UndirectedGraph&lt;TVertex, TEdge&gt; : IMutableUndirectedGraph&lt;
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_Edges.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.Edges%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L165">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L173">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_Edges_" data-uid="QuikGraph.UndirectedGraph`2.Edges*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_Edges" data-uid="QuikGraph.UndirectedGraph`2.Edges">Edges</h4>
@@ -409,7 +448,7 @@ public class UndirectedGraph&lt;TVertex, TEdge&gt; : IMutableUndirectedGraph&lt;
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_IsDirected.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.IsDirected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L124">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L132">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_IsDirected_" data-uid="QuikGraph.UndirectedGraph`2.IsDirected*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_IsDirected" data-uid="QuikGraph.UndirectedGraph`2.IsDirected">IsDirected</h4>
@@ -440,7 +479,7 @@ public class UndirectedGraph&lt;TVertex, TEdge&gt; : IMutableUndirectedGraph&lt;
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_IsEdgesEmpty.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.IsEdgesEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L156">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L164">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_IsEdgesEmpty_" data-uid="QuikGraph.UndirectedGraph`2.IsEdgesEmpty*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_IsEdgesEmpty" data-uid="QuikGraph.UndirectedGraph`2.IsEdgesEmpty">IsEdgesEmpty</h4>
@@ -472,7 +511,7 @@ It is true if this edge set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_IsVerticesEmpty.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.IsVerticesEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L134">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L142">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_IsVerticesEmpty_" data-uid="QuikGraph.UndirectedGraph`2.IsVerticesEmpty*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_IsVerticesEmpty" data-uid="QuikGraph.UndirectedGraph`2.IsVerticesEmpty">IsVerticesEmpty</h4>
@@ -504,7 +543,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_VertexCount.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.VertexCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L137">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L145">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_VertexCount_" data-uid="QuikGraph.UndirectedGraph`2.VertexCount*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_VertexCount" data-uid="QuikGraph.UndirectedGraph`2.VertexCount">VertexCount</h4>
@@ -535,7 +574,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_Vertices.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.Vertices%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L140">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L148">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_Vertices_" data-uid="QuikGraph.UndirectedGraph`2.Vertices*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_Vertices" data-uid="QuikGraph.UndirectedGraph`2.Vertices">Vertices</h4>
@@ -568,7 +607,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_AddEdge__1_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.AddEdge(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L520">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L530">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_AddEdge_" data-uid="QuikGraph.UndirectedGraph`2.AddEdge*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_AddEdge__1_" data-uid="QuikGraph.UndirectedGraph`2.AddEdge(`1)">AddEdge(TEdge)</h4>
@@ -618,7 +657,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_AddEdgeRange_System_Collections_Generic_IEnumerable__1__.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.AddEdgeRange(System.Collections.Generic.IEnumerable%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L547">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L557">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_AddEdgeRange_" data-uid="QuikGraph.UndirectedGraph`2.AddEdgeRange*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_AddEdgeRange_System_Collections_Generic_IEnumerable__1__" data-uid="QuikGraph.UndirectedGraph`2.AddEdgeRange(System.Collections.Generic.IEnumerable{`1})">AddEdgeRange(IEnumerable&lt;TEdge&gt;)</h4>
@@ -668,7 +707,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_AddVertex__0_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.AddVertex(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L346">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L356">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_AddVertex_" data-uid="QuikGraph.UndirectedGraph`2.AddVertex*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_AddVertex__0_" data-uid="QuikGraph.UndirectedGraph`2.AddVertex(`0)">AddVertex(TVertex)</h4>
@@ -718,7 +757,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_AddVertexRange_System_Collections_Generic_IEnumerable__0__.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.AddVertexRange(System.Collections.Generic.IEnumerable%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L327">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L337">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_AddVertexRange_" data-uid="QuikGraph.UndirectedGraph`2.AddVertexRange*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_AddVertexRange_System_Collections_Generic_IEnumerable__0__" data-uid="QuikGraph.UndirectedGraph`2.AddVertexRange(System.Collections.Generic.IEnumerable{`0})">AddVertexRange(IEnumerable&lt;TVertex&gt;)</h4>
@@ -768,7 +807,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_AddVerticesAndEdge__1_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.AddVerticesAndEdge(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L478">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L488">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_AddVerticesAndEdge_" data-uid="QuikGraph.UndirectedGraph`2.AddVerticesAndEdge*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_AddVerticesAndEdge__1_" data-uid="QuikGraph.UndirectedGraph`2.AddVerticesAndEdge(`1)">AddVerticesAndEdge(TEdge)</h4>
@@ -818,7 +857,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_AddVerticesAndEdgeRange_System_Collections_Generic_IEnumerable__1__.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L501">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L511">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_AddVerticesAndEdgeRange_" data-uid="QuikGraph.UndirectedGraph`2.AddVerticesAndEdgeRange*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_AddVerticesAndEdgeRange_System_Collections_Generic_IEnumerable__1__" data-uid="QuikGraph.UndirectedGraph`2.AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable{`1})">AddVerticesAndEdgeRange(IEnumerable&lt;TEdge&gt;)</h4>
@@ -868,7 +907,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_AdjacentDegree__0_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.AdjacentDegree(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L223">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L231">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_AdjacentDegree_" data-uid="QuikGraph.UndirectedGraph`2.AdjacentDegree*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_AdjacentDegree__0_" data-uid="QuikGraph.UndirectedGraph`2.AdjacentDegree(`0)">AdjacentDegree(TVertex)</h4>
@@ -918,7 +957,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_AdjacentEdge__0_System_Int32_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.AdjacentEdge(%600%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L240">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L248">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_AdjacentEdge_" data-uid="QuikGraph.UndirectedGraph`2.AdjacentEdge*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_AdjacentEdge__0_System_Int32_" data-uid="QuikGraph.UndirectedGraph`2.AdjacentEdge(`0,System.Int32)">AdjacentEdge(TVertex, Int32)</h4>
@@ -974,7 +1013,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_AdjacentEdges__0_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.AdjacentEdges(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L212">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L220">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_AdjacentEdges_" data-uid="QuikGraph.UndirectedGraph`2.AdjacentEdges*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_AdjacentEdges__0_" data-uid="QuikGraph.UndirectedGraph`2.AdjacentEdges(`0)">AdjacentEdges(TVertex)</h4>
@@ -1024,7 +1063,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_AdjacentVertices__0_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.AdjacentVertices(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L105">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L112">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_AdjacentVertices_" data-uid="QuikGraph.UndirectedGraph`2.AdjacentVertices*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_AdjacentVertices__0_" data-uid="QuikGraph.UndirectedGraph`2.AdjacentVertices(`0)">AdjacentVertices(TVertex)</h4>
@@ -1074,7 +1113,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_Clear.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L293">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L303">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_Clear_" data-uid="QuikGraph.UndirectedGraph`2.Clear*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_Clear" data-uid="QuikGraph.UndirectedGraph`2.Clear">Clear()</h4>
@@ -1090,7 +1129,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_ClearAdjacentEdges__0_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.ClearAdjacentEdges(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L440">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L450">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_ClearAdjacentEdges_" data-uid="QuikGraph.UndirectedGraph`2.ClearAdjacentEdges*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_ClearAdjacentEdges__0_" data-uid="QuikGraph.UndirectedGraph`2.ClearAdjacentEdges(`0)">ClearAdjacentEdges(TVertex)</h4>
@@ -1124,7 +1163,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_ClearEdges__0_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.ClearEdges(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L468">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L478">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_ClearEdges_" data-uid="QuikGraph.UndirectedGraph`2.ClearEdges*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_ClearEdges__0_" data-uid="QuikGraph.UndirectedGraph`2.ClearEdges(`0)">ClearEdges(TVertex)</h4>
@@ -1158,7 +1197,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_Clone.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L675">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L724">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_Clone_" data-uid="QuikGraph.UndirectedGraph`2.Clone*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_Clone" data-uid="QuikGraph.UndirectedGraph`2.Clone">Clone()</h4>
@@ -1190,7 +1229,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_ContainsEdge__0__0_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.ContainsEdge(%600%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L186">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L194">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_ContainsEdge_" data-uid="QuikGraph.UndirectedGraph`2.ContainsEdge*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_ContainsEdge__0__0_" data-uid="QuikGraph.UndirectedGraph`2.ContainsEdge(`0,`0)">ContainsEdge(TVertex, TVertex)</h4>
@@ -1247,7 +1286,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_ContainsEdge__1_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.ContainsEdge(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L168">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L176">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_ContainsEdge_" data-uid="QuikGraph.UndirectedGraph`2.ContainsEdge*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_ContainsEdge__1_" data-uid="QuikGraph.UndirectedGraph`2.ContainsEdge(`1)">ContainsEdge(TEdge)</h4>
@@ -1297,7 +1336,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_ContainsVertex__0_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.ContainsVertex(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L143">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L151">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_ContainsVertex_" data-uid="QuikGraph.UndirectedGraph`2.ContainsVertex*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_ContainsVertex__0_" data-uid="QuikGraph.UndirectedGraph`2.ContainsVertex(`0)">ContainsVertex(TVertex)</h4>
@@ -1344,10 +1383,49 @@ It is true if this vertex set is empty, otherwise false.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.GetObjectData(System.Runtime.Serialization.SerializationInfo%2CSystem.Runtime.Serialization.StreamingContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L689">View Source</a>
+  </span>
+  <a id="QuikGraph_UndirectedGraph_2_GetObjectData_" data-uid="QuikGraph.UndirectedGraph`2.GetObjectData*"></a>
+  <h4 id="QuikGraph_UndirectedGraph_2_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="QuikGraph.UndirectedGraph`2.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">GetObjectData(SerializationInfo, StreamingContext)</h4>
+  <div class="markdown level1 summary"><p>Gets the data to serialize.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
+protected virtual void GetObjectData(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.SerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.StreamingContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_IsAdjacentEdgesEmpty__0_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.IsAdjacentEdgesEmpty(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L234">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L242">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_IsAdjacentEdgesEmpty_" data-uid="QuikGraph.UndirectedGraph`2.IsAdjacentEdgesEmpty*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_IsAdjacentEdgesEmpty__0_" data-uid="QuikGraph.UndirectedGraph`2.IsAdjacentEdgesEmpty(`0)">IsAdjacentEdgesEmpty(TVertex)</h4>
@@ -1397,7 +1475,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_OnEdgeAdded__1_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.OnEdgeAdded(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L572">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L582">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_OnEdgeAdded_" data-uid="QuikGraph.UndirectedGraph`2.OnEdgeAdded*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_OnEdgeAdded__1_" data-uid="QuikGraph.UndirectedGraph`2.OnEdgeAdded(`1)">OnEdgeAdded(TEdge)</h4>
@@ -1431,7 +1509,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_OnEdgeRemoved__1_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.OnEdgeRemoved(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L610">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L620">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_OnEdgeRemoved_" data-uid="QuikGraph.UndirectedGraph`2.OnEdgeRemoved*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_OnEdgeRemoved__1_" data-uid="QuikGraph.UndirectedGraph`2.OnEdgeRemoved(`1)">OnEdgeRemoved(TEdge)</h4>
@@ -1465,7 +1543,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_OnVertexAdded__0_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.OnVertexAdded(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L319">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L329">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_OnVertexAdded_" data-uid="QuikGraph.UndirectedGraph`2.OnVertexAdded*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_OnVertexAdded__0_" data-uid="QuikGraph.UndirectedGraph`2.OnVertexAdded(`0)">OnVertexAdded(TVertex)</h4>
@@ -1499,7 +1577,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_OnVertexRemoved__0_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.OnVertexRemoved(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L385">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L395">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_OnVertexRemoved_" data-uid="QuikGraph.UndirectedGraph`2.OnVertexRemoved*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_OnVertexRemoved__0_" data-uid="QuikGraph.UndirectedGraph`2.OnVertexRemoved(`0)">OnVertexRemoved(TVertex)</h4>
@@ -1533,7 +1611,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_RemoveAdjacentEdgeIf__0_QuikGraph_EdgePredicate__0__1__.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.RemoveAdjacentEdgeIf(%600%2CQuikGraph.EdgePredicate%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L425">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L435">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_RemoveAdjacentEdgeIf_" data-uid="QuikGraph.UndirectedGraph`2.RemoveAdjacentEdgeIf*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_RemoveAdjacentEdgeIf__0_QuikGraph_EdgePredicate__0__1__" data-uid="QuikGraph.UndirectedGraph`2.RemoveAdjacentEdgeIf(`0,QuikGraph.EdgePredicate{`0,`1})">RemoveAdjacentEdgeIf(TVertex, EdgePredicate&lt;TVertex, TEdge&gt;)</h4>
@@ -1589,7 +1667,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_RemoveEdge__1_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.RemoveEdge(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L580">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L590">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_RemoveEdge_" data-uid="QuikGraph.UndirectedGraph`2.RemoveEdge*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_RemoveEdge__1_" data-uid="QuikGraph.UndirectedGraph`2.RemoveEdge(`1)">RemoveEdge(TEdge)</h4>
@@ -1639,7 +1717,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_RemoveEdgeIf_QuikGraph_EdgePredicate__0__1__.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.RemoveEdgeIf(QuikGraph.EdgePredicate%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L618">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L628">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_RemoveEdgeIf_" data-uid="QuikGraph.UndirectedGraph`2.RemoveEdgeIf*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_RemoveEdgeIf_QuikGraph_EdgePredicate__0__1__" data-uid="QuikGraph.UndirectedGraph`2.RemoveEdgeIf(QuikGraph.EdgePredicate{`0,`1})">RemoveEdgeIf(EdgePredicate&lt;TVertex, TEdge&gt;)</h4>
@@ -1689,7 +1767,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_RemoveEdges_System_Collections_Generic_IEnumerable__1__.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.RemoveEdges(System.Collections.Generic.IEnumerable%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L632">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L642">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_RemoveEdges_" data-uid="QuikGraph.UndirectedGraph`2.RemoveEdges*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_RemoveEdges_System_Collections_Generic_IEnumerable__1__" data-uid="QuikGraph.UndirectedGraph`2.RemoveEdges(System.Collections.Generic.IEnumerable{`1})">RemoveEdges(IEnumerable&lt;TEdge&gt;)</h4>
@@ -1739,7 +1817,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_RemoveVertex__0_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.RemoveVertex(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L393">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L403">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_RemoveVertex_" data-uid="QuikGraph.UndirectedGraph`2.RemoveVertex*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_RemoveVertex__0_" data-uid="QuikGraph.UndirectedGraph`2.RemoveVertex(`0)">RemoveVertex(TVertex)</h4>
@@ -1789,7 +1867,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_RemoveVertexIf_QuikGraph_VertexPredicate__0__.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.RemoveVertexIf(QuikGraph.VertexPredicate%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L405">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L415">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_RemoveVertexIf_" data-uid="QuikGraph.UndirectedGraph`2.RemoveVertexIf*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_RemoveVertexIf_QuikGraph_VertexPredicate__0__" data-uid="QuikGraph.UndirectedGraph`2.RemoveVertexIf(QuikGraph.VertexPredicate{`0})">RemoveVertexIf(VertexPredicate&lt;TVertex&gt;)</h4>
@@ -1839,7 +1917,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_TrimEdgeExcess.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.TrimEdgeExcess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L286">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L294">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_TrimEdgeExcess_" data-uid="QuikGraph.UndirectedGraph`2.TrimEdgeExcess*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_TrimEdgeExcess" data-uid="QuikGraph.UndirectedGraph`2.TrimEdgeExcess">TrimEdgeExcess()</h4>
@@ -1855,7 +1933,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_TryGetEdge__0__0__1__.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.TryGetEdge(%600%2C%600%2C%601%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L251">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L259">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_TryGetEdge_" data-uid="QuikGraph.UndirectedGraph`2.TryGetEdge*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_TryGetEdge__0__0__1__" data-uid="QuikGraph.UndirectedGraph`2.TryGetEdge(`0,`0,`1@)">TryGetEdge(TVertex, TVertex, out TEdge)</h4>
@@ -1920,7 +1998,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_EdgeAdded.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.EdgeAdded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L566">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L576">View Source</a>
   </span>
   <h4 id="QuikGraph_UndirectedGraph_2_EdgeAdded" data-uid="QuikGraph.UndirectedGraph`2.EdgeAdded">EdgeAdded</h4>
   <div class="markdown level1 summary"><p>Fired when an edge is added to this graph.</p>
@@ -1950,7 +2028,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_EdgeRemoved.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.EdgeRemoved%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L604">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L614">View Source</a>
   </span>
   <h4 id="QuikGraph_UndirectedGraph_2_EdgeRemoved" data-uid="QuikGraph.UndirectedGraph`2.EdgeRemoved">EdgeRemoved</h4>
   <div class="markdown level1 summary"><p>Fired when an edge has been removed from this graph.</p>
@@ -1980,7 +2058,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_VertexAdded.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.VertexAdded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L313">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L323">View Source</a>
   </span>
   <h4 id="QuikGraph_UndirectedGraph_2_VertexAdded" data-uid="QuikGraph.UndirectedGraph`2.VertexAdded">VertexAdded</h4>
   <div class="markdown level1 summary"><p>Fired when a vertex is added to this set.</p>
@@ -2010,7 +2088,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_VertexRemoved.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.VertexRemoved%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L379">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L389">View Source</a>
   </span>
   <h4 id="QuikGraph_UndirectedGraph_2_VertexRemoved" data-uid="QuikGraph.UndirectedGraph`2.VertexRemoved">VertexRemoved</h4>
   <div class="markdown level1 summary"><p>Fired when a vertex is removed from this set.</p>
@@ -2042,7 +2120,7 @@ It is true if this vertex set is empty, otherwise false.</p>
     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_System_ICloneable_Clone.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.System%23ICloneable%23Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L689">View Source</a>
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L738">View Source</a>
   </span>
   <a id="QuikGraph_UndirectedGraph_2_System_ICloneable_Clone_" data-uid="QuikGraph.UndirectedGraph`2.System#ICloneable#Clone*"></a>
   <h4 id="QuikGraph_UndirectedGraph_2_System_ICloneable_Clone" data-uid="QuikGraph.UndirectedGraph`2.System#ICloneable#Clone">ICloneable.Clone()</h4>
@@ -2063,6 +2141,44 @@ It is true if this vertex set is empty, otherwise false.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2_System_Runtime_Serialization_ISerializable_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602.System%23Runtime%23Serialization%23ISerializable%23GetObjectData(System.Runtime.Serialization.SerializationInfo%2CSystem.Runtime.Serialization.StreamingContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L680">View Source</a>
+  </span>
+  <a id="QuikGraph_UndirectedGraph_2_System_Runtime_Serialization_ISerializable_GetObjectData_" data-uid="QuikGraph.UndirectedGraph`2.System#Runtime#Serialization#ISerializable#GetObjectData*"></a>
+  <h4 id="QuikGraph_UndirectedGraph_2_System_Runtime_Serialization_ISerializable_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="QuikGraph.UndirectedGraph`2.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">ISerializable.GetObjectData(SerializationInfo, StreamingContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.SerializationFormatter)]
+void ISerializable.GetObjectData(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.SerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.Serialization.StreamingContext</span></td>
+        <td><span class="parametername">context</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2106,6 +2222,9 @@ It is true if this vertex set is empty, otherwise false.</p>
   </div>
   <div>
       <span class="xref">System.ICloneable</span>
+  </div>
+  <div>
+      <span class="xref">System.Runtime.Serialization.ISerializable</span>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
@@ -2215,7 +2334,7 @@ It is true if this vertex set is empty, otherwise false.</p>
                     <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_UndirectedGraph_2.md&amp;value=---%0Auid%3A%20QuikGraph.UndirectedGraph%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/UndirectedGraph.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

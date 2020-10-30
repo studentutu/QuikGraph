@@ -14081,6 +14081,25 @@ references:
   fullName.vb: QuikGraph.ArrayUndirectedGraph(Of TVertex, TEdge).System.ICloneable.Clone
   nameWithType: ArrayUndirectedGraph<TVertex, TEdge>.ICloneable.Clone
   nameWithType.vb: ArrayUndirectedGraph(Of TVertex, TEdge).System.ICloneable.Clone
+- uid: QuikGraph.ArrayUndirectedGraph`2.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name: ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  href: api/QuikGraph.ArrayUndirectedGraph-2.html#QuikGraph_ArrayUndirectedGraph_2_System_Runtime_Serialization_ISerializable_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:QuikGraph.ArrayUndirectedGraph`2.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name.vb: System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  fullName: QuikGraph.ArrayUndirectedGraph<TVertex, TEdge>.System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  fullName.vb: QuikGraph.ArrayUndirectedGraph(Of TVertex, TEdge).System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  nameWithType: ArrayUndirectedGraph<TVertex, TEdge>.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType.vb: ArrayUndirectedGraph(Of TVertex, TEdge).System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+- uid: QuikGraph.ArrayUndirectedGraph`2.System#Runtime#Serialization#ISerializable#GetObjectData*
+  name: ISerializable.GetObjectData
+  href: api/QuikGraph.ArrayUndirectedGraph-2.html#QuikGraph_ArrayUndirectedGraph_2_System_Runtime_Serialization_ISerializable_GetObjectData_
+  commentId: Overload:QuikGraph.ArrayUndirectedGraph`2.System#Runtime#Serialization#ISerializable#GetObjectData
+  isSpec: "True"
+  name.vb: System.Runtime.Serialization.ISerializable.GetObjectData
+  fullName: QuikGraph.ArrayUndirectedGraph<TVertex, TEdge>.System.Runtime.Serialization.ISerializable.GetObjectData
+  fullName.vb: QuikGraph.ArrayUndirectedGraph(Of TVertex, TEdge).System.Runtime.Serialization.ISerializable.GetObjectData
+  nameWithType: ArrayUndirectedGraph<TVertex, TEdge>.ISerializable.GetObjectData
+  nameWithType.vb: ArrayUndirectedGraph(Of TVertex, TEdge).System.Runtime.Serialization.ISerializable.GetObjectData
 - uid: QuikGraph.ArrayUndirectedGraph`2.TryGetEdge(`0,`0,`1@)
   name: TryGetEdge(TVertex, TVertex, out TEdge)
   href: api/QuikGraph.ArrayUndirectedGraph-2.html#QuikGraph_ArrayUndirectedGraph_2_TryGetEdge__0__0__1__
@@ -21844,24 +21863,24 @@ references:
   isSpec: "True"
   fullName: QuikGraph.EquateGraphs.Equate
   nameWithType: EquateGraphs.Equate
-- uid: QuikGraph.EquateGraphs.Equate``2(QuikGraph.IVertexAndEdgeListGraph{``0,``1},QuikGraph.IVertexAndEdgeListGraph{``0,``1})
-  name: Equate<TVertex, TEdge>(IVertexAndEdgeListGraph<TVertex, TEdge>, IVertexAndEdgeListGraph<TVertex, TEdge>)
-  href: api/QuikGraph.EquateGraphs.html#QuikGraph_EquateGraphs_Equate__2_QuikGraph_IVertexAndEdgeListGraph___0___1__QuikGraph_IVertexAndEdgeListGraph___0___1__
-  commentId: M:QuikGraph.EquateGraphs.Equate``2(QuikGraph.IVertexAndEdgeListGraph{``0,``1},QuikGraph.IVertexAndEdgeListGraph{``0,``1})
-  name.vb: Equate(Of TVertex, TEdge)(IVertexAndEdgeListGraph(Of TVertex, TEdge), IVertexAndEdgeListGraph(Of TVertex, TEdge))
-  fullName: QuikGraph.EquateGraphs.Equate<TVertex, TEdge>(QuikGraph.IVertexAndEdgeListGraph<TVertex, TEdge>, QuikGraph.IVertexAndEdgeListGraph<TVertex, TEdge>)
-  fullName.vb: QuikGraph.EquateGraphs.Equate(Of TVertex, TEdge)(QuikGraph.IVertexAndEdgeListGraph(Of TVertex, TEdge), QuikGraph.IVertexAndEdgeListGraph(Of TVertex, TEdge))
-  nameWithType: EquateGraphs.Equate<TVertex, TEdge>(IVertexAndEdgeListGraph<TVertex, TEdge>, IVertexAndEdgeListGraph<TVertex, TEdge>)
-  nameWithType.vb: EquateGraphs.Equate(Of TVertex, TEdge)(IVertexAndEdgeListGraph(Of TVertex, TEdge), IVertexAndEdgeListGraph(Of TVertex, TEdge))
-- uid: QuikGraph.EquateGraphs.Equate``2(QuikGraph.IVertexAndEdgeListGraph{``0,``1},QuikGraph.IVertexAndEdgeListGraph{``0,``1},System.Collections.Generic.IEqualityComparer{``0},System.Collections.Generic.IEqualityComparer{``1})
-  name: Equate<TVertex, TEdge>(IVertexAndEdgeListGraph<TVertex, TEdge>, IVertexAndEdgeListGraph<TVertex, TEdge>, IEqualityComparer<TVertex>, IEqualityComparer<TEdge>)
-  href: api/QuikGraph.EquateGraphs.html#QuikGraph_EquateGraphs_Equate__2_QuikGraph_IVertexAndEdgeListGraph___0___1__QuikGraph_IVertexAndEdgeListGraph___0___1__System_Collections_Generic_IEqualityComparer___0__System_Collections_Generic_IEqualityComparer___1__
-  commentId: M:QuikGraph.EquateGraphs.Equate``2(QuikGraph.IVertexAndEdgeListGraph{``0,``1},QuikGraph.IVertexAndEdgeListGraph{``0,``1},System.Collections.Generic.IEqualityComparer{``0},System.Collections.Generic.IEqualityComparer{``1})
-  name.vb: Equate(Of TVertex, TEdge)(IVertexAndEdgeListGraph(Of TVertex, TEdge), IVertexAndEdgeListGraph(Of TVertex, TEdge), IEqualityComparer(Of TVertex), IEqualityComparer(Of TEdge))
-  fullName: QuikGraph.EquateGraphs.Equate<TVertex, TEdge>(QuikGraph.IVertexAndEdgeListGraph<TVertex, TEdge>, QuikGraph.IVertexAndEdgeListGraph<TVertex, TEdge>, System.Collections.Generic.IEqualityComparer<TVertex>, System.Collections.Generic.IEqualityComparer<TEdge>)
-  fullName.vb: QuikGraph.EquateGraphs.Equate(Of TVertex, TEdge)(QuikGraph.IVertexAndEdgeListGraph(Of TVertex, TEdge), QuikGraph.IVertexAndEdgeListGraph(Of TVertex, TEdge), System.Collections.Generic.IEqualityComparer(Of TVertex), System.Collections.Generic.IEqualityComparer(Of TEdge))
-  nameWithType: EquateGraphs.Equate<TVertex, TEdge>(IVertexAndEdgeListGraph<TVertex, TEdge>, IVertexAndEdgeListGraph<TVertex, TEdge>, IEqualityComparer<TVertex>, IEqualityComparer<TEdge>)
-  nameWithType.vb: EquateGraphs.Equate(Of TVertex, TEdge)(IVertexAndEdgeListGraph(Of TVertex, TEdge), IVertexAndEdgeListGraph(Of TVertex, TEdge), IEqualityComparer(Of TVertex), IEqualityComparer(Of TEdge))
+- uid: QuikGraph.EquateGraphs.Equate``2(QuikGraph.IEdgeListGraph{``0,``1},QuikGraph.IEdgeListGraph{``0,``1})
+  name: Equate<TVertex, TEdge>(IEdgeListGraph<TVertex, TEdge>, IEdgeListGraph<TVertex, TEdge>)
+  href: api/QuikGraph.EquateGraphs.html#QuikGraph_EquateGraphs_Equate__2_QuikGraph_IEdgeListGraph___0___1__QuikGraph_IEdgeListGraph___0___1__
+  commentId: M:QuikGraph.EquateGraphs.Equate``2(QuikGraph.IEdgeListGraph{``0,``1},QuikGraph.IEdgeListGraph{``0,``1})
+  name.vb: Equate(Of TVertex, TEdge)(IEdgeListGraph(Of TVertex, TEdge), IEdgeListGraph(Of TVertex, TEdge))
+  fullName: QuikGraph.EquateGraphs.Equate<TVertex, TEdge>(QuikGraph.IEdgeListGraph<TVertex, TEdge>, QuikGraph.IEdgeListGraph<TVertex, TEdge>)
+  fullName.vb: QuikGraph.EquateGraphs.Equate(Of TVertex, TEdge)(QuikGraph.IEdgeListGraph(Of TVertex, TEdge), QuikGraph.IEdgeListGraph(Of TVertex, TEdge))
+  nameWithType: EquateGraphs.Equate<TVertex, TEdge>(IEdgeListGraph<TVertex, TEdge>, IEdgeListGraph<TVertex, TEdge>)
+  nameWithType.vb: EquateGraphs.Equate(Of TVertex, TEdge)(IEdgeListGraph(Of TVertex, TEdge), IEdgeListGraph(Of TVertex, TEdge))
+- uid: QuikGraph.EquateGraphs.Equate``2(QuikGraph.IEdgeListGraph{``0,``1},QuikGraph.IEdgeListGraph{``0,``1},System.Collections.Generic.IEqualityComparer{``0},System.Collections.Generic.IEqualityComparer{``1})
+  name: Equate<TVertex, TEdge>(IEdgeListGraph<TVertex, TEdge>, IEdgeListGraph<TVertex, TEdge>, IEqualityComparer<TVertex>, IEqualityComparer<TEdge>)
+  href: api/QuikGraph.EquateGraphs.html#QuikGraph_EquateGraphs_Equate__2_QuikGraph_IEdgeListGraph___0___1__QuikGraph_IEdgeListGraph___0___1__System_Collections_Generic_IEqualityComparer___0__System_Collections_Generic_IEqualityComparer___1__
+  commentId: M:QuikGraph.EquateGraphs.Equate``2(QuikGraph.IEdgeListGraph{``0,``1},QuikGraph.IEdgeListGraph{``0,``1},System.Collections.Generic.IEqualityComparer{``0},System.Collections.Generic.IEqualityComparer{``1})
+  name.vb: Equate(Of TVertex, TEdge)(IEdgeListGraph(Of TVertex, TEdge), IEdgeListGraph(Of TVertex, TEdge), IEqualityComparer(Of TVertex), IEqualityComparer(Of TEdge))
+  fullName: QuikGraph.EquateGraphs.Equate<TVertex, TEdge>(QuikGraph.IEdgeListGraph<TVertex, TEdge>, QuikGraph.IEdgeListGraph<TVertex, TEdge>, System.Collections.Generic.IEqualityComparer<TVertex>, System.Collections.Generic.IEqualityComparer<TEdge>)
+  fullName.vb: QuikGraph.EquateGraphs.Equate(Of TVertex, TEdge)(QuikGraph.IEdgeListGraph(Of TVertex, TEdge), QuikGraph.IEdgeListGraph(Of TVertex, TEdge), System.Collections.Generic.IEqualityComparer(Of TVertex), System.Collections.Generic.IEqualityComparer(Of TEdge))
+  nameWithType: EquateGraphs.Equate<TVertex, TEdge>(IEdgeListGraph<TVertex, TEdge>, IEdgeListGraph<TVertex, TEdge>, IEqualityComparer<TVertex>, IEqualityComparer<TEdge>)
+  nameWithType.vb: EquateGraphs.Equate(Of TVertex, TEdge)(IEdgeListGraph(Of TVertex, TEdge), IEdgeListGraph(Of TVertex, TEdge), IEqualityComparer(Of TVertex), IEqualityComparer(Of TEdge))
 - uid: QuikGraph.GraphColor
   name: GraphColor
   href: api/QuikGraph.GraphColor.html
@@ -24292,6 +24311,23 @@ references:
   isSpec: "True"
   fullName: QuikGraph.Graphviz.Dot.GraphvizColor.SteelBlue
   nameWithType: GraphvizColor.SteelBlue
+- uid: QuikGraph.Graphviz.Dot.GraphvizColor.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name: ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  href: api/QuikGraph.Graphviz.Dot.GraphvizColor.html#QuikGraph_Graphviz_Dot_GraphvizColor_System_Runtime_Serialization_ISerializable_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:QuikGraph.Graphviz.Dot.GraphvizColor.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name.vb: System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  fullName: QuikGraph.Graphviz.Dot.GraphvizColor.System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  nameWithType: GraphvizColor.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType.vb: GraphvizColor.System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+- uid: QuikGraph.Graphviz.Dot.GraphvizColor.System#Runtime#Serialization#ISerializable#GetObjectData*
+  name: ISerializable.GetObjectData
+  href: api/QuikGraph.Graphviz.Dot.GraphvizColor.html#QuikGraph_Graphviz_Dot_GraphvizColor_System_Runtime_Serialization_ISerializable_GetObjectData_
+  commentId: Overload:QuikGraph.Graphviz.Dot.GraphvizColor.System#Runtime#Serialization#ISerializable#GetObjectData
+  isSpec: "True"
+  name.vb: System.Runtime.Serialization.ISerializable.GetObjectData
+  fullName: QuikGraph.Graphviz.Dot.GraphvizColor.System.Runtime.Serialization.ISerializable.GetObjectData
+  nameWithType: GraphvizColor.ISerializable.GetObjectData
+  nameWithType.vb: GraphvizColor.System.Runtime.Serialization.ISerializable.GetObjectData
 - uid: QuikGraph.Graphviz.Dot.GraphvizColor.Tan
   name: Tan
   href: api/QuikGraph.Graphviz.Dot.GraphvizColor.html#QuikGraph_Graphviz_Dot_GraphvizColor_Tan
@@ -26255,6 +26291,23 @@ references:
   isSpec: "True"
   fullName: QuikGraph.Graphviz.Dot.GraphvizSize.IsEmpty
   nameWithType: GraphvizSize.IsEmpty
+- uid: QuikGraph.Graphviz.Dot.GraphvizSize.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name: ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  href: api/QuikGraph.Graphviz.Dot.GraphvizSize.html#QuikGraph_Graphviz_Dot_GraphvizSize_System_Runtime_Serialization_ISerializable_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:QuikGraph.Graphviz.Dot.GraphvizSize.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name.vb: System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  fullName: QuikGraph.Graphviz.Dot.GraphvizSize.System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  nameWithType: GraphvizSize.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType.vb: GraphvizSize.System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+- uid: QuikGraph.Graphviz.Dot.GraphvizSize.System#Runtime#Serialization#ISerializable#GetObjectData*
+  name: ISerializable.GetObjectData
+  href: api/QuikGraph.Graphviz.Dot.GraphvizSize.html#QuikGraph_Graphviz_Dot_GraphvizSize_System_Runtime_Serialization_ISerializable_GetObjectData_
+  commentId: Overload:QuikGraph.Graphviz.Dot.GraphvizSize.System#Runtime#Serialization#ISerializable#GetObjectData
+  isSpec: "True"
+  name.vb: System.Runtime.Serialization.ISerializable.GetObjectData
+  fullName: QuikGraph.Graphviz.Dot.GraphvizSize.System.Runtime.Serialization.ISerializable.GetObjectData
+  nameWithType: GraphvizSize.ISerializable.GetObjectData
+  nameWithType.vb: GraphvizSize.System.Runtime.Serialization.ISerializable.GetObjectData
 - uid: QuikGraph.Graphviz.Dot.GraphvizSize.ToString
   name: ToString()
   href: api/QuikGraph.Graphviz.Dot.GraphvizSize.html#QuikGraph_Graphviz_Dot_GraphvizSize_ToString
@@ -26326,6 +26379,23 @@ references:
   isSpec: "True"
   fullName: QuikGraph.Graphviz.Dot.GraphvizSizeF.IsEmpty
   nameWithType: GraphvizSizeF.IsEmpty
+- uid: QuikGraph.Graphviz.Dot.GraphvizSizeF.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name: ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  href: api/QuikGraph.Graphviz.Dot.GraphvizSizeF.html#QuikGraph_Graphviz_Dot_GraphvizSizeF_System_Runtime_Serialization_ISerializable_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:QuikGraph.Graphviz.Dot.GraphvizSizeF.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name.vb: System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  fullName: QuikGraph.Graphviz.Dot.GraphvizSizeF.System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  nameWithType: GraphvizSizeF.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType.vb: GraphvizSizeF.System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+- uid: QuikGraph.Graphviz.Dot.GraphvizSizeF.System#Runtime#Serialization#ISerializable#GetObjectData*
+  name: ISerializable.GetObjectData
+  href: api/QuikGraph.Graphviz.Dot.GraphvizSizeF.html#QuikGraph_Graphviz_Dot_GraphvizSizeF_System_Runtime_Serialization_ISerializable_GetObjectData_
+  commentId: Overload:QuikGraph.Graphviz.Dot.GraphvizSizeF.System#Runtime#Serialization#ISerializable#GetObjectData
+  isSpec: "True"
+  name.vb: System.Runtime.Serialization.ISerializable.GetObjectData
+  fullName: QuikGraph.Graphviz.Dot.GraphvizSizeF.System.Runtime.Serialization.ISerializable.GetObjectData
+  nameWithType: GraphvizSizeF.ISerializable.GetObjectData
+  nameWithType.vb: GraphvizSizeF.System.Runtime.Serialization.ISerializable.GetObjectData
 - uid: QuikGraph.Graphviz.Dot.GraphvizSizeF.ToString
   name: ToString()
   href: api/QuikGraph.Graphviz.Dot.GraphvizSizeF.html#QuikGraph_Graphviz_Dot_GraphvizSizeF_ToString
@@ -29997,6 +30067,12 @@ references:
   commentId: M:QuikGraph.NegativeCapacityException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   fullName: QuikGraph.NegativeCapacityException.NegativeCapacityException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
   nameWithType: NegativeCapacityException.NegativeCapacityException(SerializationInfo, StreamingContext)
+- uid: QuikGraph.NegativeCapacityException.#ctor(System.String,System.Exception)
+  name: NegativeCapacityException(String, Exception)
+  href: api/QuikGraph.NegativeCapacityException.html#QuikGraph_NegativeCapacityException__ctor_System_String_System_Exception_
+  commentId: M:QuikGraph.NegativeCapacityException.#ctor(System.String,System.Exception)
+  fullName: QuikGraph.NegativeCapacityException.NegativeCapacityException(System.String, System.Exception)
+  nameWithType: NegativeCapacityException.NegativeCapacityException(String, Exception)
 - uid: QuikGraph.NegativeCapacityException.#ctor*
   name: NegativeCapacityException
   href: api/QuikGraph.NegativeCapacityException.html#QuikGraph_NegativeCapacityException__ctor_
@@ -30022,6 +30098,12 @@ references:
   commentId: M:QuikGraph.NegativeCycleGraphException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   fullName: QuikGraph.NegativeCycleGraphException.NegativeCycleGraphException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
   nameWithType: NegativeCycleGraphException.NegativeCycleGraphException(SerializationInfo, StreamingContext)
+- uid: QuikGraph.NegativeCycleGraphException.#ctor(System.String,System.Exception)
+  name: NegativeCycleGraphException(String, Exception)
+  href: api/QuikGraph.NegativeCycleGraphException.html#QuikGraph_NegativeCycleGraphException__ctor_System_String_System_Exception_
+  commentId: M:QuikGraph.NegativeCycleGraphException.#ctor(System.String,System.Exception)
+  fullName: QuikGraph.NegativeCycleGraphException.NegativeCycleGraphException(System.String, System.Exception)
+  nameWithType: NegativeCycleGraphException.NegativeCycleGraphException(String, Exception)
 - uid: QuikGraph.NegativeCycleGraphException.#ctor*
   name: NegativeCycleGraphException
   href: api/QuikGraph.NegativeCycleGraphException.html#QuikGraph_NegativeCycleGraphException__ctor_
@@ -30047,6 +30129,12 @@ references:
   commentId: M:QuikGraph.NegativeWeightException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   fullName: QuikGraph.NegativeWeightException.NegativeWeightException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
   nameWithType: NegativeWeightException.NegativeWeightException(SerializationInfo, StreamingContext)
+- uid: QuikGraph.NegativeWeightException.#ctor(System.String,System.Exception)
+  name: NegativeWeightException(String, Exception)
+  href: api/QuikGraph.NegativeWeightException.html#QuikGraph_NegativeWeightException__ctor_System_String_System_Exception_
+  commentId: M:QuikGraph.NegativeWeightException.#ctor(System.String,System.Exception)
+  fullName: QuikGraph.NegativeWeightException.NegativeWeightException(System.String, System.Exception)
+  nameWithType: NegativeWeightException.NegativeWeightException(String, Exception)
 - uid: QuikGraph.NegativeWeightException.#ctor*
   name: NegativeWeightException
   href: api/QuikGraph.NegativeWeightException.html#QuikGraph_NegativeWeightException__ctor_
@@ -30072,6 +30160,12 @@ references:
   commentId: M:QuikGraph.NonAcyclicGraphException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   fullName: QuikGraph.NonAcyclicGraphException.NonAcyclicGraphException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
   nameWithType: NonAcyclicGraphException.NonAcyclicGraphException(SerializationInfo, StreamingContext)
+- uid: QuikGraph.NonAcyclicGraphException.#ctor(System.String,System.Exception)
+  name: NonAcyclicGraphException(String, Exception)
+  href: api/QuikGraph.NonAcyclicGraphException.html#QuikGraph_NonAcyclicGraphException__ctor_System_String_System_Exception_
+  commentId: M:QuikGraph.NonAcyclicGraphException.#ctor(System.String,System.Exception)
+  fullName: QuikGraph.NonAcyclicGraphException.NonAcyclicGraphException(System.String, System.Exception)
+  nameWithType: NonAcyclicGraphException.NonAcyclicGraphException(String, Exception)
 - uid: QuikGraph.NonAcyclicGraphException.#ctor*
   name: NonAcyclicGraphException
   href: api/QuikGraph.NonAcyclicGraphException.html#QuikGraph_NonAcyclicGraphException__ctor_
@@ -30097,6 +30191,12 @@ references:
   commentId: M:QuikGraph.NonStronglyConnectedGraphException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   fullName: QuikGraph.NonStronglyConnectedGraphException.NonStronglyConnectedGraphException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
   nameWithType: NonStronglyConnectedGraphException.NonStronglyConnectedGraphException(SerializationInfo, StreamingContext)
+- uid: QuikGraph.NonStronglyConnectedGraphException.#ctor(System.String,System.Exception)
+  name: NonStronglyConnectedGraphException(String, Exception)
+  href: api/QuikGraph.NonStronglyConnectedGraphException.html#QuikGraph_NonStronglyConnectedGraphException__ctor_System_String_System_Exception_
+  commentId: M:QuikGraph.NonStronglyConnectedGraphException.#ctor(System.String,System.Exception)
+  fullName: QuikGraph.NonStronglyConnectedGraphException.NonStronglyConnectedGraphException(System.String, System.Exception)
+  nameWithType: NonStronglyConnectedGraphException.NonStronglyConnectedGraphException(String, Exception)
 - uid: QuikGraph.NonStronglyConnectedGraphException.#ctor*
   name: NonStronglyConnectedGraphException
   href: api/QuikGraph.NonStronglyConnectedGraphException.html#QuikGraph_NonStronglyConnectedGraphException__ctor_
@@ -30122,6 +30222,12 @@ references:
   commentId: M:QuikGraph.NoPathFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   fullName: QuikGraph.NoPathFoundException.NoPathFoundException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
   nameWithType: NoPathFoundException.NoPathFoundException(SerializationInfo, StreamingContext)
+- uid: QuikGraph.NoPathFoundException.#ctor(System.String,System.Exception)
+  name: NoPathFoundException(String, Exception)
+  href: api/QuikGraph.NoPathFoundException.html#QuikGraph_NoPathFoundException__ctor_System_String_System_Exception_
+  commentId: M:QuikGraph.NoPathFoundException.#ctor(System.String,System.Exception)
+  fullName: QuikGraph.NoPathFoundException.NoPathFoundException(System.String, System.Exception)
+  nameWithType: NoPathFoundException.NoPathFoundException(String, Exception)
 - uid: QuikGraph.NoPathFoundException.#ctor*
   name: NoPathFoundException
   href: api/QuikGraph.NoPathFoundException.html#QuikGraph_NoPathFoundException__ctor_
@@ -30147,6 +30253,12 @@ references:
   commentId: M:QuikGraph.ParallelEdgeNotAllowedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   fullName: QuikGraph.ParallelEdgeNotAllowedException.ParallelEdgeNotAllowedException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
   nameWithType: ParallelEdgeNotAllowedException.ParallelEdgeNotAllowedException(SerializationInfo, StreamingContext)
+- uid: QuikGraph.ParallelEdgeNotAllowedException.#ctor(System.String,System.Exception)
+  name: ParallelEdgeNotAllowedException(String, Exception)
+  href: api/QuikGraph.ParallelEdgeNotAllowedException.html#QuikGraph_ParallelEdgeNotAllowedException__ctor_System_String_System_Exception_
+  commentId: M:QuikGraph.ParallelEdgeNotAllowedException.#ctor(System.String,System.Exception)
+  fullName: QuikGraph.ParallelEdgeNotAllowedException.ParallelEdgeNotAllowedException(System.String, System.Exception)
+  nameWithType: ParallelEdgeNotAllowedException.ParallelEdgeNotAllowedException(String, Exception)
 - uid: QuikGraph.ParallelEdgeNotAllowedException.#ctor*
   name: ParallelEdgeNotAllowedException
   href: api/QuikGraph.ParallelEdgeNotAllowedException.html#QuikGraph_ParallelEdgeNotAllowedException__ctor_
@@ -32330,12 +32442,12 @@ references:
   commentId: M:QuikGraph.QuikGraphException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   fullName: QuikGraph.QuikGraphException.QuikGraphException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
   nameWithType: QuikGraphException.QuikGraphException(SerializationInfo, StreamingContext)
-- uid: QuikGraph.QuikGraphException.#ctor(System.String)
-  name: QuikGraphException(String)
-  href: api/QuikGraph.QuikGraphException.html#QuikGraph_QuikGraphException__ctor_System_String_
-  commentId: M:QuikGraph.QuikGraphException.#ctor(System.String)
-  fullName: QuikGraph.QuikGraphException.QuikGraphException(System.String)
-  nameWithType: QuikGraphException.QuikGraphException(String)
+- uid: QuikGraph.QuikGraphException.#ctor(System.String,System.Exception)
+  name: QuikGraphException(String, Exception)
+  href: api/QuikGraph.QuikGraphException.html#QuikGraph_QuikGraphException__ctor_System_String_System_Exception_
+  commentId: M:QuikGraph.QuikGraphException.#ctor(System.String,System.Exception)
+  fullName: QuikGraph.QuikGraphException.QuikGraphException(System.String, System.Exception)
+  nameWithType: QuikGraphException.QuikGraphException(String, Exception)
 - uid: QuikGraph.QuikGraphException.#ctor*
   name: QuikGraphException
   href: api/QuikGraph.QuikGraphException.html#QuikGraph_QuikGraphException__ctor_
@@ -38986,6 +39098,25 @@ references:
   fullName.vb: QuikGraph.UndirectedBidirectionalGraph(Of TVertex, TEdge).OriginalGraph
   nameWithType: UndirectedBidirectionalGraph<TVertex, TEdge>.OriginalGraph
   nameWithType.vb: UndirectedBidirectionalGraph(Of TVertex, TEdge).OriginalGraph
+- uid: QuikGraph.UndirectedBidirectionalGraph`2.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name: ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  href: api/QuikGraph.UndirectedBidirectionalGraph-2.html#QuikGraph_UndirectedBidirectionalGraph_2_System_Runtime_Serialization_ISerializable_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:QuikGraph.UndirectedBidirectionalGraph`2.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name.vb: System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  fullName: QuikGraph.UndirectedBidirectionalGraph<TVertex, TEdge>.System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  fullName.vb: QuikGraph.UndirectedBidirectionalGraph(Of TVertex, TEdge).System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  nameWithType: UndirectedBidirectionalGraph<TVertex, TEdge>.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType.vb: UndirectedBidirectionalGraph(Of TVertex, TEdge).System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+- uid: QuikGraph.UndirectedBidirectionalGraph`2.System#Runtime#Serialization#ISerializable#GetObjectData*
+  name: ISerializable.GetObjectData
+  href: api/QuikGraph.UndirectedBidirectionalGraph-2.html#QuikGraph_UndirectedBidirectionalGraph_2_System_Runtime_Serialization_ISerializable_GetObjectData_
+  commentId: Overload:QuikGraph.UndirectedBidirectionalGraph`2.System#Runtime#Serialization#ISerializable#GetObjectData
+  isSpec: "True"
+  name.vb: System.Runtime.Serialization.ISerializable.GetObjectData
+  fullName: QuikGraph.UndirectedBidirectionalGraph<TVertex, TEdge>.System.Runtime.Serialization.ISerializable.GetObjectData
+  fullName.vb: QuikGraph.UndirectedBidirectionalGraph(Of TVertex, TEdge).System.Runtime.Serialization.ISerializable.GetObjectData
+  nameWithType: UndirectedBidirectionalGraph<TVertex, TEdge>.ISerializable.GetObjectData
+  nameWithType.vb: UndirectedBidirectionalGraph(Of TVertex, TEdge).System.Runtime.Serialization.ISerializable.GetObjectData
 - uid: QuikGraph.UndirectedBidirectionalGraph`2.TryGetEdge(`0,`0,`1@)
   name: TryGetEdge(TVertex, TVertex, out TEdge)
   href: api/QuikGraph.UndirectedBidirectionalGraph-2.html#QuikGraph_UndirectedBidirectionalGraph_2_TryGetEdge__0__0__1__
@@ -39235,6 +39366,14 @@ references:
   fullName.vb: QuikGraph.UndirectedGraph(Of TVertex, TEdge).UndirectedGraph(System.Boolean, QuikGraph.EdgeEqualityComparer(Of TVertex))
   nameWithType: UndirectedGraph<TVertex, TEdge>.UndirectedGraph(Boolean, EdgeEqualityComparer<TVertex>)
   nameWithType.vb: UndirectedGraph(Of TVertex, TEdge).UndirectedGraph(Boolean, EdgeEqualityComparer(Of TVertex))
+- uid: QuikGraph.UndirectedGraph`2.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name: UndirectedGraph(SerializationInfo, StreamingContext)
+  href: api/QuikGraph.UndirectedGraph-2.html#QuikGraph_UndirectedGraph_2__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:QuikGraph.UndirectedGraph`2.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  fullName: QuikGraph.UndirectedGraph<TVertex, TEdge>.UndirectedGraph(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  fullName.vb: QuikGraph.UndirectedGraph(Of TVertex, TEdge).UndirectedGraph(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  nameWithType: UndirectedGraph<TVertex, TEdge>.UndirectedGraph(SerializationInfo, StreamingContext)
+  nameWithType.vb: UndirectedGraph(Of TVertex, TEdge).UndirectedGraph(SerializationInfo, StreamingContext)
 - uid: QuikGraph.UndirectedGraph`2.#ctor*
   name: UndirectedGraph
   href: api/QuikGraph.UndirectedGraph-2.html#QuikGraph_UndirectedGraph_2__ctor_
@@ -39628,6 +39767,23 @@ references:
   fullName.vb: QuikGraph.UndirectedGraph(Of TVertex, TEdge).Edges
   nameWithType: UndirectedGraph<TVertex, TEdge>.Edges
   nameWithType.vb: UndirectedGraph(Of TVertex, TEdge).Edges
+- uid: QuikGraph.UndirectedGraph`2.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name: GetObjectData(SerializationInfo, StreamingContext)
+  href: api/QuikGraph.UndirectedGraph-2.html#QuikGraph_UndirectedGraph_2_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:QuikGraph.UndirectedGraph`2.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  fullName: QuikGraph.UndirectedGraph<TVertex, TEdge>.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  fullName.vb: QuikGraph.UndirectedGraph(Of TVertex, TEdge).GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  nameWithType: UndirectedGraph<TVertex, TEdge>.GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType.vb: UndirectedGraph(Of TVertex, TEdge).GetObjectData(SerializationInfo, StreamingContext)
+- uid: QuikGraph.UndirectedGraph`2.GetObjectData*
+  name: GetObjectData
+  href: api/QuikGraph.UndirectedGraph-2.html#QuikGraph_UndirectedGraph_2_GetObjectData_
+  commentId: Overload:QuikGraph.UndirectedGraph`2.GetObjectData
+  isSpec: "True"
+  fullName: QuikGraph.UndirectedGraph<TVertex, TEdge>.GetObjectData
+  fullName.vb: QuikGraph.UndirectedGraph(Of TVertex, TEdge).GetObjectData
+  nameWithType: UndirectedGraph<TVertex, TEdge>.GetObjectData
+  nameWithType.vb: UndirectedGraph(Of TVertex, TEdge).GetObjectData
 - uid: QuikGraph.UndirectedGraph`2.IsAdjacentEdgesEmpty(`0)
   name: IsAdjacentEdgesEmpty(TVertex)
   href: api/QuikGraph.UndirectedGraph-2.html#QuikGraph_UndirectedGraph_2_IsAdjacentEdgesEmpty__0_
@@ -39889,6 +40045,25 @@ references:
   fullName.vb: QuikGraph.UndirectedGraph(Of TVertex, TEdge).System.ICloneable.Clone
   nameWithType: UndirectedGraph<TVertex, TEdge>.ICloneable.Clone
   nameWithType.vb: UndirectedGraph(Of TVertex, TEdge).System.ICloneable.Clone
+- uid: QuikGraph.UndirectedGraph`2.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name: ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  href: api/QuikGraph.UndirectedGraph-2.html#QuikGraph_UndirectedGraph_2_System_Runtime_Serialization_ISerializable_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:QuikGraph.UndirectedGraph`2.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name.vb: System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  fullName: QuikGraph.UndirectedGraph<TVertex, TEdge>.System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  fullName.vb: QuikGraph.UndirectedGraph(Of TVertex, TEdge).System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  nameWithType: UndirectedGraph<TVertex, TEdge>.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType.vb: UndirectedGraph(Of TVertex, TEdge).System.Runtime.Serialization.ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+- uid: QuikGraph.UndirectedGraph`2.System#Runtime#Serialization#ISerializable#GetObjectData*
+  name: ISerializable.GetObjectData
+  href: api/QuikGraph.UndirectedGraph-2.html#QuikGraph_UndirectedGraph_2_System_Runtime_Serialization_ISerializable_GetObjectData_
+  commentId: Overload:QuikGraph.UndirectedGraph`2.System#Runtime#Serialization#ISerializable#GetObjectData
+  isSpec: "True"
+  name.vb: System.Runtime.Serialization.ISerializable.GetObjectData
+  fullName: QuikGraph.UndirectedGraph<TVertex, TEdge>.System.Runtime.Serialization.ISerializable.GetObjectData
+  fullName.vb: QuikGraph.UndirectedGraph(Of TVertex, TEdge).System.Runtime.Serialization.ISerializable.GetObjectData
+  nameWithType: UndirectedGraph<TVertex, TEdge>.ISerializable.GetObjectData
+  nameWithType.vb: UndirectedGraph(Of TVertex, TEdge).System.Runtime.Serialization.ISerializable.GetObjectData
 - uid: QuikGraph.UndirectedGraph`2.TrimEdgeExcess
   name: TrimEdgeExcess()
   href: api/QuikGraph.UndirectedGraph-2.html#QuikGraph_UndirectedGraph_2_TrimEdgeExcess
@@ -40156,12 +40331,12 @@ references:
   commentId: M:QuikGraph.VertexNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   fullName: QuikGraph.VertexNotFoundException.VertexNotFoundException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
   nameWithType: VertexNotFoundException.VertexNotFoundException(SerializationInfo, StreamingContext)
-- uid: QuikGraph.VertexNotFoundException.#ctor(System.String)
-  name: VertexNotFoundException(String)
-  href: api/QuikGraph.VertexNotFoundException.html#QuikGraph_VertexNotFoundException__ctor_System_String_
-  commentId: M:QuikGraph.VertexNotFoundException.#ctor(System.String)
-  fullName: QuikGraph.VertexNotFoundException.VertexNotFoundException(System.String)
-  nameWithType: VertexNotFoundException.VertexNotFoundException(String)
+- uid: QuikGraph.VertexNotFoundException.#ctor(System.String,System.Exception)
+  name: VertexNotFoundException(String, Exception)
+  href: api/QuikGraph.VertexNotFoundException.html#QuikGraph_VertexNotFoundException__ctor_System_String_System_Exception_
+  commentId: M:QuikGraph.VertexNotFoundException.#ctor(System.String,System.Exception)
+  fullName: QuikGraph.VertexNotFoundException.VertexNotFoundException(System.String, System.Exception)
+  nameWithType: VertexNotFoundException.VertexNotFoundException(String, Exception)
 - uid: QuikGraph.VertexNotFoundException.#ctor*
   name: VertexNotFoundException
   href: api/QuikGraph.VertexNotFoundException.html#QuikGraph_VertexNotFoundException__ctor_
