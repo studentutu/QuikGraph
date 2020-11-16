@@ -4817,6 +4817,42 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "documentation/general-coding-guidelines.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/general-coding-guidelines.html",
+          "hash": "IqiU8H4uocH5VrjgK6RGSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation/guidelines/csharp-best-practices.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/guidelines/csharp-best-practices.html",
+          "hash": "R6dV25cq0XAgAw6cfM/6tw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation/guidelines/csharp-coding-guidelines.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/guidelines/csharp-coding-guidelines.html",
+          "hash": "t+GjBGcBMkOkadTCc7ICXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "documentation/history.md",
       "output": {
         ".html": {
@@ -4833,7 +4869,29 @@
       "output": {
         ".html": {
           "relative_path": "documentation/toc.html",
-          "hash": "OKAfZVoSQpitHe0UppD4bw=="
+          "hash": "qSCbGYXZwJDjzipQfM5AKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/check.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/check.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/cross.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/cross.svg"
         }
       },
       "is_incremental": false,
@@ -4889,7 +4947,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 4,
+          "total_file_count": 7,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
