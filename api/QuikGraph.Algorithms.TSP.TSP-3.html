@@ -92,14 +92,27 @@ every vertices.</p>
     <div><a class="xref" href="QuikGraph.Algorithms.Services.IAlgorithmComponent.html">IAlgorithmComponent</a></div>
     <div><a class="xref" href="QuikGraph.Algorithms.IVertexColorizerAlgorithm-1.html">IVertexColorizerAlgorithm</a>&lt;TVertex&gt;</div>
     <div><a class="xref" href="QuikGraph.Algorithms.ITreeBuilderAlgorithm-2.html">ITreeBuilderAlgorithm</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.Algorithms.IDistancesCollection-1.html">IDistancesCollection</a>&lt;TVertex&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_Distances">ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt;.Distances</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_GetVertexDistance__0_">ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt;.GetVertexDistance(TVertex)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_SetVertexDistance__0_System_Double_">ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt;.SetVertexDistance(TVertex, Double)</a>
+    </div>
+    <div>
       <a class="xref" href="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_TryGetDistance__0_System_Double__">ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt;.TryGetDistance(TVertex, Double)</a>
     </div>
     <div>
-      <a class="xref" href="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_Distances">ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt;.Distances</a>
+      <a class="xref" href="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_GetDistance__0_">ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt;.GetDistance(TVertex)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_GetDistances">ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt;.GetDistances()</a>
     </div>
     <div>
       <a class="xref" href="QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_DistancesIndexGetter">ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt;.DistancesIndexGetter()</a>
@@ -235,7 +248,7 @@ every vertices.</p>
   <h6><strong>Assembly</strong>: QuikGraph.dll</h6>
   <h5 id="QuikGraph_Algorithms_TSP_TSP_3_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TSP&lt;TVertex, TEdge, TGraph&gt; : ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt;, IAlgorithm&lt;TGraph&gt;, IComputation, IAlgorithmComponent, IVertexColorizerAlgorithm&lt;TVertex&gt;, ITreeBuilderAlgorithm&lt;TVertex, TEdge&gt; where TEdge : EquatableEdge&lt;TVertex&gt; where TGraph : BidirectionalGraph&lt;TVertex, TEdge&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class TSP&lt;TVertex, TEdge, TGraph&gt; : ShortestPathAlgorithmBase&lt;TVertex, TEdge, TGraph&gt;, IAlgorithm&lt;TGraph&gt;, IComputation, IAlgorithmComponent, IVertexColorizerAlgorithm&lt;TVertex&gt;, ITreeBuilderAlgorithm&lt;TVertex, TEdge&gt;, IDistancesCollection&lt;TVertex&gt; where TEdge : EquatableEdge&lt;TVertex&gt; where TGraph : BidirectionalGraph&lt;TVertex, TEdge&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -422,6 +435,9 @@ every vertices.</p>
   </div>
   <div>
       <a class="xref" href="QuikGraph.Algorithms.ITreeBuilderAlgorithm-2.html">ITreeBuilderAlgorithm&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.IDistancesCollection-1.html">IDistancesCollection&lt;TVertex&gt;</a>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>

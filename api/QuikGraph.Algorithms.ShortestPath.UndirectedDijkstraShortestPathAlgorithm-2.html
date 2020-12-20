@@ -91,6 +91,7 @@ with positive distances.</p>
     <div><a class="xref" href="QuikGraph.Algorithms.IComputation.html">IComputation</a></div>
     <div><a class="xref" href="QuikGraph.Algorithms.Services.IAlgorithmComponent.html">IAlgorithmComponent</a></div>
     <div><a class="xref" href="QuikGraph.Algorithms.IVertexColorizerAlgorithm-1.html">IVertexColorizerAlgorithm</a>&lt;TVertex&gt;</div>
+    <div><a class="xref" href="QuikGraph.Algorithms.IDistancesCollection-1.html">IDistancesCollection</a>&lt;TVertex&gt;</div>
     <div><a class="xref" href="QuikGraph.Algorithms.IUndirectedVertexPredecessorRecorderAlgorithm-2.html">IUndirectedVertexPredecessorRecorderAlgorithm</a>&lt;TVertex, TEdge&gt;</div>
     <div><a class="xref" href="QuikGraph.Algorithms.IUndirectedTreeBuilderAlgorithm-2.html">IUndirectedTreeBuilderAlgorithm</a>&lt;TVertex, TEdge&gt;</div>
     <div><a class="xref" href="QuikGraph.Algorithms.IDistanceRecorderAlgorithm-1.html">IDistanceRecorderAlgorithm</a>&lt;TVertex&gt;</div>
@@ -98,10 +99,22 @@ with positive distances.</p>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_Distances">UndirectedShortestPathAlgorithmBase&lt;TVertex, TEdge&gt;.Distances</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetVertexDistance__0_">UndirectedShortestPathAlgorithmBase&lt;TVertex, TEdge&gt;.GetVertexDistance(TVertex)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_SetVertexDistance__0_System_Double_">UndirectedShortestPathAlgorithmBase&lt;TVertex, TEdge&gt;.SetVertexDistance(TVertex, Double)</a>
+    </div>
+    <div>
       <a class="xref" href="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_TryGetDistance__0_System_Double__">UndirectedShortestPathAlgorithmBase&lt;TVertex, TEdge&gt;.TryGetDistance(TVertex, Double)</a>
     </div>
     <div>
-      <a class="xref" href="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_Distances">UndirectedShortestPathAlgorithmBase&lt;TVertex, TEdge&gt;.Distances</a>
+      <a class="xref" href="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetDistance__0_">UndirectedShortestPathAlgorithmBase&lt;TVertex, TEdge&gt;.GetDistance(TVertex)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetDistances">UndirectedShortestPathAlgorithmBase&lt;TVertex, TEdge&gt;.GetDistances()</a>
     </div>
     <div>
       <a class="xref" href="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_DistancesIndexGetter">UndirectedShortestPathAlgorithmBase&lt;TVertex, TEdge&gt;.DistancesIndexGetter()</a>
@@ -243,7 +256,7 @@ with positive distances.</p>
   <h6><strong>Assembly</strong>: QuikGraph.dll</h6>
   <h5 id="QuikGraph_Algorithms_ShortestPath_UndirectedDijkstraShortestPathAlgorithm_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class UndirectedDijkstraShortestPathAlgorithm&lt;TVertex, TEdge&gt; : UndirectedShortestPathAlgorithmBase&lt;TVertex, TEdge&gt;, IAlgorithm&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;, IComputation, IAlgorithmComponent, IVertexColorizerAlgorithm&lt;TVertex&gt;, IUndirectedVertexPredecessorRecorderAlgorithm&lt;TVertex, TEdge&gt;, IUndirectedTreeBuilderAlgorithm&lt;TVertex, TEdge&gt;, IDistanceRecorderAlgorithm&lt;TVertex&gt; where TEdge : IEdge&lt;TVertex&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class UndirectedDijkstraShortestPathAlgorithm&lt;TVertex, TEdge&gt; : UndirectedShortestPathAlgorithmBase&lt;TVertex, TEdge&gt;, IAlgorithm&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;, IComputation, IAlgorithmComponent, IVertexColorizerAlgorithm&lt;TVertex&gt;, IDistancesCollection&lt;TVertex&gt;, IUndirectedVertexPredecessorRecorderAlgorithm&lt;TVertex, TEdge&gt;, IUndirectedTreeBuilderAlgorithm&lt;TVertex, TEdge&gt;, IDistanceRecorderAlgorithm&lt;TVertex&gt; where TEdge : IEdge&lt;TVertex&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -668,6 +681,9 @@ with positive distances.</p>
   </div>
   <div>
       <a class="xref" href="QuikGraph.Algorithms.IVertexColorizerAlgorithm-1.html">IVertexColorizerAlgorithm&lt;TVertex&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.IDistancesCollection-1.html">IDistancesCollection&lt;TVertex&gt;</a>
   </div>
   <div>
       <a class="xref" href="QuikGraph.Algorithms.IUndirectedVertexPredecessorRecorderAlgorithm-2.html">IUndirectedVertexPredecessorRecorderAlgorithm&lt;TVertex, TEdge&gt;</a>

@@ -4230,6 +4230,67 @@ references:
   isSpec: "True"
   fullName: QuikGraph.Algorithms.IDistanceRelaxer.InitialDistance
   nameWithType: IDistanceRelaxer.InitialDistance
+- uid: QuikGraph.Algorithms.IDistancesCollection`1
+  name: IDistancesCollection<TVertex>
+  href: api/QuikGraph.Algorithms.IDistancesCollection-1.html
+  commentId: T:QuikGraph.Algorithms.IDistancesCollection`1
+  name.vb: IDistancesCollection(Of TVertex)
+  fullName: QuikGraph.Algorithms.IDistancesCollection<TVertex>
+  fullName.vb: QuikGraph.Algorithms.IDistancesCollection(Of TVertex)
+  nameWithType: IDistancesCollection<TVertex>
+  nameWithType.vb: IDistancesCollection(Of TVertex)
+- uid: QuikGraph.Algorithms.IDistancesCollection`1.GetDistance(`0)
+  name: GetDistance(TVertex)
+  href: api/QuikGraph.Algorithms.IDistancesCollection-1.html#QuikGraph_Algorithms_IDistancesCollection_1_GetDistance__0_
+  commentId: M:QuikGraph.Algorithms.IDistancesCollection`1.GetDistance(`0)
+  fullName: QuikGraph.Algorithms.IDistancesCollection<TVertex>.GetDistance(TVertex)
+  fullName.vb: QuikGraph.Algorithms.IDistancesCollection(Of TVertex).GetDistance(TVertex)
+  nameWithType: IDistancesCollection<TVertex>.GetDistance(TVertex)
+  nameWithType.vb: IDistancesCollection(Of TVertex).GetDistance(TVertex)
+- uid: QuikGraph.Algorithms.IDistancesCollection`1.GetDistance*
+  name: GetDistance
+  href: api/QuikGraph.Algorithms.IDistancesCollection-1.html#QuikGraph_Algorithms_IDistancesCollection_1_GetDistance_
+  commentId: Overload:QuikGraph.Algorithms.IDistancesCollection`1.GetDistance
+  isSpec: "True"
+  fullName: QuikGraph.Algorithms.IDistancesCollection<TVertex>.GetDistance
+  fullName.vb: QuikGraph.Algorithms.IDistancesCollection(Of TVertex).GetDistance
+  nameWithType: IDistancesCollection<TVertex>.GetDistance
+  nameWithType.vb: IDistancesCollection(Of TVertex).GetDistance
+- uid: QuikGraph.Algorithms.IDistancesCollection`1.GetDistances
+  name: GetDistances()
+  href: api/QuikGraph.Algorithms.IDistancesCollection-1.html#QuikGraph_Algorithms_IDistancesCollection_1_GetDistances
+  commentId: M:QuikGraph.Algorithms.IDistancesCollection`1.GetDistances
+  fullName: QuikGraph.Algorithms.IDistancesCollection<TVertex>.GetDistances()
+  fullName.vb: QuikGraph.Algorithms.IDistancesCollection(Of TVertex).GetDistances()
+  nameWithType: IDistancesCollection<TVertex>.GetDistances()
+  nameWithType.vb: IDistancesCollection(Of TVertex).GetDistances()
+- uid: QuikGraph.Algorithms.IDistancesCollection`1.GetDistances*
+  name: GetDistances
+  href: api/QuikGraph.Algorithms.IDistancesCollection-1.html#QuikGraph_Algorithms_IDistancesCollection_1_GetDistances_
+  commentId: Overload:QuikGraph.Algorithms.IDistancesCollection`1.GetDistances
+  isSpec: "True"
+  fullName: QuikGraph.Algorithms.IDistancesCollection<TVertex>.GetDistances
+  fullName.vb: QuikGraph.Algorithms.IDistancesCollection(Of TVertex).GetDistances
+  nameWithType: IDistancesCollection<TVertex>.GetDistances
+  nameWithType.vb: IDistancesCollection(Of TVertex).GetDistances
+- uid: QuikGraph.Algorithms.IDistancesCollection`1.TryGetDistance(`0,System.Double@)
+  name: TryGetDistance(TVertex, out Double)
+  href: api/QuikGraph.Algorithms.IDistancesCollection-1.html#QuikGraph_Algorithms_IDistancesCollection_1_TryGetDistance__0_System_Double__
+  commentId: M:QuikGraph.Algorithms.IDistancesCollection`1.TryGetDistance(`0,System.Double@)
+  name.vb: TryGetDistance(TVertex, ByRef Double)
+  fullName: QuikGraph.Algorithms.IDistancesCollection<TVertex>.TryGetDistance(TVertex, out System.Double)
+  fullName.vb: QuikGraph.Algorithms.IDistancesCollection(Of TVertex).TryGetDistance(TVertex, ByRef System.Double)
+  nameWithType: IDistancesCollection<TVertex>.TryGetDistance(TVertex, out Double)
+  nameWithType.vb: IDistancesCollection(Of TVertex).TryGetDistance(TVertex, ByRef Double)
+- uid: QuikGraph.Algorithms.IDistancesCollection`1.TryGetDistance*
+  name: TryGetDistance
+  href: api/QuikGraph.Algorithms.IDistancesCollection-1.html#QuikGraph_Algorithms_IDistancesCollection_1_TryGetDistance_
+  commentId: Overload:QuikGraph.Algorithms.IDistancesCollection`1.TryGetDistance
+  isSpec: "True"
+  fullName: QuikGraph.Algorithms.IDistancesCollection<TVertex>.TryGetDistance
+  fullName.vb: QuikGraph.Algorithms.IDistancesCollection(Of TVertex).TryGetDistance
+  nameWithType: IDistancesCollection<TVertex>.TryGetDistance
+  nameWithType.vb: IDistancesCollection(Of TVertex).TryGetDistance
 - uid: QuikGraph.Algorithms.IEdgeColorizerAlgorithm`2
   name: IEdgeColorizerAlgorithm<TVertex, TEdge>
   href: api/QuikGraph.Algorithms.IEdgeColorizerAlgorithm-2.html
@@ -11235,6 +11296,40 @@ references:
   fullName.vb: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).DistancesIndexGetter
   nameWithType: ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.DistancesIndexGetter
   nameWithType.vb: ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).DistancesIndexGetter
+- uid: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.GetDistance(`0)
+  name: GetDistance(TVertex)
+  href: api/QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_GetDistance__0_
+  commentId: M:QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.GetDistance(`0)
+  fullName: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.GetDistance(TVertex)
+  fullName.vb: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).GetDistance(TVertex)
+  nameWithType: ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.GetDistance(TVertex)
+  nameWithType.vb: ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).GetDistance(TVertex)
+- uid: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.GetDistance*
+  name: GetDistance
+  href: api/QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_GetDistance_
+  commentId: Overload:QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.GetDistance
+  isSpec: "True"
+  fullName: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.GetDistance
+  fullName.vb: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).GetDistance
+  nameWithType: ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.GetDistance
+  nameWithType.vb: ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).GetDistance
+- uid: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.GetDistances
+  name: GetDistances()
+  href: api/QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_GetDistances
+  commentId: M:QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.GetDistances
+  fullName: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.GetDistances()
+  fullName.vb: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).GetDistances()
+  nameWithType: ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.GetDistances()
+  nameWithType.vb: ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).GetDistances()
+- uid: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.GetDistances*
+  name: GetDistances
+  href: api/QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_GetDistances_
+  commentId: Overload:QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.GetDistances
+  isSpec: "True"
+  fullName: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.GetDistances
+  fullName.vb: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).GetDistances
+  nameWithType: ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.GetDistances
+  nameWithType.vb: ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).GetDistances
 - uid: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.GetVertexColor(`0)
   name: GetVertexColor(TVertex)
   href: api/QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_GetVertexColor__0_
@@ -11252,6 +11347,23 @@ references:
   fullName.vb: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).GetVertexColor
   nameWithType: ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.GetVertexColor
   nameWithType.vb: ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).GetVertexColor
+- uid: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.GetVertexDistance(`0)
+  name: GetVertexDistance(TVertex)
+  href: api/QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_GetVertexDistance__0_
+  commentId: M:QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.GetVertexDistance(`0)
+  fullName: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.GetVertexDistance(TVertex)
+  fullName.vb: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).GetVertexDistance(TVertex)
+  nameWithType: ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.GetVertexDistance(TVertex)
+  nameWithType.vb: ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).GetVertexDistance(TVertex)
+- uid: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.GetVertexDistance*
+  name: GetVertexDistance
+  href: api/QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_GetVertexDistance_
+  commentId: Overload:QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.GetVertexDistance
+  isSpec: "True"
+  fullName: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.GetVertexDistance
+  fullName.vb: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).GetVertexDistance
+  nameWithType: ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.GetVertexDistance
+  nameWithType.vb: ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).GetVertexDistance
 - uid: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.Initialize
   name: Initialize()
   href: api/QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_Initialize
@@ -11303,6 +11415,23 @@ references:
   fullName.vb: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).Relax
   nameWithType: ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.Relax
   nameWithType.vb: ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).Relax
+- uid: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.SetVertexDistance(`0,System.Double)
+  name: SetVertexDistance(TVertex, Double)
+  href: api/QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_SetVertexDistance__0_System_Double_
+  commentId: M:QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.SetVertexDistance(`0,System.Double)
+  fullName: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.SetVertexDistance(TVertex, System.Double)
+  fullName.vb: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).SetVertexDistance(TVertex, System.Double)
+  nameWithType: ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.SetVertexDistance(TVertex, Double)
+  nameWithType.vb: ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).SetVertexDistance(TVertex, Double)
+- uid: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.SetVertexDistance*
+  name: SetVertexDistance
+  href: api/QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_SetVertexDistance_
+  commentId: Overload:QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.SetVertexDistance
+  isSpec: "True"
+  fullName: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.SetVertexDistance
+  fullName.vb: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).SetVertexDistance
+  nameWithType: ShortestPathAlgorithmBase<TVertex, TEdge, TGraph>.SetVertexDistance
+  nameWithType.vb: ShortestPathAlgorithmBase(Of TVertex, TEdge, TGraph).SetVertexDistance
 - uid: QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase`3.TreeEdge
   name: TreeEdge
   href: api/QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html#QuikGraph_Algorithms_ShortestPath_ShortestPathAlgorithmBase_3_TreeEdge
@@ -11585,6 +11714,40 @@ references:
   fullName.vb: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).DistancesIndexGetter
   nameWithType: UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.DistancesIndexGetter
   nameWithType.vb: UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).DistancesIndexGetter
+- uid: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetDistance(`0)
+  name: GetDistance(TVertex)
+  href: api/QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetDistance__0_
+  commentId: M:QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetDistance(`0)
+  fullName: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.GetDistance(TVertex)
+  fullName.vb: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).GetDistance(TVertex)
+  nameWithType: UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.GetDistance(TVertex)
+  nameWithType.vb: UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).GetDistance(TVertex)
+- uid: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetDistance*
+  name: GetDistance
+  href: api/QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetDistance_
+  commentId: Overload:QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetDistance
+  isSpec: "True"
+  fullName: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.GetDistance
+  fullName.vb: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).GetDistance
+  nameWithType: UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.GetDistance
+  nameWithType.vb: UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).GetDistance
+- uid: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetDistances
+  name: GetDistances()
+  href: api/QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetDistances
+  commentId: M:QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetDistances
+  fullName: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.GetDistances()
+  fullName.vb: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).GetDistances()
+  nameWithType: UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.GetDistances()
+  nameWithType.vb: UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).GetDistances()
+- uid: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetDistances*
+  name: GetDistances
+  href: api/QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetDistances_
+  commentId: Overload:QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetDistances
+  isSpec: "True"
+  fullName: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.GetDistances
+  fullName.vb: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).GetDistances
+  nameWithType: UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.GetDistances
+  nameWithType.vb: UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).GetDistances
 - uid: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetVertexColor(`0)
   name: GetVertexColor(TVertex)
   href: api/QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetVertexColor__0_
@@ -11602,6 +11765,23 @@ references:
   fullName.vb: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).GetVertexColor
   nameWithType: UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.GetVertexColor
   nameWithType.vb: UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).GetVertexColor
+- uid: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetVertexDistance(`0)
+  name: GetVertexDistance(TVertex)
+  href: api/QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetVertexDistance__0_
+  commentId: M:QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetVertexDistance(`0)
+  fullName: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.GetVertexDistance(TVertex)
+  fullName.vb: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).GetVertexDistance(TVertex)
+  nameWithType: UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.GetVertexDistance(TVertex)
+  nameWithType.vb: UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).GetVertexDistance(TVertex)
+- uid: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetVertexDistance*
+  name: GetVertexDistance
+  href: api/QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetVertexDistance_
+  commentId: Overload:QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetVertexDistance
+  isSpec: "True"
+  fullName: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.GetVertexDistance
+  fullName.vb: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).GetVertexDistance
+  nameWithType: UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.GetVertexDistance
+  nameWithType.vb: UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).GetVertexDistance
 - uid: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.Initialize
   name: Initialize()
   href: api/QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_Initialize
@@ -11653,6 +11833,23 @@ references:
   fullName.vb: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).Relax
   nameWithType: UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.Relax
   nameWithType.vb: UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).Relax
+- uid: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.SetVertexDistance(`0,System.Double)
+  name: SetVertexDistance(TVertex, Double)
+  href: api/QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_SetVertexDistance__0_System_Double_
+  commentId: M:QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.SetVertexDistance(`0,System.Double)
+  fullName: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.SetVertexDistance(TVertex, System.Double)
+  fullName.vb: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).SetVertexDistance(TVertex, System.Double)
+  nameWithType: UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.SetVertexDistance(TVertex, Double)
+  nameWithType.vb: UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).SetVertexDistance(TVertex, Double)
+- uid: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.SetVertexDistance*
+  name: SetVertexDistance
+  href: api/QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_SetVertexDistance_
+  commentId: Overload:QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.SetVertexDistance
+  isSpec: "True"
+  fullName: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.SetVertexDistance
+  fullName.vb: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).SetVertexDistance
+  nameWithType: UndirectedShortestPathAlgorithmBase<TVertex, TEdge>.SetVertexDistance
+  nameWithType.vb: UndirectedShortestPathAlgorithmBase(Of TVertex, TEdge).SetVertexDistance
 - uid: QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.TreeEdge
   name: TreeEdge
   href: api/QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_TreeEdge
