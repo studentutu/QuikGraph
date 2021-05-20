@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
@@ -20,14 +20,14 @@ namespace QuikGraph.Tests.Algorithms.Observers
             CollectionAssert.IsEmpty(recorder.EdgesPredecessors);
             CollectionAssert.IsEmpty(recorder.EndPathEdges);
 
-            var predecessors = new Dictionary<Edge<int>, Edge<int>>();
+            var predecessors = new Dictionary<Edge<int>, List<Edge<int>>>();
             recorder = new EdgePredecessorRecorderObserver<int, Edge<int>>(predecessors);
             Assert.AreSame(predecessors, recorder.EdgesPredecessors);
             CollectionAssert.IsEmpty(recorder.EndPathEdges);
 
-            predecessors = new Dictionary<Edge<int>, Edge<int>>
+            predecessors = new Dictionary<Edge<int>, List<Edge<int>>>
             {
-                [new Edge<int>(3, 2)] = new Edge<int>(2, 1)
+                [new Edge<int>(3, 2)] = new List<Edge<int>> { new Edge<int>(2, 1) }
             };
             recorder = new EdgePredecessorRecorderObserver<int, Edge<int>>(predecessors);
             Assert.AreSame(predecessors, recorder.EdgesPredecessors);
@@ -263,57 +263,139 @@ namespace QuikGraph.Tests.Algorithms.Observers
         [Test]
         public void AllPaths()
         {
+            //{
+            //    var startNode = "0";
+            //    //var endNode = "2";
+
+            //    var graph = new AdjacencyGraph<string, TaggedEdge<string, string>>(allowParallelEdges: true);
+
+            //    var edges = new List<TaggedEdge<string, string>>{
+            //        new TaggedEdge<string, string>("0", "1", "edge A"),
+            //        new TaggedEdge<string, string>("0", "1", "edge B"),
+            //        new TaggedEdge<string, string>("1", "2", string.Empty),
+            //        new TaggedEdge<string, string>("0", "2", string.Empty),
+            //        new TaggedEdge<string, string>("0", "3", string.Empty),
+            //        new TaggedEdge<string, string>("1", "3", string.Empty), };
+            //    edges.ForEach(x => graph.AddVerticesAndEdge(x));
+
+            //    var algo = new EdgeDepthFirstSearchAlgorithm<string, TaggedEdge<string, string>>(graph);
+            //    var observer = new EdgePredecessorRecorderObserver<string, TaggedEdge<string, string>>();
+
+            //    using (observer.Attach(algo))
+            //    {
+            //        algo.Compute(startNode);
+            //    }
+
+            //    var allPaths = observer.AllPaths()/*.Where(x => x.Last().Target == endNode)*/.ToArray();
+            //}
+
+            //{
+            //    var startNode = "A";
+            //    //var endNode = "D";
+
+            //    var graph = new AdjacencyGraph<string, TaggedEdge<string, string>>(allowParallelEdges: true);
+
+            //    var edges = new List<TaggedEdge<string, string>>{
+            //        new TaggedEdge<string, string>("A", "B", "edge 1"),
+            //        new TaggedEdge<string, string>("A", "B", "edge 2"),
+            //        new TaggedEdge<string, string>("B", "C", "edge 1"),
+            //        new TaggedEdge<string, string>("B", "C", "edge 2"),
+            //        new TaggedEdge<string, string>("C", "D", string.Empty),
+            //        new TaggedEdge<string, string>("B", "D", string.Empty), };
+            //    edges.ForEach(x => graph.AddVerticesAndEdge(x));
+
+            //    var algo = new EdgeDepthFirstSearchAlgorithm<string, TaggedEdge<string, string>>(graph);
+            //    var observer = new EdgePredecessorRecorderObserver<string, TaggedEdge<string, string>>();
+
+            //    using (observer.Attach(algo))
+            //    {
+            //        algo.Compute(startNode);
+            //    }
+
+            //    var allPaths = observer.AllPaths()/*.Where(x => x.Last().Target == endNode)*/.ToArray();
+            //}
+
+            //{
+            //    var startNode = "2";
+            //    //var endNode = "2";
+
+            //    var graph = new AdjacencyGraph<string, Edge<string>>(allowParallelEdges: true);
+
+            //    var edges = new List<Edge<string>>{
+            //        new Edge<string>("0", "2"),
+            //        new Edge<string>("2", "0"),
+            //        new Edge<string>("0", "1"),
+            //        new Edge<string>("0", "3"),
+            //        new Edge<string>("2", "1"),
+            //        new Edge<string>("1", "3"), };
+            //    edges.ForEach(x => graph.AddVerticesAndEdge(x));
+
+            //    var algo = new EdgeDepthFirstSearchAlgorithm<string, Edge<string>>(graph);
+            //    var observer = new EdgePredecessorRecorderObserver<string, Edge<string>>();
+
+            //    using (observer.Attach(algo))
+            //    {
+            //        algo.Compute(startNode);
+            //    }
+
+            //    var allPaths = observer.AllPaths()/*.Where(x => x.Last().Target == endNode)*/.ToArray();
+            //}
+
             {
-                var startNode = "0";
-                var endNode = "2";
+                var startNode = "2";
+                //var endNode = "2";
 
-                var graph = new AdjacencyGraph<string, TaggedEdge<string, string>>(allowParallelEdges: true);
+                var graph = new AdjacencyGraph<string, Edge<string>>(allowParallelEdges: true);
 
-                var edges = new List<TaggedEdge<string, string>>{
-                    new TaggedEdge<string, string>("0", "1", "edge A"),
-                    new TaggedEdge<string, string>("0", "1", "edge B"),
-                    new TaggedEdge<string, string>("1", "2", string.Empty),
-                    new TaggedEdge<string, string>("0", "2", string.Empty),
-                    new TaggedEdge<string, string>("0", "3", string.Empty),
-                    new TaggedEdge<string, string>("1", "3", string.Empty), };
+                var edges = new List<Edge<string>>{
+                    //new Edge<string>("0", "2"),
+                    new Edge<string>("2", "0"),
+                    new Edge<string>("0", "1"),
+                    new Edge<string>("1", "0"),
+                    new Edge<string>("0", "3"),
+                    new Edge<string>("2", "1"),
+                    new Edge<string>("1", "3"), };
                 edges.ForEach(x => graph.AddVerticesAndEdge(x));
 
-                var algo = new EdgeDepthFirstSearchAlgorithm<string, TaggedEdge<string, string>>(graph);
-                var observer = new EdgePredecessorRecorderObserver<string, TaggedEdge<string, string>>();
+                var algo = new EdgeDepthFirstSearchAlgorithm<string, Edge<string>>(graph);
+                var observer = new EdgePredecessorRecorderObserver<string, Edge<string>>();
 
                 using (observer.Attach(algo))
                 {
                     algo.Compute(startNode);
                 }
 
-                var allPaths = observer.AllPaths().Where(x => x.Last().Target == endNode).ToArray();
+                var allPaths = observer.AllPaths()/*.Where(x => x.Last().Target == endNode)*/.ToArray();
             }
-            {
-                var startNode = "0";
-                var endNode = "2";
 
-                var graph = new AdjacencyGraph<string, TaggedEdge<string, string>>(allowParallelEdges: true);
 
-                var edges = new List<TaggedEdge<string, string>>{
-                    new TaggedEdge<string, string>("0", "1", "edge A"),
-                    new TaggedEdge<string, string>("0", "1", "edge B"),
-                    new TaggedEdge<string, string>("1", "2", string.Empty),
-                    new TaggedEdge<string, string>("0", "2", string.Empty),
-                    new TaggedEdge<string, string>("0", "3", string.Empty),
-                    new TaggedEdge<string, string>("1", "3", string.Empty), };
-                edges.ForEach(x => graph.AddVerticesAndEdge(x));
 
-                //var algo = new DepthFirstSearchAlgorithm<string, TaggedEdge<string, string>>(graph);
-                var algo = new BreadthFirstSearchAlgorithm<string, TaggedEdge<string, string>>(graph);
-                var observer = new VertexPredecessorPathRecorderObserver<string, TaggedEdge<string, string>>();
+            //{
+            //    var startNode = "0";
+            //    var endNode = "2";
 
-                using (observer.Attach(algo))
-                {
-                    algo.Compute(startNode);
-                }
+            //    var graph = new AdjacencyGraph<string, TaggedEdge<string, string>>(allowParallelEdges: true);
 
-                var allPaths = observer.AllPaths().Where(x => x.Last().Target == endNode).ToArray();
-            }
+            //    var edges = new List<TaggedEdge<string, string>>{
+            //        new TaggedEdge<string, string>("0", "1", "edge A"),
+            //        new TaggedEdge<string, string>("0", "1", "edge B"),
+            //        new TaggedEdge<string, string>("1", "2", string.Empty),
+            //        new TaggedEdge<string, string>("0", "2", string.Empty),
+            //        new TaggedEdge<string, string>("0", "3", string.Empty),
+            //        new TaggedEdge<string, string>("1", "3", string.Empty), };
+            //    edges.ForEach(x => graph.AddVerticesAndEdge(x));
+
+            //    //var algo = new DepthFirstSearchAlgorithm<string, TaggedEdge<string, string>>(graph);
+            //    var algo = new BreadthFirstSearchAlgorithm<string, TaggedEdge<string, string>>(graph);
+            //    var observer = new VertexPredecessorPathRecorderObserver<string, TaggedEdge<string, string>>();
+
+            //    using (observer.Attach(algo))
+            //    {
+            //        algo.Compute(startNode);
+            //    }
+
+            //    var allPaths = observer.AllPaths().Where(x => x.Last().Target == endNode).ToArray();
+            //}
 
 
 

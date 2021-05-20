@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using JetBrains.Annotations;
@@ -95,12 +95,12 @@ namespace QuikGraph.Algorithms.Search
         /// </summary>
         public event EdgeEdgeAction<TVertex, TEdge> DiscoverTreeEdge;
 
-        private void OnDiscoverTreeEdge([NotNull] TEdge edge, [NotNull] TEdge targetEdge)
+        private void OnDiscoverTreeEdge([NotNull] TEdge sourceEdge, [NotNull] TEdge edge)
         {
+            Debug.Assert(sourceEdge != null);
             Debug.Assert(edge != null);
-            Debug.Assert(targetEdge != null);
 
-            DiscoverTreeEdge?.Invoke(edge, targetEdge);
+            DiscoverTreeEdge?.Invoke(sourceEdge, edge);
         }
 
         /// <summary>

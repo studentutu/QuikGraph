@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using JetBrains.Annotations;
@@ -128,12 +128,12 @@ namespace QuikGraph.Algorithms.Search
         /// <inheritdoc />
         public event EdgeEdgeAction<TVertex, TEdge> DiscoverTreeEdge;
 
-        private void OnDiscoverTreeEdge([NotNull] TEdge edge, [NotNull] TEdge targetEdge)
+        private void OnDiscoverTreeEdge([NotNull] TEdge sourceEdge, [NotNull] TEdge edge)
         {
+            Debug.Assert(sourceEdge != null);
             Debug.Assert(edge != null);
-            Debug.Assert(targetEdge != null);
 
-            DiscoverTreeEdge?.Invoke(edge, targetEdge);
+            DiscoverTreeEdge?.Invoke(sourceEdge, edge);
         }
 
         /// <summary>
@@ -160,16 +160,15 @@ namespace QuikGraph.Algorithms.Search
             BackEdge?.Invoke(edge);
         }
 
-        /// <summary>
-        /// Fired when an edge is going to be treated when coming from a black edge.
-        /// </summary>
-        public event EdgeAction<TVertex, TEdge> ForwardOrCrossEdge;
+        /// <inheritdoc />
+        public event EdgeEdgeAction<TVertex, TEdge> ForwardOrCrossEdge;
 
-        private void OnForwardOrCrossEdge([NotNull] TEdge edge)
+        private void OnForwardOrCrossEdge([NotNull] TEdge sourceEdge, [NotNull] TEdge edge)
         {
+            Debug.Assert(sourceEdge != null);
             Debug.Assert(edge != null);
 
-            ForwardOrCrossEdge?.Invoke(edge);
+            ForwardOrCrossEdge?.Invoke(sourceEdge, edge);
         }
 
         /// <inheritdoc />
@@ -295,7 +294,7 @@ namespace QuikGraph.Algorithms.Search
                 else
                 {
                     // Edge is black
-                    OnForwardOrCrossEdge(edge);
+                    OnForwardOrCrossEdge(rootEdge, edge);
                 }
             }
 

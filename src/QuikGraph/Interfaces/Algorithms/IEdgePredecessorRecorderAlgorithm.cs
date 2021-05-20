@@ -1,4 +1,4 @@
-namespace QuikGraph.Algorithms
+﻿namespace QuikGraph.Algorithms
 {
     /// <summary>
     /// An algorithm that exposes events to compute edges predecessors.
@@ -12,6 +12,11 @@ namespace QuikGraph.Algorithms
         /// Fired when an edge is discovered.
         /// </summary>
         event EdgeEdgeAction<TVertex, TEdge> DiscoverTreeEdge;
+
+        /// <summary>
+        /// Fired when an edge is going to be treated when coming from a black edge.
+        /// </summary>
+        event EdgeEdgeAction<TVertex, TEdge> ForwardOrCrossEdge;
 
         /// <summary>
         /// Fired when an edge is fully treated.

@@ -1,4 +1,4 @@
-using JetBrains.Annotations;
+﻿using JetBrains.Annotations;
 
 namespace QuikGraph
 {
@@ -7,8 +7,8 @@ namespace QuikGraph
     /// </summary>
     /// <typeparam name="TVertex">Vertex type.</typeparam>
     /// <typeparam name="TEdge">Edge type.</typeparam>
-    /// <param name="edge">First edge.</param>
-    /// <param name="targetEdge">Second edge.</param>
-    public delegate void EdgeEdgeAction<TVertex, in TEdge>([NotNull] TEdge edge, [NotNull] TEdge targetEdge)
+    /// <param name="edge1">First edge.</param>
+    /// <param name="edge2">Second edge.</param>
+    public delegate void EdgeEdgeAction<TVertex, in TEdge>([NotNull] TEdge edge1, [NotNull] TEdge edge2)
         where TEdge : IEdge<TVertex>;
 }

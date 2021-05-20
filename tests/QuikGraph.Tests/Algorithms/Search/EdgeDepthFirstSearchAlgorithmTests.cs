@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using NUnit.Framework;
@@ -63,8 +63,9 @@ namespace QuikGraph.Tests.Algorithms.Search
                 Assert.AreEqual(GraphColor.Gray, dfs.EdgesColors[edge]);
             };
 
-            dfs.ForwardOrCrossEdge += edge =>
+            dfs.ForwardOrCrossEdge += (sourceEdge, edge) =>
             {
+                Assert.AreEqual(GraphColor.Black, dfs.EdgesColors[sourceEdge]);
                 Assert.AreEqual(GraphColor.Black, dfs.EdgesColors[edge]);
             };
 

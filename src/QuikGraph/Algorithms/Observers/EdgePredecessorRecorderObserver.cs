@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -22,7 +22,7 @@ namespace QuikGraph.Algorithms.Observers
         /// Initializes a new instance of the <see cref="EdgePredecessorRecorderObserver{TVertex,TEdge}"/> class.
         /// </summary>
         public EdgePredecessorRecorderObserver()
-            : this(new Dictionary<TEdge, TEdge>())
+            : this(new Dictionary<TEdge, List<TEdge>>())
         {
         }
 
@@ -31,7 +31,7 @@ namespace QuikGraph.Algorithms.Observers
         /// </summary>
         /// <param name="edgesPredecessors">Edges predecessors.</param>
         public EdgePredecessorRecorderObserver(
-            [NotNull] IDictionary<TEdge, TEdge> edgesPredecessors)
+            [NotNull] IDictionary<TEdge, List<TEdge>> edgesPredecessors)
         {
             EdgesPredecessors = edgesPredecessors ?? throw new ArgumentNullException(nameof(edgesPredecessors));
             EndPathEdges = new List<TEdge>();
@@ -41,7 +41,7 @@ namespace QuikGraph.Algorithms.Observers
         /// Edges predecessors.
         /// </summary>
         [NotNull]
-        public IDictionary<TEdge, TEdge> EdgesPredecessors { get; }
+        public IDictionary<TEdge, List<TEdge>> EdgesPredecessors { get; }//hashset
 
         /// <summary>
         /// Path ending edges.
@@ -58,11 +58,13 @@ namespace QuikGraph.Algorithms.Observers
                 throw new ArgumentNullException(nameof(algorithm));
 
             algorithm.DiscoverTreeEdge += OnEdgeDiscovered;
+            algorithm.ForwardOrCrossEdge += OnEdgeForwardedOrCrossed;
             algorithm.FinishEdge += OnEdgeFinished;
 
             return Finally(() =>
             {
                 algorithm.DiscoverTreeEdge -= OnEdgeDiscovered;
+                algorithm.ForwardOrCrossEdge -= OnEdgeForwardedOrCrossed;
                 algorithm.FinishEdge -= OnEdgeFinished;
             });
         }
@@ -84,14 +86,64 @@ namespace QuikGraph.Algorithms.Observers
             var path = new List<TEdge> { startingEdge };
 
             TEdge currentEdge = startingEdge;
-            while (EdgesPredecessors.TryGetValue(currentEdge, out TEdge edge))
+            while (EdgesPredecessors.TryGetValue(currentEdge, out List<TEdge> edges))
             {
+                TEdge edge = edges.First();
                 path.Add(edge);
                 currentEdge = edge;
             }
 
             path.Reverse();
             return path;
+        }
+
+        /// <summary>
+        /// Gets a path starting with <paramref name="startingEdge"/>.
+        /// </summary>
+        /// <param name="startingEdge">Starting edge.</param>
+        /// <returns>Edge path.</returns>
+        [Pure]
+        [NotNull, ItemNotNull]
+        public IEnumerable<ICollection<TEdge>> Paths([NotNull] TEdge startingEdge)
+        {
+            if (startingEdge == null)
+                throw new ArgumentNullException(nameof(startingEdge));
+
+            var paths = new List<ICollection<TEdge>> { new List<TEdge> { startingEdge } };
+
+            TEdge currentEdge = startingEdge;
+            while (EdgesPredecessors.TryGetValue(currentEdge, out List<TEdge> edges))
+            {
+                int pathsCount = paths.Count;
+                int nbPredecessors = edges.Count;
+                // Multiply the number of paths (if needed)
+                if (nbPredecessors > 1)
+                {
+                    for (int duplication = 0; duplication < nbPredecessors - 1; ++duplication)
+                    {
+                        for (int i = 0; i < pathsCount; ++i)
+                        {
+                            paths.Add(new List<TEdge>(paths[i]));
+                        }
+                    }
+                }
+
+                // Append predecessors to paths
+                for (int i = 0; i < nbPredecessors; ++i)
+                {
+                    for (int j = 0; j < pathsCount; ++j)
+                    {
+                        paths[i * pathsCount + j].Add(edges[i]);
+                    }
+                }
+
+                currentEdge = edges.First();
+            }
+
+            foreach (ICollection<TEdge> path in paths)
+            {
+                yield return path.Reverse().ToArray();
+            }
         }
 
         /// <summary>
@@ -102,7 +154,7 @@ namespace QuikGraph.Algorithms.Observers
         [NotNull, ItemNotNull]
         public IEnumerable<ICollection<TEdge>> AllPaths()
         {
-            return EndPathEdges.Select(Path);
+            return EndPathEdges.SelectMany(Paths);
         }
 
         /// <summary>
@@ -131,20 +183,20 @@ namespace QuikGraph.Algorithms.Observers
             colors[currentEdge] = GraphColor.Black;
 
             path.Add(currentEdge);
-            while (EdgesPredecessors.TryGetValue(currentEdge, out TEdge edge))
-            {
-                color = colors[edge];
-                if (color != GraphColor.White)
-                {
-                    path.Reverse();
-                    return path;
-                }
+            //while (EdgesPredecessors.TryGetValue(currentEdge, out TEdge edge))
+            //{
+            //    color = colors[edge];
+            //    if (color != GraphColor.White)
+            //    {
+            //        path.Reverse();
+            //        return path;
+            //    }
 
-                colors[edge] = GraphColor.Black;
+            //    colors[edge] = GraphColor.Black;
 
-                path.Add(edge);
-                currentEdge = edge;
-            }
+            //    path.Add(edge);
+            //    currentEdge = edge;
+            //}
 
             path.Reverse();
             return path;
@@ -160,31 +212,58 @@ namespace QuikGraph.Algorithms.Observers
         {
             var colors = new Dictionary<TEdge, GraphColor>();
 
-            foreach (KeyValuePair<TEdge, TEdge> pair in EdgesPredecessors)
-            {
-                colors[pair.Key] = GraphColor.White;
-                colors[pair.Value] = GraphColor.White;
-            }
+            //foreach (KeyValuePair<TEdge, TEdge> pair in EdgesPredecessors)
+            //{
+            //    colors[pair.Key] = GraphColor.White;
+            //    colors[pair.Value] = GraphColor.White;
+            //}
 
             return EndPathEdges.Select(edge => MergedPath(edge, colors));
         }
 
-        private void OnEdgeDiscovered([NotNull] TEdge edge, [NotNull] TEdge targetEdge)
+        private void OnEdgeDiscovered([NotNull] TEdge sourceEdge, [NotNull] TEdge edge)
         {
+            Debug.Assert(sourceEdge != null);
             Debug.Assert(edge != null);
-            Debug.Assert(targetEdge != null);
 
-            if (!EqualityComparer<TEdge>.Default.Equals(edge, targetEdge))
-                EdgesPredecessors[targetEdge] = edge;
+            if (!EqualityComparer<TEdge>.Default.Equals(sourceEdge, edge))
+            {
+                if (EdgesPredecessors.TryGetValue(edge, out List<TEdge> predecessors))
+                {
+                    predecessors.Add(sourceEdge);
+                }
+                else
+                {
+                    EdgesPredecessors[edge] = new List<TEdge> { sourceEdge };
+                }
+            }
+        }
+
+        private void OnEdgeForwardedOrCrossed([NotNull] TEdge sourceEdge, [NotNull] TEdge edge)
+        {
+            Debug.Assert(sourceEdge != null);
+            Debug.Assert(edge != null);
+
+            if (!EqualityComparer<TEdge>.Default.Equals(sourceEdge, edge))
+            {
+                if (EdgesPredecessors.TryGetValue(edge, out List<TEdge> predecessors))
+                {
+                    predecessors.Add(sourceEdge);
+                }
+                else
+                {
+                    EdgesPredecessors[edge] = new List<TEdge> { sourceEdge };
+                }
+            }
         }
 
         private void OnEdgeFinished([NotNull] TEdge finishedEdge)
         {
             Debug.Assert(finishedEdge != null);
 
-            foreach (TEdge edge in EdgesPredecessors.Values)
+            foreach (List<TEdge> edges in EdgesPredecessors.Values)
             {
-                if (EqualityComparer<TEdge>.Default.Equals(finishedEdge, edge))
+                if (edges.Contains(finishedEdge, EqualityComparer<TEdge>.Default))
                     return;
             }
 

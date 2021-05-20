@@ -12,6 +12,43 @@ namespace QuikGraph.Serialization.Tests
     [TestFixture]
     internal class SystemSerializationTests
     {
+        [Test]
+        public void Test()
+        {
+            var graph = new UndirectedGraph<VertexTest, EdgeTest>();
+
+            for (var i = 0; i < 50000; i++)
+            {
+                AddRoad(graph);
+            }
+
+            using var stream = new MemoryStream();
+            SerializationExtensions.SerializeToBinary(graph, stream);
+        }
+
+        [Serializable]
+        class VertexTest
+        {
+        }
+
+        [Serializable]
+        class EdgeTest : IEdge<VertexTest>
+        {
+            public VertexTest Source { get; set; }
+            public VertexTest Target { get; set; }
+        }
+
+        private static void AddRoad(UndirectedGraph<VertexTest, EdgeTest> graph)
+        {
+            var node1 = new VertexTest();
+            var node2 = new VertexTest();
+            graph.AddVertex(node1);
+            graph.AddVertex(node2);
+
+            var edge = new EdgeTest() {Source = node1, Target = node2 };
+            graph.AddEdge(edge);
+        }
+
         #region Helpers
 
         [Pure]

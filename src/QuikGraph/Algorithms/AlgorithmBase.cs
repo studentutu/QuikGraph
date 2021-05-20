@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 #if SUPPORTS_AGGRESSIVE_INLINING
@@ -18,6 +18,7 @@ namespace QuikGraph.Algorithms
 #endif
     public abstract class AlgorithmBase<TGraph> : IAlgorithm<TGraph>, IAlgorithmComponent
     {
+        private readonly int m_int = 1;
         /// <summary>
         /// Initializes a new instance of the <see cref="AlgorithmBase{TGraph}"/> class (with optional host).
         /// </summary>
@@ -25,6 +26,21 @@ namespace QuikGraph.Algorithms
         /// <param name="visitedGraph">Graph to visit.</param>
         protected AlgorithmBase([CanBeNull] IAlgorithmComponent host, [NotNull] TGraph visitedGraph)
         {
+            m_int++;
+            if (m_int == 2)
+            {
+
+            }
+            switch (m_int)
+            {
+                case 1:
+                    break;
+            }
+            if (m_int == 1)
+            {
+
+            }
+
             if (visitedGraph == null)
                 throw new ArgumentNullException(nameof(visitedGraph));
 
