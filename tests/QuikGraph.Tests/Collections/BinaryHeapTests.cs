@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using JetBrains.Annotations;
@@ -26,7 +26,39 @@ namespace QuikGraph.Tests.Collections
             Assert.IsTrue(heap.Capacity >= 0, "Capacity test failed.");
             Assert.IsTrue(heap.Count >= 0, "Count test failed.");
             Assert.IsTrue(heap.Count <= heap.Capacity, "Count and capacity comparison failed.");
-            Assert.IsTrue(heap.IsConsistent(), "IsConsistent test failed.");
+            Assert.IsTrue(IsConsistent(), "IsConsistent test failed.");
+
+            #region Local function
+
+            bool IsConsistent()
+            {
+                KeyValuePair<TPriority, TValue>[] heapItems = heap.ToPairsArray();
+                int wrong = -1;
+
+                for (int i = 0; i < heap.Count; ++i)
+                {
+                    int l = 2 * i + 1;
+                    int r = 2 * i + 2;
+                    if (l < heap.Count && !LessOrEqual(i, l))
+                        wrong = i;
+                    if (r < heap.Count && !LessOrEqual(i, r))
+                        wrong = i;
+                }
+
+                bool correct = wrong == -1;
+                return correct;
+
+                #region Local function
+
+                bool LessOrEqual(int i, int j)
+                {
+                    return Comparer<TPriority>.Default.Compare(heapItems[i].Key, heapItems[j].Key) <= 0;
+                }
+
+                #endregion
+            }
+
+            #endregion
         }
 
         private static void AssertHeapSize<TPriority, TValue>(

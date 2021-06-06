@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using NUnit.Framework;
 using QuikGraph.Collections;
-using static QuikGraph.Collections.HeapConstants;
 using static QuikGraph.Tests.AssertHelpers;
 
 namespace QuikGraph.Tests.Collections
@@ -279,6 +279,9 @@ namespace QuikGraph.Tests.Collections
 
             #endregion
         }
+
+        [NotNull]
+        private const string Consistent = "Is_Consistent";
 
         [Test]
         public void ToString2()

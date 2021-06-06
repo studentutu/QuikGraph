@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net461;net462;net47;net471;net472;netcoreapp2.1</TargetFrameworks>
+      <TargetFrameworks>net472</TargetFrameworks>
+
+    <!--<TargetFrameworks>net461;net462;net47;net471;net472;netcoreapp2.1</TargetFrameworks>-->
 
     <Title>QuikGraph.MSAGL.Tests</Title>
 
@@ -35,7 +37,7 @@
 
   <!-- Dependencies -->
   <!-- Shared Projects -->
-  <Import Project="..\..\src\QuikGraph.CommonInternals\QuikGraph.CommonInternals.projitems" Label="Shared" />
+  <!--<Import Project="..\..\src\QuikGraph.CommonInternals\QuikGraph.CommonInternals.projitems" Label="Shared" />-->
 
   <!-- Projects -->
   <!-- QuikGraph.MSAGL reference -->
@@ -46,5 +48,8 @@
   </ItemGroup>
   <ItemGroup Condition="!$(UseQuikGraphMSAGLNuget)">
     <ProjectReference Include="..\..\src\QuikGraph.MSAGL\QuikGraph.MSAGL.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuikGraphTestsCommon\QuikGraphTestsCommon.csproj" />
   </ItemGroup>
 </Project>

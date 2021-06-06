@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
@@ -56,7 +56,7 @@ namespace QuikGraph.Algorithms
             // If no true elements returns (null, null)
             // If only one true element, returns (indexOfTrue, null)
             int? firstIndex = null;
-            for (int i = 0; i < data.Length; i++)
+            for (int i = 0; i < data.Length; ++i)
             {
                 if (data[i])
                 {

@@ -82,4 +82,9 @@ Updates:
   <ItemGroup Condition="!$(UseQuikGraphCoreNuget)">
     <ProjectReference Include="..\QuikGraph\QuikGraph.csproj" />
   </ItemGroup>
+  <ItemGroup>
+      <!--<Compile Include="..\QuikGraph.CommonInternals\DisposableHelpers.cs" Link="DisposableHelpers.cs" />-->
+      <!--<Compile Include="..\QuikGraph.CommonInternals\Externs\JetBrains.Annotations.cs" Link="JetBrains.Annotations.cs" />-->
+      <!--<Compile Include="..\QuikGraph.CommonInternals\Signing\PublicKey.cs" Link="PublicKey.cs" />-->
+  </ItemGroup>
 </Project>

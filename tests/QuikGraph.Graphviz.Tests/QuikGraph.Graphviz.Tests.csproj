@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net35;net40;net45;net451;net452;net46;net461;net462;net47;net471;net472;netcoreapp2.1</TargetFrameworks>
+    <TargetFrameworks>net472</TargetFrameworks>
+
+    <!--<TargetFrameworks>net35;net40;net45;net451;net452;net46;net461;net462;net47;net471;net472;netcoreapp2.1</TargetFrameworks>-->
 
     <Title>QuikGraph.Graphviz.Tests</Title>
 
@@ -58,7 +60,7 @@
   </ItemGroup>
 
   <!-- Shared Projects -->
-  <Import Project="..\..\src\QuikGraph.CommonInternals\QuikGraph.CommonInternals.projitems" Label="Shared" />
+  <!--<Import Project="..\..\src\QuikGraph.CommonInternals\QuikGraph.CommonInternals.projitems" Label="Shared" />-->
 
   <!-- Projects -->
   <!-- QuikGraph.Graphviz reference -->
@@ -67,5 +69,8 @@
   </ItemGroup>
   <ItemGroup Condition="!$(UseQuikGraphGraphvizNuget)">
     <ProjectReference Include="..\..\src\QuikGraph.Graphviz\QuikGraph.Graphviz.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuikGraphTestsCommon\QuikGraphTestsCommon.csproj" />
   </ItemGroup>
 </Project>

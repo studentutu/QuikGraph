@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net35;net40;net45;net451;net452;net46;net461;net462;net47;net471;net472;netcoreapp2.1</TargetFrameworks>
+      <TargetFrameworks>net472</TargetFrameworks>
+
+    <!--<TargetFrameworks>net35;net40;net45;net451;net452;net46;net461;net462;net47;net471;net472;netcoreapp2.1</TargetFrameworks>-->
 
     <Title>QuikGraph.Serialization.Tests</Title>
 
@@ -62,7 +64,7 @@
 
   <!-- Dependencies -->
   <!-- Shared Projects -->
-  <Import Project="..\QuikGraph.Serialization.Tests.CommonInternals\QuikGraph.Serialization.Tests.CommonInternals.projitems" Label="Shared" />
+  <!--<Import Project="..\QuikGraph.Serialization.Tests.CommonInternals\QuikGraph.Serialization.Tests.CommonInternals.projitems" Label="Shared" />-->
 
   <!-- QuikGraph.Serialization reference -->
   <ItemGroup Condition="$(UseQuikGraphSerializationNuget)">

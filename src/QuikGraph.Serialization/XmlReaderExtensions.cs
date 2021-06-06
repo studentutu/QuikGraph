@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Xml;
 using JetBrains.Annotations;
 
@@ -140,7 +140,7 @@ namespace QuikGraph.Serialization
             string[] strArray = str.Split(' ');
 
             var array = new T[strArray.Length];
-            for (int i = 0; i < strArray.Length; i++)
+            for (int i = 0; i < strArray.Length; ++i)
             {
                 array[i] = stringToT(strArray[i]);
             }

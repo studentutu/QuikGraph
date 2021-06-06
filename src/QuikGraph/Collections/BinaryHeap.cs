@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -240,7 +240,7 @@ namespace QuikGraph.Collections
         [Pure]
         public int IndexOf([CanBeNull] TValue value)
         {
-            for (int i = 0; i < Count; i++)
+            for (int i = 0; i < Count; ++i)
             {
                 if (EqualityComparer<TValue>.Default.Equals(value, _items[i].Value))
                     return i;
@@ -421,7 +421,7 @@ namespace QuikGraph.Collections
             TPriority k = kvp.Key;
             TValue v = kvp.Value;
 
-            return $"{k.ToString()} {(v == null ? "null" : v.ToString())}";
+            return $"{k} {(v == null ? "null" : v.ToString())}";
         }
 
         /// <summary>
@@ -432,7 +432,7 @@ namespace QuikGraph.Collections
         {
             int wrong = -1;
 
-            for (int i = 0; i < Count; i++)
+            for (int i = 0; i < Count; ++i)
             {
                 int l = 2 * i + 1;
                 int r = 2 * i + 2;

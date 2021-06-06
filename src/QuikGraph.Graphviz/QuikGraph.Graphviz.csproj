@@ -63,4 +63,9 @@ New:
   <ItemGroup Condition="!$(UseQuikGraphCoreNuget)">
     <ProjectReference Include="..\QuikGraph\QuikGraph.csproj" />
   </ItemGroup>
+  <ItemGroup>
+
+      <Compile Include="..\..\src\QuikGraph.CommonInternals\Compatibility\StringUtils.cs" Link="StringUtils.cs" />
+      <Compile Include="..\..\src\QuikGraph.CommonInternals\MathUtils.cs" Link="MathUtils.cs" />
+  </ItemGroup>
 </Project>

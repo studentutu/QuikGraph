@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Collections.Generic;
 using JetBrains.Annotations;
@@ -85,7 +85,7 @@ namespace QuikGraph.Algorithms
                 path.Add(path[0]);      // Make cycle, not simple path
             }
 
-            for (int i = 0; i < path.Count - 1; i++)
+            for (int i = 0; i < path.Count - 1; ++i)
             {
                 if (!_graph.AdjacentVertices(path[i]).Contains(path[i + 1]))
                 {

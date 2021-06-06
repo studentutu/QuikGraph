@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
@@ -1463,7 +1463,7 @@ namespace QuikGraph.Tests.Collections
                         var heap = new FibonacciHeap<int, TValue>(direction);
                         var emptyHeap = new FibonacciHeap<int, TValue>(direction);
                         int expectedCount = 11;
-                        for (int i = 0; i < expectedCount; i++)
+                        for (int i = 0; i < expectedCount; ++i)
                         {
                             heap.Enqueue(i, i % 2 == 0 ? value1 : value2);
                         }
@@ -1480,7 +1480,7 @@ namespace QuikGraph.Tests.Collections
                         var heap = new FibonacciHeap<int, TValue>(direction);
                         var emptyHeap = new FibonacciHeap<int, TValue>(direction);
                         int expectedCount = 11;
-                        for (int i = 0; i < expectedCount; i++)
+                        for (int i = 0; i < expectedCount; ++i)
                         {
                             heap.Enqueue(i, i % 2 == 0 ? value1 : value2);
                         }
@@ -1509,7 +1509,7 @@ namespace QuikGraph.Tests.Collections
                         var heap = new FibonacciHeap<int, TValue>(direction);
                         var heap2 = new FibonacciHeap<int, TValue>(direction);
                         int expectedCount = 0;
-                        for (int i = 0; i < 11; i++)
+                        for (int i = 0; i < 11; ++i)
                         {
                             heap.Enqueue(i, i % 2 == 0 ? value1 : value2);
                             heap2.Enqueue(i * 11, i % 2 == 0 ? value2 : value1);
@@ -1532,7 +1532,7 @@ namespace QuikGraph.Tests.Collections
                         var heap = new FibonacciHeap<TestPriority, TValue>(direction);
                         var emptyHeap = new FibonacciHeap<TestPriority, TValue>(direction);
                         int expectedCount = 11;
-                        for (int i = 0; i < expectedCount; i++)
+                        for (int i = 0; i < expectedCount; ++i)
                         {
                             heap.Enqueue(new TestPriority(i), i % 2 == 0 ? value1 : value2);
                         }
@@ -1549,7 +1549,7 @@ namespace QuikGraph.Tests.Collections
                         var heap = new FibonacciHeap<TestPriority, TValue>(direction);
                         var emptyHeap = new FibonacciHeap<TestPriority, TValue>(direction);
                         int expectedCount = 11;
-                        for (int i = 0; i < expectedCount; i++)
+                        for (int i = 0; i < expectedCount; ++i)
                         {
                             heap.Enqueue(new TestPriority(i), i % 2 == 0 ? value1 : value2);
                         }
@@ -1578,7 +1578,7 @@ namespace QuikGraph.Tests.Collections
                         var heap = new FibonacciHeap<TestPriority, TValue>(direction);
                         var heap2 = new FibonacciHeap<TestPriority, TValue>(direction);
                         int expectedCount = 0;
-                        for (int i = 0; i < 11; i++)
+                        for (int i = 0; i < 11; ++i)
                         {
                             heap.Enqueue(new TestPriority(i), i % 2 == 0 ? value1 : value2);
                             heap2.Enqueue(new TestPriority(i* 11), i % 2 == 0 ? value2 : value1);
@@ -1601,7 +1601,7 @@ namespace QuikGraph.Tests.Collections
                         var heap = new FibonacciHeap<int, TValue>(direction);
                         var emptyHeap = new FibonacciHeap<int, TValue>(direction);
                         int expectedCount = 11;
-                        for (int i = 0; i < expectedCount; i++)
+                        for (int i = 0; i < expectedCount; ++i)
                         {
                             heap.Enqueue(1, i % 2 == 0 ? value1 : value2);
                         }
@@ -1618,7 +1618,7 @@ namespace QuikGraph.Tests.Collections
                         var heap = new FibonacciHeap<int, TValue>(direction);
                         var emptyHeap = new FibonacciHeap<int, TValue>(direction);
                         int expectedCount = 11;
-                        for (int i = 0; i < expectedCount; i++)
+                        for (int i = 0; i < expectedCount; ++i)
                         {
                             heap.Enqueue(1, i % 2 == 0 ? value1 : value2);
                         }
@@ -1635,7 +1635,7 @@ namespace QuikGraph.Tests.Collections
                         var heap = new FibonacciHeap<int, TValue>(direction);
                         var heap2 = new FibonacciHeap<int, TValue>(direction);
                         int expectedCount = 0;
-                        for (int i = 0; i < 11; i++)
+                        for (int i = 0; i < 11; ++i)
                         {
                             heap.Enqueue(1, i % 2 == 0 ? value1 : value2);
                             heap2.Enqueue(1, i % 2 == 0 ? value2 : value1);

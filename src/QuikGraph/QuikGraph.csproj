@@ -81,4 +81,9 @@ Misc:
   <ItemGroup Condition="'$(TargetFramework)'=='netstandard1.3'">
     <PackageReference Include="System.Reflection.TypeExtensions" Version="4.3.0" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\QuikGraph.CommonInternals\DisposableHelpers.cs" Link="DisposableHelpers.cs" />
+    <Compile Include="..\QuikGraph.CommonInternals\Externs\JetBrains.Annotations.cs" Link="JetBrains.Annotations.cs" />
+    <Compile Include="..\QuikGraph.CommonInternals\Signing\PublicKey.cs" Link="PublicKey.cs" />
+  </ItemGroup>
 </Project>

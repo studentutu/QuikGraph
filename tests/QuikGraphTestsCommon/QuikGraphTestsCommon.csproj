@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net45</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+      <!--<Compile Include="..\..\src\QuikGraph.CommonInternals\DisposableHelpers.cs" Link="DisposableHelpers.cs" />-->
+      <!--<Compile Include="..\..\src\QuikGraph.CommonInternals\Compatibility\StringUtils.cs" Link="StringUtils.cs" />-->
+      <!--<Compile Include="..\..\src\QuikGraph.CommonInternals\Externs\JetBrains.Annotations.cs" Link="JetBrains.Annotations.cs" />-->
+      <!--<Compile Include="..\QuikGraph.CommonInternals\Signing\PublicKey.cs" Link="PublicKey.cs" />-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\QuikGraph.Serialization\QuikGraph.Serialization.csproj" />
+    <ProjectReference Include="..\..\src\QuikGraph\QuikGraph.csproj" />
+  </ItemGroup>
+
+</Project>

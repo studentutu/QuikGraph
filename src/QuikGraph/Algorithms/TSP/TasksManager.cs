@@ -1,4 +1,4 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using JetBrains.Annotations;
 using QuikGraph.Collections;
 
@@ -49,5 +49,4 @@ namespace QuikGraph.Algorithms.TSP
             return _tasksQueue.Count > 0;
         }
     }
-
 }

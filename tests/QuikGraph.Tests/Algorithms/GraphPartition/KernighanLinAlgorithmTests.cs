@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using NUnit.Framework;
 using QuikGraph.Algorithms.GraphPartition;
@@ -138,7 +138,7 @@ namespace QuikGraph.Tests.Algorithms.GraphPartitioning
 
             var setA = new SortedSet<int>();
             var setB = new SortedSet<int>();
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < 12; ++i)
             {
                 if (i < 4 || i == 6 || i == 9)
                     setB.Add(i);
