@@ -2962,6 +2962,12 @@ references:
   commentId: F:QuikGraph.Algorithms.DistanceRelaxers.EdgeShortestDistance
   fullName: QuikGraph.Algorithms.DistanceRelaxers.EdgeShortestDistance
   nameWithType: DistanceRelaxers.EdgeShortestDistance
+- uid: QuikGraph.Algorithms.DistanceRelaxers.Prim
+  name: Prim
+  href: api/QuikGraph.Algorithms.DistanceRelaxers.html#QuikGraph_Algorithms_DistanceRelaxers_Prim
+  commentId: F:QuikGraph.Algorithms.DistanceRelaxers.Prim
+  fullName: QuikGraph.Algorithms.DistanceRelaxers.Prim
+  nameWithType: DistanceRelaxers.Prim
 - uid: QuikGraph.Algorithms.DistanceRelaxers.ShortestDistance
   name: ShortestDistance
   href: api/QuikGraph.Algorithms.DistanceRelaxers.html#QuikGraph_Algorithms_DistanceRelaxers_ShortestDistance
