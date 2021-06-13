@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
 using System.Xml;
@@ -73,7 +74,8 @@ namespace QuikGraph.Serialization
                 EdgeAttributesWriter =
                     (WriteEdgeAttributesDelegate)CreateWriteDelegate(
                         typeof(TEdge),
-                        typeof(WriteEdgeAttributesDelegate));
+                        typeof(WriteEdgeAttributesDelegate),
+                        SerializationHelpers.GetEdgeAttributeProperties<TVertex, TEdge>());
 
                 GraphAttributesWriter =
                     (WriteGraphAttributesDelegate)CreateWriteDelegate(
@@ -93,7 +95,7 @@ namespace QuikGraph.Serialization
                     null);
             }
 
-            private static void EmitWriteProperty(PropertySerializationInfo info, [NotNull] ILGenerator generator)
+            private static void EmitWriteProperty([NotNull] PropertySerializationInfo info, [NotNull] ILGenerator generator)
             {
                 var @default = default(Label);
                 PropertyInfo property = info.Property;
@@ -117,7 +119,7 @@ namespace QuikGraph.Serialization
 
                     EmitValue(generator, property, value);
                     generator.Emit(OpCodes.Ldarg_1);
-                    generator.EmitCall(OpCodes.Callvirt, getMethod, null);
+                    EmitCall(generator, getMethod);
                     generator.Emit(OpCodes.Ceq);
                     generator.Emit(OpCodes.Brtrue, @default);
                 }
@@ -128,23 +130,27 @@ namespace QuikGraph.Serialization
                 generator.Emit(OpCodes.Ldarg_0);
                 generator.Emit(OpCodes.Ldstr, "data");
                 generator.Emit(OpCodes.Ldstr, GraphMLXmlResolver.GraphMLNamespace);
-                generator.EmitCall(OpCodes.Callvirt, Metadata.WriteStartElementMethod, null);
+                EmitCall(generator, Metadata.WriteStartElementMethod);
 
                 // writer.WriteStartAttribute("key");
                 generator.Emit(OpCodes.Ldarg_0);
                 generator.Emit(OpCodes.Ldstr, "key");
                 generator.Emit(OpCodes.Ldstr, info.Name);
-                generator.EmitCall(OpCodes.Callvirt, Metadata.WriteAttributeStringMethod, null);
+                EmitCall(generator, Metadata.WriteAttributeStringMethod);
 
                 // writer.WriteValue(v.xxx);
                 generator.Emit(OpCodes.Ldarg_0);
-                generator.Emit(OpCodes.Ldarg_1);
-                generator.EmitCall(OpCodes.Callvirt, getMethod, null);
+                generator.Emit(
+                    info.GetTargetObject is null
+                        ? OpCodes.Ldarg_1   // Edge
+                        : OpCodes.Ldloc_0   // Tag object
+                );
+                EmitCall(generator, getMethod);
                 EmitCallWriter(generator, writeMethod);
 
                 // writer.WriteEndElement()
                 generator.Emit(OpCodes.Ldarg_0);
-                generator.EmitCall(OpCodes.Callvirt, Metadata.WriteEndElementMethod, null);
+                EmitCall(generator, Metadata.WriteEndElementMethod);
 
                 if (defaultValueAttribute != null)
                 {
@@ -153,10 +159,14 @@ namespace QuikGraph.Serialization
             }
 
             [NotNull]
-            private static Delegate CreateWriteDelegate([NotNull] Type elementType, [NotNull] Type delegateType)
+            private static Delegate CreateWriteDelegate(
+                [NotNull] Type elementType,
+                [NotNull] Type delegateType,
+                [NotNull, ItemNotNull] IEnumerable<PropertySerializationInfo> properties)
             {
                 Debug.Assert(elementType != null);
                 Debug.Assert(delegateType != null);
+                Debug.Assert(properties != null);
 
                 var method = new DynamicMethod(
                     $"{DynamicMethodPrefix}Write{delegateType.Name}_{elementType.Name}",
@@ -166,15 +176,58 @@ namespace QuikGraph.Serialization
 
                 ILGenerator generator = method.GetILGenerator();
 
-                foreach (PropertySerializationInfo info in SerializationHelpers.GetAttributeProperties(elementType))
+                PropertySerializationInfo[] propertiesArray = properties as PropertySerializationInfo[] ?? properties.ToArray();
+                IEnumerable<PropertySerializationInfo> selfProperties = propertiesArray.Where(p => p.GetTargetObject is null);
+                PropertySerializationInfo[] subProperties = propertiesArray.Where(p => p.GetTargetObject != null).ToArray();
+                foreach (PropertySerializationInfo info in selfProperties)
                 {
                     EmitWriteProperty(info, generator);
+                }
+
+                // Sub object properties
+                if (subProperties.Length > 0)
+                {
+                    PropertyInfo targetProperty = subProperties[0].GetTargetObject;
+                    Debug.Assert(targetProperty != null);
+
+                    LocalBuilder subObject = generator.DeclareLocal(targetProperty.PropertyType);
+                    MethodInfo getSubObjectMethod = targetProperty.GetGetMethod();
+                    generator.Emit(OpCodes.Ldarg_1);
+                    EmitCall(generator, getSubObjectMethod);
+                    generator.Emit(OpCodes.Stloc, subObject);
+
+                    // Check sub object is null (if null skip write)
+                    Label @null = generator.DefineLabel();
+                    bool canBeNull = !targetProperty.PropertyType.IsValueType;
+                    if (canBeNull)
+                    {
+                        generator.Emit(OpCodes.Ldloc, subObject);
+                        generator.Emit(OpCodes.Ldnull);
+                        generator.Emit(OpCodes.Ceq);
+                        generator.Emit(OpCodes.Brtrue_S, @null);
+                    }
+
+                    foreach (PropertySerializationInfo info in subProperties)
+                    {
+                        EmitWriteProperty(info, generator);
+                    }
+
+                    if (canBeNull)
+                    {
+                        generator.MarkLabel(@null);
+                    }
                 }
 
                 generator.Emit(OpCodes.Ret);
 
                 // Let's bake the method
                 return method.CreateDelegate(delegateType);
+            }
+
+            [NotNull]
+            private static Delegate CreateWriteDelegate([NotNull] Type elementType, [NotNull] Type delegateType)
+            {
+                return CreateWriteDelegate(elementType, delegateType, SerializationHelpers.GetAttributeProperties(elementType));
             }
         }
 
@@ -300,7 +353,7 @@ namespace QuikGraph.Serialization
 
             private void WriteEdgeAttributeDefinitions()
             {
-                WriteAttributeDefinitions(EdgeTag, typeof(TEdge));
+                WriteAttributeDefinitions(EdgeTag, SerializationHelpers.GetEdgeAttributeProperties<TVertex, TEdge>());
             }
 
             private static string ConstructTypeCodeForSimpleType([NotNull] Type type)
@@ -351,18 +404,18 @@ namespace QuikGraph.Serialization
                 return code;
             }
 
-            private void WriteAttributeDefinitions([NotNull] string elementName, [NotNull] Type elementType)
+            private void WriteAttributeDefinitions([NotNull] string elementName, [NotNull, ItemNotNull] IEnumerable<PropertySerializationInfo> properties)
             {
                 Debug.Assert(elementName != null);
-                Debug.Assert(elementType != null);
+                Debug.Assert(properties != null);
 
-                foreach (PropertySerializationInfo info in SerializationHelpers.GetAttributeProperties(elementType))
+                foreach (PropertySerializationInfo info in properties)
                 {
                     PropertyInfo property = info.Property;
                     string name = info.Name;
                     Type propertyType = property.PropertyType;
 
-                    // <key id="d1" for="edge" attr.name="weight" attr.type="double"/>
+                    // Example: <key id="d1" for="edge" attr.name="weight" attr.type="double"/>
                     _writer.WriteStartElement("key", GraphMLXmlResolver.GraphMLNamespace);
                     _writer.WriteAttributeString(IdAttribute, name);
                     _writer.WriteAttributeString("for", elementName);
@@ -421,6 +474,11 @@ namespace QuikGraph.Serialization
 
                     _writer.WriteEndElement();
                 }
+            }
+
+            private void WriteAttributeDefinitions([NotNull] string elementName, [NotNull] Type elementType)
+            {
+                WriteAttributeDefinitions(elementName, SerializationHelpers.GetAttributeProperties(elementType));
             }
 
             private void WriteVertices()

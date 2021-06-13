@@ -1,4 +1,4 @@
-#if SUPPORTS_GRAPHS_SERIALIZATION
+﻿#if SUPPORTS_GRAPHS_SERIALIZATION
 using System;
 #if SUPPORTS_XML_DTD_PROCESSING
 using System.Diagnostics;
@@ -39,7 +39,7 @@ namespace QuikGraph.Serialization
                 throw new ArgumentException("Must provide a file path.", nameof(filePath));
 
             var settings = new XmlWriterSettings { Indent = true, IndentChars = SerializationIndent };
-            using (XmlWriter writer = XmlWriter.Create(filePath, settings))
+            using (var writer = XmlWriter.Create(filePath, settings))
             {
                 SerializeToGraphML<TVertex, TEdge, TGraph>(graph, writer);
                 writer.Flush();
@@ -68,7 +68,7 @@ namespace QuikGraph.Serialization
                 throw new ArgumentException("Must provide a file path.", nameof(filePath));
 
             var settings = new XmlWriterSettings { Indent = true, IndentChars = SerializationIndent };
-            using (XmlWriter writer = XmlWriter.Create(filePath, settings))
+            using (var writer = XmlWriter.Create(filePath, settings))
             {
                 SerializeToGraphML(graph, writer, vertexIdentity, edgeIdentity);
                 writer.Flush();
@@ -175,7 +175,7 @@ namespace QuikGraph.Serialization
                 DtdProcessing = DtdProcessing.Ignore
             };
 
-            using (XmlReader xmlReader = XmlReader.Create(reader, settings))
+            using (var xmlReader = XmlReader.Create(reader, settings))
                 DeserializeFromGraphML(graph, xmlReader, vertexFactory, edgeFactory);
 #else
             var xmlReader = new XmlTextReader(reader)
@@ -257,7 +257,7 @@ namespace QuikGraph.Serialization
                 settings.ValidationEventHandler += ValidationEventHandler;
 
                 // Read and validate
-                using (XmlReader xmlReader = XmlReader.Create(reader, settings))
+                using (var xmlReader = XmlReader.Create(reader, settings))
                     serializer.Deserialize(xmlReader, graph, vertexFactory, edgeFactory);
             }
             finally
@@ -273,7 +273,7 @@ namespace QuikGraph.Serialization
                 Debug.Assert(xsdStream != null, "GraphML schema resource not found.");
 
                 settings.Schemas.XmlResolver = resolver;
-                using (XmlReader xsdReader = XmlReader.Create(xsdStream, settings))
+                using (var xsdReader = XmlReader.Create(xsdStream, settings))
                     settings.Schemas.Add(GraphMLXmlResolver.GraphMLNamespace, xsdReader);
             }
         }

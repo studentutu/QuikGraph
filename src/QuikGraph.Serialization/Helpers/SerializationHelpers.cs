@@ -1,4 +1,4 @@
-#if SUPPORTS_GRAPHS_SERIALIZATION
+﻿#if SUPPORTS_GRAPHS_SERIALIZATION
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,11 +39,9 @@ namespace QuikGraph.Serialization
         /// <summary>
         /// Gets all properties that are marked with <see cref="XmlAttributeAttribute"/> on given type.
         /// </summary>
-        /// <param name="type"></param>
-        /// <returns></returns>
         [Pure]
-        [NotNull]
-        public static IEnumerable<PropertySerializationInfo> GetAttributeProperties([CanBeNull] Type type)
+        [NotNull, ItemNotNull]
+        public static IEnumerable<PropertySerializationInfo> GetAttributeProperties([CanBeNull] Type type, [CanBeNull] string prefix = null)
         {
             Type currentType = type;
             while (IsTreatableType(currentType))
@@ -58,23 +56,58 @@ namespace QuikGraph.Serialization
                     if (TryGetAttributeName(property, out string name))
                     {
                         if (TryGetDefaultValue(property, out object value))
-                            yield return new PropertySerializationInfo(property, name, value);
+                            yield return new PropertySerializationInfo(property, GetPropertyName(name), value);
                         else
-                            yield return new PropertySerializationInfo(property, name);
+                            yield return new PropertySerializationInfo(property, GetPropertyName(name));
                     }
                 }
 
                 currentType = currentType.BaseType;
             }
 
-            #region Local function
+            #region Local functions
 
             bool ValidProperty(PropertyInfo property)
             {
                 return property.CanRead && !IsIndexed(property);
             }
 
+            string GetPropertyName(string baseName)
+            {
+                return prefix is null
+                    ? baseName
+                    : prefix + baseName;
+            }
+
             #endregion
+        }
+
+        [NotNull]
+        private const string TagPrefix = "TAG-";
+
+        /// <summary>
+        /// Gets all properties that are marked with <see cref="XmlAttributeAttribute"/> on given edge type.
+        /// </summary>
+        /// <remarks>It includes data coming from <see cref="ITagged{TTag}"/> interface implementations.</remarks>
+        [Pure]
+        [NotNull, ItemNotNull]
+        public static IEnumerable<PropertySerializationInfo> GetEdgeAttributeProperties<TVertex, TEdge>()
+            where TEdge : IEdge<TVertex>
+        {
+            IEnumerable<PropertySerializationInfo> properties = GetAttributeProperties(typeof(TEdge));
+            IEnumerable<Type> tagTypes = typeof(TEdge).GetInterfaces()
+                .Where(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(ITagged<>))
+                .Select(tagType => tagType.GetGenericArguments()[0]);
+
+            return properties.Concat(tagTypes.SelectMany(tagType =>
+            {
+                PropertyInfo tagProperty = typeof(TEdge).GetProperty(nameof(ITagged<object>.Tag));
+                return GetAttributeProperties(tagType, TagPrefix).Select(property =>
+                {
+                    property.GetTargetObject = tagProperty;
+                    return property;
+                });
+            }));
         }
 
         [Pure]

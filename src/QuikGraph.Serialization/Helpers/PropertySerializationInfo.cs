@@ -1,10 +1,10 @@
-#if SUPPORTS_GRAPHS_SERIALIZATION
+﻿#if SUPPORTS_GRAPHS_SERIALIZATION
 using System.Reflection;
 using JetBrains.Annotations;
 
 namespace QuikGraph.Serialization
 {
-    internal struct PropertySerializationInfo
+    internal sealed class PropertySerializationInfo
     {
         /// <summary>
         /// Gets the embedded <see cref="PropertyInfo"/>.
@@ -18,10 +18,17 @@ namespace QuikGraph.Serialization
         [NotNull]
         public string Name { get; }
 
-        private readonly bool _hasValue;
+        private readonly bool _hasDefaultValue;
 
         [CanBeNull]
-        private readonly object _value;
+        private readonly object _defaultValue;
+
+        /// <summary>
+        /// <see cref="PropertyInfo"/> to get object holding <see cref="Property"/>.
+        /// </summary>
+        /// <remarks>Only relevant for property in sub object.</remarks>
+        [CanBeNull]
+        public PropertyInfo GetTargetObject { get; set; }
 
         public PropertySerializationInfo([NotNull] PropertyInfo property, [NotNull] string name)
             : this(property, name, null)
@@ -31,19 +38,19 @@ namespace QuikGraph.Serialization
         public PropertySerializationInfo(
             [NotNull] PropertyInfo property,
             [NotNull] string name,
-            [CanBeNull] object value)
+            [CanBeNull] object defaultValue)
         {
             Property = property;
             Name = name;
-            _value = value;
-            _hasValue = _value != null;
+            _defaultValue = defaultValue;
+            _hasDefaultValue = _defaultValue != null;
         }
 
         [Pure]
         public bool TryGetDefaultValue(out object value)
         {
-            value = _value;
-            return _hasValue;
+            value = _defaultValue;
+            return _hasDefaultValue;
         }
     }
 }
