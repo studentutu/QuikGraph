@@ -1,0 +1,1018 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class UndirectedShortestPathAlgorithmBase&lt;TVertex, TEdge&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class UndirectedShortestPathAlgorithmBase&lt;TVertex, TEdge&gt;
+   ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2">
+  
+  
+  <h1 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2" class="text-break">Class UndirectedShortestPathAlgorithmBase&lt;TVertex, TEdge&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Base class for all shortest path finder algorithms in undirected graphs.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html">AlgorithmBase</a>&lt;<a class="xref" href="QuikGraph.IUndirectedGraph-2.html">IUndirectedGraph</a>&lt;TVertex, TEdge&gt;&gt;</div>
+    <div class="level2"><a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html">RootedAlgorithmBase</a>&lt;TVertex, <a class="xref" href="QuikGraph.IUndirectedGraph-2.html">IUndirectedGraph</a>&lt;TVertex, TEdge&gt;&gt;</div>
+    <div class="level3"><span class="xref">UndirectedShortestPathAlgorithmBase&lt;TVertex, TEdge&gt;</span></div>
+      <div class="level4"><a class="xref" href="QuikGraph.Algorithms.ShortestPath.UndirectedDijkstraShortestPathAlgorithm-2.html">UndirectedDijkstraShortestPathAlgorithm&lt;TVertex, TEdge&gt;</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="QuikGraph.Algorithms.IAlgorithm-1.html">IAlgorithm</a>&lt;<a class="xref" href="QuikGraph.IUndirectedGraph-2.html">IUndirectedGraph</a>&lt;TVertex, TEdge&gt;&gt;</div>
+    <div><a class="xref" href="QuikGraph.Algorithms.IComputation.html">IComputation</a></div>
+    <div><a class="xref" href="QuikGraph.Algorithms.Services.IAlgorithmComponent.html">IAlgorithmComponent</a></div>
+    <div><a class="xref" href="QuikGraph.Algorithms.IVertexColorizerAlgorithm-1.html">IVertexColorizerAlgorithm</a>&lt;TVertex&gt;</div>
+    <div><a class="xref" href="QuikGraph.Algorithms.IUndirectedTreeBuilderAlgorithm-2.html">IUndirectedTreeBuilderAlgorithm</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.Algorithms.IDistancesCollection-1.html">IDistancesCollection</a>&lt;TVertex&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html#QuikGraph_Algorithms_RootedAlgorithmBase_2_TryGetRootVertex__0__">RootedAlgorithmBase&lt;TVertex, IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.TryGetRootVertex(TVertex)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html#QuikGraph_Algorithms_RootedAlgorithmBase_2_SetRootVertex__0_">RootedAlgorithmBase&lt;TVertex, IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.SetRootVertex(TVertex)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html#QuikGraph_Algorithms_RootedAlgorithmBase_2_ClearRootVertex">RootedAlgorithmBase&lt;TVertex, IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.ClearRootVertex()</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html#QuikGraph_Algorithms_RootedAlgorithmBase_2_RootVertexChanged">RootedAlgorithmBase&lt;TVertex, IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.RootVertexChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html#QuikGraph_Algorithms_RootedAlgorithmBase_2_OnRootVertexChanged_System_EventArgs_">RootedAlgorithmBase&lt;TVertex, IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.OnRootVertexChanged(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html#QuikGraph_Algorithms_RootedAlgorithmBase_2_GetAndAssertRootInGraph">RootedAlgorithmBase&lt;TVertex, IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.GetAndAssertRootInGraph()</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html#QuikGraph_Algorithms_RootedAlgorithmBase_2_AssertRootInGraph__0_">RootedAlgorithmBase&lt;TVertex, IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.AssertRootInGraph(TVertex)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html#QuikGraph_Algorithms_RootedAlgorithmBase_2_Compute__0_">RootedAlgorithmBase&lt;TVertex, IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.Compute(TVertex)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_SyncRoot">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.SyncRoot</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_State">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.State</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_Compute">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.Compute()</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_Abort">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.Abort()</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_StateChanged">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.StateChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_OnStateChanged_System_EventArgs_">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.OnStateChanged(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_Started">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.Started</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_OnStarted_System_EventArgs_">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.OnStarted(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_Finished">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.Finished</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_OnFinished_System_EventArgs_">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.OnFinished(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_Aborted">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.Aborted</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_OnAborted_System_EventArgs_">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.OnAborted(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_VisitedGraph">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.VisitedGraph</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_Services">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.Services</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_GetService__1">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.GetService&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_TryGetService__1___0__">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.TryGetService&lt;T&gt;(T)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_TryGetService_System_Type_System_Object__">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.TryGetService(Type, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_ThrowIfCancellationRequested">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.ThrowIfCancellationRequested()</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_Initialize">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.Initialize()</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_InternalCompute">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.InternalCompute()</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_Clean">AlgorithmBase&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.Clean()</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="QuikGraph.Algorithms.ShortestPath.html">QuikGraph.Algorithms.ShortestPath</a></h6>
+  <h6><strong>Assembly</strong>: QuikGraph.dll</h6>
+  <h5 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class UndirectedShortestPathAlgorithmBase&lt;TVertex, TEdge&gt; : RootedAlgorithmBase&lt;TVertex, IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;, IAlgorithm&lt;IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;, IComputation, IAlgorithmComponent, IVertexColorizerAlgorithm&lt;TVertex&gt;, IUndirectedTreeBuilderAlgorithm&lt;TVertex, TEdge&gt;, IDistancesCollection&lt;TVertex&gt; where TEdge : IEdge&lt;TVertex&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TVertex</span></td>
+        <td><p>Vertex type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TEdge</span></td>
+        <td><p>Edge type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2__ctor_QuikGraph_Algorithms_Services_IAlgorithmComponent_QuikGraph_IUndirectedGraph__0__1__System_Func__1_System_Double__.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602.%23ctor(QuikGraph.Algorithms.Services.IAlgorithmComponent%2CQuikGraph.IUndirectedGraph%7B%600%2C%601%7D%2CSystem.Func%7B%601%2CSystem.Double%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L33">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2__ctor_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.#ctor*"></a>
+  <h4 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2__ctor_QuikGraph_Algorithms_Services_IAlgorithmComponent_QuikGraph_IUndirectedGraph__0__1__System_Func__1_System_Double__" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.#ctor(QuikGraph.Algorithms.Services.IAlgorithmComponent,QuikGraph.IUndirectedGraph{`0,`1},System.Func{`1,System.Double})">UndirectedShortestPathAlgorithmBase(IAlgorithmComponent, IUndirectedGraph&lt;TVertex, TEdge&gt;, Func&lt;TEdge, Double&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html">UndirectedShortestPathAlgorithmBase&lt;TVertex, TEdge&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UndirectedShortestPathAlgorithmBase(IAlgorithmComponent host, IUndirectedGraph&lt;TVertex, TEdge&gt; visitedGraph, Func&lt;TEdge, double&gt; edgeWeights)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Algorithms.Services.IAlgorithmComponent.html">IAlgorithmComponent</a></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>Host to use if set, otherwise use this reference.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="QuikGraph.IUndirectedGraph-2.html">IUndirectedGraph</a>&lt;TVertex, TEdge&gt;</td>
+        <td><span class="parametername">visitedGraph</span></td>
+        <td><p>Graph to visit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TEdge, <span class="xref">System.Double</span>&gt;</td>
+        <td><span class="parametername">edgeWeights</span></td>
+        <td><p>Function that computes the weight for a given edge.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2__ctor_QuikGraph_Algorithms_Services_IAlgorithmComponent_QuikGraph_IUndirectedGraph__0__1__System_Func__1_System_Double__QuikGraph_Algorithms_IDistanceRelaxer_.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602.%23ctor(QuikGraph.Algorithms.Services.IAlgorithmComponent%2CQuikGraph.IUndirectedGraph%7B%600%2C%601%7D%2CSystem.Func%7B%601%2CSystem.Double%7D%2CQuikGraph.Algorithms.IDistanceRelaxer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L48">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2__ctor_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.#ctor*"></a>
+  <h4 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2__ctor_QuikGraph_Algorithms_Services_IAlgorithmComponent_QuikGraph_IUndirectedGraph__0__1__System_Func__1_System_Double__QuikGraph_Algorithms_IDistanceRelaxer_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.#ctor(QuikGraph.Algorithms.Services.IAlgorithmComponent,QuikGraph.IUndirectedGraph{`0,`1},System.Func{`1,System.Double},QuikGraph.Algorithms.IDistanceRelaxer)">UndirectedShortestPathAlgorithmBase(IAlgorithmComponent, IUndirectedGraph&lt;TVertex, TEdge&gt;, Func&lt;TEdge, Double&gt;, IDistanceRelaxer)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html">UndirectedShortestPathAlgorithmBase&lt;TVertex, TEdge&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected UndirectedShortestPathAlgorithmBase(IAlgorithmComponent host, IUndirectedGraph&lt;TVertex, TEdge&gt; visitedGraph, Func&lt;TEdge, double&gt; edgeWeights, IDistanceRelaxer distanceRelaxer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Algorithms.Services.IAlgorithmComponent.html">IAlgorithmComponent</a></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>Host to use if set, otherwise use this reference.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="QuikGraph.IUndirectedGraph-2.html">IUndirectedGraph</a>&lt;TVertex, TEdge&gt;</td>
+        <td><span class="parametername">visitedGraph</span></td>
+        <td><p>Graph to visit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TEdge, <span class="xref">System.Double</span>&gt;</td>
+        <td><span class="parametername">edgeWeights</span></td>
+        <td><p>Function that computes the weight for a given edge.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Algorithms.IDistanceRelaxer.html">IDistanceRelaxer</a></td>
+        <td><span class="parametername">distanceRelaxer</span></td>
+        <td><p>Distance relaxer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_DistanceRelaxer.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602.DistanceRelaxer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L130">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_DistanceRelaxer_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.DistanceRelaxer*"></a>
+  <h4 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_DistanceRelaxer" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.DistanceRelaxer">DistanceRelaxer</h4>
+  <div class="markdown level1 summary"><p>Distance relaxer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDistanceRelaxer DistanceRelaxer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Algorithms.IDistanceRelaxer.html">IDistanceRelaxer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_Distances.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602.Distances%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L62">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_Distances_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.Distances*"></a>
+  <h4 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_Distances" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.Distances">Distances</h4>
+  <div class="markdown level1 summary"><p>Vertices distances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use methods on IDistancesCollection to interact with the distances instead.&quot;)]
+public IDictionary&lt;TVertex, double&gt; Distances { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;TVertex, <span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_VerticesColors.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602.VerticesColors%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L151">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_VerticesColors_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.VerticesColors*"></a>
+  <h4 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_VerticesColors" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.VerticesColors">VerticesColors</h4>
+  <div class="markdown level1 summary"><p>Stores vertices associated to their colors (treatment state).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;TVertex, GraphColor&gt; VerticesColors { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;TVertex, <a class="xref" href="QuikGraph.GraphColor.html">GraphColor</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_Weights.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602.Weights%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L124">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_Weights_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.Weights*"></a>
+  <h4 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_Weights" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.Weights">Weights</h4>
+  <div class="markdown level1 summary"><p>Function that given an edge return the weight of this edge.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;TEdge, double&gt; Weights { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TEdge, <span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_DistancesIndexGetter.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602.DistancesIndexGetter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L114">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_DistancesIndexGetter_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.DistancesIndexGetter*"></a>
+  <h4 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_DistancesIndexGetter" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.DistancesIndexGetter">DistancesIndexGetter()</h4>
+  <div class="markdown level1 summary"><p>Gets the function that gives access to distances from a vertex.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Func&lt;TVertex, double&gt; DistancesIndexGetter()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TVertex, <span class="xref">System.Double</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetDistance__0_.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602.GetDistance(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L97">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetDistance_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetDistance*"></a>
+  <h4 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetDistance__0_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetDistance(`0)">GetDistance(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Gets the distance associated to the given <code data-dev-comment-type="paramref" class="paramref">vertex</code>.
+Will throw a <span class="xref">System.Collections.Generic.KeyNotFoundException</span> if the vertex does not exist in the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double GetDistance(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex to get the distance for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><p>The distance associated with the vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetDistances.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602.GetDistances%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L106">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetDistances_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetDistances*"></a>
+  <h4 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetDistances" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetDistances">GetDistances()</h4>
+  <div class="markdown level1 summary"><p>Gets the distances for all vertices currently known.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;KeyValuePair&lt;TVertex, double&gt;&gt; GetDistances()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TVertex, <span class="xref">System.Double</span>&gt;&gt;</td>
+        <td><p>The <span class="xref">System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt;</span> for the known vertices.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetVertexColor__0_.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602.GetVertexColor(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L154">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetVertexColor_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetVertexColor*"></a>
+  <h4 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetVertexColor__0_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetVertexColor(`0)">GetVertexColor(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="QuikGraph.GraphColor.html">GraphColor</a> associated to the given <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphColor GetVertexColor(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.GraphColor.html">GraphColor</a></td>
+        <td><p>The vertex <a class="xref" href="QuikGraph.GraphColor.html">GraphColor</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetVertexDistance__0_.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602.GetVertexDistance(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L69">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetVertexDistance_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetVertexDistance*"></a>
+  <h4 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_GetVertexDistance__0_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.GetVertexDistance(`0)">GetVertexDistance(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Gets the distance associated to the given <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected double GetVertexDistance(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex to get the distance for.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_Initialize.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602.Initialize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L136">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_Initialize_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.Initialize*"></a>
+  <h4 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_Initialize" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"><p>Called on algorithm initialization step.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Initialize()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">QuikGraph.Algorithms.AlgorithmBase&lt;QuikGraph.IUndirectedGraph&lt;TVertex, TEdge&gt;&gt;.Initialize()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_OnTreeEdge__1_System_Boolean_.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602.OnTreeEdge(%601%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L175">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_OnTreeEdge_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.OnTreeEdge*"></a>
+  <h4 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_OnTreeEdge__1_System_Boolean_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.OnTreeEdge(`1,System.Boolean)">OnTreeEdge(TEdge, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Called on each <a class="xref" href="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html#QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_TreeEdge">TreeEdge</a> event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnTreeEdge(TEdge edge, bool reversed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEdge</span></td>
+        <td><span class="parametername">edge</span></td>
+        <td><p>Concerned edge.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">reversed</span></td>
+        <td><p>Indicates if the edge is reversed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_Relax__1__0__0_.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602.Relax(%601%2C%600%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L191">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_Relax_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.Relax*"></a>
+  <h4 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_Relax__1__0__0_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.Relax(`1,`0,`0)">Relax(TEdge, TVertex, TVertex)</h4>
+  <div class="markdown level1 summary"><p>Runs the relaxation algorithm on the given <code data-dev-comment-type="paramref" class="paramref">edge</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool Relax(TEdge edge, TVertex source, TVertex target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEdge</span></td>
+        <td><span class="parametername">edge</span></td>
+        <td><p>Edge to relax.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Source vertex.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>Target vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if relaxation decreased the target vertex distance, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_SetVertexDistance__0_System_Double_.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602.SetVertexDistance(%600%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L80">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_SetVertexDistance_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.SetVertexDistance*"></a>
+  <h4 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_SetVertexDistance__0_System_Double_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.SetVertexDistance(`0,System.Double)">SetVertexDistance(TVertex, Double)</h4>
+  <div class="markdown level1 summary"><p>Sets the distance associated to the given <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SetVertexDistance(TVertex vertex, double distance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex to get the distance for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">distance</span></td>
+        <td><p>The distance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_TryGetDistance__0_System_Double__.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602.TryGetDistance(%600%2CSystem.Double%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L86">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_TryGetDistance_" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.TryGetDistance*"></a>
+  <h4 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_TryGetDistance__0_System_Double__" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.TryGetDistance(`0,System.Double@)">TryGetDistance(TVertex, out Double)</h4>
+  <div class="markdown level1 summary"><p>Tries to get the distance associated to the given <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetDistance(TVertex vertex, out double distance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">distance</span></td>
+        <td><p>Associated distance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the distance was found, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_TreeEdge.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602.TreeEdge%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L168">View Source</a>
+  </span>
+  <h4 id="QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2_TreeEdge" data-uid="QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase`2.TreeEdge">TreeEdge</h4>
+  <div class="markdown level1 summary"><p>Fired when the distance label for the target vertex is decreased.
+The edge that participated in the last relaxation for vertex v is
+an edge in the shortest paths tree.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event UndirectedEdgeAction&lt;TVertex, TEdge&gt; TreeEdge</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.UndirectedEdgeAction-2.html">UndirectedEdgeAction</a>&lt;TVertex, TEdge&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.IAlgorithm-1.html">IAlgorithm&lt;TGraph&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.IComputation.html">IComputation</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.Services.IAlgorithmComponent.html">IAlgorithmComponent</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.IVertexColorizerAlgorithm-1.html">IVertexColorizerAlgorithm&lt;TVertex&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.IUndirectedTreeBuilderAlgorithm-2.html">IUndirectedTreeBuilderAlgorithm&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.IDistancesCollection-1.html">IDistancesCollection&lt;TVertex&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_String_">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_String_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_Xml_XmlWriter_">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_Xml_XmlReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_IO_TextReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, TextReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_String_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeAndValidateFromGraphML__3___2_System_IO_TextReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeAndValidateFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, TextReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.SerializationExtensions.html#QuikGraph_Serialization_SerializationExtensions_SerializeToXml__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__System_String_System_String_System_String_System_String_">SerializationExtensions.SerializeToXml&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;, String, String, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.SerializationExtensions.html#QuikGraph_Serialization_SerializationExtensions_SerializeToXml__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__System_String_System_String_System_String_System_String_System_Action_System_Xml_XmlWriter___2__System_Action_System_Xml_XmlWriter___0__System_Action_System_Xml_XmlWriter___1__">SerializationExtensions.SerializeToXml&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;, String, String, String, String, Action&lt;XmlWriter, TGraph&gt;, Action&lt;XmlWriter, TVertex&gt;, Action&lt;XmlWriter, TEdge&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_ShortestPath_UndirectedShortestPathAlgorithmBase_2.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/ShortestPath/UndirectedShortestPathAlgorithmBase.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

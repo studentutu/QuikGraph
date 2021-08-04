@@ -1,0 +1,673 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PetriNet&lt;TToken&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PetriNet&lt;TToken&gt;
+   ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="QuikGraph.Petri.PetriNet`1">
+  
+  
+  <h1 id="QuikGraph_Petri_PetriNet_1" data-uid="QuikGraph.Petri.PetriNet`1" class="text-break">Class PetriNet&lt;TToken&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>High Level Petri Graph.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PetriNet&lt;TToken&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="QuikGraph.Petri.IMutablePetriNet-1.html">IMutablePetriNet</a>&lt;TToken&gt;</div>
+    <div><a class="xref" href="QuikGraph.Petri.IPetriNet-1.html">IPetriNet</a>&lt;TToken&gt;</div>
+    <div><span class="xref">System.ICloneable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="QuikGraph.Petri.html">QuikGraph.Petri</a></h6>
+  <h6><strong>Assembly</strong>: QuikGraph.Petri.dll</h6>
+  <h5 id="QuikGraph_Petri_PetriNet_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public sealed class PetriNet&lt;TToken&gt; : IMutablePetriNet&lt;TToken&gt;, IPetriNet&lt;TToken&gt;, ICloneable</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TToken</span></td>
+        <td><p>Token type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Petri_PetriNet_1__ctor.md&amp;value=---%0Auid%3A%20QuikGraph.Petri.PetriNet%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph.Petri/Structures/PetriNet.cs/#L27">View Source</a>
+  </span>
+  <a id="QuikGraph_Petri_PetriNet_1__ctor_" data-uid="QuikGraph.Petri.PetriNet`1.#ctor*"></a>
+  <h4 id="QuikGraph_Petri_PetriNet_1__ctor" data-uid="QuikGraph.Petri.PetriNet`1.#ctor">PetriNet()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="QuikGraph.Petri.PetriNet-1.html">PetriNet&lt;TToken&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PetriNet()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Petri_PetriNet_1_Arcs.md&amp;value=---%0Auid%3A%20QuikGraph.Petri.PetriNet%601.Arcs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph.Petri/Structures/PetriNet.cs/#L64">View Source</a>
+  </span>
+  <a id="QuikGraph_Petri_PetriNet_1_Arcs_" data-uid="QuikGraph.Petri.PetriNet`1.Arcs*"></a>
+  <h4 id="QuikGraph_Petri_PetriNet_1_Arcs" data-uid="QuikGraph.Petri.PetriNet`1.Arcs">Arcs</h4>
+  <div class="markdown level1 summary"><p>Gets a collection of <a class="xref" href="QuikGraph.Petri.IArc-1.html">IArc&lt;TToken&gt;</a> instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IArc&lt;TToken&gt;&gt; Arcs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="QuikGraph.Petri.IArc-1.html">IArc</a>&lt;TToken&gt;&gt;</td>
+        <td><p>A collection of <a class="xref" href="QuikGraph.Petri.IArc-1.html">IArc&lt;TToken&gt;</a> instances.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Petri_PetriNet_1_Graph.md&amp;value=---%0Auid%3A%20QuikGraph.Petri.PetriNet%601.Graph%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph.Petri/Structures/PetriNet.cs/#L70">View Source</a>
+  </span>
+  <a id="QuikGraph_Petri_PetriNet_1_Graph_" data-uid="QuikGraph.Petri.PetriNet`1.Graph*"></a>
+  <h4 id="QuikGraph_Petri_PetriNet_1_Graph" data-uid="QuikGraph.Petri.PetriNet`1.Graph">Graph</h4>
+  <div class="markdown level1 summary"><p>Gets the Petri Graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyPetriGraph&lt;TToken&gt; Graph { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Petri.IReadOnlyPetriGraph-1.html">IReadOnlyPetriGraph</a>&lt;TToken&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Petri_PetriNet_1_Places.md&amp;value=---%0Auid%3A%20QuikGraph.Petri.PetriNet%601.Places%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph.Petri/Structures/PetriNet.cs/#L52">View Source</a>
+  </span>
+  <a id="QuikGraph_Petri_PetriNet_1_Places_" data-uid="QuikGraph.Petri.PetriNet`1.Places*"></a>
+  <h4 id="QuikGraph_Petri_PetriNet_1_Places" data-uid="QuikGraph.Petri.PetriNet`1.Places">Places</h4>
+  <div class="markdown level1 summary"><p>Gets a collection of <a class="xref" href="QuikGraph.Petri.IPlace-1.html">IPlace&lt;TToken&gt;</a> instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IPlace&lt;TToken&gt;&gt; Places { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="QuikGraph.Petri.IPlace-1.html">IPlace</a>&lt;TToken&gt;&gt;</td>
+        <td><p>A collection of <a class="xref" href="QuikGraph.Petri.IPlace-1.html">IPlace&lt;TToken&gt;</a> instances.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Petri_PetriNet_1_Transitions.md&amp;value=---%0Auid%3A%20QuikGraph.Petri.PetriNet%601.Transitions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph.Petri/Structures/PetriNet.cs/#L58">View Source</a>
+  </span>
+  <a id="QuikGraph_Petri_PetriNet_1_Transitions_" data-uid="QuikGraph.Petri.PetriNet`1.Transitions*"></a>
+  <h4 id="QuikGraph_Petri_PetriNet_1_Transitions" data-uid="QuikGraph.Petri.PetriNet`1.Transitions">Transitions</h4>
+  <div class="markdown level1 summary"><p>Gets a collection of <a class="xref" href="QuikGraph.Petri.ITransition-1.html">ITransition&lt;TToken&gt;</a> instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ITransition&lt;TToken&gt;&gt; Transitions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="QuikGraph.Petri.ITransition-1.html">ITransition</a>&lt;TToken&gt;&gt;</td>
+        <td><p>A collection of <a class="xref" href="QuikGraph.Petri.ITransition-1.html">ITransition&lt;TToken&gt;</a> instances.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Petri_PetriNet_1_AddArc_QuikGraph_Petri_IPlace__0__QuikGraph_Petri_ITransition__0__.md&amp;value=---%0Auid%3A%20QuikGraph.Petri.PetriNet%601.AddArc(QuikGraph.Petri.IPlace%7B%600%7D%2CQuikGraph.Petri.ITransition%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph.Petri/Structures/PetriNet.cs/#L95">View Source</a>
+  </span>
+  <a id="QuikGraph_Petri_PetriNet_1_AddArc_" data-uid="QuikGraph.Petri.PetriNet`1.AddArc*"></a>
+  <h4 id="QuikGraph_Petri_PetriNet_1_AddArc_QuikGraph_Petri_IPlace__0__QuikGraph_Petri_ITransition__0__" data-uid="QuikGraph.Petri.PetriNet`1.AddArc(QuikGraph.Petri.IPlace{`0},QuikGraph.Petri.ITransition{`0})">AddArc(IPlace&lt;TToken&gt;, ITransition&lt;TToken&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds an <a class="xref" href="QuikGraph.Petri.IArc-1.html">IArc&lt;TToken&gt;</a> with given source <code data-dev-comment-type="paramref" class="paramref">place</code> and target <code data-dev-comment-type="paramref" class="paramref">transition</code> to this Petri net.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IArc&lt;TToken&gt; AddArc(IPlace&lt;TToken&gt; place, ITransition&lt;TToken&gt; transition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Petri.IPlace-1.html">IPlace</a>&lt;TToken&gt;</td>
+        <td><span class="parametername">place</span></td>
+        <td><p>Source place.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Petri.ITransition-1.html">ITransition</a>&lt;TToken&gt;</td>
+        <td><span class="parametername">transition</span></td>
+        <td><p>Target transition.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Petri.IArc-1.html">IArc</a>&lt;TToken&gt;</td>
+        <td><p>Added <a class="xref" href="QuikGraph.Petri.IArc-1.html">IArc&lt;TToken&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Petri_PetriNet_1_AddArc_QuikGraph_Petri_ITransition__0__QuikGraph_Petri_IPlace__0__.md&amp;value=---%0Auid%3A%20QuikGraph.Petri.PetriNet%601.AddArc(QuikGraph.Petri.ITransition%7B%600%7D%2CQuikGraph.Petri.IPlace%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph.Petri/Structures/PetriNet.cs/#L104">View Source</a>
+  </span>
+  <a id="QuikGraph_Petri_PetriNet_1_AddArc_" data-uid="QuikGraph.Petri.PetriNet`1.AddArc*"></a>
+  <h4 id="QuikGraph_Petri_PetriNet_1_AddArc_QuikGraph_Petri_ITransition__0__QuikGraph_Petri_IPlace__0__" data-uid="QuikGraph.Petri.PetriNet`1.AddArc(QuikGraph.Petri.ITransition{`0},QuikGraph.Petri.IPlace{`0})">AddArc(ITransition&lt;TToken&gt;, IPlace&lt;TToken&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds an <a class="xref" href="QuikGraph.Petri.IArc-1.html">IArc&lt;TToken&gt;</a> with given source <code data-dev-comment-type="paramref" class="paramref">transition</code> and target <code data-dev-comment-type="paramref" class="paramref">place</code> to this Petri net.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IArc&lt;TToken&gt; AddArc(ITransition&lt;TToken&gt; transition, IPlace&lt;TToken&gt; place)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Petri.ITransition-1.html">ITransition</a>&lt;TToken&gt;</td>
+        <td><span class="parametername">transition</span></td>
+        <td><p>Source transition.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Petri.IPlace-1.html">IPlace</a>&lt;TToken&gt;</td>
+        <td><span class="parametername">place</span></td>
+        <td><p>Target place.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Petri.IArc-1.html">IArc</a>&lt;TToken&gt;</td>
+        <td><p>Added <a class="xref" href="QuikGraph.Petri.IArc-1.html">IArc&lt;TToken&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Petri_PetriNet_1_AddPlace_System_String_.md&amp;value=---%0Auid%3A%20QuikGraph.Petri.PetriNet%601.AddPlace(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph.Petri/Structures/PetriNet.cs/#L77">View Source</a>
+  </span>
+  <a id="QuikGraph_Petri_PetriNet_1_AddPlace_" data-uid="QuikGraph.Petri.PetriNet`1.AddPlace*"></a>
+  <h4 id="QuikGraph_Petri_PetriNet_1_AddPlace_System_String_" data-uid="QuikGraph.Petri.PetriNet`1.AddPlace(System.String)">AddPlace(String)</h4>
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="QuikGraph.Petri.IPlace-1.html">IPlace&lt;TToken&gt;</a> with given <code data-dev-comment-type="paramref" class="paramref">name</code> to this Petri net.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPlace&lt;TToken&gt; AddPlace(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Place name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Petri.IPlace-1.html">IPlace</a>&lt;TToken&gt;</td>
+        <td><p>Added <a class="xref" href="QuikGraph.Petri.IPlace-1.html">IPlace&lt;TToken&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Petri_PetriNet_1_AddTransition_System_String_.md&amp;value=---%0Auid%3A%20QuikGraph.Petri.PetriNet%601.AddTransition(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph.Petri/Structures/PetriNet.cs/#L86">View Source</a>
+  </span>
+  <a id="QuikGraph_Petri_PetriNet_1_AddTransition_" data-uid="QuikGraph.Petri.PetriNet`1.AddTransition*"></a>
+  <h4 id="QuikGraph_Petri_PetriNet_1_AddTransition_System_String_" data-uid="QuikGraph.Petri.PetriNet`1.AddTransition(System.String)">AddTransition(String)</h4>
+  <div class="markdown level1 summary"><p>Adds a <a class="xref" href="QuikGraph.Petri.ITransition-1.html">ITransition&lt;TToken&gt;</a> with given <code data-dev-comment-type="paramref" class="paramref">name</code> to this Petri net.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITransition&lt;TToken&gt; AddTransition(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Transition name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Petri.ITransition-1.html">ITransition</a>&lt;TToken&gt;</td>
+        <td><p>Added <a class="xref" href="QuikGraph.Petri.ITransition-1.html">ITransition&lt;TToken&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Petri_PetriNet_1_Clone.md&amp;value=---%0Auid%3A%20QuikGraph.Petri.PetriNet%601.Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph.Petri/Structures/PetriNet.cs/#L119">View Source</a>
+  </span>
+  <a id="QuikGraph_Petri_PetriNet_1_Clone_" data-uid="QuikGraph.Petri.PetriNet`1.Clone*"></a>
+  <h4 id="QuikGraph_Petri_PetriNet_1_Clone" data-uid="QuikGraph.Petri.PetriNet`1.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Clones this <a class="xref" href="QuikGraph.Petri.PetriNet-1.html">PetriNet&lt;TToken&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PetriNet&lt;TToken&gt; Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Petri.PetriNet-1.html">PetriNet</a>&lt;TToken&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Petri_PetriNet_1_ToString.md&amp;value=---%0Auid%3A%20QuikGraph.Petri.PetriNet%601.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph.Petri/Structures/PetriNet.cs/#L137">View Source</a>
+  </span>
+  <a id="QuikGraph_Petri_PetriNet_1_ToString_" data-uid="QuikGraph.Petri.PetriNet`1.ToString*"></a>
+  <h4 id="QuikGraph_Petri_PetriNet_1_ToString" data-uid="QuikGraph.Petri.PetriNet`1.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Petri_PetriNet_1_System_ICloneable_Clone.md&amp;value=---%0Auid%3A%20QuikGraph.Petri.PetriNet%601.System%23ICloneable%23Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph.Petri/Structures/PetriNet.cs/#L128">View Source</a>
+  </span>
+  <a id="QuikGraph_Petri_PetriNet_1_System_ICloneable_Clone_" data-uid="QuikGraph.Petri.PetriNet`1.System#ICloneable#Clone*"></a>
+  <h4 id="QuikGraph_Petri_PetriNet_1_System_ICloneable_Clone" data-uid="QuikGraph.Petri.PetriNet`1.System#ICloneable#Clone">ICloneable.Clone()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object ICloneable.Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="QuikGraph.Petri.IMutablePetriNet-1.html">IMutablePetriNet&lt;TToken&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Petri.IPetriNet-1.html">IPetriNet&lt;TToken&gt;</a>
+  </div>
+  <div>
+      <span class="xref">System.ICloneable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_String_">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_String_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_Xml_XmlWriter_">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_Xml_XmlReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_IO_TextReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, TextReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_String_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeAndValidateFromGraphML__3___2_System_IO_TextReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeAndValidateFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, TextReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.SerializationExtensions.html#QuikGraph_Serialization_SerializationExtensions_SerializeToXml__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__System_String_System_String_System_String_System_String_">SerializationExtensions.SerializeToXml&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;, String, String, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.SerializationExtensions.html#QuikGraph_Serialization_SerializationExtensions_SerializeToXml__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__System_String_System_String_System_String_System_String_System_Action_System_Xml_XmlWriter___2__System_Action_System_Xml_XmlWriter___0__System_Action_System_Xml_XmlWriter___1__">SerializationExtensions.SerializeToXml&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;, String, String, String, String, Action&lt;XmlWriter, TGraph&gt;, Action&lt;XmlWriter, TVertex&gt;, Action&lt;XmlWriter, TEdge&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Petri_PetriNet_1.md&amp;value=---%0Auid%3A%20QuikGraph.Petri.PetriNet%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph.Petri/Structures/PetriNet.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

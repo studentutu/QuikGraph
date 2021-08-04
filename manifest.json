@@ -9,7 +9,4795 @@
       "output": {
         ".html": {
           "relative_path": "RELEASE_NOTES.html",
-          "hash": "O+9SI/r74WzkZmnzZbeRBw=="
+          "hash": "an172MRY/cetgApk0lDOIAWBgejwuiowWQ4HiCFxDcM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.AdjacencyGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.AdjacencyGraph-2.html",
+          "hash": "kfQK4TtF4tKjOHCPsSruPjuzHBYsFZTU/8Qd6mByehA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.AlgorithmBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.AlgorithmBase-1.html",
+          "hash": "Tf5j+Zc1JEM/leCaMTuT7nUW29J0HH7abJAFj96PGr4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.AlgorithmEventHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.AlgorithmEventHandler-1.html",
+          "hash": "wLWhlU2qr+qDKIK0lBOwV3TeEmiMT+cZaU66RYo3MAg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.AlgorithmExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.AlgorithmExtensions.html",
+          "hash": "OvuRHkcoIF3/MXHsO5YLgFDmleQX3BiSDqSY9nhppc0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Assignment.HungarianAlgorithm.Steps.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Assignment.HungarianAlgorithm.Steps.html",
+          "hash": "WaIIQLjbl7uqi8rIerytxgOobsZ5z0p3USn5F+BT8IA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Assignment.HungarianAlgorithm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Assignment.HungarianAlgorithm.html",
+          "hash": "YeEpMy0nnZ8aO6K2u7k5MDEreTy9D5ud8uFqOi6CB5o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Assignment.HungarianIteration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Assignment.HungarianIteration.html",
+          "hash": "JnDugsEvc1/oQCGcKw30QiSp0rsOKmXLMuRl+mnnD9g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Assignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Assignment.html",
+          "hash": "IzC+7LReM/CEAOjPJHCeMXgYBjkt206DeQVS86nfVs0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Cliques.MaximumCliqueAlgorithmBase-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Cliques.MaximumCliqueAlgorithmBase-2.html",
+          "hash": "u44ZL7pzHtdzKdIOGj05f9bzztJHMxKlAjHDNX1h5qg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Cliques.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Cliques.html",
+          "hash": "o0gDugUuEwe196UvmXmkUdln87y8QGf/Jtu3QFU4QIg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ComponentWithEdges.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ComponentWithEdges.html",
+          "hash": "zIylCl2IiJ0JQ1z8xw9NAR7F4JnsjzGhrTEBpaAtu5A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ComputationState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ComputationState.html",
+          "hash": "FzjisY06UmFeN+IisOD6YthIZfu5SG7dyJqXKGJlGlk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Condensation.CondensationGraphAlgorithm-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Condensation.CondensationGraphAlgorithm-3.html",
+          "hash": "c7Kf/86l40qRKpSpPeICVdaVkWUossnU35Yr7bgiBwQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Condensation.CondensedEdge-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Condensation.CondensedEdge-3.html",
+          "hash": "0kR/C0atkTmQmNYZ0sjW1zumUxOiCcmW56pB+FFrTVU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Condensation.EdgeMergeCondensationGraphAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Condensation.EdgeMergeCondensationGraphAlgorithm-2.html",
+          "hash": "voZ1rbk7rKGVms0PzSK3cc/P0iPpC0F1/CiRTi3kT9A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Condensation.MergedEdge-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Condensation.MergedEdge-2.html",
+          "hash": "V9F4op4KOmFcwppgylJPP8k+mJLeMEWBEu/RVJUHtyE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Condensation.MergedEdge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Condensation.MergedEdge.html",
+          "hash": "Ze7BvHUM6mNfLc6I9vD3k79qTLkM2Cgj8EgMagSCsQQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Condensation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Condensation.html",
+          "hash": "lRIyJSivAxh9Uy96tReYPuTjyoFrGFFhgHW2CmcvVgo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ConnectedComponents.ConnectedComponentsAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ConnectedComponents.ConnectedComponentsAlgorithm-2.html",
+          "hash": "iftYbtDspER6mf1HaUhk2Tll9ZickVsbBl/If+3RmZE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ConnectedComponents.IncrementalConnectedComponentsAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ConnectedComponents.IncrementalConnectedComponentsAlgorithm-2.html",
+          "hash": "SK6SXufnw8lEQD7ZiS+50fvfFNmuftIl+rYoaCE7FUQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ConnectedComponents.StronglyConnectedComponentsAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ConnectedComponents.StronglyConnectedComponentsAlgorithm-2.html",
+          "hash": "xorhCTQ2kZGS0Sapj6yvzab5usBnYNcoPJRcym06s1Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ConnectedComponents.WeaklyConnectedComponentsAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ConnectedComponents.WeaklyConnectedComponentsAlgorithm-2.html",
+          "hash": "+BdyRJQ88t5T1+Tgop97723kGhs9fajvB7mDqzvsoRk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ConnectedComponents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ConnectedComponents.html",
+          "hash": "24g0islo5YeQ6E2HeC/rJzHzYB8Z5JhtFhkEO6zMUys="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.DistanceRelaxers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.DistanceRelaxers.html",
+          "hash": "hnnoZm0yjAAOGWDgsRqt/p+ky0LHY0zlpAf8GlL0cVo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.EulerianTrailAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.EulerianTrailAlgorithm-2.html",
+          "hash": "ZJg+S+KPHKiUUKL6zM4qsWC9WF+wzckO00tD5azdAGY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Exploration.CloneableVertexGraphExplorerAlgorithm-2.DefaultFinishedPredicate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Exploration.CloneableVertexGraphExplorerAlgorithm-2.DefaultFinishedPredicate.html",
+          "hash": "+DMumpTQ2dsdo1c/qBWKQund3LcR+GnS3QwEOnx0kF8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Exploration.CloneableVertexGraphExplorerAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Exploration.CloneableVertexGraphExplorerAlgorithm-2.html",
+          "hash": "Injxfga/lCSzs3WCHwHXOpB56iFCNBQms8wZdzuUp3I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Exploration.ITransitionFactory-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Exploration.ITransitionFactory-2.html",
+          "hash": "0R+z9SrEwtnoxmZu6ZdUhCJVHn5WSCwSUXa2mnSv44Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Exploration.TransitionFactoryImplicitGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Exploration.TransitionFactoryImplicitGraph-2.html",
+          "hash": "f0fEcdU0Nf4d4MK+JoFYKNeHMgJPThufbiJpZcKjNvU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Exploration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Exploration.html",
+          "hash": "IUQ6aXkjp2en7md0gETrkNOARkHFnrEk111wyuEvyfQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.GraphPartition.KernighanLinAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.GraphPartition.KernighanLinAlgorithm-2.html",
+          "hash": "fYmkU4itf/gHRHjw8xZFIMaaq1Zy6ed1ecti+FBs7s8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.GraphPartition.Partition-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.GraphPartition.Partition-1.html",
+          "hash": "DxuWczbMuWhiOT+yDjNbYaMo3hWuUp8DQum2vf9/Jw4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.GraphPartition.PartitionHelpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.GraphPartition.PartitionHelpers.html",
+          "hash": "RzSwYHfteHJKJzvfv2zaHGjBVhvpVGp+FqVNkec8F0U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.GraphPartition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.GraphPartition.html",
+          "hash": "+0fiYm6QpaUZ2MVJlptK0/QHGnr08NJWSrN5ZX08pL4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.IAlgorithm-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.IAlgorithm-1.html",
+          "hash": "v1VooppnbyI/MdeJe9WEca/XJvQ3gnblcduUoEZgjX0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.IComputation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.IComputation.html",
+          "hash": "cLU4G3qM1yz+i/4mVagREEPOwr1Hi7qaLP/i6ywHz64="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.IConnectedComponentAlgorithm-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.IConnectedComponentAlgorithm-3.html",
+          "hash": "//W7WG4hLuNGz0HvENDuTbOoMHnocRuU6TlbqRa4jys="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.IDistanceRecorderAlgorithm-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.IDistanceRecorderAlgorithm-1.html",
+          "hash": "MlsMf+/vgLh3lSumxeYfTkC99+rkH19YwB93HmBfCXY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.IDistanceRelaxer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.IDistanceRelaxer.html",
+          "hash": "DAW9+gaAl+tekf7Q2mhccwN48kHz/5Y99CIdwQwkAsw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.IDistancesCollection-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.IDistancesCollection-1.html",
+          "hash": "NLhut0UpahCFY6Vp0elswbm5KliArV7Eh3alp7QKMMA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.IEdgeColorizerAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.IEdgeColorizerAlgorithm-2.html",
+          "hash": "klz89ozy10xkde39jgvOxyoRJY9WIimuK5D9T846DUM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.IEdgePredecessorRecorderAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.IEdgePredecessorRecorderAlgorithm-2.html",
+          "hash": "h1XiPtp08ubd5d2oHVM1p2IbTfPxebSQhcvEQmGAX7c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ITreeBuilderAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ITreeBuilderAlgorithm-2.html",
+          "hash": "brlpxF4MIOOw2vFF+3eW73hmoNcV864WgPqVPAjDFqo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.IUndirectedTreeBuilderAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.IUndirectedTreeBuilderAlgorithm-2.html",
+          "hash": "xSatvamaVqAg0v/NW4SDNDoDnxDsUmx5R49Ass53mvg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.IUndirectedVertexPredecessorRecorderAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.IUndirectedVertexPredecessorRecorderAlgorithm-2.html",
+          "hash": "Zng1sYZdHDN10m8nW2Kd4gfLZ0pCBmLQKGI0hfcALeM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.IVertexColorizerAlgorithm-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.IVertexColorizerAlgorithm-1.html",
+          "hash": "aQfqWY51reV4RZr92254CRSkyEg5nqHQUZB0u8t1l7g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.IVertexPredecessorRecorderAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.IVertexPredecessorRecorderAlgorithm-2.html",
+          "hash": "FjyUYv/8Dx/sqRVy5cTT/wmnGhjSlSeBq/DooPPq2CM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.IVertexTimeStamperAlgorithm-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.IVertexTimeStamperAlgorithm-1.html",
+          "hash": "e2BpbukvZlSYqRWy9iZQ49/mstDY2XFrmW6WOV1PH68="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.IsEulerianGraphAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.IsEulerianGraphAlgorithm-2.html",
+          "hash": "byG97E+W4W+S80enfGZUUPFywiUn5BbGLHtgt0VTVJo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.IsEulerianGraphAlgorithm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.IsEulerianGraphAlgorithm.html",
+          "hash": "96EPMHUsGO7AgTl68Rk+qOy4uKldkXWCyOcsaGH8x5I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.IsHamiltonianGraphAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.IsHamiltonianGraphAlgorithm-2.html",
+          "hash": "aaDUiUoN2IBxQ3JWX/Oy1CjsGiFzLjDjbXiHY1Y5qx8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.IsHamiltonianGraphAlgorithm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.IsHamiltonianGraphAlgorithm.html",
+          "hash": "wXo3HVQ+b+lsvd/lqDxLhIlvmHbew6gET0RemvIDiYM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.MaximumBipartiteMatchingAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.MaximumBipartiteMatchingAlgorithm-2.html",
+          "hash": "kaHe7DbE023H3n73/2u3DzLRtNu/l6K1SXKkCNrRJAM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.MaximumFlow.AllVerticesGraphAugmentorAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.MaximumFlow.AllVerticesGraphAugmentorAlgorithm-2.html",
+          "hash": "/43E5eTlN5790y3AjgSufV6kPxFb5VAR43vg29/d1VE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.MaximumFlow.EdmondsKarpMaximumFlowAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.MaximumFlow.EdmondsKarpMaximumFlowAlgorithm-2.html",
+          "hash": "t1iGhNkSIt/Jx9oue9FfZMwM4aygKm+o1BFuHb8jA1Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.MaximumFlow.GraphAugmentorAlgorithmBase-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.MaximumFlow.GraphAugmentorAlgorithmBase-3.html",
+          "hash": "NYmMvXwVU59uHpuFp81FowCXlI98W7Ka2w27hu4npmg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.MaximumFlow.GraphBalancerAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.MaximumFlow.GraphBalancerAlgorithm-2.html",
+          "hash": "NYpS4WCgn+fll50QTp+TYg5Cf/K3adFpHBEQtY7CJko="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.MaximumFlow.MaximumFlowAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.MaximumFlow.MaximumFlowAlgorithm-2.html",
+          "hash": "OihMCz84pJI01kSBBmkcFHM5IafLr2T2GvrteaP1maE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.MaximumFlow.MultiSourceSinkGraphAugmentorAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.MaximumFlow.MultiSourceSinkGraphAugmentorAlgorithm-2.html",
+          "hash": "4ChogdG/xwQS2AdN9LeHvY0MhTMBQRxqaw6qFOMnFjo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.MaximumFlow.ReversedEdgeAugmentorAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.MaximumFlow.ReversedEdgeAugmentorAlgorithm-2.html",
+          "hash": "p8+LPsx1++zhgyECGzn0LZqpTKg178DpCvAdW50KWXY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.MaximumFlow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.MaximumFlow.html",
+          "hash": "VDVfXKwukIW6l4X7bLJnA3ezcJ5MY3VoeNx5MvmWKVk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.MinimumSpanningTree.IMinimumSpanningTreeAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.MinimumSpanningTree.IMinimumSpanningTreeAlgorithm-2.html",
+          "hash": "hyyPfUXBxXiYnggaYwGrcJHcvW9NgdUINYFS16c+4gw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.MinimumSpanningTree.KruskalMinimumSpanningTreeAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.MinimumSpanningTree.KruskalMinimumSpanningTreeAlgorithm-2.html",
+          "hash": "imHpygcmrMhC562CUbNYb5iXy/Azk2fqjp8WNEHQQWY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.MinimumSpanningTree.PrimMinimumSpanningTreeAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.MinimumSpanningTree.PrimMinimumSpanningTreeAlgorithm-2.html",
+          "hash": "2+hFvbA0mFANkfFL0H3CjV6NNZrF8i5d9EJFSkKPY7Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.MinimumSpanningTree.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.MinimumSpanningTree.html",
+          "hash": "RDke8yx3JFIfNWtG398ykl//YWik0hQXcjKkC2sZmEo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Observers.EdgePredecessorRecorderObserver-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Observers.EdgePredecessorRecorderObserver-2.html",
+          "hash": "rxlNKiYuZPa9Wn/q0+bSqyB5MGCfj+24l6sToLEO0ms="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Observers.EdgeRecorderObserver-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Observers.EdgeRecorderObserver-2.html",
+          "hash": "9EDz1vOK8lPoiW/vV1d0uuGBEKLGMv2nnQMVoeP7B14="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Observers.IObserver-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Observers.IObserver-1.html",
+          "hash": "BqEM8lQvKJREVDgfoxfVRXuqsx1AkRUm0376t9H+hEg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Observers.UndirectedVertexDistanceRecorderObserver-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Observers.UndirectedVertexDistanceRecorderObserver-2.html",
+          "hash": "EIqgCT6AwRdaNiap6VCyX9GhQx+KxL/lTHXCh2ja3Yk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Observers.UndirectedVertexPredecessorRecorderObserver-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Observers.UndirectedVertexPredecessorRecorderObserver-2.html",
+          "hash": "MejHr1JJ6GKwxh7kHeE7wKDaxBRkXbheOABj/DzVkDw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Observers.VertexDistanceRecorderObserver-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Observers.VertexDistanceRecorderObserver-2.html",
+          "hash": "8wvuWtTSJ2cJVcf88AaBYYkqSMlUZnveoHTld+foEbA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Observers.VertexPredecessorPathRecorderObserver-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Observers.VertexPredecessorPathRecorderObserver-2.html",
+          "hash": "NmTjUZyCFPNvzSvIZteh8/WMFGMZ6Md+PbtX5kR5NPE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Observers.VertexPredecessorRecorderObserver-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Observers.VertexPredecessorRecorderObserver-2.html",
+          "hash": "qn/oaKq14EY0NX7cIeqyKvNIp+4ETB0oW7xiX6wjqc0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Observers.VertexRecorderObserver-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Observers.VertexRecorderObserver-1.html",
+          "hash": "e5RN+gVLuhR55UZk64/592iYOLW3jrnbxXCHRZE4e3E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Observers.VertexTimeStamperObserver-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Observers.VertexTimeStamperObserver-1.html",
+          "hash": "XOnxasv9xW/IWQn945I0yC7iE3vKs5sWHDBk/cxzQdI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Observers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Observers.html",
+          "hash": "JVehwIuFlVMFzHaeX4LJcftASZXtjzXUP1O6mSSTC8o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.RandomGraphFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.RandomGraphFactory.html",
+          "hash": "jb9jXXI/dDGBUvPg01+7aF3GTqWnmQ+VXpS/duLzg34="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.RandomWalks.CyclePoppingRandomTreeAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.RandomWalks.CyclePoppingRandomTreeAlgorithm-2.html",
+          "hash": "mqtOjqU6i/XPeMeIkcTdwsjF7CoRMrsqrrhLF12ouWs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.RandomWalks.IEdgeChain-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.RandomWalks.IEdgeChain-2.html",
+          "hash": "YoULJWYAB0YwhhvA4Dd4IddKFuku6EqZ3+lQe+551jw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.RandomWalks.IMarkovEdgeChain-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.RandomWalks.IMarkovEdgeChain-2.html",
+          "hash": "kCfQIFiDUHdQkJ+HIQ1gbKN4wx3WNtxwDiHbONCPGJg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.RandomWalks.MarkovEdgeChainBase-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.RandomWalks.MarkovEdgeChainBase-2.html",
+          "hash": "fBFR7rpWqyVPn/IhbFM6XBizfilX/wTSX7NlIuCJ4EM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.RandomWalks.NormalizedMarkovEdgeChain-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.RandomWalks.NormalizedMarkovEdgeChain-2.html",
+          "hash": "p3oopC6upqeeKUaXxy9B8WgI3UhesS7EKTdEk9egY2o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.RandomWalks.RandomWalkAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.RandomWalks.RandomWalkAlgorithm-2.html",
+          "hash": "ATlWPhRfBS62mVD6NTRmMNTI89LnLoamGEnQezeMJCE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.RandomWalks.RoundRobinEdgeChain-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.RandomWalks.RoundRobinEdgeChain-2.html",
+          "hash": "OWukrFWVx8UT2m/82FGkTiIyOtIRzTd0QLkmnwx0cFc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.RandomWalks.VanishingWeightedMarkovEdgeChain-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.RandomWalks.VanishingWeightedMarkovEdgeChain-2.html",
+          "hash": "YhjOZTrkLf4pX2R1NDnhfFfVL/aoOeJ6mM7UC3902hg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.RandomWalks.WeightedMarkovEdgeChain-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.RandomWalks.WeightedMarkovEdgeChain-2.html",
+          "hash": "gX/Uc2dVfSQH33eOrOODin1jS3I13xhli/kvFwKfmUo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.RandomWalks.WeightedMarkovEdgeChainBase-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.RandomWalks.WeightedMarkovEdgeChainBase-2.html",
+          "hash": "XCC0vnNOPL125y8bXQPJnBL/tm6L6GfnFJjNPj8+xlg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.RandomWalks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.RandomWalks.html",
+          "hash": "mtlxFhcJoBl7dVgbIxocXPIHPrrSsyhrGZ57vVJiXUs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.RankedShortestPath.HoffmanPavleyRankedShortestPathAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.RankedShortestPath.HoffmanPavleyRankedShortestPathAlgorithm-2.html",
+          "hash": "st0XropjKzG00fNEKXmB74O/gXlrsqbkmyrDHcbB654="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.RankedShortestPath.RankedShortestPathAlgorithmBase-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.RankedShortestPath.RankedShortestPathAlgorithmBase-3.html",
+          "hash": "MXIw62rDySK0hw1JV2v+KVpY+xN1maL2/i4nPzsMBpU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.RankedShortestPath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.RankedShortestPath.html",
+          "hash": "EVX2+qgHn5ShMpC+8N+Ts7OoIYv4sPG0HpavBB+xobE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Ranking.PageRankAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Ranking.PageRankAlgorithm-2.html",
+          "hash": "DyssENRsjoUJveUBCjX52vzaQxbnVhrpvnpYty81g6c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Ranking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Ranking.html",
+          "hash": "OeYwse6ymJOw01ildCGZenGptWbQfUW75mK9/jLnTe0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.RootedAlgorithmBase-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.RootedAlgorithmBase-2.html",
+          "hash": "BgSiTtK7CTLX3EYW1+IVivGDup3MRAFwXQYZIKxH3/A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.RootedSearchAlgorithmBase-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.RootedSearchAlgorithmBase-2.html",
+          "hash": "6qh+LQFtPDN/EZP+O7de6ZQqfjEdC0Z73RlVJk0VncE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Search.BestFirstFrontierSearchAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Search.BestFirstFrontierSearchAlgorithm-2.html",
+          "hash": "L1nwTzxNJ1GGG5PMimAtbXG//7AVGTmNUfOxeiWvWzg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Search.BidirectionalDepthFirstSearchAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Search.BidirectionalDepthFirstSearchAlgorithm-2.html",
+          "hash": "c237UGLd6KeK9hQxqe4EuNomsSrEkV4iNvHQxVRrPX0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm-2.html",
+          "hash": "GUl5hIEUycVNr+RyJu8kLemLQAWW4aydlnJ2gPKE250="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Search.DepthFirstSearchAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Search.DepthFirstSearchAlgorithm-2.html",
+          "hash": "5hN4/uBR1MuhslY8CTP+nEUi2RMk+EcYmpxOSbH4TDo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Search.EdgeDepthFirstSearchAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Search.EdgeDepthFirstSearchAlgorithm-2.html",
+          "hash": "59IVD+xSXVB/s2YOuiscSB2GgaJZhAUQfIWnK3w6mVk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Search.ImplicitDepthFirstSearchAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Search.ImplicitDepthFirstSearchAlgorithm-2.html",
+          "hash": "Z4/H5okDyyYc5AFrRngZpnwmgbxWXC03p0+Ee3YX6Y8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Search.ImplicitEdgeDepthFirstSearchAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Search.ImplicitEdgeDepthFirstSearchAlgorithm-2.html",
+          "hash": "Hn1+83S7/lVGbvxn7j5ik4OolfZ3wWxjN+9JLEcOrCw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Search.UndirectedBreadthFirstSearchAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Search.UndirectedBreadthFirstSearchAlgorithm-2.html",
+          "hash": "VtKZlwunV9qrSjF36I/u+U5O0AiPWKoBJ55ZJlYJVns="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Search.UndirectedDepthFirstSearchAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Search.UndirectedDepthFirstSearchAlgorithm-2.html",
+          "hash": "4M6d56yDL80Ar60cenvroYfMli4UVcIQNIloOoTs5kQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Search.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Search.html",
+          "hash": "g3GCjWlpIOZHk87srK595RsElh2yQg/30RXrDMmG9yg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Services.IAlgorithmComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Services.IAlgorithmComponent.html",
+          "hash": "isrrzmBD68pS6ItN8KkYFQwKFJzNys+JGl4EJMMDt9I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Services.IAlgorithmServices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Services.IAlgorithmServices.html",
+          "hash": "40PgEp7lxDnkUoNHLHo2UAqzdHKORXWBvxFIJDQotF4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Services.ICancelManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Services.ICancelManager.html",
+          "hash": "VlVKmZ7dc2c/6TtjuFRAVfcm+iBq7olxNIjHqoeK+1s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.Services.html",
+          "hash": "cVlGQbseaeCUO/qwBXTd85FZxJ7KGXHsrB0uLyKVsU8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ShortestPath.AStarShortestPathAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ShortestPath.AStarShortestPathAlgorithm-2.html",
+          "hash": "w/nbEFrktL06tYncjtumQh2vmfS2ejRgmyC/8hxFwEM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ShortestPath.BellmanFordShortestPathAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ShortestPath.BellmanFordShortestPathAlgorithm-2.html",
+          "hash": "YrZMWQCsFswkIgZxCPX9NJdBGHYF+F87aGihfV9BPYY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ShortestPath.DagShortestPathAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ShortestPath.DagShortestPathAlgorithm-2.html",
+          "hash": "m9QQWI/ihPB9pGsoZ3UXBLbxACWnnRVyyclRohArsOQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ShortestPath.DijkstraShortestPathAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ShortestPath.DijkstraShortestPathAlgorithm-2.html",
+          "hash": "u1cr93ZJhzK2ypIArTdHoydkkGbGVvH+UnoBp3XEbAg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ShortestPath.FloydWarshallAllShortestPathAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ShortestPath.FloydWarshallAllShortestPathAlgorithm-2.html",
+          "hash": "VWvFRvoVfzt4O938wz1XZ5VVfjXMw/+lYLK+X8OCzyQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ShortestPath.ShortestPathAlgorithmBase-3.html",
+          "hash": "uUrX8tNclhwxXgbCczkxTNBcXTqFkrbCmQ0T7OdgMsM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ShortestPath.UndirectedDijkstraShortestPathAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ShortestPath.UndirectedDijkstraShortestPathAlgorithm-2.html",
+          "hash": "iev6JSvIYe4WDevXIAiMS9v135cHSimnoj8QCbYWM6I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ShortestPath.UndirectedShortestPathAlgorithmBase-2.html",
+          "hash": "SDePJ4Wb+AbbxDBEwk+wl0P1PxaomzJSpsQzOpVjBjo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ShortestPath.YenShortestPathsAlgorithm-1.SortedPath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ShortestPath.YenShortestPathsAlgorithm-1.SortedPath.html",
+          "hash": "lbot+9BXIzYUSNCroN977F+EXran5Enltyc6ItuRS/Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ShortestPath.YenShortestPathsAlgorithm-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ShortestPath.YenShortestPathsAlgorithm-1.html",
+          "hash": "MdHPpqMHcEf/EAxu9EHzU28ihA2W8+iYiOLn9SE3JQs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.ShortestPath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.ShortestPath.html",
+          "hash": "uOX4zU90A49HwUGQ5pTFdOZqH3a7DY/uQlOUL7DRt/8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.TSP.TSP-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.TSP.TSP-3.html",
+          "hash": "shzFIy8b/9TQWDDKjqZAs7ftzwJyS1eMDTHQG5q9K1Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.TSP.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.TSP.html",
+          "hash": "m7oT/4tj5mp0IZOOaxFAG9+JW2RK5PnkBPsydVL4BwM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.TarjanOfflineLeastCommonAncestorAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.TarjanOfflineLeastCommonAncestorAlgorithm-2.html",
+          "hash": "9hKm8qOpQraAUwNmooDubK0Cg9xN6RZ0yO4XI3YPMOg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.TopologicalSort.SourceFirstBidirectionalTopologicalSortAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.TopologicalSort.SourceFirstBidirectionalTopologicalSortAlgorithm-2.html",
+          "hash": "DdpR932haqQ+flPro7lVp7Az/MZeeQv3aUS1ovXFttc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.TopologicalSort.SourceFirstTopologicalSortAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.TopologicalSort.SourceFirstTopologicalSortAlgorithm-2.html",
+          "hash": "kYWjmIhuBEpSs000qqLprjRlBCCg1asrJWJZAr3OyE4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.TopologicalSort.TopologicalSortAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.TopologicalSort.TopologicalSortAlgorithm-2.html",
+          "hash": "L/wLZ1Ckk25dNO5YHycbl7MvhNt0+c9JlqhF+iK6fsU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.TopologicalSort.TopologicalSortDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.TopologicalSort.TopologicalSortDirection.html",
+          "hash": "U/G+mnbUwhYrekOVv/NV7fTOj4xyx1gUzCO1I03wQqY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.TopologicalSort.UndirectedFirstTopologicalSortAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.TopologicalSort.UndirectedFirstTopologicalSortAlgorithm-2.html",
+          "hash": "lXIKLrnWLLZ1hq1m9mEUjxN2H+b8lRug26ylYBxa1F4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.TopologicalSort.UndirectedTopologicalSortAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.TopologicalSort.UndirectedTopologicalSortAlgorithm-2.html",
+          "hash": "z/9NG/LE4ixSXLfNcYYrTqZgwwHUln3dxQeKhfWAXok="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.TopologicalSort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.TopologicalSort.html",
+          "hash": "4NOJQLhx2UQjSRaU7z804omFfmwwSDfNy8j1kykAp/s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.TransitiveClosureAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.TransitiveClosureAlgorithm-2.html",
+          "hash": "KKQ/FyhLStg3WkdlF0S7qebbsuN/flSrl15TL8yuohI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.TransitiveReductionAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.TransitiveReductionAlgorithm-2.html",
+          "hash": "Uj1zS4qWsaBWw7j80i9dRTlTO22EmgDl9Ap7Rpf/+L0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.VertexColoring.VertexColoringAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.VertexColoring.VertexColoringAlgorithm-2.html",
+          "hash": "8W820b4e3MtuJBbhis6qERCZS6FLrF6sLtlRuDyS3rg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.VertexColoring.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.VertexColoring.html",
+          "hash": "V+utez5V4XVl7XrAH7R+RXQAhxpXDfwIZPJgnc/aoTc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.VertexCover.MinimumVertexCoverApproximationAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.VertexCover.MinimumVertexCoverApproximationAlgorithm-2.html",
+          "hash": "FcGSn5052V4f4RUIi6jUNVOx2fQ8Nke7wICLfoAqRwo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.VertexCover.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.VertexCover.html",
+          "hash": "6BFA9ynoOfGRNovAbERkOh0gJYj3r9fEcmxwigTg/2M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Algorithms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Algorithms.html",
+          "hash": "n5Bl1xRQmJiawe/bIV6kid//+ra830XnrRpGjp3Nyq8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.ArrayAdjacencyGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.ArrayAdjacencyGraph-2.html",
+          "hash": "HkUzHzMMkqHqSvQdtP2hhbTWMOeCI41SckKzrAVYdx8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.ArrayBidirectionalGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.ArrayBidirectionalGraph-2.html",
+          "hash": "EP/kcScktttexmDVm0TrjejcK6xIIcMLTaKML3WMRxs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.ArrayUndirectedGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.ArrayUndirectedGraph-2.html",
+          "hash": "xtM0DOyFzj5vUj7ICAEdjLVNWo6O49M3+LsR86Wn8OM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.BidirectionalAdapterGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.BidirectionalAdapterGraph-2.html",
+          "hash": "5aTh0dJisCB65XmVir/2exUZ/IiMvTRSJw8GnTm/XgU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.BidirectionalGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.BidirectionalGraph-2.html",
+          "hash": "nUOcLFjHSJ/8mzsOyULy1OVlqlnDGCBS1CehClHBjBs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.BidirectionalMatrixGraph-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.BidirectionalMatrixGraph-1.html",
+          "hash": "vxUOK6WAgQTXjqgz1vH/CpqTOarrs9FllvP5OfeV0SE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.ClusteredAdjacencyGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.ClusteredAdjacencyGraph-2.html",
+          "hash": "O7vPExHshKPOUs547zyF0vv35m4JYyOh4Fyebu3V24k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.BinaryHeap-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.BinaryHeap-2.html",
+          "hash": "8sS01XNsrFIuOHA99JVd48YnqKNe6mgl/P+UeKB50OQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.BinaryQueue-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.BinaryQueue-2.html",
+          "hash": "NMjgRGnLcW4BnYw3ya3TOIwXb23L1M5tIGFuOfL53Zc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.EdgeEdgeDictionary-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.EdgeEdgeDictionary-2.html",
+          "hash": "CMUyPEnBzb8m1h6tOKxkTbAu2x2YNsYkNhxdoR9eWz0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.EdgeList-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.EdgeList-2.html",
+          "hash": "3wPUNqlaoTUFR+y/sVy03dnEyqabrxBYa1DW1D0I1pQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.FibonacciHeap-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.FibonacciHeap-2.html",
+          "hash": "lP3vvlHcLoT2L6j34+fYkbUuYza8zEiYUljXgTSQ7zc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.FibonacciHeapCell-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.FibonacciHeapCell-2.html",
+          "hash": "pOBX8ZUj06grY9W4NVIH9NDYp4U90NwDz8w5BcgUvEs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.FibonacciHeapLinkedList-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.FibonacciHeapLinkedList-2.html",
+          "hash": "ZaHv0BrwKYxyId2ks3aWqquBKSZ1/Jfvofidvsw3n0o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.FibonacciQueue-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.FibonacciQueue-2.html",
+          "hash": "bjgRI9LEWs5NlSq4NX9KH3zseGgqhANXofYzdEWi5xU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.ForestDisjointSet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.ForestDisjointSet-1.html",
+          "hash": "GOQIaypAYUxiAOoa1uqogn8AtgmT8mwctd0kkV3RKSk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.HeapDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.HeapDirection.html",
+          "hash": "JGkOMnSNMYcbRIGDA/MuGqSabFXnCOy4kXBUkE6isnY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.IDisjointSet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.IDisjointSet-1.html",
+          "hash": "634fZI0bnuWBRFubVuka/VPc6A9kVJPoJPAOYBL83fU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.IEdgeList-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.IEdgeList-2.html",
+          "hash": "HAiSXkPs4UhH07lhG5xFaGZEWOLK3N+mqwtABUexUbI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.IPriorityQueue-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.IPriorityQueue-1.html",
+          "hash": "kqZ6vltQqRaxZM4SeIFCKbWGZ94xSpgNfI9yhpUXTDo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.IQueue-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.IQueue-1.html",
+          "hash": "qMhLLXPpIQb2j5fF6MHOcE/1T/jWUDCZ04F1Ig16cAQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.IVertexEdgeDictionary-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.IVertexEdgeDictionary-2.html",
+          "hash": "Q78VMZ79FTRi4ggGaKK1sS4HFk6/OaQLrgJY2gLsXfs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.Queue-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.Queue-1.html",
+          "hash": "9SqQMRV3xw04FouP70KQFuQ/jCbIOfs3RGgedQddZdA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.SoftHeap-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.SoftHeap-2.html",
+          "hash": "z9mBuhvxUbKVaYr0dwFDOzAu7hP+uLs3xmEJmRKF3Rc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.VertexEdgeDictionary-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.VertexEdgeDictionary-2.html",
+          "hash": "RRBeVu62aJHTCVK0Maq0ve469tdioLhpW0dw+gzdyb0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.VertexList-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.VertexList-1.html",
+          "hash": "iQj2z4ISMfluOZYhbESYBdIwbNd7CuxwXqiWwqOwL0A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Collections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Collections.html",
+          "hash": "+Ex1Y4IrlEh6kTdSaK6iGyxE9Hh992Cvs8Zx6x2PVR0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.CompressedSparseRowGraph-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.CompressedSparseRowGraph-1.html",
+          "hash": "yJIgaWvOb/Ml9PanzdNO1WmPGLSWp3olfByjO6bkehY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.CreateEdge-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.CreateEdge-2.html",
+          "hash": "yoaqrF/UIIm9QmncrzsmSm156fWsNFGEKAB+uvDOwaE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.CreateVertexDelegate-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.CreateVertexDelegate-2.html",
+          "hash": "nYCsc2oA5IeWhqEc3UUA6Lo5/QLj5Z+mZR84kySlZPo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Data.DataRelationEdge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Data.DataRelationEdge.html",
+          "hash": "j4D39sz53tt6rjTaiFt3VFOApj0fQiFIUvabrOXisUU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Data.DataSetGraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Data.DataSetGraph.html",
+          "hash": "0hY5BoY5f8CE5pRz858Z5YLrfGuHSmZotVEeFe6gbx0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Data.DataSetGraphExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Data.DataSetGraphExtensions.html",
+          "hash": "x+C2DHxb/x530+AxFzKqIqtWf83qjdua8nRbPLtqUCM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Data.DataSetGraphPopulatorAlgorithm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Data.DataSetGraphPopulatorAlgorithm.html",
+          "hash": "bfOiGRGYVLhIlO5Ggr8fyjuP9ZGN3iI3hAxwG2qz4Ys="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Data.DataSetGraphvizAlgorithm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Data.DataSetGraphvizAlgorithm.html",
+          "hash": "swFMzTaB2LOYhx0GL6IBJDpq8zvqwsOVjjpXx4Zi6bk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Data.html",
+          "hash": "SS7Pot1hFgqSpc/lS7kgkvP/9qkhLuWamvMLu9bEbzY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.DelegateBidirectionalIncidenceGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.DelegateBidirectionalIncidenceGraph-2.html",
+          "hash": "2xEJzOiZOucAhNShBL1saat09qO8Luh3vxTwfvarNSA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.DelegateImplicitGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.DelegateImplicitGraph-2.html",
+          "hash": "c8dxWsKWcanKgp5rHO/FHiyMW/IxbadU1PSTxMNIo+g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.DelegateImplicitUndirectedGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.DelegateImplicitUndirectedGraph-2.html",
+          "hash": "wNF6dtjMxip9fSZAJlSN2RV1vcieUYpsLedgxB7JddM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.DelegateIncidenceGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.DelegateIncidenceGraph-2.html",
+          "hash": "W6kT7cHvMb8rWUI+x3lmDQ/uMqjz9hUoCv5j2fiLCA0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.DelegateUndirectedGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.DelegateUndirectedGraph-2.html",
+          "hash": "zLO7tk+Mm6HXi/zr95pctE0QFmoWMhsremA9H5ugVCU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.DelegateVertexAndEdgeListGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.DelegateVertexAndEdgeListGraph-2.html",
+          "hash": "TdUR7K9+fnQ1rvhaUaZ/++6FuUP+p3vLU+xRRJkWQsc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Edge-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Edge-1.html",
+          "hash": "cZ82uvZ5gCrtH7sUAXI5CFeNtQZo95z5EvnyNiasaWI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.EdgeAction-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.EdgeAction-2.html",
+          "hash": "YVD+SWgrQSN7TNAQYTF4B8lYfrnhq2BbVqQR6nrdhnA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.EdgeEdgeAction-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.EdgeEdgeAction-2.html",
+          "hash": "7rJjQG/3jZ6JRe870JdnEh4AbyhmoP1yY8qOqVDJWy0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.EdgeEqualityComparer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.EdgeEqualityComparer-1.html",
+          "hash": "gLsc/144pl14s0f0MyXQOtDRhY5WZLrwJkI3giTFjEY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.EdgeEventArgs-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.EdgeEventArgs-2.html",
+          "hash": "bQotDbEYFEj745lOqyGWqQtV1EfgKQrUAQciVUXxlnA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.EdgeEventHandler-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.EdgeEventHandler-2.html",
+          "hash": "y7SRSE4y8+o6qhhnjqseWATXy0WdKWO7wdGfGuPPUp4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.EdgeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.EdgeExtensions.html",
+          "hash": "PXPL1qR0e1PlBCaGFbvXRzgTm6hj8DkaVS1qbeX2dNA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.EdgeFactory-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.EdgeFactory-2.html",
+          "hash": "QXFQ/31VZjktyMqqbv807ZGagnpwsC/8VD2XcnUZ5qQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.EdgeIdentity-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.EdgeIdentity-2.html",
+          "hash": "rgjNbQdiNBakghUdZs/qVMRx8khfFRTeJhMbgmWI2ww="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.EdgeListGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.EdgeListGraph-2.html",
+          "hash": "k/jI+jXSLxV9lpzX2u/dnrjO08L6vT+dGYfqs8xisco="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.EdgePredicate-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.EdgePredicate-2.html",
+          "hash": "cVXMHmpNuC1hwYL1kjORs2O3PvEGZOTKEPuadkh2cSA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.EquatableEdge-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.EquatableEdge-1.html",
+          "hash": "DIuKy0mDEeP9JMMAsdG7acqgCJwMkJ536DGKL5vlw5E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.EquatableTaggedEdge-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.EquatableTaggedEdge-2.html",
+          "hash": "udLFbHy44j6lGPhHNXYyDU3xjWvuZlFW5ENmacND4R0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.EquatableTermEdge-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.EquatableTermEdge-1.html",
+          "hash": "Wfyt4LVMwMj4YIMHT6rNJXIALLvYWkydRgrJV0g9thM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.EquatableUndirectedEdge-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.EquatableUndirectedEdge-1.html",
+          "hash": "ayVBpy8EzrXDMxxVF52VylCquBVxXABUSpElZx7WiLk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.EquateGraphs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.EquateGraphs.html",
+          "hash": "SJp0voyquQUSSByUsc2Qb2to9dkYwP1xKl7jcfM6hXo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.GraphColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.GraphColor.html",
+          "hash": "DYVpBKKxFP72M6P37w4gE4kkP/JSQ2vY9ZOM+YywL/w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.GraphExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.GraphExtensions.html",
+          "hash": "WYKL7njyxnbXoT/nbzJL7pOs0P9ECyglRHguET3+EfI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.CondensatedGraphRenderer-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.CondensatedGraphRenderer-3.html",
+          "hash": "8IojOqeWgjfTchwPJbWcN/Y6WYx3UI59KY0QUAfSWuE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizArrow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizArrow.html",
+          "hash": "Z8nPkeQL7goprP+GBA+WQSagEhMBTB6IvgjpQeZOpSs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizArrowClipping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizArrowClipping.html",
+          "hash": "XkypdK1vZKW0mLUP37PodeoUYeXHpkUChAfh9A9ai5Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizArrowFilling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizArrowFilling.html",
+          "hash": "qmGAwYwA7d3vcGL0RtL3H1t0aU5VkIuR8mISaAtxs+A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizArrowShape.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizArrowShape.html",
+          "hash": "wTH6sHcnsPt8vIy4/jGWJxgY4ZUdKNWqn7jrU2iSPH4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizClusterMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizClusterMode.html",
+          "hash": "7iIrq31815oTpoEb9ZmBOOKjYAZWjYtK4tZuXzhf6rY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizColor.html",
+          "hash": "hdiQnozfPfzAQCFQ4d1HU8zgzZ8V9nsTTl8npJru3o4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizEdge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizEdge.html",
+          "hash": "rhfHux02NcGmn5ulGVswNfnH0+IloZNIp4xRe6eIgkE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizEdgeDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizEdgeDirection.html",
+          "hash": "pCbCX4dVxvbeLnE2lFIeAh3aA+iMmCzjREVgMtyXJOs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizEdgeExtremity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizEdgeExtremity.html",
+          "hash": "QPo8fqgMe9T01KeTVWEsslrmCjE91D3ZUHsORRz7fi4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizEdgeLabel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizEdgeLabel.html",
+          "hash": "34CoUcoJjW5uHOoQbGAB1B7QiSPubD2G06R/i25po9Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizEdgeStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizEdgeStyle.html",
+          "hash": "TfV8WycFL78/FFytZ8eap7SJABHx5Qs6lj6cgbo1ElM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizFont.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizFont.html",
+          "hash": "NmqoMmVdHqrw2sspTVFPyw5MZ4qJzTZ2AL8Lfodpy8c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizGraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizGraph.html",
+          "hash": "Sd4IflIxhugPfO7/4vMa9PrbYyFrgTNnwesbU9DHX30="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizImageType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizImageType.html",
+          "hash": "jcacd0wQYw0KH3zP+EwvNk2LpElaeVavRMkYPy+1RQs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizLabelJustification.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizLabelJustification.html",
+          "hash": "1q/uwUz5h5q+6giAEJbQylVpCryKsg7xD6sNQulr8a8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizLabelLocation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizLabelLocation.html",
+          "hash": "hnwdtFf6SkJC29OOMFgmDy3Pg1tflgw3twVOjweIEq8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizLayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizLayer.html",
+          "hash": "cC2blpNAdD3a1icBc7ViKZEAIhbmXFTuJz4h+PVPJhY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizLayerCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizLayerCollection.html",
+          "hash": "2NKcG2KStz4+PKsvJN0PTyJ1qLp26iMBnaNpkYnqg3E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizOutputMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizOutputMode.html",
+          "hash": "JCXkWJxWrfpDqRhzSUAWI+1LUN3Hpqc3Cmdb42NKZqs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizPageDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizPageDirection.html",
+          "hash": "PaMowchNICHVWM+7ZMFUZRzxipaFMqdU4hV8NGQAzJY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizPoint.html",
+          "hash": "0QMDva2uNmvM6J5WAA0dHZnDlGK9aqSuIY71X57iIDI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizRankDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizRankDirection.html",
+          "hash": "giNjawPOiVweLpoZKqDYjG2FdpJ8zXhOldzkISoIrYY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizRatioMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizRatioMode.html",
+          "hash": "+dVEZI0tc0AtAbBa5A3iB+CyNpLowZ3n/oFLDWA7Glg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizRecord.html",
+          "hash": "kr2SefxWUylJeu59Ozxd2qYkv4UJiHTnGKMOYG9tj9w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizRecordCell.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizRecordCell.html",
+          "hash": "83yJyYUGwNgoGlULmJpjfWlNsjBMZYMjA5VAt6lCA+I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizRecordCellCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizRecordCellCollection.html",
+          "hash": "IEwuLadBDweyNNFyFCvbvO3Er2wK9254j4ZA02uBGgE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizSize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizSize.html",
+          "hash": "IiV7LL4nYiRnf7imPV6HRlg/nEPpczOA+VtBRc6YIOE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizSizeF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizSizeF.html",
+          "hash": "BT9aXS1BOJPCsfkkxU5YEA/El9V5zZdwQvJbOEoVxQc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizSplineType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizSplineType.html",
+          "hash": "8RYeLeGVQy3OQFMzGddANSJ2D4/R+fkvQl0UWqjZduw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizVertex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizVertex.html",
+          "hash": "0aZUo6hKjgsRnlCF1HFHKUTDjNahPNrjUsh+Rkv1Jwc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizVertexShape.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizVertexShape.html",
+          "hash": "GV8+8dQXukWlpjx6skwkoFDg+OUsYjRPAVXc83rRYkQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizVertexStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.GraphvizVertexStyle.html",
+          "hash": "/rf6csLvV3Tb6BZn8rnN5NTrj/NK1zlzfvXjUHW/Nz4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.Dot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.Dot.html",
+          "hash": "CVmwjzNsjirpDpwPWrv/pGl7JTQAI2N3tfSPBhSLU/Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.DotEscapers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.DotEscapers.html",
+          "hash": "uC5Qa87EenCwcMHhr2O3kyZ6IgtIVhi1W9LIkRp1cyk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.EdgeMergeCondensatedGraphRenderer-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.EdgeMergeCondensatedGraphRenderer-2.html",
+          "hash": "68L3v3QC0iZll1fHbacjurPD6DBNr8IYURf5KdMh/WI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.FileDotEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.FileDotEngine.html",
+          "hash": "c6Sxql82yK2PPncv/1VHMtn31cbFt4pNfx+24L622n0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.FormatClusterEventArgs-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.FormatClusterEventArgs-2.html",
+          "hash": "Lt4SR5chRM6nGR5rJ2EDD4A0kT7T7ib+w2SsbbD5s8E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.FormatClusterEventHandler-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.FormatClusterEventHandler-2.html",
+          "hash": "qTfQ9pn3FwUA+wgdX/tf+WQzF2Bi4D/PmvxFCzMRKWY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.FormatEdgeAction-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.FormatEdgeAction-2.html",
+          "hash": "IH8qjS2JwAcF7G5Hh6gzKSMAs9ovNFDffgCvRqMKjtI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.FormatEdgeEventArgs-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.FormatEdgeEventArgs-2.html",
+          "hash": "cMklp/5JSjhMLgq4D5DrPcCHUQO/z09SyFw1tNtWwtw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.FormatVertexEventArgs-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.FormatVertexEventArgs-1.html",
+          "hash": "aoeLxP2Ka/MmmgRHyXkXGdqi/6xOX9b9kBzTIsmep1s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.FormatVertexEventHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.FormatVertexEventHandler-1.html",
+          "hash": "foUVRn6k7Ew5pYMvdvZPFf2/xMWJHl6JGMqAOfeYI/k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.GraphRendererBase-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.GraphRendererBase-2.html",
+          "hash": "kNqsxZpn3aLN0I96x9wmEF5PBbrx8NJApe1gppUOXx0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.GraphvizAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.GraphvizAlgorithm-2.html",
+          "hash": "aI1YPfA5gfCJ+RIHE6wlUV4xdABO+khC1QCyk3OZBfU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.GraphvizExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.GraphvizExtensions.html",
+          "hash": "wqG9tR5EFtzETiPdOY08qSawukTM42GBGIrXpOo4E+w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.IDotEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.IDotEngine.html",
+          "hash": "39qaL5IitQ79IndDNa+D7UOqJdC3uew8S/tQQ8M0Jx4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.SvgHtmlWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.SvgHtmlWrapper.html",
+          "hash": "EBDUrqz0kQQWJ5WsPlw0nscqzGTHrHAkWP5ZrfivunA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Graphviz.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Graphviz.html",
+          "hash": "5JOXjinri4c73dlW0gedR664fDKol3WnyiTLcKDLIjA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IBidirectionalGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IBidirectionalGraph-2.html",
+          "hash": "3RE+KRVFEDEG9jpq33E/IIIA6Xfr1MUkeYbSGxZC6Ok="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IBidirectionalIncidenceGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IBidirectionalIncidenceGraph-2.html",
+          "hash": "KQYtXyO2DGYxL8Kmv9fL2LukFZygqedTIw6yO6Cwxkk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.ICloneableEdge-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.ICloneableEdge-2.html",
+          "hash": "6DIUXzqfJkMYT7kQ8lCLyC/f/7/e5DKe63q5IF7etgw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IClusteredGraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IClusteredGraph.html",
+          "hash": "O6AGXC2obJDpMW0hm2FQ3lJ1n8rgxvgoWeuMxkab6io="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IEdge-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IEdge-1.html",
+          "hash": "eN01xRV5fsg2zJClEZtj/+n2wQYf76KCyZICmn+2BDs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IEdgeListAndIncidenceGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IEdgeListAndIncidenceGraph-2.html",
+          "hash": "fCTSd8Dp6SUl8eaTz8kFW1hIZp7KHSdVFmt1ian+6r8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IEdgeListGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IEdgeListGraph-2.html",
+          "hash": "vlFzuKWhCANWCBcN64H30nUV2wsmnuzKHvda3BeUCo8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IEdgeSet-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IEdgeSet-2.html",
+          "hash": "Kt844VYphT/AOzGkPfdJn6+lZe1zNVp/nE861azZelM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IGraph-2.html",
+          "hash": "aRFPvhBmbOBQNxkSIpcaq3hIRI6cNIWEjnul5wF59l8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IHierarchy-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IHierarchy-2.html",
+          "hash": "N/SniPiarZiNCYgikNNTaFOsgLpAbF8uVehy/4t6QGQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IImplicitGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IImplicitGraph-2.html",
+          "hash": "pMJAKJS0tThJwQRdAI0L5cJ6y0JyFf2PNYF94OCJh2E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IImplicitUndirectedGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IImplicitUndirectedGraph-2.html",
+          "hash": "dug/C93hFeE5uzxTGvPqoWYlajMpbsEeSBLDwfNl4dk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IImplicitVertexSet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IImplicitVertexSet-1.html",
+          "hash": "YfzInlUP5X9i8mM0IHUuItv+ddoW7+DuXl4WJ0+qnb8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IIncidenceGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IIncidenceGraph-2.html",
+          "hash": "9GZS/Om15GSqtL7ChWfcz/IEl4wJPT3feT7aDHmvFSY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IMutableBidirectionalGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IMutableBidirectionalGraph-2.html",
+          "hash": "5/pt0EZ1HVZql23G042/HsO+ZYiJzLIrdy9NXcpBwBY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IMutableEdgeListGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IMutableEdgeListGraph-2.html",
+          "hash": "+jL9ELS1oMNPxsMhcVRvx7i0509f9drK2dgbWHIEx/8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IMutableGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IMutableGraph-2.html",
+          "hash": "CiDqEPKPgZBqVZkxjhYZaz3knUuSWSBnvhGsTzeuUow="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IMutableIncidenceGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IMutableIncidenceGraph-2.html",
+          "hash": "BS2Z/9b/K5wmVS2Gud6xAdIWfpOB26lAu0nqoIDHceI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IMutableTermBidirectionalGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IMutableTermBidirectionalGraph-2.html",
+          "hash": "3E++nWvuv82ph9MAc1GTRj9+XYGLsyp7ENhvLn4WAIU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IMutableUndirectedGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IMutableUndirectedGraph-2.html",
+          "hash": "6X+Us5bER411fyiQSrHINDPruklhW5vhWn1hbASCF9I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IMutableVertexAndEdgeListGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IMutableVertexAndEdgeListGraph-2.html",
+          "hash": "KNRc4zNq6gpY8OMc/h5X24hElAX1SLZ4MZ6aQmcRsso="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IMutableVertexAndEdgeSet-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IMutableVertexAndEdgeSet-2.html",
+          "hash": "aeuyBJl+HcZ0PP8E+6k1gn2R5MF5oJk5kSs1Zm8Alwk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IMutableVertexListGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IMutableVertexListGraph-2.html",
+          "hash": "jGf117fXoQk9yvZLYMculgX9Z684+EUq4eqLKCitsgA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IMutableVertexSet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IMutableVertexSet-1.html",
+          "hash": "aGIrm7NGs7LAs7Ut67FMnbmJ/8M+m8n7kJz+pkrSGLk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.ITagged-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.ITagged-1.html",
+          "hash": "YTWJCg2tS4ddzvz70D5Itt3rl/DcqAZESQTR5MIifKo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.ITermBidirectionalGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.ITermBidirectionalGraph-2.html",
+          "hash": "7ccC/kVi0WHpvyjKlp0j2nMmSChX/Znc7JQ23M3es+s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.ITermEdge-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.ITermEdge-1.html",
+          "hash": "QXbmKZpqDXSN+wTtuX8krTRF9hU5hGecNO+c+c6+f/Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IUndirectedEdge-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IUndirectedEdge-1.html",
+          "hash": "BzIbjc6LZOJSu8ZW9iLuO8gnnbb4PrMBg5Y+D8lRKpU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IUndirectedGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IUndirectedGraph-2.html",
+          "hash": "+y6OIL+GVuYt6gTj5pNzoGWEc/OEe1mpfzXZfNNbvh8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IVertexAndEdgeListGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IVertexAndEdgeListGraph-2.html",
+          "hash": "t0V/x3qtyAxTDoGmIJlM60tnN9L5eWUkmTYtiTsuGIk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IVertexListGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IVertexListGraph-2.html",
+          "hash": "4ja9apeN64ChaP0kYZcr53zQ3Gpd5aCS1RQvkeO2ytw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IVertexSet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IVertexSet-1.html",
+          "hash": "oaJP00G+4xYEAzALj0KrVzHN5AsWWXQb4w6B8u+bf2s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IdentifiableEdgeFactory-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IdentifiableEdgeFactory-2.html",
+          "hash": "5sn1b8GOcmnRA0+R3JwbdARc9xsFwHBUTwknB5ZTs4I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.IdentifiableVertexFactory-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.IdentifiableVertexFactory-1.html",
+          "hash": "A2SUpg6XQ7X1NlzXreZ3AIUVjJw8h/mc0YyknXZ+Umo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.MSAGL.MsaglDefaultGraphPopulator-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.MSAGL.MsaglDefaultGraphPopulator-2.html",
+          "hash": "Fjd9cPWcE/KesNcgSK1euKHcSLz6mJiZvSGVPkACG1w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.MSAGL.MsaglEdgeEventArgs-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.MSAGL.MsaglEdgeEventArgs-2.html",
+          "hash": "dv4yCW3kA7wtMDMFy7JcFkt8D3rV6OFrtoDI8SVWUVM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.MSAGL.MsaglEdgeEventHandler-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.MSAGL.MsaglEdgeEventHandler-2.html",
+          "hash": "ZqN6o7M+A6vkT39+2R8sqyv1QTrz+15x5Lm64fXrmw4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.MSAGL.MsaglGraphExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.MSAGL.MsaglGraphExtensions.html",
+          "hash": "GzdEjF8sPpG+BeuF3hZgVpq54Cc9HJiS+GmzVyluZMI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.MSAGL.MsaglGraphPopulator-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.MSAGL.MsaglGraphPopulator-2.html",
+          "hash": "s0aepf7CgIQPg63A1Z9dWHjE96tqepuhqU5nKLXs8tg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.MSAGL.MsaglIdentifiableGraphPopulator-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.MSAGL.MsaglIdentifiableGraphPopulator-2.html",
+          "hash": "/o4D4T37flokVPseSjDjd/okfHeyFHoa6guBHDoEoWY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.MSAGL.MsaglToStringGraphPopulator-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.MSAGL.MsaglToStringGraphPopulator-2.html",
+          "hash": "7z0X0L0oau7u/Qfy4IK8/hSu/Xfxnpp8RFeNyUJV1gQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.MSAGL.MsaglVertexEventArgs-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.MSAGL.MsaglVertexEventArgs-1.html",
+          "hash": "Ss7ySKGIWnXWmAGzjWoIrKybYRIKZBwHwTEaxtvl/ag="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.MSAGL.MsaglVertexNodeEventHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.MSAGL.MsaglVertexNodeEventHandler-1.html",
+          "hash": "Wd63ANFJN28+6PzRlayP9b+cnD7YwW9CCI9bQ82NJdc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.MSAGL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.MSAGL.html",
+          "hash": "SlpE6kP9U5X/2RvEFXW8JwpIZxlupbdjVzqq44E+DWk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.NegativeCapacityException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.NegativeCapacityException.html",
+          "hash": "OXEmZmqH95KSSLI6wj0rgz94Dr8EIl6oNY1F7dAKIPM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.NegativeCycleGraphException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.NegativeCycleGraphException.html",
+          "hash": "OBVOPYtVegITpPIppjMyzmnqYeRLAVXFPNadHE0xolM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.NegativeWeightException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.NegativeWeightException.html",
+          "hash": "hEu1kb89MmAAfG5ssZC6Klg3/NDnOJoqu7BlmdsqsnE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.NoPathFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.NoPathFoundException.html",
+          "hash": "DZh79pTTN48SgvlPr0lM6oRjyAW/f4N93ieBi6EWWes="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.NonAcyclicGraphException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.NonAcyclicGraphException.html",
+          "hash": "Hc9YRBwJfLa2G+8LU5x4+wUy5w3aFyzcLzdbP8LZZKc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.NonStronglyConnectedGraphException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.NonStronglyConnectedGraphException.html",
+          "hash": "WiPPb2J880RULompRNO9JcjEZu5tO0diZLc5RRHAyG4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.ParallelEdgeNotAllowedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.ParallelEdgeNotAllowedException.html",
+          "hash": "pMRx0uyFA3W/R4CeR2S3CPJve4Wn1EVpP0OGu+JqZwA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Petri.AlwaysTrueConditionExpression-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Petri.AlwaysTrueConditionExpression-1.html",
+          "hash": "W3eexgux288AjKhtXu/wmU+4mTZPiqQ5FTUgNilIv2A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Petri.IArc-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Petri.IArc-1.html",
+          "hash": "sNDvcyzQo2/xHThijILGoB0Xkz03YO7rFKtq9Q0ORa4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Petri.IConditionExpression-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Petri.IConditionExpression-1.html",
+          "hash": "pKaGkCpdxC2b+gcVwu0S1eGZ7PfYM9JFI1BR5oqFvdw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Petri.IExpression-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Petri.IExpression-1.html",
+          "hash": "X8cAVGlPGjXT1s8XV8Z/9zCoGMshkG0Q4EgoGQgDLvY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Petri.IMutablePetriNet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Petri.IMutablePetriNet-1.html",
+          "hash": "rCZvmxH4TMBN0zTdTMPs06tJh/a778JFpwTCVpF5KsI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Petri.IPetriGraph-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Petri.IPetriGraph-1.html",
+          "hash": "tFWCpZfpkTznaIYmVebpu+A1sW30drMrrJYkP0uOO64="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Petri.IPetriNet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Petri.IPetriNet-1.html",
+          "hash": "OhqmibZBmkTM51PyjfcIS50Sd5TFeMMnfKDxGD6dykU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Petri.IPetriVertex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Petri.IPetriVertex.html",
+          "hash": "H0V1T6aLZ1YcKT2I87HQFcryU7VMQe3X87cfPNTBqwA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Petri.IPlace-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Petri.IPlace-1.html",
+          "hash": "P+2Q5vnF7dvsnybFW+S6WRrT5DzOdbqKFAl13zddADA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Petri.IReadOnlyPetriGraph-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Petri.IReadOnlyPetriGraph-1.html",
+          "hash": "l0NGXiebQPf6llo+FBWLzJBMNOsSFOcYpceeULObEBU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Petri.ITransition-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Petri.ITransition-1.html",
+          "hash": "5lIeNG6lizkNFQtoSCTXFa7G1OYD9ttAV2dHJ7AigZM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Petri.IdentityExpression-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Petri.IdentityExpression-1.html",
+          "hash": "ZMzLNwewfG6lQ+wGiWJx6NEGLN0D5cjhg1mgrsLo/zo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Petri.PetriNet-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Petri.PetriNet-1.html",
+          "hash": "C0Ew/JTTIq8gkdKmCXbEo8T89p8BL17kjW+K+bfq24s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Petri.PetriNetSimulator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Petri.PetriNetSimulator-1.html",
+          "hash": "5o9+yeH0hXB9b44LjfJa5heUN0ZPmBJWOjZW5FM85Jo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Petri.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Petri.html",
+          "hash": "o6UkMzHPgFrbUJCd6iei/R4LwoTQ6MjfcH7zZWgtD/Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Predicates.FilteredBidirectionalGraph-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Predicates.FilteredBidirectionalGraph-3.html",
+          "hash": "iGImPFa7aBfJqD08yN37MKQc4ym0DoxUi+pru2rfzgc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Predicates.FilteredEdgeListGraph-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Predicates.FilteredEdgeListGraph-3.html",
+          "hash": "gykkC5wJTU+27CmnUX9WKefwriczDCiwECJ3L0WgyY8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Predicates.FilteredGraph-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Predicates.FilteredGraph-3.html",
+          "hash": "1nMHhkSbwVd21GK+Cc3A2fWIdsP6sdgtBUWbsYeErTk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Predicates.FilteredImplicitGraph-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Predicates.FilteredImplicitGraph-3.html",
+          "hash": "mbFF3Is3Zkpwc4irmM2hTYx0+2IPVsYPh/wM0B/tmFA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Predicates.FilteredImplicitVertexSet-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Predicates.FilteredImplicitVertexSet-3.html",
+          "hash": "Fy/pYKMZmeSHCq7sQBkq0kbsw7B3BzinUhdwk24MHzk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Predicates.FilteredIncidenceGraph-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Predicates.FilteredIncidenceGraph-3.html",
+          "hash": "J6xXTWBSIFxGfmVQWYHrQByApl/ecSJ2aWsNXmSGkY8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Predicates.FilteredUndirectedGraph-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Predicates.FilteredUndirectedGraph-3.html",
+          "hash": "JvdcY6jwCD9VPBjWi27xXciUAQBfs0zqiVoOrGVyOJI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Predicates.FilteredVertexAndEdgeListGraph-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Predicates.FilteredVertexAndEdgeListGraph-3.html",
+          "hash": "yYbCPBxZckfE5E7j6LJNm0BnKINwSG1Qx/Yn57AHfPg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Predicates.FilteredVertexListGraph-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Predicates.FilteredVertexListGraph-3.html",
+          "hash": "pIiZis34mNndWJlx4+YId+XvTomfBSR2av+vl2tnDm8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Predicates.InDictionaryVertexPredicate-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Predicates.InDictionaryVertexPredicate-2.html",
+          "hash": "yiLdIng7G5ykg5Le3QK+d4oZS8BkIjuslRztmpTEXPg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Predicates.IsolatedVertexPredicate-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Predicates.IsolatedVertexPredicate-2.html",
+          "hash": "LP8QbxrBYKI6DoiPDpAOCUIT4S++7ZpNhkH23idXG9w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Predicates.ResidualEdgePredicate-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Predicates.ResidualEdgePredicate-2.html",
+          "hash": "Yw9fp8cWNfpHFNBcZ4xGnDvBPkKs1HCt0XBqVrrDSDY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Predicates.ReversedResidualEdgePredicate-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Predicates.ReversedResidualEdgePredicate-2.html",
+          "hash": "aO+7+weDRonHSCcKOxcqsaG+D7UYug8KC8IUlQq5la8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Predicates.SinkVertexPredicate-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Predicates.SinkVertexPredicate-2.html",
+          "hash": "zcMf197Wx/JYD294ib5Wi4DNbvvC1cTXUdNRsxFR0r4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Predicates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Predicates.html",
+          "hash": "mYV9uudoK6CLk57SO0vwDcYL4oEARTxq7jEmn9FPNDU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.QuikGraphException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.QuikGraphException.html",
+          "hash": "4d9TJZk51Cs+ybyq9kfQT36FdpHCxvOXo4bMQW03Yj4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.ReversedBidirectionalGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.ReversedBidirectionalGraph-2.html",
+          "hash": "xqCbn9z3DgWMSwopyYNs83n16Sr4KdqArulz49a24Kc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.SEdge-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.SEdge-1.html",
+          "hash": "dUj71Eb4qRBQVTQtMUhqEKIQIyc0yMlBaikO8r/ihQ8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.SEquatableEdge-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.SEquatableEdge-1.html",
+          "hash": "VETWXJpXKp9a26oxQo7KC2dDQL8tzS8E/gNm0MwDbAk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.SEquatableTaggedEdge-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.SEquatableTaggedEdge-2.html",
+          "hash": "Eq09Je9Pr6EdmLjyDobfjnmfs6HRjluONwOxkvdKeSo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.SReversedEdge-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.SReversedEdge-2.html",
+          "hash": "ry47pnaR6Z79gj2xx1CyCoV6cnGLruljg9o+18dpAi4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.STaggedEdge-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.STaggedEdge-2.html",
+          "hash": "QrEyVOSMpCWQkssxZLhG1ha63u/xtLaWQuxoiRk+n8c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.STaggedUndirectedEdge-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.STaggedUndirectedEdge-2.html",
+          "hash": "z1fMuqYKcrdqcQ8iA6M2kA3y2vZdN1RiWDs4bgSBrIM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.SUndirectedEdge-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.SUndirectedEdge-1.html",
+          "hash": "MgidsD8V48YCcPOIv4cZioONJIFEw79TOKYAVAyUqBU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.ClrBoolean.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.ClrBoolean.html",
+          "hash": "gsm1924RUNyBQacejMr2Hfd9pajbuIWjG9/dil47V48="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraph.html",
+          "hash": "FnhG4Bs3pWeZTG5IRQL8vsUEPY1LUQfUhStaO6/3TEc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphAlias.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphAlias.html",
+          "hash": "SznIyH91WO5nqmzxmwjojJKk552MlM5MJYhWy0YpH6A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphCategory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphCategory.html",
+          "hash": "OOdTbSVpwnknBAXcliTuoHCCzwtEIvOcBXk6qZ5BfPs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphLink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphLink.html",
+          "hash": "Cw05wr/ToBnkZE1cT7x+OmxNRq4nCExroFVzvF/AFDo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphLinkCategory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphLinkCategory.html",
+          "hash": "3jFEwGXDllp+hjW70g+bcqb7VIA33P642KJetzAOAXw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphName.html",
+          "hash": "cUFZMa27MqH7WnWUdUXBkGs9haR0ETzFEq2uHrvnHmQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphNode.html",
+          "hash": "AeHgLaXae4O4+ucMyy8kQa3GLP+pCN62v8MxLMTyf/k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphNodeCategory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphNodeCategory.html",
+          "hash": "IqPRkZ9aYYCk139YOU4DzBEHdUzcD3rFu+b68uhT/N8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphPath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphPath.html",
+          "hash": "guFIQ/UoT/t6edp/H7FEu1pdUyVPZAPAHxHUIv/eA6Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphProperty.html",
+          "hash": "E7wna2168RUd1o9t4YDld2ZNf1f6U7zZgxOKz6mNWOs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphStyle.html",
+          "hash": "DMQdJjDkjUqrUxZo0kp7NM3YXMMSgBGTSRTnuD570Ng="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphStyleCondition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphStyleCondition.html",
+          "hash": "zO4mAWohgjdFxyySHenzxn00h/JHdR+UUexwjPrk/wM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphStyleSetter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.DirectedGraphStyleSetter.html",
+          "hash": "yRdk+Pab/x6DvA3jp0kaSZ/P4tSaOht3fVaCz+kqKu8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.FontStyleEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.FontStyleEnum.html",
+          "hash": "qOrCsL+Lp/DNmX+n1EAxtUduWlp6eK1FGcyk6O+Yxpw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.FontWeightEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.FontWeightEnum.html",
+          "hash": "RSiNIkixTs0++nrz4X1jL7AEECwCpLyXUDBmYujDVoA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.FrameKindEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.FrameKindEnum.html",
+          "hash": "wW5PfVMzDehAbY2ArMA8/kdaSUKexMdVi0p3tqkd36A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.GraphDirectionEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.GraphDirectionEnum.html",
+          "hash": "b7a6gwp2wLmaamCOn+zKdfoItqBUr5LAOvuhcBib0Z8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.GroupEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.GroupEnum.html",
+          "hash": "0R2XoVvCGw+f0GrjqKXNpdMxz1T+4x4AoJPOqrQhGhQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.HorizontalAlignmentEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.HorizontalAlignmentEnum.html",
+          "hash": "tLhJHqWn4b9xzIb+xb2reIQiaVwialw6lSJr+w4L6Tc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.LayoutEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.LayoutEnum.html",
+          "hash": "IDIIl8ExMpmMbbODapqC//K5eXHyDO5J3OroMz5OHyE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.PropertyType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.PropertyType.html",
+          "hash": "Y7okTvNfELiU5gl71/7EZIKwpr9VcclZIc4jFve+Amw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.TargetTypeEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.TargetTypeEnum.html",
+          "hash": "ck7xn9teeHXJuh+ceXZVdXHHDgnWgCrdgLDB4dWj8Ns="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.VerticalAlignmentEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.VerticalAlignmentEnum.html",
+          "hash": "gINaPhx0lEW5PJOPI7ynMfY9GFe12oDrHrFFVaoHtt8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.VisibilityEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.VisibilityEnum.html",
+          "hash": "9PWrb4VQaoWTYhsCuABIaOzJXTSWdxZuakBFVA5RQzw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphML.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphML.html",
+          "hash": "Q8LsN24q65BJO8CGyByd8Npdwlznbg2kFENETM3vIeU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphMLAlgorithm-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphMLAlgorithm-2.html",
+          "hash": "qZEW5zBmIR1zPdnfQn4N2WanryGXIBKAYbraNF//kzw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.DirectedGraphMLExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.DirectedGraphMLExtensions.html",
+          "hash": "YUcw8FQIH9LRvWuHC2TE1TrW2pH3HkgHdIZMRzDpi2c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.GraphMLDeserializer-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.GraphMLDeserializer-3.html",
+          "hash": "ehC195MZjnjopxqUegRlSjL/sFKl/5smW6Z8Lo6YcnA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.GraphMLExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.GraphMLExtensions.html",
+          "hash": "ijgoHMQjH6DXMp9+OhncTmufWw0BlgB1VjJ2ZTDGGAQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.GraphMLSerializer-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.GraphMLSerializer-3.html",
+          "hash": "KcIBFa/5k/KpPHt+X39w0lnSkEMrq0QAtqELx3hqbhU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.GraphMLXmlResolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.GraphMLXmlResolver.html",
+          "hash": "uQDm9bqwNyO2t630erXYSj8yYpwtt0MbN3ttHd4Q9QM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.SerializationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.SerializationExtensions.html",
+          "hash": "ggVs2uPkK7LW6qRORicEqfw8zkfzbA1HowJC7uv1VZg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.SerializerBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.SerializerBase.html",
+          "hash": "ULS5AMO4YQ2CYk6KI2kwm1DVAP7e0kqoZPZiZrGAcDU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.XmlReaderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.XmlReaderExtensions.html",
+          "hash": "TB8f/YoXnAlomrPZZndCWHY222q8jlItRw7CTG5Gwbo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.XmlSerializableEdge-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.XmlSerializableEdge-1.html",
+          "hash": "RRN4Fv+8iuAyHI5uhTtfxzQ/Pu2TMmvCjbFurD3NCQI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.XmlSerializableGraph-3.XmlEdgeList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.XmlSerializableGraph-3.XmlEdgeList.html",
+          "hash": "edJFbFg87850QZD28PlShsKXi/9FyWjv5+CTGELRnes="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.XmlSerializableGraph-3.XmlVertexList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.XmlSerializableGraph-3.XmlVertexList.html",
+          "hash": "zDxeXDpO/Hz7NNXIP3mSjB/qxBFsCrDSJVshHgLi6Ew="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.XmlSerializableGraph-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.XmlSerializableGraph-3.html",
+          "hash": "djZIiK9PEApZsmtsaOCxUj0XrZEO7pCtfq3O9H2PWJo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.XmlWriterExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.XmlWriterExtensions.html",
+          "hash": "hbVeXHWADtCxbvEoNdI1kbK8m+zvunrfhnbLwVx0b+Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Serialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Serialization.html",
+          "hash": "/DK/T3fnsj0bDv/ZEH2tBhH+C0ql3ggIi3+Tq1zpxmQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.TaggedEdge-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.TaggedEdge-2.html",
+          "hash": "Jz0WiR1fj/pEGF8b42mukFzJAYWuR3kf2cyWILRJZaE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.TaggedUndirectedEdge-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.TaggedUndirectedEdge-2.html",
+          "hash": "ibd2pfOZbe0jNbEerEvJN5J1RpZgZJMUdo44JroN0jA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.TermEdge-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.TermEdge-1.html",
+          "hash": "ncRe+LHPrQ7wOZ40vTddbURn2Dg/89Cz/RH1bmic++M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.TryFunc-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.TryFunc-2.html",
+          "hash": "XBMgBfYWM62n/k56eq+jHh3xWEofAq8ok1QDddfM3og="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.TryFunc-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.TryFunc-3.html",
+          "hash": "rR8xxE3yuuopy5wLsKkTD82MhT73e2xDt56GlaxhKS4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.TryFunc-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.TryFunc-4.html",
+          "hash": "KtltCKSJqTd5sui5O7SIS5UbzJT8PQZTkvtw4eeyibQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.TryFunc-5.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.TryFunc-5.html",
+          "hash": "7oaxcXfsFBmlEGPy3SaN8iTo/pzaMBfcafUCPVdH8kU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.UndirectedBidirectionalGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.UndirectedBidirectionalGraph-2.html",
+          "hash": "JHzdjnwZPH6pzPsIR5viyvlWb5E/QeNKxUskOhN4oOA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.UndirectedEdge-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.UndirectedEdge-1.html",
+          "hash": "EfoXkmaitwGWZyCgTxj27r6vXyDCOZ2GDte0DFzcRQY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.UndirectedEdgeAction-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.UndirectedEdgeAction-2.html",
+          "hash": "kDe8nqwWaSa8JIq7AuWkr4YjHGqVwbXElVdkqdJa7Xk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.UndirectedEdgeEventArgs-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.UndirectedEdgeEventArgs-2.html",
+          "hash": "4HvKCYSmV6LkFbo/frGVTlJCFvm9xSs+NbUyMF9W5no="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.UndirectedGraph-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.UndirectedGraph-2.html",
+          "hash": "1nkqaYuWlJHMD5XTVgKnKBmUla4+mkdZp4mD5U3KLDQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Utils.CryptoRandom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Utils.CryptoRandom.html",
+          "hash": "5CDTiQKKfu4Pi2f6DJ2rykJ3Rmd6T3cwsXvcdMNwfj4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.Utils.html",
+          "hash": "mMtgt4ceqm8g+RC8OqQEAIc1csbxKtjU7IhGssdZCGw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.VertexAction-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.VertexAction-1.html",
+          "hash": "3QV7J/VmL0DyGk3CrUE2C+i9bkvXZ2jNtOCKVIbICe0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.VertexEventArgs-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.VertexEventArgs-1.html",
+          "hash": "nJMZOjq1uz23L5Dug0qcGVw+oXfe+Bv/IdPwP11UPV4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.VertexEventHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.VertexEventHandler-1.html",
+          "hash": "+XPPyHMhEvTJu+F8snn51OLQGgizI0m2Zus31IwxlRQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.VertexFactory-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.VertexFactory-1.html",
+          "hash": "az4GXOdR8b2eKbKBWMaZwCOIqVhn8bOAFIKDmA3FVSc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.VertexIdentity-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.VertexIdentity-1.html",
+          "hash": "oeJCg8c18ZildetmG4vckxO6IApOjXNevEPCfantAl4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.VertexNotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.VertexNotFoundException.html",
+          "hash": "k62BtSgpmF0vF6jR2hS9PgYVzDKZpNQ19k/U25r112w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.VertexPredicate-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.VertexPredicate-1.html",
+          "hash": "17G2ZKoxOafzvXeo9lu4JIBqECOzkYfj0rxnk5FyTaM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuikGraph.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuikGraph.html",
+          "hash": "ufN32bltVivFjdvs38YD8K8perrPmZfNyJRZe9z1ylM="
         }
       },
       "is_incremental": false,
@@ -21,7 +4809,19 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "O/8D0mG9aPM1ND+LoT/R3Q=="
+          "hash": "kFrkVnXg0UuBNSHfi+WPwqDawcTlVQS//WH651RlaFw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "QN4PX7AmHGDIg9Sp4HZyrfjisj3DCF3iuOXWlXBUCJY="
         }
       },
       "is_incremental": false,
@@ -33,7 +4833,7 @@
       "output": {
         ".html": {
           "relative_path": "documentation/general-coding-guidelines.html",
-          "hash": "IqiU8H4uocH5VrjgK6RGSA=="
+          "hash": "nXnm5MAnyElYVTC8bjOIDxZRjzvIX4Zh2rV2DyPo0LI="
         }
       },
       "is_incremental": false,
@@ -45,7 +4845,7 @@
       "output": {
         ".html": {
           "relative_path": "documentation/guidelines/csharp-best-practices.html",
-          "hash": "R6dV25cq0XAgAw6cfM/6tw=="
+          "hash": "VGu57rdnDogVFrTNqIVtoTpyWm/JBD2UWgnS7laKWyw="
         }
       },
       "is_incremental": false,
@@ -57,7 +4857,7 @@
       "output": {
         ".html": {
           "relative_path": "documentation/guidelines/csharp-coding-guidelines.html",
-          "hash": "t+GjBGcBMkOkadTCc7ICXA=="
+          "hash": "r67dvCDiktTKHHA5HfcEXK2HpIyKjE71Ywpx6O0PWYY="
         }
       },
       "is_incremental": false,
@@ -69,7 +4869,7 @@
       "output": {
         ".html": {
           "relative_path": "documentation/history.html",
-          "hash": "3ZLR25qTA1tWbcz4yr+VNQ=="
+          "hash": "1n7HHUCgSt0EjZA/nOrp+vlUra3ngzReERQYNh3GVCY="
         }
       },
       "is_incremental": false,
@@ -81,7 +4881,7 @@
       "output": {
         ".html": {
           "relative_path": "documentation/toc.html",
-          "hash": "ry7qXXDMUYLidM8/tNZmUA=="
+          "hash": "H2MPF9bwtGHLYYVG7uUPqnT3ZCGhJ7/SxDBnzRPmCWU="
         }
       },
       "is_incremental": false,
@@ -93,7 +4893,7 @@
       "output": {
         ".html": {
           "relative_path": "documentation/tutorials.html",
-          "hash": "v3LOo8r/8O9BvAGZ5255MA=="
+          "hash": "Y5xutS71V19MqMB1jQmb3/TZ6/m5+86TpMMQ8md4yP0="
         }
       },
       "is_incremental": false,
@@ -105,7 +4905,7 @@
       "output": {
         ".html": {
           "relative_path": "documentation/tutorials/use-under-unity.html",
-          "hash": "VzEIbsUaP91r0Vr8rPdAzw=="
+          "hash": "fBDephxi21B60oasp6hf+QhKVrL9TtOLZCvE5L+LgCo="
         }
       },
       "is_incremental": false,
@@ -150,7 +4950,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "jQHzYQu7XTKhqrh1o+fxVA=="
+          "hash": "xL5eeZ4Z0c/jt9C5DWRASkjSkB9PckYN6prlOIjgXPs="
         }
       },
       "is_incremental": false,
@@ -162,7 +4962,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "s0lLTCswM/9GrCjj32kJnQ=="
+          "hash": "ll9LWjJnBbTSL41NCZEjzZj3mW5LSlyj/Y1CTaySfQA="
         }
       },
       "is_incremental": false,
@@ -184,6 +4984,12 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 9,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 399,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

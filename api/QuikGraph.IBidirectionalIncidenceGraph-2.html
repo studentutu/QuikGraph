@@ -1,0 +1,535 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IBidirectionalIncidenceGraph&lt;TVertex, TEdge&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IBidirectionalIncidenceGraph&lt;TVertex, TEdge&gt;
+   ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="QuikGraph.IBidirectionalIncidenceGraph`2">
+  
+  
+  <h1 id="QuikGraph_IBidirectionalIncidenceGraph_2" data-uid="QuikGraph.IBidirectionalIncidenceGraph`2" class="text-break">Interface IBidirectionalIncidenceGraph&lt;TVertex, TEdge&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>A incident directed graph with vertices of type <code data-dev-comment-type="typeparamref" class="typeparamref">TVertex</code>
+and edges of type <code data-dev-comment-type="typeparamref" class="typeparamref">TEdge</code>, that is efficient
+to traverse both in and out edges.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="QuikGraph.IIncidenceGraph-2.html#QuikGraph_IIncidenceGraph_2_ContainsEdge__0__0_">IIncidenceGraph&lt;TVertex, TEdge&gt;.ContainsEdge(TVertex, TVertex)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.IIncidenceGraph-2.html#QuikGraph_IIncidenceGraph_2_TryGetEdge__0__0__1__">IIncidenceGraph&lt;TVertex, TEdge&gt;.TryGetEdge(TVertex, TVertex, TEdge)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.IIncidenceGraph-2.html#QuikGraph_IIncidenceGraph_2_TryGetEdges__0__0_System_Collections_Generic_IEnumerable__1___">IIncidenceGraph&lt;TVertex, TEdge&gt;.TryGetEdges(TVertex, TVertex, IEnumerable&lt;TEdge&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.IImplicitGraph-2.html#QuikGraph_IImplicitGraph_2_IsOutEdgesEmpty__0_">IImplicitGraph&lt;TVertex, TEdge&gt;.IsOutEdgesEmpty(TVertex)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.IImplicitGraph-2.html#QuikGraph_IImplicitGraph_2_OutDegree__0_">IImplicitGraph&lt;TVertex, TEdge&gt;.OutDegree(TVertex)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.IImplicitGraph-2.html#QuikGraph_IImplicitGraph_2_OutEdges__0_">IImplicitGraph&lt;TVertex, TEdge&gt;.OutEdges(TVertex)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.IImplicitGraph-2.html#QuikGraph_IImplicitGraph_2_TryGetOutEdges__0_System_Collections_Generic_IEnumerable__1___">IImplicitGraph&lt;TVertex, TEdge&gt;.TryGetOutEdges(TVertex, IEnumerable&lt;TEdge&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.IImplicitGraph-2.html#QuikGraph_IImplicitGraph_2_OutEdge__0_System_Int32_">IImplicitGraph&lt;TVertex, TEdge&gt;.OutEdge(TVertex, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.IGraph-2.html#QuikGraph_IGraph_2_IsDirected">IGraph&lt;TVertex, TEdge&gt;.IsDirected</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.IGraph-2.html#QuikGraph_IGraph_2_AllowParallelEdges">IGraph&lt;TVertex, TEdge&gt;.AllowParallelEdges</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.IImplicitVertexSet-1.html#QuikGraph_IImplicitVertexSet_1_ContainsVertex__0_">IImplicitVertexSet&lt;TVertex&gt;.ContainsVertex(TVertex)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="QuikGraph.html">QuikGraph</a></h6>
+  <h6><strong>Assembly</strong>: QuikGraph.dll</h6>
+  <h5 id="QuikGraph_IBidirectionalIncidenceGraph_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IBidirectionalIncidenceGraph&lt;TVertex, TEdge&gt; : IIncidenceGraph&lt;TVertex, TEdge&gt;, IImplicitGraph&lt;TVertex, TEdge&gt;, IGraph&lt;TVertex, TEdge&gt;, IImplicitVertexSet&lt;TVertex&gt; where TEdge : IEdge&lt;TVertex&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TVertex</span></td>
+        <td><p>Vertex type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TEdge</span></td>
+        <td><p>Edge type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_IBidirectionalIncidenceGraph_2_Degree__0_.md&amp;value=---%0Auid%3A%20QuikGraph.IBidirectionalIncidenceGraph%602.Degree(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Interfaces/Graphs/IBidirectionalIncidenceGraph.cs/#L67">View Source</a>
+  </span>
+  <a id="QuikGraph_IBidirectionalIncidenceGraph_2_Degree_" data-uid="QuikGraph.IBidirectionalIncidenceGraph`2.Degree*"></a>
+  <h4 id="QuikGraph_IBidirectionalIncidenceGraph_2_Degree__0_" data-uid="QuikGraph.IBidirectionalIncidenceGraph`2.Degree(`0)">Degree(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Gets the degree of <code data-dev-comment-type="paramref" class="paramref">vertex</code>, i.e.
+the sum of the out-degree and in-degree of <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Degree(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The sum of OutDegree and InDegree of <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_IBidirectionalIncidenceGraph_2_InDegree__0_.md&amp;value=---%0Auid%3A%20QuikGraph.IBidirectionalIncidenceGraph%602.InDegree(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Interfaces/Graphs/IBidirectionalIncidenceGraph.cs/#L29">View Source</a>
+  </span>
+  <a id="QuikGraph_IBidirectionalIncidenceGraph_2_InDegree_" data-uid="QuikGraph.IBidirectionalIncidenceGraph`2.InDegree*"></a>
+  <h4 id="QuikGraph_IBidirectionalIncidenceGraph_2_InDegree__0_" data-uid="QuikGraph.IBidirectionalIncidenceGraph`2.InDegree(`0)">InDegree(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Gets the number of in-edges of <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int InDegree(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of in-edges pointing towards <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_IBidirectionalIncidenceGraph_2_InEdge__0_System_Int32_.md&amp;value=---%0Auid%3A%20QuikGraph.IBidirectionalIncidenceGraph%602.InEdge(%600%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Interfaces/Graphs/IBidirectionalIncidenceGraph.cs/#L57">View Source</a>
+  </span>
+  <a id="QuikGraph_IBidirectionalIncidenceGraph_2_InEdge_" data-uid="QuikGraph.IBidirectionalIncidenceGraph`2.InEdge*"></a>
+  <h4 id="QuikGraph_IBidirectionalIncidenceGraph_2_InEdge__0_System_Int32_" data-uid="QuikGraph.IBidirectionalIncidenceGraph`2.InEdge(`0,System.Int32)">InEdge(TVertex, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the in-edge at location <code data-dev-comment-type="paramref" class="paramref">index</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TEdge InEdge(TVertex vertex, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEdge</span></td>
+        <td><p>The in-edge at position <code data-dev-comment-type="paramref" class="paramref">index</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_IBidirectionalIncidenceGraph_2_InEdges__0_.md&amp;value=---%0Auid%3A%20QuikGraph.IBidirectionalIncidenceGraph%602.InEdges(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Interfaces/Graphs/IBidirectionalIncidenceGraph.cs/#L37">View Source</a>
+  </span>
+  <a id="QuikGraph_IBidirectionalIncidenceGraph_2_InEdges_" data-uid="QuikGraph.IBidirectionalIncidenceGraph`2.InEdges*"></a>
+  <h4 id="QuikGraph_IBidirectionalIncidenceGraph_2_InEdges__0_" data-uid="QuikGraph.IBidirectionalIncidenceGraph`2.InEdges(`0)">InEdges(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Gets the collection of in-edges of <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;TEdge&gt; InEdges(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TEdge&gt;</td>
+        <td><p>The collection of in-edges of <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_IBidirectionalIncidenceGraph_2_IsInEdgesEmpty__0_.md&amp;value=---%0Auid%3A%20QuikGraph.IBidirectionalIncidenceGraph%602.IsInEdgesEmpty(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Interfaces/Graphs/IBidirectionalIncidenceGraph.cs/#L21">View Source</a>
+  </span>
+  <a id="QuikGraph_IBidirectionalIncidenceGraph_2_IsInEdgesEmpty_" data-uid="QuikGraph.IBidirectionalIncidenceGraph`2.IsInEdgesEmpty*"></a>
+  <h4 id="QuikGraph_IBidirectionalIncidenceGraph_2_IsInEdgesEmpty__0_" data-uid="QuikGraph.IBidirectionalIncidenceGraph`2.IsInEdgesEmpty(`0)">IsInEdgesEmpty(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Determines whether <code data-dev-comment-type="paramref" class="paramref">vertex</code> has no in-edges.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsInEdgesEmpty(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if <code data-dev-comment-type="paramref" class="paramref">vertex</code> has no in-edges, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_IBidirectionalIncidenceGraph_2_TryGetInEdges__0_System_Collections_Generic_IEnumerable__1___.md&amp;value=---%0Auid%3A%20QuikGraph.IBidirectionalIncidenceGraph%602.TryGetInEdges(%600%2CSystem.Collections.Generic.IEnumerable%7B%601%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Interfaces/Graphs/IBidirectionalIncidenceGraph.cs/#L47">View Source</a>
+  </span>
+  <a id="QuikGraph_IBidirectionalIncidenceGraph_2_TryGetInEdges_" data-uid="QuikGraph.IBidirectionalIncidenceGraph`2.TryGetInEdges*"></a>
+  <h4 id="QuikGraph_IBidirectionalIncidenceGraph_2_TryGetInEdges__0_System_Collections_Generic_IEnumerable__1___" data-uid="QuikGraph.IBidirectionalIncidenceGraph`2.TryGetInEdges(`0,System.Collections.Generic.IEnumerable{`1}@)">TryGetInEdges(TVertex, out IEnumerable&lt;TEdge&gt;)</h4>
+  <div class="markdown level1 summary"><p>Tries to get the in-edges of <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool TryGetInEdges(TVertex vertex, out IEnumerable&lt;TEdge&gt; edges)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TEdge&gt;</td>
+        <td><span class="parametername">edges</span></td>
+        <td><p>In-edges.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if <code data-dev-comment-type="paramref" class="paramref">vertex</code> was found or/and in-edges were found, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_String_">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_String_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_Xml_XmlWriter_">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_Xml_XmlReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_IO_TextReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, TextReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_String_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeAndValidateFromGraphML__3___2_System_IO_TextReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeAndValidateFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, TextReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.SerializationExtensions.html#QuikGraph_Serialization_SerializationExtensions_SerializeToBinary__2_QuikGraph_IGraph___0___1__System_IO_Stream_">SerializationExtensions.SerializeToBinary&lt;TVertex, TEdge&gt;(IGraph&lt;TVertex, TEdge&gt;, Stream)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.SerializationExtensions.html#QuikGraph_Serialization_SerializationExtensions_SerializeToXml__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__System_String_System_String_System_String_System_String_">SerializationExtensions.SerializeToXml&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;, String, String, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.SerializationExtensions.html#QuikGraph_Serialization_SerializationExtensions_SerializeToXml__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__System_String_System_String_System_String_System_String_System_Action_System_Xml_XmlWriter___2__System_Action_System_Xml_XmlWriter___0__System_Action_System_Xml_XmlWriter___1__">SerializationExtensions.SerializeToXml&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;, String, String, String, String, Action&lt;XmlWriter, TGraph&gt;, Action&lt;XmlWriter, TVertex&gt;, Action&lt;XmlWriter, TEdge&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_IBidirectionalIncidenceGraph_2.md&amp;value=---%0Auid%3A%20QuikGraph.IBidirectionalIncidenceGraph%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Interfaces/Graphs/IBidirectionalIncidenceGraph.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

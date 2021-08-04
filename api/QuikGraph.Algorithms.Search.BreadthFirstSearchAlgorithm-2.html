@@ -1,0 +1,979 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BreadthFirstSearchAlgorithm&lt;TVertex, TEdge&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BreadthFirstSearchAlgorithm&lt;TVertex, TEdge&gt;
+   ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2">
+  
+  
+  <h1 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2" class="text-break">Class BreadthFirstSearchAlgorithm&lt;TVertex, TEdge&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>A breath first search algorithm for directed graphs.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html">AlgorithmBase</a>&lt;<a class="xref" href="QuikGraph.IVertexListGraph-2.html">IVertexListGraph</a>&lt;TVertex, TEdge&gt;&gt;</div>
+    <div class="level2"><a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html">RootedAlgorithmBase</a>&lt;TVertex, <a class="xref" href="QuikGraph.IVertexListGraph-2.html">IVertexListGraph</a>&lt;TVertex, TEdge&gt;&gt;</div>
+    <div class="level3"><span class="xref">BreadthFirstSearchAlgorithm&lt;TVertex, TEdge&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="QuikGraph.Algorithms.IAlgorithm-1.html">IAlgorithm</a>&lt;<a class="xref" href="QuikGraph.IVertexListGraph-2.html">IVertexListGraph</a>&lt;TVertex, TEdge&gt;&gt;</div>
+    <div><a class="xref" href="QuikGraph.Algorithms.IComputation.html">IComputation</a></div>
+    <div><a class="xref" href="QuikGraph.Algorithms.Services.IAlgorithmComponent.html">IAlgorithmComponent</a></div>
+    <div><a class="xref" href="QuikGraph.Algorithms.IVertexPredecessorRecorderAlgorithm-2.html">IVertexPredecessorRecorderAlgorithm</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.Algorithms.ITreeBuilderAlgorithm-2.html">ITreeBuilderAlgorithm</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.Algorithms.IDistanceRecorderAlgorithm-1.html">IDistanceRecorderAlgorithm</a>&lt;TVertex&gt;</div>
+    <div><a class="xref" href="QuikGraph.Algorithms.IVertexColorizerAlgorithm-1.html">IVertexColorizerAlgorithm</a>&lt;TVertex&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html#QuikGraph_Algorithms_RootedAlgorithmBase_2_TryGetRootVertex__0__">RootedAlgorithmBase&lt;TVertex, IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.TryGetRootVertex(TVertex)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html#QuikGraph_Algorithms_RootedAlgorithmBase_2_SetRootVertex__0_">RootedAlgorithmBase&lt;TVertex, IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.SetRootVertex(TVertex)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html#QuikGraph_Algorithms_RootedAlgorithmBase_2_ClearRootVertex">RootedAlgorithmBase&lt;TVertex, IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.ClearRootVertex()</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html#QuikGraph_Algorithms_RootedAlgorithmBase_2_RootVertexChanged">RootedAlgorithmBase&lt;TVertex, IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.RootVertexChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html#QuikGraph_Algorithms_RootedAlgorithmBase_2_OnRootVertexChanged_System_EventArgs_">RootedAlgorithmBase&lt;TVertex, IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.OnRootVertexChanged(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html#QuikGraph_Algorithms_RootedAlgorithmBase_2_GetAndAssertRootInGraph">RootedAlgorithmBase&lt;TVertex, IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.GetAndAssertRootInGraph()</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html#QuikGraph_Algorithms_RootedAlgorithmBase_2_AssertRootInGraph__0_">RootedAlgorithmBase&lt;TVertex, IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.AssertRootInGraph(TVertex)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.RootedAlgorithmBase-2.html#QuikGraph_Algorithms_RootedAlgorithmBase_2_Compute__0_">RootedAlgorithmBase&lt;TVertex, IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.Compute(TVertex)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_SyncRoot">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.SyncRoot</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_State">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.State</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_Compute">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.Compute()</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_Abort">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.Abort()</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_StateChanged">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.StateChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_OnStateChanged_System_EventArgs_">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.OnStateChanged(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_Started">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.Started</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_OnStarted_System_EventArgs_">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.OnStarted(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_Finished">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.Finished</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_OnFinished_System_EventArgs_">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.OnFinished(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_Aborted">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.Aborted</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_OnAborted_System_EventArgs_">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.OnAborted(EventArgs)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_VisitedGraph">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.VisitedGraph</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_Services">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.Services</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_GetService__1">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.GetService&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_TryGetService__1___0__">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.TryGetService&lt;T&gt;(T)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_TryGetService_System_Type_System_Object__">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.TryGetService(Type, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_ThrowIfCancellationRequested">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.ThrowIfCancellationRequested()</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_Initialize">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.Initialize()</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_InternalCompute">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.InternalCompute()</a>
+    </div>
+    <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmBase-1.html#QuikGraph_Algorithms_AlgorithmBase_1_Clean">AlgorithmBase&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.Clean()</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="QuikGraph.Algorithms.Search.html">QuikGraph.Algorithms.Search</a></h6>
+  <h6><strong>Assembly</strong>: QuikGraph.dll</h6>
+  <h5 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class BreadthFirstSearchAlgorithm&lt;TVertex, TEdge&gt; : RootedAlgorithmBase&lt;TVertex, IVertexListGraph&lt;TVertex, TEdge&gt;&gt;, IAlgorithm&lt;IVertexListGraph&lt;TVertex, TEdge&gt;&gt;, IComputation, IAlgorithmComponent, IVertexPredecessorRecorderAlgorithm&lt;TVertex, TEdge&gt;, ITreeBuilderAlgorithm&lt;TVertex, TEdge&gt;, IDistanceRecorderAlgorithm&lt;TVertex&gt;, IVertexColorizerAlgorithm&lt;TVertex&gt; where TEdge : IEdge&lt;TVertex&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TVertex</span></td>
+        <td><p>Vertex type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TEdge</span></td>
+        <td><p>Edge type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This is a modified version of the classic DFS algorithm
+where the search is performed both in depth and height.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2__ctor_QuikGraph_Algorithms_Services_IAlgorithmComponent_QuikGraph_IVertexListGraph__0__1__QuikGraph_Collections_IQueue__0__System_Collections_Generic_IDictionary__0_QuikGraph_GraphColor__.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.%23ctor(QuikGraph.Algorithms.Services.IAlgorithmComponent%2CQuikGraph.IVertexListGraph%7B%600%2C%601%7D%2CQuikGraph.Collections.IQueue%7B%600%7D%2CSystem.Collections.Generic.IDictionary%7B%600%2CQuikGraph.GraphColor%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L59">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2__ctor_" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.#ctor*"></a>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2__ctor_QuikGraph_Algorithms_Services_IAlgorithmComponent_QuikGraph_IVertexListGraph__0__1__QuikGraph_Collections_IQueue__0__System_Collections_Generic_IDictionary__0_QuikGraph_GraphColor__" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.#ctor(QuikGraph.Algorithms.Services.IAlgorithmComponent,QuikGraph.IVertexListGraph{`0,`1},QuikGraph.Collections.IQueue{`0},System.Collections.Generic.IDictionary{`0,QuikGraph.GraphColor})">BreadthFirstSearchAlgorithm(IAlgorithmComponent, IVertexListGraph&lt;TVertex, TEdge&gt;, IQueue&lt;TVertex&gt;, IDictionary&lt;TVertex, GraphColor&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm-2.html">BreadthFirstSearchAlgorithm&lt;TVertex, TEdge&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BreadthFirstSearchAlgorithm(IAlgorithmComponent host, IVertexListGraph&lt;TVertex, TEdge&gt; visitedGraph, IQueue&lt;TVertex&gt; vertexQueue, IDictionary&lt;TVertex, GraphColor&gt; verticesColors)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Algorithms.Services.IAlgorithmComponent.html">IAlgorithmComponent</a></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>Host to use if set, otherwise use this reference.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="QuikGraph.IVertexListGraph-2.html">IVertexListGraph</a>&lt;TVertex, TEdge&gt;</td>
+        <td><span class="parametername">visitedGraph</span></td>
+        <td><p>Graph to visit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Collections.IQueue-1.html">IQueue</a>&lt;TVertex&gt;</td>
+        <td><span class="parametername">vertexQueue</span></td>
+        <td><p>Queue of vertices to treat.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;TVertex, <a class="xref" href="QuikGraph.GraphColor.html">GraphColor</a>&gt;</td>
+        <td><span class="parametername">verticesColors</span></td>
+        <td><p>Vertices associated to their colors (treatment states).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2__ctor_QuikGraph_Algorithms_Services_IAlgorithmComponent_QuikGraph_IVertexListGraph__0__1__QuikGraph_Collections_IQueue__0__System_Collections_Generic_IDictionary__0_QuikGraph_GraphColor__System_Func_System_Collections_Generic_IEnumerable__1__System_Collections_Generic_IEnumerable__1___.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.%23ctor(QuikGraph.Algorithms.Services.IAlgorithmComponent%2CQuikGraph.IVertexListGraph%7B%600%2C%601%7D%2CQuikGraph.Collections.IQueue%7B%600%7D%2CSystem.Collections.Generic.IDictionary%7B%600%2CQuikGraph.GraphColor%7D%2CSystem.Func%7BSystem.Collections.Generic.IEnumerable%7B%601%7D%2CSystem.Collections.Generic.IEnumerable%7B%601%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L76">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2__ctor_" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.#ctor*"></a>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2__ctor_QuikGraph_Algorithms_Services_IAlgorithmComponent_QuikGraph_IVertexListGraph__0__1__QuikGraph_Collections_IQueue__0__System_Collections_Generic_IDictionary__0_QuikGraph_GraphColor__System_Func_System_Collections_Generic_IEnumerable__1__System_Collections_Generic_IEnumerable__1___" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.#ctor(QuikGraph.Algorithms.Services.IAlgorithmComponent,QuikGraph.IVertexListGraph{`0,`1},QuikGraph.Collections.IQueue{`0},System.Collections.Generic.IDictionary{`0,QuikGraph.GraphColor},System.Func{System.Collections.Generic.IEnumerable{`1},System.Collections.Generic.IEnumerable{`1}})">BreadthFirstSearchAlgorithm(IAlgorithmComponent, IVertexListGraph&lt;TVertex, TEdge&gt;, IQueue&lt;TVertex&gt;, IDictionary&lt;TVertex, GraphColor&gt;, Func&lt;IEnumerable&lt;TEdge&gt;, IEnumerable&lt;TEdge&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm-2.html">BreadthFirstSearchAlgorithm&lt;TVertex, TEdge&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BreadthFirstSearchAlgorithm(IAlgorithmComponent host, IVertexListGraph&lt;TVertex, TEdge&gt; visitedGraph, IQueue&lt;TVertex&gt; vertexQueue, IDictionary&lt;TVertex, GraphColor&gt; verticesColors, Func&lt;IEnumerable&lt;TEdge&gt;, IEnumerable&lt;TEdge&gt;&gt; outEdgesFilter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Algorithms.Services.IAlgorithmComponent.html">IAlgorithmComponent</a></td>
+        <td><span class="parametername">host</span></td>
+        <td><p>Host to use if set, otherwise use this reference.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="QuikGraph.IVertexListGraph-2.html">IVertexListGraph</a>&lt;TVertex, TEdge&gt;</td>
+        <td><span class="parametername">visitedGraph</span></td>
+        <td><p>Graph to visit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Collections.IQueue-1.html">IQueue</a>&lt;TVertex&gt;</td>
+        <td><span class="parametername">vertexQueue</span></td>
+        <td><p>Queue of vertices to treat.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;TVertex, <a class="xref" href="QuikGraph.GraphColor.html">GraphColor</a>&gt;</td>
+        <td><span class="parametername">verticesColors</span></td>
+        <td><p>Vertices associated to their colors (treatment states).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TEdge&gt;, <span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TEdge&gt;&gt;</td>
+        <td><span class="parametername">outEdgesFilter</span></td>
+        <td><p>Function that is used filter out-edges of a vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2__ctor_QuikGraph_IVertexListGraph__0__1__.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.%23ctor(QuikGraph.IVertexListGraph%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L33">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2__ctor_" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.#ctor*"></a>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2__ctor_QuikGraph_IVertexListGraph__0__1__" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.#ctor(QuikGraph.IVertexListGraph{`0,`1})">BreadthFirstSearchAlgorithm(IVertexListGraph&lt;TVertex, TEdge&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm-2.html">BreadthFirstSearchAlgorithm&lt;TVertex, TEdge&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BreadthFirstSearchAlgorithm(IVertexListGraph&lt;TVertex, TEdge&gt; visitedGraph)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.IVertexListGraph-2.html">IVertexListGraph</a>&lt;TVertex, TEdge&gt;</td>
+        <td><span class="parametername">visitedGraph</span></td>
+        <td><p>Graph to visit.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2__ctor_QuikGraph_IVertexListGraph__0__1__QuikGraph_Collections_IQueue__0__System_Collections_Generic_IDictionary__0_QuikGraph_GraphColor__.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.%23ctor(QuikGraph.IVertexListGraph%7B%600%2C%601%7D%2CQuikGraph.Collections.IQueue%7B%600%7D%2CSystem.Collections.Generic.IDictionary%7B%600%2CQuikGraph.GraphColor%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L44">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2__ctor_" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.#ctor*"></a>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2__ctor_QuikGraph_IVertexListGraph__0__1__QuikGraph_Collections_IQueue__0__System_Collections_Generic_IDictionary__0_QuikGraph_GraphColor__" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.#ctor(QuikGraph.IVertexListGraph{`0,`1},QuikGraph.Collections.IQueue{`0},System.Collections.Generic.IDictionary{`0,QuikGraph.GraphColor})">BreadthFirstSearchAlgorithm(IVertexListGraph&lt;TVertex, TEdge&gt;, IQueue&lt;TVertex&gt;, IDictionary&lt;TVertex, GraphColor&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm-2.html">BreadthFirstSearchAlgorithm&lt;TVertex, TEdge&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BreadthFirstSearchAlgorithm(IVertexListGraph&lt;TVertex, TEdge&gt; visitedGraph, IQueue&lt;TVertex&gt; vertexQueue, IDictionary&lt;TVertex, GraphColor&gt; verticesColors)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.IVertexListGraph-2.html">IVertexListGraph</a>&lt;TVertex, TEdge&gt;</td>
+        <td><span class="parametername">visitedGraph</span></td>
+        <td><p>Graph to visit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="QuikGraph.Collections.IQueue-1.html">IQueue</a>&lt;TVertex&gt;</td>
+        <td><span class="parametername">vertexQueue</span></td>
+        <td><p>Queue of vertices to treat.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;TVertex, <a class="xref" href="QuikGraph.GraphColor.html">GraphColor</a>&gt;</td>
+        <td><span class="parametername">verticesColors</span></td>
+        <td><p>Vertices associated to their colors (treatment states).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_OutEdgesFilter.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.OutEdgesFilter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L92">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_OutEdgesFilter_" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.OutEdgesFilter*"></a>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_OutEdgesFilter" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.OutEdgesFilter">OutEdgesFilter</h4>
+  <div class="markdown level1 summary"><p>Filter of edges.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;IEnumerable&lt;TEdge&gt;, IEnumerable&lt;TEdge&gt;&gt; OutEdgesFilter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TEdge&gt;, <span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TEdge&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_VerticesColors.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.VerticesColors%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L258">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_VerticesColors_" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.VerticesColors*"></a>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_VerticesColors" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.VerticesColors">VerticesColors</h4>
+  <div class="markdown level1 summary"><p>Stores vertices associated to their colors (treatment state).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;TVertex, GraphColor&gt; VerticesColors { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;TVertex, <a class="xref" href="QuikGraph.GraphColor.html">GraphColor</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_GetVertexColor__0_.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.GetVertexColor(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L264">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_GetVertexColor_" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.GetVertexColor*"></a>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_GetVertexColor__0_" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.GetVertexColor(`0)">GetVertexColor(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="QuikGraph.GraphColor.html">GraphColor</a> associated to the given <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphColor GetVertexColor(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.GraphColor.html">GraphColor</a></td>
+        <td><p>The vertex <a class="xref" href="QuikGraph.GraphColor.html">GraphColor</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_Initialize.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.Initialize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L216">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_Initialize_" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.Initialize*"></a>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_Initialize" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"><p>Called on algorithm initialization step.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Initialize()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">QuikGraph.Algorithms.AlgorithmBase&lt;QuikGraph.IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.Initialize()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_InternalCompute.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.InternalCompute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L231">View Source</a>
+  </span>
+  <a id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_InternalCompute_" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.InternalCompute*"></a>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_InternalCompute" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.InternalCompute">InternalCompute()</h4>
+  <div class="markdown level1 summary"><p>Algorithm compute step.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void InternalCompute()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">QuikGraph.Algorithms.AlgorithmBase&lt;QuikGraph.IVertexListGraph&lt;TVertex, TEdge&gt;&gt;.InternalCompute()</span></div>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_BlackTarget.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.BlackTarget%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L192">View Source</a>
+  </span>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_BlackTarget" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.BlackTarget">BlackTarget</h4>
+  <div class="markdown level1 summary"><p>Fired when the target vertex of an out-edge from the currently treated vertex is marked as black.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EdgeAction&lt;TVertex, TEdge&gt; BlackTarget</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.EdgeAction-2.html">EdgeAction</a>&lt;TVertex, TEdge&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_DiscoverVertex.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.DiscoverVertex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L132">View Source</a>
+  </span>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_DiscoverVertex" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.DiscoverVertex">DiscoverVertex</h4>
+  <div class="markdown level1 summary"><p>Fired when a vertex is discovered and under treatment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event VertexAction&lt;TVertex&gt; DiscoverVertex</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.VertexAction-1.html">VertexAction</a>&lt;TVertex&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_ExamineEdge.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.ExamineEdge%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L144">View Source</a>
+  </span>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_ExamineEdge" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.ExamineEdge">ExamineEdge</h4>
+  <div class="markdown level1 summary"><p>Fired when an edge is going to be analyzed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EdgeAction&lt;TVertex, TEdge&gt; ExamineEdge</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.EdgeAction-2.html">EdgeAction</a>&lt;TVertex, TEdge&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_ExamineVertex.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.ExamineVertex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L120">View Source</a>
+  </span>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_ExamineVertex" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.ExamineVertex">ExamineVertex</h4>
+  <div class="markdown level1 summary"><p>Fired when a vertex is going to be analyzed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event VertexAction&lt;TVertex&gt; ExamineVertex</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.VertexAction-1.html">VertexAction</a>&lt;TVertex&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_FinishVertex.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.FinishVertex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L202">View Source</a>
+  </span>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_FinishVertex" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.FinishVertex">FinishVertex</h4>
+  <div class="markdown level1 summary"><p>Fired when a vertex is fully treated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event VertexAction&lt;TVertex&gt; FinishVertex</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.VertexAction-1.html">VertexAction</a>&lt;TVertex&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_GrayTarget.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.GrayTarget%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L180">View Source</a>
+  </span>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_GrayTarget" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.GrayTarget">GrayTarget</h4>
+  <div class="markdown level1 summary"><p>Fired when the target vertex of an out-edge from the currently treated vertex is marked as gray.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EdgeAction&lt;TVertex, TEdge&gt; GrayTarget</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.EdgeAction-2.html">EdgeAction</a>&lt;TVertex, TEdge&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_InitializeVertex.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.InitializeVertex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L98">View Source</a>
+  </span>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_InitializeVertex" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.InitializeVertex">InitializeVertex</h4>
+  <div class="markdown level1 summary"><p>Fired when a vertex is initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event VertexAction&lt;TVertex&gt; InitializeVertex</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.VertexAction-1.html">VertexAction</a>&lt;TVertex&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_NonTreeEdge.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.NonTreeEdge%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L168">View Source</a>
+  </span>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_NonTreeEdge" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.NonTreeEdge">NonTreeEdge</h4>
+  <div class="markdown level1 summary"><p>Fired when an edge is going to be treated when coming from a gray vertex.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EdgeAction&lt;TVertex, TEdge&gt; NonTreeEdge</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.EdgeAction-2.html">EdgeAction</a>&lt;TVertex, TEdge&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_StartVertex.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.StartVertex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L108">View Source</a>
+  </span>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_StartVertex" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.StartVertex">StartVertex</h4>
+  <div class="markdown level1 summary"><p>Fired on a starting vertex once before the start of the search from it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event VertexAction&lt;TVertex&gt; StartVertex</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.VertexAction-1.html">VertexAction</a>&lt;TVertex&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_TreeEdge.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602.TreeEdge%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L156">View Source</a>
+  </span>
+  <h4 id="QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2_TreeEdge" data-uid="QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm`2.TreeEdge">TreeEdge</h4>
+  <div class="markdown level1 summary"><p>Fired when an edge is going to be treated when coming from a white vertex.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EdgeAction&lt;TVertex, TEdge&gt; TreeEdge</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.EdgeAction-2.html">EdgeAction</a>&lt;TVertex, TEdge&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.IAlgorithm-1.html">IAlgorithm&lt;TGraph&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.IComputation.html">IComputation</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.Services.IAlgorithmComponent.html">IAlgorithmComponent</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.IVertexPredecessorRecorderAlgorithm-2.html">IVertexPredecessorRecorderAlgorithm&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.ITreeBuilderAlgorithm-2.html">ITreeBuilderAlgorithm&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.IDistanceRecorderAlgorithm-1.html">IDistanceRecorderAlgorithm&lt;TVertex&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.IVertexColorizerAlgorithm-1.html">IVertexColorizerAlgorithm&lt;TVertex&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_String_">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_String_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_Xml_XmlWriter_">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_Xml_XmlReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_IO_TextReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, TextReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_String_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeAndValidateFromGraphML__3___2_System_IO_TextReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeAndValidateFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, TextReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.SerializationExtensions.html#QuikGraph_Serialization_SerializationExtensions_SerializeToXml__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__System_String_System_String_System_String_System_String_">SerializationExtensions.SerializeToXml&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;, String, String, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.SerializationExtensions.html#QuikGraph_Serialization_SerializationExtensions_SerializeToXml__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__System_String_System_String_System_String_System_String_System_Action_System_Xml_XmlWriter___2__System_Action_System_Xml_XmlWriter___0__System_Action_System_Xml_XmlWriter___1__">SerializationExtensions.SerializeToXml&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;, String, String, String, String, Action&lt;XmlWriter, TGraph&gt;, Action&lt;XmlWriter, TVertex&gt;, Action&lt;XmlWriter, TEdge&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Algorithms_Search_BreadthFirstSearchAlgorithm_2.md&amp;value=---%0Auid%3A%20QuikGraph.Algorithms.Search.BreadthFirstSearchAlgorithm%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Algorithms/Search/BreadthFirstSearchAlgorithm.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

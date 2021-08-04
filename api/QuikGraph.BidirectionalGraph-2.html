@@ -1,0 +1,2984 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BidirectionalGraph&lt;TVertex, TEdge&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BidirectionalGraph&lt;TVertex, TEdge&gt;
+   ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="QuikGraph.BidirectionalGraph`2">
+  
+  
+  <h1 id="QuikGraph_BidirectionalGraph_2" data-uid="QuikGraph.BidirectionalGraph`2" class="text-break">Class BidirectionalGraph&lt;TVertex, TEdge&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Mutable directed graph data structure.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">BidirectionalGraph&lt;TVertex, TEdge&gt;</span></div>
+      <div class="level2"><a class="xref" href="QuikGraph.Data.DataSetGraph.html">DataSetGraph</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="QuikGraph.IEdgeListAndIncidenceGraph-2.html">IEdgeListAndIncidenceGraph</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.IMutableBidirectionalGraph-2.html">IMutableBidirectionalGraph</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.IMutableVertexAndEdgeListGraph-2.html">IMutableVertexAndEdgeListGraph</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.IMutableVertexListGraph-2.html">IMutableVertexListGraph</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.IMutableIncidenceGraph-2.html">IMutableIncidenceGraph</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.IMutableVertexAndEdgeSet-2.html">IMutableVertexAndEdgeSet</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.IMutableVertexSet-1.html">IMutableVertexSet</a>&lt;TVertex&gt;</div>
+    <div><a class="xref" href="QuikGraph.IMutableEdgeListGraph-2.html">IMutableEdgeListGraph</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.IMutableGraph-2.html">IMutableGraph</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.IBidirectionalGraph-2.html">IBidirectionalGraph</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.IVertexAndEdgeListGraph-2.html">IVertexAndEdgeListGraph</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.IVertexListGraph-2.html">IVertexListGraph</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.IEdgeListGraph-2.html">IEdgeListGraph</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.IEdgeSet-2.html">IEdgeSet</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.IVertexSet-1.html">IVertexSet</a>&lt;TVertex&gt;</div>
+    <div><a class="xref" href="QuikGraph.IBidirectionalIncidenceGraph-2.html">IBidirectionalIncidenceGraph</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.IIncidenceGraph-2.html">IIncidenceGraph</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.IImplicitGraph-2.html">IImplicitGraph</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.IGraph-2.html">IGraph</a>&lt;TVertex, TEdge&gt;</div>
+    <div><a class="xref" href="QuikGraph.IImplicitVertexSet-1.html">IImplicitVertexSet</a>&lt;TVertex&gt;</div>
+    <div><span class="xref">System.ICloneable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="QuikGraph.html">QuikGraph</a></h6>
+  <h6><strong>Assembly</strong>: QuikGraph.dll</h6>
+  <h5 id="QuikGraph_BidirectionalGraph_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class BidirectionalGraph&lt;TVertex, TEdge&gt; : IEdgeListAndIncidenceGraph&lt;TVertex, TEdge&gt;, IMutableBidirectionalGraph&lt;TVertex, TEdge&gt;, IMutableVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;, IMutableVertexListGraph&lt;TVertex, TEdge&gt;, IMutableIncidenceGraph&lt;TVertex, TEdge&gt;, IMutableVertexAndEdgeSet&lt;TVertex, TEdge&gt;, IMutableVertexSet&lt;TVertex&gt;, IMutableEdgeListGraph&lt;TVertex, TEdge&gt;, IMutableGraph&lt;TVertex, TEdge&gt;, IBidirectionalGraph&lt;TVertex, TEdge&gt;, IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;, IVertexListGraph&lt;TVertex, TEdge&gt;, IEdgeListGraph&lt;TVertex, TEdge&gt;, IEdgeSet&lt;TVertex, TEdge&gt;, IVertexSet&lt;TVertex&gt;, IBidirectionalIncidenceGraph&lt;TVertex, TEdge&gt;, IIncidenceGraph&lt;TVertex, TEdge&gt;, IImplicitGraph&lt;TVertex, TEdge&gt;, IGraph&lt;TVertex, TEdge&gt;, IImplicitVertexSet&lt;TVertex&gt;, ICloneable where TEdge : IEdge&lt;TVertex&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TVertex</span></td>
+        <td><p>Vertex type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TEdge</span></td>
+        <td><p>Edge type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="QuikGraph_BidirectionalGraph_2_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>It is efficient for sparse graph representation
+where out-edge and in-edges need to be enumerated.
+Requires twice as much memory as the <a class="xref" href="QuikGraph.AdjacencyGraph-2.html">AdjacencyGraph&lt;TVertex, TEdge&gt;</a>.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2__ctor.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L35">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2__ctor_" data-uid="QuikGraph.BidirectionalGraph`2.#ctor*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2__ctor" data-uid="QuikGraph.BidirectionalGraph`2.#ctor">BidirectionalGraph()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="QuikGraph.BidirectionalGraph-2.html">BidirectionalGraph&lt;TVertex, TEdge&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BidirectionalGraph()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2__ctor_QuikGraph_BidirectionalGraph__0__1__.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.%23ctor(QuikGraph.BidirectionalGraph%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L790">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2__ctor_" data-uid="QuikGraph.BidirectionalGraph`2.#ctor*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2__ctor_QuikGraph_BidirectionalGraph__0__1__" data-uid="QuikGraph.BidirectionalGraph`2.#ctor(QuikGraph.BidirectionalGraph{`0,`1})">BidirectionalGraph(BidirectionalGraph&lt;TVertex, TEdge&gt;)</h4>
+  <div class="markdown level1 summary"><p>Copy constructor that creates sufficiently deep copy of the graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BidirectionalGraph(BidirectionalGraph&lt;TVertex, TEdge&gt; other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.BidirectionalGraph-2.html">BidirectionalGraph</a>&lt;TVertex, TEdge&gt;</td>
+        <td><span class="parametername">other</span></td>
+        <td><p>Graph to copy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2__ctor_System_Boolean_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.%23ctor(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L44">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2__ctor_" data-uid="QuikGraph.BidirectionalGraph`2.#ctor*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2__ctor_System_Boolean_" data-uid="QuikGraph.BidirectionalGraph`2.#ctor(System.Boolean)">BidirectionalGraph(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="QuikGraph.BidirectionalGraph-2.html">BidirectionalGraph&lt;TVertex, TEdge&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BidirectionalGraph(bool allowParallelEdges)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allowParallelEdges</span></td>
+        <td><p>Indicates if parallel edges are allowed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2__ctor_System_Boolean_System_Int32_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.%23ctor(System.Boolean%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L54">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2__ctor_" data-uid="QuikGraph.BidirectionalGraph`2.#ctor*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2__ctor_System_Boolean_System_Int32_" data-uid="QuikGraph.BidirectionalGraph`2.#ctor(System.Boolean,System.Int32)">BidirectionalGraph(Boolean, Int32)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="QuikGraph.BidirectionalGraph-2.html">BidirectionalGraph&lt;TVertex, TEdge&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BidirectionalGraph(bool allowParallelEdges, int capacity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allowParallelEdges</span></td>
+        <td><p>Indicates if parallel edges are allowed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">capacity</span></td>
+        <td><p>Vertex capacity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2__ctor_System_Boolean_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.%23ctor(System.Boolean%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L65">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2__ctor_" data-uid="QuikGraph.BidirectionalGraph`2.#ctor*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2__ctor_System_Boolean_System_Int32_System_Int32_" data-uid="QuikGraph.BidirectionalGraph`2.#ctor(System.Boolean,System.Int32,System.Int32)">BidirectionalGraph(Boolean, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="QuikGraph.BidirectionalGraph-2.html">BidirectionalGraph&lt;TVertex, TEdge&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BidirectionalGraph(bool allowParallelEdges, int vertexCapacity, int edgeCapacity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allowParallelEdges</span></td>
+        <td><p>Indicates if parallel edges are allowed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">vertexCapacity</span></td>
+        <td><p>Vertex capacity.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">edgeCapacity</span></td>
+        <td><p>Edge capacity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_AllowParallelEdges.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.AllowParallelEdges%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L103">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_AllowParallelEdges_" data-uid="QuikGraph.BidirectionalGraph`2.AllowParallelEdges*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_AllowParallelEdges" data-uid="QuikGraph.BidirectionalGraph`2.AllowParallelEdges">AllowParallelEdges</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating if the graph allows parallel edges</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowParallelEdges { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_EdgeCapacity.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.EdgeCapacity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L84">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_EdgeCapacity_" data-uid="QuikGraph.BidirectionalGraph`2.EdgeCapacity*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_EdgeCapacity" data-uid="QuikGraph.BidirectionalGraph`2.EdgeCapacity">EdgeCapacity</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the edge capacity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int EdgeCapacity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_EdgeCount.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.EdgeCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L135">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_EdgeCount_" data-uid="QuikGraph.BidirectionalGraph`2.EdgeCount*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_EdgeCount" data-uid="QuikGraph.BidirectionalGraph`2.EdgeCount">EdgeCount</h4>
+  <div class="markdown level1 summary"><p>Gets the edge count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int EdgeCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_Edges.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.Edges%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L138">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_Edges_" data-uid="QuikGraph.BidirectionalGraph`2.Edges*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_Edges" data-uid="QuikGraph.BidirectionalGraph`2.Edges">Edges</h4>
+  <div class="markdown level1 summary"><p>Gets the edges.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;TEdge&gt; Edges { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TEdge&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_EdgeType.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.EdgeType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L95">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_EdgeType_" data-uid="QuikGraph.BidirectionalGraph`2.EdgeType*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_EdgeType" data-uid="QuikGraph.BidirectionalGraph`2.EdgeType">EdgeType</h4>
+  <div class="markdown level1 summary"><p>Gives the type of edges.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type EdgeType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_IsDirected.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.IsDirected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L100">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_IsDirected_" data-uid="QuikGraph.BidirectionalGraph`2.IsDirected*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_IsDirected" data-uid="QuikGraph.BidirectionalGraph`2.IsDirected">IsDirected</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating if the graph is directed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDirected { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_IsEdgesEmpty.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.IsEdgesEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L132">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_IsEdgesEmpty_" data-uid="QuikGraph.BidirectionalGraph`2.IsEdgesEmpty*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_IsEdgesEmpty" data-uid="QuikGraph.BidirectionalGraph`2.IsEdgesEmpty">IsEdgesEmpty</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether there are no edges in this set.
+It is true if this edge set is empty, otherwise false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEdgesEmpty { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_IsVerticesEmpty.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.IsVerticesEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L110">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_IsVerticesEmpty_" data-uid="QuikGraph.BidirectionalGraph`2.IsVerticesEmpty*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_IsVerticesEmpty" data-uid="QuikGraph.BidirectionalGraph`2.IsVerticesEmpty">IsVerticesEmpty</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether there are no vertices in this set.
+It is true if this vertex set is empty, otherwise false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsVerticesEmpty { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_VertexCount.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.VertexCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L113">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_VertexCount_" data-uid="QuikGraph.BidirectionalGraph`2.VertexCount*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_VertexCount" data-uid="QuikGraph.BidirectionalGraph`2.VertexCount">VertexCount</h4>
+  <div class="markdown level1 summary"><p>Gets the vertex count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int VertexCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_VertexType.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.VertexType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L89">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_VertexType_" data-uid="QuikGraph.BidirectionalGraph`2.VertexType*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_VertexType" data-uid="QuikGraph.BidirectionalGraph`2.VertexType">VertexType</h4>
+  <div class="markdown level1 summary"><p>Gets the type of vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type VertexType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_Vertices.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.Vertices%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L116">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_Vertices_" data-uid="QuikGraph.BidirectionalGraph`2.Vertices*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_Vertices" data-uid="QuikGraph.BidirectionalGraph`2.Vertices">Vertices</h4>
+  <div class="markdown level1 summary"><p>Gets the vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;TVertex&gt; Vertices { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TVertex&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_AddEdge__1_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.AddEdge(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L497">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_AddEdge_" data-uid="QuikGraph.BidirectionalGraph`2.AddEdge*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_AddEdge__1_" data-uid="QuikGraph.BidirectionalGraph`2.AddEdge(`1)">AddEdge(TEdge)</h4>
+  <div class="markdown level1 summary"><p>Adds the <code data-dev-comment-type="paramref" class="paramref">edge</code> to this graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool AddEdge(TEdge edge)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEdge</span></td>
+        <td><span class="parametername">edge</span></td>
+        <td><p>An edge.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the edge was added, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_AddEdgeRange_System_Collections_Generic_IEnumerable__1__.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.AddEdgeRange(System.Collections.Generic.IEnumerable%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L508">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_AddEdgeRange_" data-uid="QuikGraph.BidirectionalGraph`2.AddEdgeRange*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_AddEdgeRange_System_Collections_Generic_IEnumerable__1__" data-uid="QuikGraph.BidirectionalGraph`2.AddEdgeRange(System.Collections.Generic.IEnumerable{`1})">AddEdgeRange(IEnumerable&lt;TEdge&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds a set of edges to this graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AddEdgeRange(IEnumerable&lt;TEdge&gt; edges)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TEdge&gt;</td>
+        <td><span class="parametername">edges</span></td>
+        <td><p>Edges to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of edges successfully added to this graph.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_AddVertex__0_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.AddVertex(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L357">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_AddVertex_" data-uid="QuikGraph.BidirectionalGraph`2.AddVertex*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_AddVertex__0_" data-uid="QuikGraph.BidirectionalGraph`2.AddVertex(`0)">AddVertex(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Adds a vertex to this set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool AddVertex(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>Vertex to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the vertex was added, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_AddVertexRange_System_Collections_Generic_IEnumerable__0__.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.AddVertexRange(System.Collections.Generic.IEnumerable%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L379">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_AddVertexRange_" data-uid="QuikGraph.BidirectionalGraph`2.AddVertexRange*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_AddVertexRange_System_Collections_Generic_IEnumerable__0__" data-uid="QuikGraph.BidirectionalGraph`2.AddVertexRange(System.Collections.Generic.IEnumerable{`0})">AddVertexRange(IEnumerable&lt;TVertex&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds given vertices to this set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int AddVertexRange(IEnumerable&lt;TVertex&gt; vertices)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TVertex&gt;</td>
+        <td><span class="parametername">vertices</span></td>
+        <td><p>Vertices to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of vertex added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_AddVerticesAndEdge__1_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.AddVerticesAndEdge(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L595">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_AddVerticesAndEdge_" data-uid="QuikGraph.BidirectionalGraph`2.AddVerticesAndEdge*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_AddVerticesAndEdge__1_" data-uid="QuikGraph.BidirectionalGraph`2.AddVerticesAndEdge(`1)">AddVerticesAndEdge(TEdge)</h4>
+  <div class="markdown level1 summary"><p>Adds <code data-dev-comment-type="paramref" class="paramref">edge</code> and its vertices to this graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool AddVerticesAndEdge(TEdge edge)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEdge</span></td>
+        <td><span class="parametername">edge</span></td>
+        <td><p>The edge to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the edge was added, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_AddVerticesAndEdgeRange_System_Collections_Generic_IEnumerable__1__.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L606">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_AddVerticesAndEdgeRange_" data-uid="QuikGraph.BidirectionalGraph`2.AddVerticesAndEdgeRange*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_AddVerticesAndEdgeRange_System_Collections_Generic_IEnumerable__1__" data-uid="QuikGraph.BidirectionalGraph`2.AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable{`1})">AddVerticesAndEdgeRange(IEnumerable&lt;TEdge&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds a set of edges (and it's vertices if necessary).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AddVerticesAndEdgeRange(IEnumerable&lt;TEdge&gt; edges)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TEdge&gt;</td>
+        <td><span class="parametername">edges</span></td>
+        <td><p>Edges to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of edges added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_Clear.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L337">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_Clear_" data-uid="QuikGraph.BidirectionalGraph`2.Clear*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_Clear" data-uid="QuikGraph.BidirectionalGraph`2.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Clears the vertex and edges.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_ClearEdges__0_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.ClearEdges(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L714">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_ClearEdges_" data-uid="QuikGraph.BidirectionalGraph`2.ClearEdges*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_ClearEdges__0_" data-uid="QuikGraph.BidirectionalGraph`2.ClearEdges(`0)">ClearEdges(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Clears in-edges and out-edges of the given <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearEdges(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_ClearInEdges__0_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.ClearInEdges(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L695">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_ClearInEdges_" data-uid="QuikGraph.BidirectionalGraph`2.ClearInEdges*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_ClearInEdges__0_" data-uid="QuikGraph.BidirectionalGraph`2.ClearInEdges(`0)">ClearInEdges(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Clears in-edges of the given <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearInEdges(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_ClearOutEdges__0_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.ClearOutEdges(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L646">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_ClearOutEdges_" data-uid="QuikGraph.BidirectionalGraph`2.ClearOutEdges*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_ClearOutEdges__0_" data-uid="QuikGraph.BidirectionalGraph`2.ClearOutEdges(`0)">ClearOutEdges(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Trims the out-edges of the given <code data-dev-comment-type="paramref" class="paramref">vertex</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearOutEdges(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_Clone.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L806">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_Clone_" data-uid="QuikGraph.BidirectionalGraph`2.Clone*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_Clone" data-uid="QuikGraph.BidirectionalGraph`2.Clone">Clone()</h4>
+  <div class="markdown level1 summary"><p>Clones this graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BidirectionalGraph&lt;TVertex, TEdge&gt; Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.BidirectionalGraph-2.html">BidirectionalGraph</a>&lt;TVertex, TEdge&gt;</td>
+        <td><p>Cloned graph.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_ContainsEdge__0__0_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.ContainsEdge(%600%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L151">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_ContainsEdge_" data-uid="QuikGraph.BidirectionalGraph`2.ContainsEdge*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_ContainsEdge__0__0_" data-uid="QuikGraph.BidirectionalGraph`2.ContainsEdge(`0,`0)">ContainsEdge(TVertex, TVertex)</h4>
+  <div class="markdown level1 summary"><p>Checks if this graph contains an edge that link
+<code data-dev-comment-type="paramref" class="paramref">source</code> and <code data-dev-comment-type="paramref" class="paramref">target</code> vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ContainsEdge(TVertex source, TVertex target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Source vertex.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>Target vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if an edge exists, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_ContainsEdge__1_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.ContainsEdge(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L141">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_ContainsEdge_" data-uid="QuikGraph.BidirectionalGraph`2.ContainsEdge*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_ContainsEdge__1_" data-uid="QuikGraph.BidirectionalGraph`2.ContainsEdge(`1)">ContainsEdge(TEdge)</h4>
+  <div class="markdown level1 summary"><p>Determines whether this set contains the specified <code data-dev-comment-type="paramref" class="paramref">edge</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ContainsEdge(TEdge edge)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEdge</span></td>
+        <td><span class="parametername">edge</span></td>
+        <td><p>Edge to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the specified <code data-dev-comment-type="paramref" class="paramref">edge</code> is contained in this set, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_ContainsVertex__0_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.ContainsVertex(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L119">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_ContainsVertex_" data-uid="QuikGraph.BidirectionalGraph`2.ContainsVertex*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_ContainsVertex__0_" data-uid="QuikGraph.BidirectionalGraph`2.ContainsVertex(`0)">ContainsVertex(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Determines whether this set contains the specified <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ContainsVertex(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>Vertex to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the specified <code data-dev-comment-type="paramref" class="paramref">vertex</code> is contained in this set, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_Degree__0_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.Degree(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L327">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_Degree_" data-uid="QuikGraph.BidirectionalGraph`2.Degree*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_Degree__0_" data-uid="QuikGraph.BidirectionalGraph`2.Degree(`0)">Degree(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Gets the degree of <code data-dev-comment-type="paramref" class="paramref">vertex</code>, i.e.
+the sum of the out-degree and in-degree of <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Degree(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The sum of OutDegree and InDegree of <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_InDegree__0_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.InDegree(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L278">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_InDegree_" data-uid="QuikGraph.BidirectionalGraph`2.InDegree*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_InDegree__0_" data-uid="QuikGraph.BidirectionalGraph`2.InDegree(`0)">InDegree(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Gets the number of in-edges of <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int InDegree(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of in-edges pointing towards <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_InEdge__0_System_Int32_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.InEdge(%600%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L316">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_InEdge_" data-uid="QuikGraph.BidirectionalGraph`2.InEdge*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_InEdge__0_System_Int32_" data-uid="QuikGraph.BidirectionalGraph`2.InEdge(`0,System.Int32)">InEdge(TVertex, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the in-edge at location <code data-dev-comment-type="paramref" class="paramref">index</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TEdge InEdge(TVertex vertex, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEdge</span></td>
+        <td><p>The in-edge at position <code data-dev-comment-type="paramref" class="paramref">index</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_InEdges__0_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.InEdges(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L292">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_InEdges_" data-uid="QuikGraph.BidirectionalGraph`2.InEdges*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_InEdges__0_" data-uid="QuikGraph.BidirectionalGraph`2.InEdges(`0)">InEdges(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Gets the collection of in-edges of <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TEdge&gt; InEdges(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TEdge&gt;</td>
+        <td><p>The collection of in-edges of <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_IsInEdgesEmpty__0_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.IsInEdgesEmpty(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L272">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_IsInEdgesEmpty_" data-uid="QuikGraph.BidirectionalGraph`2.IsInEdgesEmpty*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_IsInEdgesEmpty__0_" data-uid="QuikGraph.BidirectionalGraph`2.IsInEdgesEmpty(`0)">IsInEdgesEmpty(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Determines whether <code data-dev-comment-type="paramref" class="paramref">vertex</code> has no in-edges.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInEdgesEmpty(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if <code data-dev-comment-type="paramref" class="paramref">vertex</code> has no in-edges, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_IsOutEdgesEmpty__0_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.IsOutEdgesEmpty(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L166">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_IsOutEdgesEmpty_" data-uid="QuikGraph.BidirectionalGraph`2.IsOutEdgesEmpty*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_IsOutEdgesEmpty__0_" data-uid="QuikGraph.BidirectionalGraph`2.IsOutEdgesEmpty(`0)">IsOutEdgesEmpty(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Determines whether there are out-edges associated to <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOutEdgesEmpty(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if <code data-dev-comment-type="paramref" class="paramref">vertex</code> has no out-edges, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_MergeVertex__0_QuikGraph_EdgeFactory__0__1__.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.MergeVertex(%600%2CQuikGraph.EdgeFactory%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L727">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_MergeVertex_" data-uid="QuikGraph.BidirectionalGraph`2.MergeVertex*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_MergeVertex__0_QuikGraph_EdgeFactory__0__1__" data-uid="QuikGraph.BidirectionalGraph`2.MergeVertex(`0,QuikGraph.EdgeFactory{`0,`1})">MergeVertex(TVertex, EdgeFactory&lt;TVertex, TEdge&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes the given <code data-dev-comment-type="paramref" class="paramref">vertex</code> and merges all its connection to other vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MergeVertex(TVertex vertex, EdgeFactory&lt;TVertex, TEdge&gt; edgeFactory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="QuikGraph.EdgeFactory-2.html">EdgeFactory</a>&lt;TVertex, TEdge&gt;</td>
+        <td><span class="parametername">edgeFactory</span></td>
+        <td><p>Factory method to create an edge.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_MergeVerticesIf_QuikGraph_VertexPredicate__0__QuikGraph_EdgeFactory__0__1__.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.MergeVerticesIf(QuikGraph.VertexPredicate%7B%600%7D%2CQuikGraph.EdgeFactory%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L766">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_MergeVerticesIf_" data-uid="QuikGraph.BidirectionalGraph`2.MergeVerticesIf*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_MergeVerticesIf_QuikGraph_VertexPredicate__0__QuikGraph_EdgeFactory__0__1__" data-uid="QuikGraph.BidirectionalGraph`2.MergeVerticesIf(QuikGraph.VertexPredicate{`0},QuikGraph.EdgeFactory{`0,`1})">MergeVerticesIf(VertexPredicate&lt;TVertex&gt;, EdgeFactory&lt;TVertex, TEdge&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes vertices matching the given <code data-dev-comment-type="paramref" class="paramref">vertexPredicate</code> and merges all their
+connections to other vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MergeVerticesIf(VertexPredicate&lt;TVertex&gt; vertexPredicate, EdgeFactory&lt;TVertex, TEdge&gt; edgeFactory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.VertexPredicate-1.html">VertexPredicate</a>&lt;TVertex&gt;</td>
+        <td><span class="parametername">vertexPredicate</span></td>
+        <td><p>Predicate to match vertices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="QuikGraph.EdgeFactory-2.html">EdgeFactory</a>&lt;TVertex, TEdge&gt;</td>
+        <td><span class="parametername">edgeFactory</span></td>
+        <td><p>Factory method to create an edge.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_OnEdgeAdded__1_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.OnEdgeAdded(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L533">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_OnEdgeAdded_" data-uid="QuikGraph.BidirectionalGraph`2.OnEdgeAdded*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_OnEdgeAdded__1_" data-uid="QuikGraph.BidirectionalGraph`2.OnEdgeAdded(`1)">OnEdgeAdded(TEdge)</h4>
+  <div class="markdown level1 summary"><p>Called on each added edge.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEdgeAdded(TEdge edge)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEdge</span></td>
+        <td><span class="parametername">edge</span></td>
+        <td><p>Added edge.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_OnEdgeRemoved__1_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.OnEdgeRemoved(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L568">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_OnEdgeRemoved_" data-uid="QuikGraph.BidirectionalGraph`2.OnEdgeRemoved*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_OnEdgeRemoved__1_" data-uid="QuikGraph.BidirectionalGraph`2.OnEdgeRemoved(`1)">OnEdgeRemoved(TEdge)</h4>
+  <div class="markdown level1 summary"><p>Called on each removed edge.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEdgeRemoved(TEdge edge)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEdge</span></td>
+        <td><span class="parametername">edge</span></td>
+        <td><p>Removed edge.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_OnVertexAdded__0_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.OnVertexAdded(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L404">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_OnVertexAdded_" data-uid="QuikGraph.BidirectionalGraph`2.OnVertexAdded*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_OnVertexAdded__0_" data-uid="QuikGraph.BidirectionalGraph`2.OnVertexAdded(`0)">OnVertexAdded(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Called on each added vertex.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnVertexAdded(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>Added vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_OnVertexRemoved__0_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.OnVertexRemoved(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L454">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_OnVertexRemoved_" data-uid="QuikGraph.BidirectionalGraph`2.OnVertexRemoved*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_OnVertexRemoved__0_" data-uid="QuikGraph.BidirectionalGraph`2.OnVertexRemoved(`0)">OnVertexRemoved(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Called for each removed vertex.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnVertexRemoved(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>Removed vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_OutDegree__0_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.OutDegree(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L172">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_OutDegree_" data-uid="QuikGraph.BidirectionalGraph`2.OutDegree*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_OutDegree__0_" data-uid="QuikGraph.BidirectionalGraph`2.OutDegree(`0)">OutDegree(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Gets the count of out-edges of <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int OutDegree(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The count of out-edges of <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_OutEdge__0_System_Int32_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.OutEdge(%600%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L210">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_OutEdge_" data-uid="QuikGraph.BidirectionalGraph`2.OutEdge*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_OutEdge__0_System_Int32_" data-uid="QuikGraph.BidirectionalGraph`2.OutEdge(`0,System.Int32)">OutEdge(TVertex, Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the out-edge of <code data-dev-comment-type="paramref" class="paramref">vertex</code> at position <code data-dev-comment-type="paramref" class="paramref">index</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TEdge OutEdge(TVertex vertex, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEdge</span></td>
+        <td><p>The out-edge at position <code data-dev-comment-type="paramref" class="paramref">index</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_OutEdges__0_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.OutEdges(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L186">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_OutEdges_" data-uid="QuikGraph.BidirectionalGraph`2.OutEdges*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_OutEdges__0_" data-uid="QuikGraph.BidirectionalGraph`2.OutEdges(`0)">OutEdges(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Gets the out-edges of <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TEdge&gt; OutEdges(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TEdge&gt;</td>
+        <td><p>An enumeration of the out-edges of <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_RemoveEdge__1_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.RemoveEdge(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L541">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_RemoveEdge_" data-uid="QuikGraph.BidirectionalGraph`2.RemoveEdge*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_RemoveEdge__1_" data-uid="QuikGraph.BidirectionalGraph`2.RemoveEdge(`1)">RemoveEdge(TEdge)</h4>
+  <div class="markdown level1 summary"><p>Removes the <code data-dev-comment-type="paramref" class="paramref">edge</code> from this graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool RemoveEdge(TEdge edge)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TEdge</span></td>
+        <td><span class="parametername">edge</span></td>
+        <td><p>Edge to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the <code data-dev-comment-type="paramref" class="paramref">edge</code> was successfully removed, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_RemoveEdgeIf_QuikGraph_EdgePredicate__0__1__.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.RemoveEdgeIf(QuikGraph.EdgePredicate%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L576">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_RemoveEdgeIf_" data-uid="QuikGraph.BidirectionalGraph`2.RemoveEdgeIf*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_RemoveEdgeIf_QuikGraph_EdgePredicate__0__1__" data-uid="QuikGraph.BidirectionalGraph`2.RemoveEdgeIf(QuikGraph.EdgePredicate{`0,`1})">RemoveEdgeIf(EdgePredicate&lt;TVertex, TEdge&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes all edges that match the given <code data-dev-comment-type="paramref" class="paramref">predicate</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RemoveEdgeIf(EdgePredicate&lt;TVertex, TEdge&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.EdgePredicate-2.html">EdgePredicate</a>&lt;TVertex, TEdge&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td><p>Predicate to check if an edge should be removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of edges removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_RemoveInEdgeIf__0_QuikGraph_EdgePredicate__0__1__.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.RemoveInEdgeIf(%600%2CQuikGraph.EdgePredicate%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L678">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_RemoveInEdgeIf_" data-uid="QuikGraph.BidirectionalGraph`2.RemoveInEdgeIf*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_RemoveInEdgeIf__0_QuikGraph_EdgePredicate__0__1__" data-uid="QuikGraph.BidirectionalGraph`2.RemoveInEdgeIf(`0,QuikGraph.EdgePredicate{`0,`1})">RemoveInEdgeIf(TVertex, EdgePredicate&lt;TVertex, TEdge&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes in-edges of the given <code data-dev-comment-type="paramref" class="paramref">vertex</code> that match
+predicate <code data-dev-comment-type="paramref" class="paramref">predicate</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RemoveInEdgeIf(TVertex vertex, EdgePredicate&lt;TVertex, TEdge&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="QuikGraph.EdgePredicate-2.html">EdgePredicate</a>&lt;TVertex, TEdge&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td><p>Edge predicate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Number of edges removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_RemoveOutEdgeIf__0_QuikGraph_EdgePredicate__0__1__.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.RemoveOutEdgeIf(%600%2CQuikGraph.EdgePredicate%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L629">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_RemoveOutEdgeIf_" data-uid="QuikGraph.BidirectionalGraph`2.RemoveOutEdgeIf*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_RemoveOutEdgeIf__0_QuikGraph_EdgePredicate__0__1__" data-uid="QuikGraph.BidirectionalGraph`2.RemoveOutEdgeIf(`0,QuikGraph.EdgePredicate{`0,`1})">RemoveOutEdgeIf(TVertex, EdgePredicate&lt;TVertex, TEdge&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes all out-edges of the <code data-dev-comment-type="paramref" class="paramref">vertex</code>
+where the <code data-dev-comment-type="paramref" class="paramref">predicate</code> is evaluated to true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RemoveOutEdgeIf(TVertex vertex, EdgePredicate&lt;TVertex, TEdge&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="QuikGraph.EdgePredicate-2.html">EdgePredicate</a>&lt;TVertex, TEdge&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td><p>Predicate to remove edges.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of removed edges.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_RemoveVertex__0_.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.RemoveVertex(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L412">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_RemoveVertex_" data-uid="QuikGraph.BidirectionalGraph`2.RemoveVertex*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_RemoveVertex__0_" data-uid="QuikGraph.BidirectionalGraph`2.RemoveVertex(`0)">RemoveVertex(TVertex)</h4>
+  <div class="markdown level1 summary"><p>Removes the given vertex from this set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool RemoveVertex(TVertex vertex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>Vertex to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the vertex was removed, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_RemoveVertexIf_QuikGraph_VertexPredicate__0__.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.RemoveVertexIf(QuikGraph.VertexPredicate%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L462">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_RemoveVertexIf_" data-uid="QuikGraph.BidirectionalGraph`2.RemoveVertexIf*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_RemoveVertexIf_QuikGraph_VertexPredicate__0__" data-uid="QuikGraph.BidirectionalGraph`2.RemoveVertexIf(QuikGraph.VertexPredicate{`0})">RemoveVertexIf(VertexPredicate&lt;TVertex&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes all vertices matching the given <code data-dev-comment-type="paramref" class="paramref">predicate</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RemoveVertexIf(VertexPredicate&lt;TVertex&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.VertexPredicate-1.html">VertexPredicate</a>&lt;TVertex&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td><p>Predicate to check on each vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The number of vertex removed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_TrimEdgeExcess.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.TrimEdgeExcess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L665">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_TrimEdgeExcess_" data-uid="QuikGraph.BidirectionalGraph`2.TrimEdgeExcess*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_TrimEdgeExcess" data-uid="QuikGraph.BidirectionalGraph`2.TrimEdgeExcess">TrimEdgeExcess()</h4>
+  <div class="markdown level1 summary"><p>Trims excess storage allocated for edges.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TrimEdgeExcess()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_TryGetEdge__0__0__1__.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.TryGetEdge(%600%2C%600%2C%601%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L225">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_TryGetEdge_" data-uid="QuikGraph.BidirectionalGraph`2.TryGetEdge*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_TryGetEdge__0__0__1__" data-uid="QuikGraph.BidirectionalGraph`2.TryGetEdge(`0,`0,`1@)">TryGetEdge(TVertex, TVertex, out TEdge)</h4>
+  <div class="markdown level1 summary"><p>Tries to get the edge that link
+<code data-dev-comment-type="paramref" class="paramref">source</code> and <code data-dev-comment-type="paramref" class="paramref">target</code> vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetEdge(TVertex source, TVertex target, out TEdge edge)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Source vertex.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>Target vertex.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TEdge</span></td>
+        <td><span class="parametername">edge</span></td>
+        <td><p>Edge found, otherwise null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if an edge was found, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_TryGetEdges__0__0_System_Collections_Generic_IEnumerable__1___.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.TryGetEdges(%600%2C%600%2CSystem.Collections.Generic.IEnumerable%7B%601%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L250">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_TryGetEdges_" data-uid="QuikGraph.BidirectionalGraph`2.TryGetEdges*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_TryGetEdges__0__0_System_Collections_Generic_IEnumerable__1___" data-uid="QuikGraph.BidirectionalGraph`2.TryGetEdges(`0,`0,System.Collections.Generic.IEnumerable{`1}@)">TryGetEdges(TVertex, TVertex, out IEnumerable&lt;TEdge&gt;)</h4>
+  <div class="markdown level1 summary"><p>Tries to get edges that link
+<code data-dev-comment-type="paramref" class="paramref">source</code> and <code data-dev-comment-type="paramref" class="paramref">target</code> vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetEdges(TVertex source, TVertex target, out IEnumerable&lt;TEdge&gt; edges)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Source vertex.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>Target vertex.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TEdge&gt;</td>
+        <td><span class="parametername">edges</span></td>
+        <td><p>Edges found, otherwise null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if at least an edge was found, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_TryGetInEdges__0_System_Collections_Generic_IEnumerable__1___.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.TryGetInEdges(%600%2CSystem.Collections.Generic.IEnumerable%7B%601%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L300">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_TryGetInEdges_" data-uid="QuikGraph.BidirectionalGraph`2.TryGetInEdges*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_TryGetInEdges__0_System_Collections_Generic_IEnumerable__1___" data-uid="QuikGraph.BidirectionalGraph`2.TryGetInEdges(`0,System.Collections.Generic.IEnumerable{`1}@)">TryGetInEdges(TVertex, out IEnumerable&lt;TEdge&gt;)</h4>
+  <div class="markdown level1 summary"><p>Tries to get the in-edges of <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetInEdges(TVertex vertex, out IEnumerable&lt;TEdge&gt; edges)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TEdge&gt;</td>
+        <td><span class="parametername">edges</span></td>
+        <td><p>In-edges.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if <code data-dev-comment-type="paramref" class="paramref">vertex</code> was found or/and in-edges were found, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_TryGetOutEdges__0_System_Collections_Generic_IEnumerable__1___.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.TryGetOutEdges(%600%2CSystem.Collections.Generic.IEnumerable%7B%601%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L194">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_TryGetOutEdges_" data-uid="QuikGraph.BidirectionalGraph`2.TryGetOutEdges*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_TryGetOutEdges__0_System_Collections_Generic_IEnumerable__1___" data-uid="QuikGraph.BidirectionalGraph`2.TryGetOutEdges(`0,System.Collections.Generic.IEnumerable{`1}@)">TryGetOutEdges(TVertex, out IEnumerable&lt;TEdge&gt;)</h4>
+  <div class="markdown level1 summary"><p>Tries to get the out-edges of <code data-dev-comment-type="paramref" class="paramref">vertex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetOutEdges(TVertex vertex, out IEnumerable&lt;TEdge&gt; edges)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TVertex</span></td>
+        <td><span class="parametername">vertex</span></td>
+        <td><p>The vertex.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TEdge&gt;</td>
+        <td><span class="parametername">edges</span></td>
+        <td><p>Out-edges.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if <code data-dev-comment-type="paramref" class="paramref">vertex</code> was found or/and out-edges were found, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_EdgeAdded.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.EdgeAdded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L527">View Source</a>
+  </span>
+  <h4 id="QuikGraph_BidirectionalGraph_2_EdgeAdded" data-uid="QuikGraph.BidirectionalGraph`2.EdgeAdded">EdgeAdded</h4>
+  <div class="markdown level1 summary"><p>Fired when an edge is added to this graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EdgeAction&lt;TVertex, TEdge&gt; EdgeAdded</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.EdgeAction-2.html">EdgeAction</a>&lt;TVertex, TEdge&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_EdgeRemoved.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.EdgeRemoved%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L562">View Source</a>
+  </span>
+  <h4 id="QuikGraph_BidirectionalGraph_2_EdgeRemoved" data-uid="QuikGraph.BidirectionalGraph`2.EdgeRemoved">EdgeRemoved</h4>
+  <div class="markdown level1 summary"><p>Fired when an edge has been removed from this graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EdgeAction&lt;TVertex, TEdge&gt; EdgeRemoved</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.EdgeAction-2.html">EdgeAction</a>&lt;TVertex, TEdge&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_VertexAdded.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.VertexAdded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L398">View Source</a>
+  </span>
+  <h4 id="QuikGraph_BidirectionalGraph_2_VertexAdded" data-uid="QuikGraph.BidirectionalGraph`2.VertexAdded">VertexAdded</h4>
+  <div class="markdown level1 summary"><p>Fired when a vertex is added to this set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event VertexAction&lt;TVertex&gt; VertexAdded</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.VertexAction-1.html">VertexAction</a>&lt;TVertex&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_VertexRemoved.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.VertexRemoved%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L448">View Source</a>
+  </span>
+  <h4 id="QuikGraph_BidirectionalGraph_2_VertexRemoved" data-uid="QuikGraph.BidirectionalGraph`2.VertexRemoved">VertexRemoved</h4>
+  <div class="markdown level1 summary"><p>Fired when a vertex is removed from this set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event VertexAction&lt;TVertex&gt; VertexRemoved</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="QuikGraph.VertexAction-1.html">VertexAction</a>&lt;TVertex&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2_System_ICloneable_Clone.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602.System%23ICloneable%23Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L815">View Source</a>
+  </span>
+  <a id="QuikGraph_BidirectionalGraph_2_System_ICloneable_Clone_" data-uid="QuikGraph.BidirectionalGraph`2.System#ICloneable#Clone*"></a>
+  <h4 id="QuikGraph_BidirectionalGraph_2_System_ICloneable_Clone" data-uid="QuikGraph.BidirectionalGraph`2.System#ICloneable#Clone">ICloneable.Clone()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object ICloneable.Clone()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="QuikGraph.IEdgeListAndIncidenceGraph-2.html">IEdgeListAndIncidenceGraph&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IMutableBidirectionalGraph-2.html">IMutableBidirectionalGraph&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IMutableVertexAndEdgeListGraph-2.html">IMutableVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IMutableVertexListGraph-2.html">IMutableVertexListGraph&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IMutableIncidenceGraph-2.html">IMutableIncidenceGraph&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IMutableVertexAndEdgeSet-2.html">IMutableVertexAndEdgeSet&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IMutableVertexSet-1.html">IMutableVertexSet&lt;TVertex&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IMutableEdgeListGraph-2.html">IMutableEdgeListGraph&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IMutableGraph-2.html">IMutableGraph&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IBidirectionalGraph-2.html">IBidirectionalGraph&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IVertexAndEdgeListGraph-2.html">IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IVertexListGraph-2.html">IVertexListGraph&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IEdgeListGraph-2.html">IEdgeListGraph&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IEdgeSet-2.html">IEdgeSet&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IVertexSet-1.html">IVertexSet&lt;TVertex&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IBidirectionalIncidenceGraph-2.html">IBidirectionalIncidenceGraph&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IIncidenceGraph-2.html">IIncidenceGraph&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IImplicitGraph-2.html">IImplicitGraph&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IGraph-2.html">IGraph&lt;TVertex, TEdge&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.IImplicitVertexSet-1.html">IImplicitVertexSet&lt;TVertex&gt;</a>
+  </div>
+  <div>
+      <span class="xref">System.ICloneable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.DirectedGraphMLExtensions.html#QuikGraph_Serialization_DirectedGraphMLExtensions_ToDirectedGraphML__2_QuikGraph_IVertexAndEdgeListGraph___0___1__">DirectedGraphMLExtensions.ToDirectedGraphML&lt;TVertex, TEdge&gt;(IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.DirectedGraphMLExtensions.html#QuikGraph_Serialization_DirectedGraphMLExtensions_ToDirectedGraphML__2_QuikGraph_IVertexAndEdgeListGraph___0___1__System_Func___0_QuikGraph_GraphColor__">DirectedGraphMLExtensions.ToDirectedGraphML&lt;TVertex, TEdge&gt;(IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;, Func&lt;TVertex, GraphColor&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.DirectedGraphMLExtensions.html#QuikGraph_Serialization_DirectedGraphMLExtensions_ToDirectedGraphML__2_QuikGraph_IVertexAndEdgeListGraph___0___1__QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__">DirectedGraphMLExtensions.ToDirectedGraphML&lt;TVertex, TEdge&gt;(IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.DirectedGraphMLExtensions.html#QuikGraph_Serialization_DirectedGraphMLExtensions_ToDirectedGraphML__2_QuikGraph_IVertexAndEdgeListGraph___0___1__QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__System_Action___0_QuikGraph_Serialization_DirectedGraphML_DirectedGraphNode__System_Action___1_QuikGraph_Serialization_DirectedGraphML_DirectedGraphLink__">DirectedGraphMLExtensions.ToDirectedGraphML&lt;TVertex, TEdge&gt;(IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;, Action&lt;TVertex, DirectedGraphNode&gt;, Action&lt;TEdge, DirectedGraphLink&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.DirectedGraphMLExtensions.html#QuikGraph_Serialization_DirectedGraphMLExtensions_OpenAsDGML__2_QuikGraph_IVertexAndEdgeListGraph___0___1__System_String_">DirectedGraphMLExtensions.OpenAsDGML&lt;TVertex, TEdge&gt;(IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_String_">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_String_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_Xml_XmlWriter_">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_Xml_XmlReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_IO_TextReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, TextReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_String_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeAndValidateFromGraphML__3___2_System_IO_TextReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeAndValidateFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, TextReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.SerializationExtensions.html#QuikGraph_Serialization_SerializationExtensions_SerializeToBinary__2_QuikGraph_IGraph___0___1__System_IO_Stream_">SerializationExtensions.SerializeToBinary&lt;TVertex, TEdge&gt;(IGraph&lt;TVertex, TEdge&gt;, Stream)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.SerializationExtensions.html#QuikGraph_Serialization_SerializationExtensions_SerializeToXml__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__System_String_System_String_System_String_System_String_">SerializationExtensions.SerializeToXml&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;, String, String, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.SerializationExtensions.html#QuikGraph_Serialization_SerializationExtensions_SerializeToXml__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__System_String_System_String_System_String_System_String_System_Action_System_Xml_XmlWriter___2__System_Action_System_Xml_XmlWriter___0__System_Action_System_Xml_XmlWriter___1__">SerializationExtensions.SerializeToXml&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;, String, String, String, String, Action&lt;XmlWriter, TGraph&gt;, Action&lt;XmlWriter, TVertex&gt;, Action&lt;XmlWriter, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.GraphExtensions.html#QuikGraph_GraphExtensions_ToArrayAdjacencyGraph__2_QuikGraph_IVertexAndEdgeListGraph___0___1__">GraphExtensions.ToArrayAdjacencyGraph&lt;TVertex, TEdge&gt;(IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.GraphExtensions.html#QuikGraph_GraphExtensions_ToBidirectionalGraph__2_QuikGraph_IVertexAndEdgeListGraph___0___1__">GraphExtensions.ToBidirectionalGraph&lt;TVertex, TEdge&gt;(IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.GraphExtensions.html#QuikGraph_GraphExtensions_ToArrayBidirectionalGraph__2_QuikGraph_IBidirectionalGraph___0___1__">GraphExtensions.ToArrayBidirectionalGraph&lt;TVertex, TEdge&gt;(IBidirectionalGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.GraphExtensions.html#QuikGraph_GraphExtensions_ToCompressedRowGraph__2_QuikGraph_IVertexAndEdgeListGraph___0___1__">GraphExtensions.ToCompressedRowGraph&lt;TVertex, TEdge&gt;(IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_GetVertexIdentity__1_QuikGraph_IVertexSet___0__">AlgorithmExtensions.GetVertexIdentity&lt;TVertex&gt;(IVertexSet&lt;TVertex&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_GetEdgeIdentity__2_QuikGraph_IEdgeSet___0___1__">AlgorithmExtensions.GetEdgeIdentity&lt;TVertex, TEdge&gt;(IEdgeSet&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_TreeBreadthFirstSearch__2_QuikGraph_IVertexListGraph___0___1____0_">AlgorithmExtensions.TreeBreadthFirstSearch&lt;TVertex, TEdge&gt;(IVertexListGraph&lt;TVertex, TEdge&gt;, TVertex)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_TreeDepthFirstSearch__2_QuikGraph_IVertexListGraph___0___1____0_">AlgorithmExtensions.TreeDepthFirstSearch&lt;TVertex, TEdge&gt;(IVertexListGraph&lt;TVertex, TEdge&gt;, TVertex)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_TreeCyclePoppingRandom__2_QuikGraph_IVertexListGraph___0___1____0_">AlgorithmExtensions.TreeCyclePoppingRandom&lt;TVertex, TEdge&gt;(IVertexListGraph&lt;TVertex, TEdge&gt;, TVertex)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_TreeCyclePoppingRandom__2_QuikGraph_IVertexListGraph___0___1____0_QuikGraph_Algorithms_RandomWalks_IMarkovEdgeChain___0___1__">AlgorithmExtensions.TreeCyclePoppingRandom&lt;TVertex, TEdge&gt;(IVertexListGraph&lt;TVertex, TEdge&gt;, TVertex, IMarkovEdgeChain&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_ShortestPathsDijkstra__2_QuikGraph_IVertexAndEdgeListGraph___0___1__System_Func___1_System_Double____0_">AlgorithmExtensions.ShortestPathsDijkstra&lt;TVertex, TEdge&gt;(IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;, Func&lt;TEdge, Double&gt;, TVertex)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_ShortestPathsAStar__2_QuikGraph_IVertexAndEdgeListGraph___0___1__System_Func___1_System_Double__System_Func___0_System_Double____0_">AlgorithmExtensions.ShortestPathsAStar&lt;TVertex, TEdge&gt;(IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;, Func&lt;TEdge, Double&gt;, Func&lt;TVertex, Double&gt;, TVertex)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_ShortestPathsBellmanFord__2_QuikGraph_IVertexAndEdgeListGraph___0___1__System_Func___1_System_Double____0_System_Boolean__">AlgorithmExtensions.ShortestPathsBellmanFord&lt;TVertex, TEdge&gt;(IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;, Func&lt;TEdge, Double&gt;, TVertex, out Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_ShortestPathsDag__2_QuikGraph_IVertexAndEdgeListGraph___0___1__System_Func___1_System_Double____0_">AlgorithmExtensions.ShortestPathsDag&lt;TVertex, TEdge&gt;(IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;, Func&lt;TEdge, Double&gt;, TVertex)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_RankedShortestPathHoffmanPavley__2_QuikGraph_IBidirectionalGraph___0___1__System_Func___1_System_Double____0___0_System_Int32_">AlgorithmExtensions.RankedShortestPathHoffmanPavley&lt;TVertex, TEdge&gt;(IBidirectionalGraph&lt;TVertex, TEdge&gt;, Func&lt;TEdge, Double&gt;, TVertex, TVertex, Int32)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_Sinks__2_QuikGraph_IVertexListGraph___0___1__">AlgorithmExtensions.Sinks&lt;TVertex, TEdge&gt;(IVertexListGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_Roots__2_QuikGraph_IVertexListGraph___0___1__">AlgorithmExtensions.Roots&lt;TVertex, TEdge&gt;(IVertexListGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_Roots__2_QuikGraph_IBidirectionalGraph___0___1__">AlgorithmExtensions.Roots&lt;TVertex, TEdge&gt;(IBidirectionalGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_IsolatedVertices__2_QuikGraph_IBidirectionalGraph___0___1__">AlgorithmExtensions.IsolatedVertices&lt;TVertex, TEdge&gt;(IBidirectionalGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_TopologicalSort__2_QuikGraph_IVertexListGraph___0___1__">AlgorithmExtensions.TopologicalSort&lt;TVertex, TEdge&gt;(IVertexListGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_SourceFirstTopologicalSort__2_QuikGraph_IVertexAndEdgeListGraph___0___1__">AlgorithmExtensions.SourceFirstTopologicalSort&lt;TVertex, TEdge&gt;(IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_SourceFirstBidirectionalTopologicalSort__2_QuikGraph_IBidirectionalGraph___0___1__">AlgorithmExtensions.SourceFirstBidirectionalTopologicalSort&lt;TVertex, TEdge&gt;(IBidirectionalGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_SourceFirstBidirectionalTopologicalSort__2_QuikGraph_IBidirectionalGraph___0___1__QuikGraph_Algorithms_TopologicalSort_TopologicalSortDirection_">AlgorithmExtensions.SourceFirstBidirectionalTopologicalSort&lt;TVertex, TEdge&gt;(IBidirectionalGraph&lt;TVertex, TEdge&gt;, TopologicalSortDirection)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_IncrementalConnectedComponents__2_QuikGraph_IMutableVertexAndEdgeSet___0___1__System_Func_System_Collections_Generic_KeyValuePair_System_Int32_System_Collections_Generic_IDictionary___0_System_Int32_____">AlgorithmExtensions.IncrementalConnectedComponents&lt;TVertex, TEdge&gt;(IMutableVertexAndEdgeSet&lt;TVertex, TEdge&gt;, out Func&lt;KeyValuePair&lt;Int32, IDictionary&lt;TVertex, Int32&gt;&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_StronglyConnectedComponents__2_QuikGraph_IVertexListGraph___0___1__System_Collections_Generic_IDictionary___0_System_Int32__">AlgorithmExtensions.StronglyConnectedComponents&lt;TVertex, TEdge&gt;(IVertexListGraph&lt;TVertex, TEdge&gt;, IDictionary&lt;TVertex, Int32&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_WeaklyConnectedComponents__2_QuikGraph_IVertexListGraph___0___1__System_Collections_Generic_IDictionary___0_System_Int32__">AlgorithmExtensions.WeaklyConnectedComponents&lt;TVertex, TEdge&gt;(IVertexListGraph&lt;TVertex, TEdge&gt;, IDictionary&lt;TVertex, Int32&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_CondensateStronglyConnected__3_QuikGraph_IVertexAndEdgeListGraph___0___1__">AlgorithmExtensions.CondensateStronglyConnected&lt;TVertex, TEdge, TGraph&gt;(IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_CondensateWeaklyConnected__3_QuikGraph_IVertexAndEdgeListGraph___0___1__">AlgorithmExtensions.CondensateWeaklyConnected&lt;TVertex, TEdge, TGraph&gt;(IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_CondensateEdges__2_QuikGraph_IBidirectionalGraph___0___1__QuikGraph_VertexPredicate___0__">AlgorithmExtensions.CondensateEdges&lt;TVertex, TEdge&gt;(IBidirectionalGraph&lt;TVertex, TEdge&gt;, VertexPredicate&lt;TVertex&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_OddVertices__2_QuikGraph_IVertexAndEdgeListGraph___0___1__">AlgorithmExtensions.OddVertices&lt;TVertex, TEdge&gt;(IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_IsDirectedAcyclicGraph__2_QuikGraph_IVertexListGraph___0___1__">AlgorithmExtensions.IsDirectedAcyclicGraph&lt;TVertex, TEdge&gt;(IVertexListGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_OfflineLeastCommonAncestor__2_QuikGraph_IVertexListGraph___0___1____0_System_Collections_Generic_IEnumerable_QuikGraph_SEquatableEdge___0___">AlgorithmExtensions.OfflineLeastCommonAncestor&lt;TVertex, TEdge&gt;(IVertexListGraph&lt;TVertex, TEdge&gt;, TVertex, IEnumerable&lt;SEquatableEdge&lt;TVertex&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_MaximumFlow__2_QuikGraph_IMutableVertexAndEdgeListGraph___0___1__System_Func___1_System_Double____0___0_QuikGraph_TryFunc___0___1___QuikGraph_EdgeFactory___0___1__QuikGraph_Algorithms_MaximumFlow_ReversedEdgeAugmentorAlgorithm___0___1__">AlgorithmExtensions.MaximumFlow&lt;TVertex, TEdge&gt;(IMutableVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;, Func&lt;TEdge, Double&gt;, TVertex, TVertex, out TryFunc&lt;TVertex, TEdge&gt;, EdgeFactory&lt;TVertex, TEdge&gt;, ReversedEdgeAugmentorAlgorithm&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_ComputeTransitiveReduction__2_QuikGraph_BidirectionalGraph___0___1__">AlgorithmExtensions.ComputeTransitiveReduction&lt;TVertex, TEdge&gt;(BidirectionalGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_ComputeTransitiveClosure__2_QuikGraph_BidirectionalGraph___0___1__System_Func___0___0___1__">AlgorithmExtensions.ComputeTransitiveClosure&lt;TVertex, TEdge&gt;(BidirectionalGraph&lt;TVertex, TEdge&gt;, Func&lt;TVertex, TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Algorithms.AlgorithmExtensions.html#QuikGraph_Algorithms_AlgorithmExtensions_Clone__2_QuikGraph_IVertexAndEdgeListGraph___0___1__System_Func___0___0__System_Func___1___0___0___1__QuikGraph_IMutableVertexAndEdgeSet___0___1__">AlgorithmExtensions.Clone&lt;TVertex, TEdge&gt;(IVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;, Func&lt;TVertex, TVertex&gt;, Func&lt;TEdge, TVertex, TVertex, TEdge&gt;, IMutableVertexAndEdgeSet&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Graphviz.GraphvizExtensions.html#QuikGraph_Graphviz_GraphvizExtensions_ToGraphviz__2_QuikGraph_IEdgeListGraph___0___1__">GraphvizExtensions.ToGraphviz&lt;TVertex, TEdge&gt;(IEdgeListGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Graphviz.GraphvizExtensions.html#QuikGraph_Graphviz_GraphvizExtensions_ToGraphviz__2_QuikGraph_IEdgeListGraph___0___1__System_Action_QuikGraph_Graphviz_GraphvizAlgorithm___0___1___">GraphvizExtensions.ToGraphviz&lt;TVertex, TEdge&gt;(IEdgeListGraph&lt;TVertex, TEdge&gt;, Action&lt;GraphvizAlgorithm&lt;TVertex, TEdge&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Graphviz.GraphvizExtensions.html#QuikGraph_Graphviz_GraphvizExtensions_ToSvg__2_QuikGraph_IEdgeListGraph___0___1__">GraphvizExtensions.ToSvg&lt;TVertex, TEdge&gt;(IEdgeListGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Graphviz.GraphvizExtensions.html#QuikGraph_Graphviz_GraphvizExtensions_ToSvg__2_QuikGraph_IEdgeListGraph___0___1__System_Action_QuikGraph_Graphviz_GraphvizAlgorithm___0___1___">GraphvizExtensions.ToSvg&lt;TVertex, TEdge&gt;(IEdgeListGraph&lt;TVertex, TEdge&gt;, Action&lt;GraphvizAlgorithm&lt;TVertex, TEdge&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.MSAGL.MsaglGraphExtensions.html#QuikGraph_MSAGL_MsaglGraphExtensions_CreateMsaglPopulator__2_QuikGraph_IEdgeListGraph___0___1__">MsaglGraphExtensions.CreateMsaglPopulator&lt;TVertex, TEdge&gt;(IEdgeListGraph&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.MSAGL.MsaglGraphExtensions.html#QuikGraph_MSAGL_MsaglGraphExtensions_CreateMsaglPopulator__2_QuikGraph_IEdgeListGraph___0___1__System_String_System_IFormatProvider_">MsaglGraphExtensions.CreateMsaglPopulator&lt;TVertex, TEdge&gt;(IEdgeListGraph&lt;TVertex, TEdge&gt;, String, IFormatProvider)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.MSAGL.MsaglGraphExtensions.html#QuikGraph_MSAGL_MsaglGraphExtensions_CreateMsaglPopulator__2_QuikGraph_IEdgeListGraph___0___1__QuikGraph_VertexIdentity___0__">MsaglGraphExtensions.CreateMsaglPopulator&lt;TVertex, TEdge&gt;(IEdgeListGraph&lt;TVertex, TEdge&gt;, VertexIdentity&lt;TVertex&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.MSAGL.MsaglGraphExtensions.html#QuikGraph_MSAGL_MsaglGraphExtensions_ToMsaglGraph__2_QuikGraph_IEdgeListGraph___0___1__QuikGraph_MSAGL_MsaglVertexNodeEventHandler___0__QuikGraph_MSAGL_MsaglEdgeEventHandler___0___1__">MsaglGraphExtensions.ToMsaglGraph&lt;TVertex, TEdge&gt;(IEdgeListGraph&lt;TVertex, TEdge&gt;, MsaglVertexNodeEventHandler&lt;TVertex&gt;, MsaglEdgeEventHandler&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.MSAGL.MsaglGraphExtensions.html#QuikGraph_MSAGL_MsaglGraphExtensions_ToMsaglGraph__2_QuikGraph_IEdgeListGraph___0___1__QuikGraph_VertexIdentity___0__QuikGraph_MSAGL_MsaglVertexNodeEventHandler___0__QuikGraph_MSAGL_MsaglEdgeEventHandler___0___1__">MsaglGraphExtensions.ToMsaglGraph&lt;TVertex, TEdge&gt;(IEdgeListGraph&lt;TVertex, TEdge&gt;, VertexIdentity&lt;TVertex&gt;, MsaglVertexNodeEventHandler&lt;TVertex&gt;, MsaglEdgeEventHandler&lt;TVertex, TEdge&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_BidirectionalGraph_2.md&amp;value=---%0Auid%3A%20QuikGraph.BidirectionalGraph%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Structures/Graphs/BidirectionalGraph.cs/#L21" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,961 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BinaryHeap&lt;TPriority, TValue&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BinaryHeap&lt;TPriority, TValue&gt;
+   ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="QuikGraph.Collections.BinaryHeap`2">
+  
+  
+  <h1 id="QuikGraph_Collections_BinaryHeap_2" data-uid="QuikGraph.Collections.BinaryHeap`2" class="text-break">Class BinaryHeap&lt;TPriority, TValue&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Binary heap.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">BinaryHeap&lt;TPriority, TValue&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TPriority, TValue&gt;&gt;</div>
+    <div><span class="xref">System.Collections.IEnumerable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="QuikGraph.Collections.html">QuikGraph.Collections</a></h6>
+  <h6><strong>Assembly</strong>: QuikGraph.dll</h6>
+  <h5 id="QuikGraph_Collections_BinaryHeap_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class BinaryHeap&lt;TPriority, TValue&gt; : IEnumerable&lt;KeyValuePair&lt;TPriority, TValue&gt;&gt;, IEnumerable</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TPriority</span></td>
+        <td><p>Priority metric type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Value type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="QuikGraph_Collections_BinaryHeap_2_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Indexing rules:</p>
+<p>parent index: (index - 1)/2
+left child: 2 * index + 1
+right child: 2 * index + 2</p>
+<p>Reference:
+<a href="http://dotnetslackers.com/Community/files/folders/data-structures-and-algorithms/entry28722.aspx">http://dotnetslackers.com/Community/files/folders/data-structures-and-algorithms/entry28722.aspx</a></p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2__ctor.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L43">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2__ctor_" data-uid="QuikGraph.Collections.BinaryHeap`2.#ctor*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2__ctor" data-uid="QuikGraph.Collections.BinaryHeap`2.#ctor">BinaryHeap()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="QuikGraph.Collections.BinaryHeap-2.html">BinaryHeap&lt;TPriority, TValue&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BinaryHeap()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2__ctor_System_Comparison__0__.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.%23ctor(System.Comparison%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L61">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2__ctor_" data-uid="QuikGraph.Collections.BinaryHeap`2.#ctor*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2__ctor_System_Comparison__0__" data-uid="QuikGraph.Collections.BinaryHeap`2.#ctor(System.Comparison{`0})">BinaryHeap(Comparison&lt;TPriority&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="QuikGraph.Collections.BinaryHeap-2.html">BinaryHeap&lt;TPriority, TValue&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BinaryHeap(Comparison&lt;TPriority&gt; priorityComparison)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Comparison</span>&lt;TPriority&gt;</td>
+        <td><span class="parametername">priorityComparison</span></td>
+        <td><p>Priority comparer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2__ctor_System_Int32_.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.%23ctor(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L52">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2__ctor_" data-uid="QuikGraph.Collections.BinaryHeap`2.#ctor*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2__ctor_System_Int32_" data-uid="QuikGraph.Collections.BinaryHeap`2.#ctor(System.Int32)">BinaryHeap(Int32)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="QuikGraph.Collections.BinaryHeap-2.html">BinaryHeap&lt;TPriority, TValue&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BinaryHeap(int capacity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">capacity</span></td>
+        <td><p>Heap capacity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2__ctor_System_Int32_System_Comparison__0__.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.%23ctor(System.Int32%2CSystem.Comparison%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L71">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2__ctor_" data-uid="QuikGraph.Collections.BinaryHeap`2.#ctor*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2__ctor_System_Int32_System_Comparison__0__" data-uid="QuikGraph.Collections.BinaryHeap`2.#ctor(System.Int32,System.Comparison{`0})">BinaryHeap(Int32, Comparison&lt;TPriority&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="QuikGraph.Collections.BinaryHeap-2.html">BinaryHeap&lt;TPriority, TValue&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BinaryHeap(int capacity, Comparison&lt;TPriority&gt; priorityComparison)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">capacity</span></td>
+        <td><p>Heap capacity.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Comparison</span>&lt;TPriority&gt;</td>
+        <td><span class="parametername">priorityComparison</span></td>
+        <td><p>Priority comparer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2_Capacity.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.Capacity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L89">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2_Capacity_" data-uid="QuikGraph.Collections.BinaryHeap`2.Capacity*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2_Capacity" data-uid="QuikGraph.Collections.BinaryHeap`2.Capacity">Capacity</h4>
+  <div class="markdown level1 summary"><p>Heap capacity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Capacity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2_Count.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L94">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2_Count_" data-uid="QuikGraph.Collections.BinaryHeap`2.Count*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2_Count" data-uid="QuikGraph.Collections.BinaryHeap`2.Count">Count</h4>
+  <div class="markdown level1 summary"><p>Number of element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2_PriorityComparison.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.PriorityComparison%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L83">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2_PriorityComparison_" data-uid="QuikGraph.Collections.BinaryHeap`2.PriorityComparison*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2_PriorityComparison" data-uid="QuikGraph.Collections.BinaryHeap`2.PriorityComparison">PriorityComparison</h4>
+  <div class="markdown level1 summary"><p>Priority comparer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Comparison&lt;TPriority&gt; PriorityComparison { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Comparison</span>&lt;TPriority&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2_Add__0__1_.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.Add(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L125">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2_Add_" data-uid="QuikGraph.Collections.BinaryHeap`2.Add*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2_Add__0__1_" data-uid="QuikGraph.Collections.BinaryHeap`2.Add(`0,`1)">Add(TPriority, TValue)</h4>
+  <div class="markdown level1 summary"><p>Adds the given <code data-dev-comment-type="paramref" class="paramref">value</code> (with priority) into the heap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(TPriority priority, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TPriority</span></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>Item priority.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2_GetEnumerator.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L323">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2_GetEnumerator_" data-uid="QuikGraph.Collections.BinaryHeap`2.GetEnumerator*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2_GetEnumerator" data-uid="QuikGraph.Collections.BinaryHeap`2.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;KeyValuePair&lt;TPriority, TValue&gt;&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TPriority, TValue&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2_IndexOf__1_.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.IndexOf(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L240">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2_IndexOf_" data-uid="QuikGraph.Collections.BinaryHeap`2.IndexOf*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2_IndexOf__1_" data-uid="QuikGraph.Collections.BinaryHeap`2.IndexOf(`1)">IndexOf(TValue)</h4>
+  <div class="markdown level1 summary"><p>Gets the index of the given <code data-dev-comment-type="paramref" class="paramref">value</code> in the heap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int IndexOf(TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Index of the value if found, otherwise -1.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2_Minimum.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.Minimum%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L177">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2_Minimum_" data-uid="QuikGraph.Collections.BinaryHeap`2.Minimum*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2_Minimum" data-uid="QuikGraph.Collections.BinaryHeap`2.Minimum">Minimum()</h4>
+  <div class="markdown level1 summary"><p>Gets the minimum pair.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyValuePair&lt;TPriority, TValue&gt; Minimum()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TPriority, TValue&gt;</td>
+        <td><p>The minimal pair.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>The heap is empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2_MinimumUpdate__0__1_.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.MinimumUpdate(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L291">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2_MinimumUpdate_" data-uid="QuikGraph.Collections.BinaryHeap`2.MinimumUpdate*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2_MinimumUpdate__0__1_" data-uid="QuikGraph.Collections.BinaryHeap`2.MinimumUpdate(`0,`1)">MinimumUpdate(TPriority, TValue)</h4>
+  <div class="markdown level1 summary"><p>Updates the priority of the given <code data-dev-comment-type="paramref" class="paramref">value</code> if the new priority is lower
+than the current <code data-dev-comment-type="paramref" class="paramref">value</code> priority (or add it if not present).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool MinimumUpdate(TPriority priority, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TPriority</span></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the heap was updated, false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2_RemoveMinimum.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.RemoveMinimum%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L189">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2_RemoveMinimum_" data-uid="QuikGraph.Collections.BinaryHeap`2.RemoveMinimum*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2_RemoveMinimum" data-uid="QuikGraph.Collections.BinaryHeap`2.RemoveMinimum">RemoveMinimum()</h4>
+  <div class="markdown level1 summary"><p>Gets and removes the minimal pair.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyValuePair&lt;TPriority, TValue&gt; RemoveMinimum()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TPriority, TValue&gt;</td>
+        <td><p>The minimal pair.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>The heap is empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2_ToArray.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.ToArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L391">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2_ToArray_" data-uid="QuikGraph.Collections.BinaryHeap`2.ToArray*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2_ToArray" data-uid="QuikGraph.Collections.BinaryHeap`2.ToArray">ToArray()</h4>
+  <div class="markdown level1 summary"><p>Gets all heap values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TValue[] ToArray()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TValue[]</td>
+        <td><p>Array of heap values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2_ToPairsArray.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.ToPairsArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L405">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2_ToPairsArray_" data-uid="QuikGraph.Collections.BinaryHeap`2.ToPairsArray*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2_ToPairsArray" data-uid="QuikGraph.Collections.BinaryHeap`2.ToPairsArray">ToPairsArray()</h4>
+  <div class="markdown level1 summary"><p>Gets all values with their priorities.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyValuePair&lt;TPriority, TValue&gt;[] ToPairsArray()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TPriority, TValue&gt;[]</td>
+        <td><p>Array of heap priorities and values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2_ToString2.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.ToString2%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L467">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2_ToString2_" data-uid="QuikGraph.Collections.BinaryHeap`2.ToString2*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2_ToString2" data-uid="QuikGraph.Collections.BinaryHeap`2.ToString2">ToString2()</h4>
+  <div class="markdown level1 summary"><p>Gets a string representation of this heap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToString2()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>String representation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2_ToStringTree.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.ToStringTree%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L479">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2_ToStringTree_" data-uid="QuikGraph.Collections.BinaryHeap`2.ToStringTree*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2_ToStringTree" data-uid="QuikGraph.Collections.BinaryHeap`2.ToStringTree">ToStringTree()</h4>
+  <div class="markdown level1 summary"><p>Gets a string tree representation of this heap.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToStringTree()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>String representation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2_Update__0__1_.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.Update(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L257">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2_Update_" data-uid="QuikGraph.Collections.BinaryHeap`2.Update*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2_Update__0__1_" data-uid="QuikGraph.Collections.BinaryHeap`2.Update(`0,`1)">Update(TPriority, TValue)</h4>
+  <div class="markdown level1 summary"><p>Updates the priority of the given <code data-dev-comment-type="paramref" class="paramref">value</code> (or add it if not present).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update(TPriority priority, TValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TPriority</span></td>
+        <td><span class="parametername">priority</span></td>
+        <td><p>The priority.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L313">View Source</a>
+  </span>
+  <a id="QuikGraph_Collections_BinaryHeap_2_System_Collections_IEnumerable_GetEnumerator_" data-uid="QuikGraph.Collections.BinaryHeap`2.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="QuikGraph_Collections_BinaryHeap_2_System_Collections_IEnumerable_GetEnumerator" data-uid="QuikGraph.Collections.BinaryHeap`2.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">System.Collections.IEnumerable</span>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_String_">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_String_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_Xml_XmlWriter_">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_SerializeToGraphML__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__">GraphMLExtensions.SerializeToGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_Xml_XmlReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_IO_TextReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, TextReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeFromGraphML__3___2_System_String_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, String, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.GraphMLExtensions.html#QuikGraph_Serialization_GraphMLExtensions_DeserializeAndValidateFromGraphML__3___2_System_IO_TextReader_QuikGraph_IdentifiableVertexFactory___0__QuikGraph_IdentifiableEdgeFactory___0___1__">GraphMLExtensions.DeserializeAndValidateFromGraphML&lt;TVertex, TEdge, TGraph&gt;(TGraph, TextReader, IdentifiableVertexFactory&lt;TVertex&gt;, IdentifiableEdgeFactory&lt;TVertex, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.SerializationExtensions.html#QuikGraph_Serialization_SerializationExtensions_SerializeToXml__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__System_String_System_String_System_String_System_String_">SerializationExtensions.SerializeToXml&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;, String, String, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.Serialization.SerializationExtensions.html#QuikGraph_Serialization_SerializationExtensions_SerializeToXml__3___2_System_Xml_XmlWriter_QuikGraph_VertexIdentity___0__QuikGraph_EdgeIdentity___0___1__System_String_System_String_System_String_System_String_System_Action_System_Xml_XmlWriter___2__System_Action_System_Xml_XmlWriter___0__System_Action_System_Xml_XmlWriter___1__">SerializationExtensions.SerializeToXml&lt;TVertex, TEdge, TGraph&gt;(TGraph, XmlWriter, VertexIdentity&lt;TVertex&gt;, EdgeIdentity&lt;TVertex, TEdge&gt;, String, String, String, String, Action&lt;XmlWriter, TGraph&gt;, Action&lt;XmlWriter, TVertex&gt;, Action&lt;XmlWriter, TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.EdgeExtensions.html#QuikGraph_EdgeExtensions_IsPath__2_System_Collections_Generic_IEnumerable___1__">EdgeExtensions.IsPath&lt;TVertex, TEdge&gt;(IEnumerable&lt;TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.EdgeExtensions.html#QuikGraph_EdgeExtensions_HasCycles__2_System_Collections_Generic_IEnumerable___1__">EdgeExtensions.HasCycles&lt;TVertex, TEdge&gt;(IEnumerable&lt;TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.EdgeExtensions.html#QuikGraph_EdgeExtensions_IsPathWithoutCycles__2_System_Collections_Generic_IEnumerable___1__">EdgeExtensions.IsPathWithoutCycles&lt;TVertex, TEdge&gt;(IEnumerable&lt;TEdge&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.GraphExtensions.html#QuikGraph_GraphExtensions_ToDelegateVertexAndEdgeListGraph__2_System_Collections_Generic_IEnumerable___0__QuikGraph_TryFunc___0_System_Collections_Generic_IEnumerable___1___">GraphExtensions.ToDelegateVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;(IEnumerable&lt;TVertex&gt;, TryFunc&lt;TVertex, IEnumerable&lt;TEdge&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.GraphExtensions.html#QuikGraph_GraphExtensions_ToDelegateVertexAndEdgeListGraph__2_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Collections_Generic_IEnumerable___1___">GraphExtensions.ToDelegateVertexAndEdgeListGraph&lt;TVertex, TEdge&gt;(IEnumerable&lt;TVertex&gt;, Func&lt;TVertex, IEnumerable&lt;TEdge&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.GraphExtensions.html#QuikGraph_GraphExtensions_ToDelegateUndirectedGraph__2_System_Collections_Generic_IEnumerable___0__QuikGraph_TryFunc___0_System_Collections_Generic_IEnumerable___1___">GraphExtensions.ToDelegateUndirectedGraph&lt;TVertex, TEdge&gt;(IEnumerable&lt;TVertex&gt;, TryFunc&lt;TVertex, IEnumerable&lt;TEdge&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.GraphExtensions.html#QuikGraph_GraphExtensions_ToDelegateUndirectedGraph__2_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Collections_Generic_IEnumerable___1___">GraphExtensions.ToDelegateUndirectedGraph&lt;TVertex, TEdge&gt;(IEnumerable&lt;TVertex&gt;, Func&lt;TVertex, IEnumerable&lt;TEdge&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.GraphExtensions.html#QuikGraph_GraphExtensions_ToAdjacencyGraph__2_System_Collections_Generic_IEnumerable___1__System_Boolean_">GraphExtensions.ToAdjacencyGraph&lt;TVertex, TEdge&gt;(IEnumerable&lt;TEdge&gt;, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.GraphExtensions.html#QuikGraph_GraphExtensions_ToAdjacencyGraph__2_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Collections_Generic_IEnumerable___1___System_Boolean_">GraphExtensions.ToAdjacencyGraph&lt;TVertex, TEdge&gt;(IEnumerable&lt;TVertex&gt;, Func&lt;TVertex, IEnumerable&lt;TEdge&gt;&gt;, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.GraphExtensions.html#QuikGraph_GraphExtensions_ToBidirectionalGraph__2_System_Collections_Generic_IEnumerable___1__System_Boolean_">GraphExtensions.ToBidirectionalGraph&lt;TVertex, TEdge&gt;(IEnumerable&lt;TEdge&gt;, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.GraphExtensions.html#QuikGraph_GraphExtensions_ToBidirectionalGraph__2_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Collections_Generic_IEnumerable___1___System_Boolean_">GraphExtensions.ToBidirectionalGraph&lt;TVertex, TEdge&gt;(IEnumerable&lt;TVertex&gt;, Func&lt;TVertex, IEnumerable&lt;TEdge&gt;&gt;, Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="QuikGraph.GraphExtensions.html#QuikGraph_GraphExtensions_ToUndirectedGraph__2_System_Collections_Generic_IEnumerable___1__System_Boolean_">GraphExtensions.ToUndirectedGraph&lt;TVertex, TEdge&gt;(IEnumerable&lt;TEdge&gt;, Boolean)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/KeRNeLith/QuikGraph/new/master/apiSpec/new?filename=QuikGraph_Collections_BinaryHeap_2.md&amp;value=---%0Auid%3A%20QuikGraph.Collections.BinaryHeap%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/KeRNeLith/QuikGraph/blob/master/src/QuikGraph/Collections/BinaryHeap.cs/#L28" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
