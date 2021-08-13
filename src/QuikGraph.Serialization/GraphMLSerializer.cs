@@ -75,7 +75,8 @@ namespace QuikGraph.Serialization
                     (WriteEdgeAttributesDelegate)CreateWriteDelegate(
                         typeof(TEdge),
                         typeof(WriteEdgeAttributesDelegate),
-                        SerializationHelpers.GetEdgeAttributeProperties<TVertex, TEdge>());
+                        //SerializationHelpers.GetEdgeAttributeProperties<TVertex, TEdge>());
+                        SerializationHelpers.GetAttributeProperties(typeof(TEdge)));
 
                 GraphAttributesWriter =
                     (WriteGraphAttributesDelegate)CreateWriteDelegate(
@@ -86,7 +87,7 @@ namespace QuikGraph.Serialization
             private static void EmitCallWriter([NotNull] ILGenerator generator, [NotNull] MethodInfo writer)
             {
                 // When reading scalar values we call member methods of XmlReader, while for array values 
-                // we call our own static methods.  These two types of methods seem to need different OpCode.
+                // we call our own static methods. These two types of methods seem to need different OpCode.
                 generator.EmitCall(
                     writer.DeclaringType == typeof(XmlWriterExtensions)
                         ? OpCodes.Call

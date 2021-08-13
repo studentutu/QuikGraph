@@ -8,6 +8,17 @@ namespace QuikGraph.Serialization.Tests
 {
     #region Test classes
 
+    public sealed class TestData
+    {
+        [XmlAttribute("e_string")]
+        [DefaultValue("defaultString")]
+        public string String { get; set; }
+
+        [XmlAttribute("e_long")]
+        [DefaultValue(2L)]
+        public long Long { get; set; }
+    }
+
     public sealed class TestEdge : Edge<TestVertex>
     {
         public TestEdge(
@@ -153,6 +164,29 @@ namespace QuikGraph.Serialization.Tests
         [XmlAttribute("e_string")]
         public string String { get; }
     }
+
+    //public sealed class TestTaggedEdge : TaggedEdge<TestVertex, TestData>
+    //{
+    //    public TestTaggedEdge(
+    //        [NotNull] TestVertex source,
+    //        [NotNull] TestVertex target)
+    //        : base(source, target, new TestData())
+    //    {
+    //    }
+
+    //    public TestTaggedEdge(
+    //        [NotNull] TestVertex source,
+    //        [NotNull] TestVertex target,
+    //        [NotNull] string id,
+    //        float @float)
+    //        : this(source, target, id)
+    //    {
+    //        Float = @float;
+    //    }
+
+    //    [XmlAttribute("e_float")]
+    //    public float Float { get; set; }
+    //}
 
     #endregion
 }

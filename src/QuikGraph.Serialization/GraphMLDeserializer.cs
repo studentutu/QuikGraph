@@ -1,4 +1,4 @@
-#if SUPPORTS_GRAPHS_SERIALIZATION
+﻿#if SUPPORTS_GRAPHS_SERIALIZATION
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -85,7 +85,8 @@ namespace QuikGraph.Serialization
                 EdgeAttributesReader =
                     (ReadEdgeAttributesDelegate)CreateReadDelegate(
                     typeof(ReadEdgeAttributesDelegate),
-                    typeof(TEdge)); //,"id", "source", "target"
+                    typeof(TEdge),  //,"id", "source", "target"
+                    SerializationHelpers.GetEdgeAttributeProperties<TVertex, TEdge>());
 
                 GraphAttributesReader =
                     (ReadGraphAttributesDelegate)CreateReadDelegate(
@@ -155,13 +156,27 @@ namespace QuikGraph.Serialization
                 return method.CreateDelegate(delegateType);
             }
 
+            private static void EmitCallReader([NotNull] ILGenerator generator, [NotNull] MethodInfo reader)
+            {
+                // When writing scalar values we call member methods of XmlReader, while for array values 
+                // we call our own static methods. These two types of methods seem to need different OpCode.
+                generator.EmitCall(
+                    reader.DeclaringType == typeof(XmlReaderExtensions)
+                        ? OpCodes.Call
+                        : OpCodes.Callvirt,
+                    reader,
+                    null);
+            }
+
             [NotNull]
             private static Delegate CreateReadDelegate(
                 [NotNull] Type delegateType,
-                [NotNull] Type elementType)
+                [NotNull] Type elementType,
+                [NotNull, ItemNotNull] IEnumerable<PropertySerializationInfo> properties)
             {
                 Debug.Assert(delegateType != null);
                 Debug.Assert(elementType != null);
+                Debug.Assert(properties != null);
 
                 var method = new DynamicMethod(
                     $"{DynamicMethodPrefix}Read{elementType.Name}",
@@ -182,8 +197,8 @@ namespace QuikGraph.Serialization
                 Label next = generator.DefineLabel();
                 Label @return = generator.DefineLabel();
                 bool first = true;
-                foreach (PropertySerializationInfo info in SerializationHelpers.GetAttributeProperties(elementType))
-                {
+                foreach (PropertySerializationInfo info in properties)
+                {//if (info.GetTargetObject != null)continue;
                     PropertyInfo property = info.Property;
                     if (!first)
                     {
@@ -209,20 +224,14 @@ namespace QuikGraph.Serialization
                         throw new InvalidOperationException($"Property {property.DeclaringType}.{property.Name} has no setter.");
 
                     // reader.ReadXXX
-                    generator.Emit(OpCodes.Ldarg_2); // element
                     generator.Emit(OpCodes.Ldarg_0); // reader
                     generator.Emit(OpCodes.Ldstr, "data");
                     generator.Emit(OpCodes.Ldarg_1); // namespace URI
+                    EmitCallReader(generator, readMethod);
 
-                    // When writing scalar values we call member methods of XmlReader, while for array values 
-                    // we call our own static methods. These two types of methods seem to need different OpCode.
-                    generator.EmitCall(
-                        readMethod.DeclaringType == typeof(XmlReaderExtensions)
-                            ? OpCodes.Call
-                            : OpCodes.Callvirt,
-                        readMethod,
-                        null);
-                    generator.EmitCall(OpCodes.Callvirt, setMethod, null);
+                    // Set property value
+                    generator.Emit(OpCodes.Ldarg_2); // element
+                    EmitCall(generator, setMethod);
 
                     // Jump to do while
                     generator.Emit(OpCodes.Br, @return);
@@ -239,6 +248,12 @@ namespace QuikGraph.Serialization
 
                 // Let's bake the method
                 return method.CreateDelegate(delegateType);
+            }
+
+            [NotNull]
+            private static Delegate CreateReadDelegate([NotNull] Type delegateType, [NotNull] Type elementType)
+            {
+                return CreateReadDelegate(delegateType, elementType, SerializationHelpers.GetAttributeProperties(elementType));
             }
         }
 
@@ -343,13 +358,12 @@ namespace QuikGraph.Serialization
                 var vertices = new Dictionary<string, TVertex>(StringComparer.Ordinal);
 
                 // Read vertices or edges
-                XmlReader reader = _reader;
-                while (reader.Read())
+                while (_reader.Read())
                 {
-                    if (reader.NodeType == XmlNodeType.Element
-                        && reader.NamespaceURI == _graphMLNamespace)
+                    if (_reader.NodeType == XmlNodeType.Element
+                        && _reader.NamespaceURI == _graphMLNamespace)
                     {
-                        switch (reader.Name)
+                        switch (_reader.Name)
                         {
                             case NodeTag:
                                 ReadVertex(vertices);
@@ -376,7 +390,7 @@ namespace QuikGraph.Serialization
                     && _reader.NamespaceURI == _graphMLNamespace);
 
                 // Get subtree
-                using (XmlReader subReader = _reader.ReadSubtree())
+                using (XmlReader reader = _reader.ReadSubtree())
                 {
                     // Read id
                     string id = ReadAttributeValue(_reader, IdAttribute);
@@ -391,13 +405,13 @@ namespace QuikGraph.Serialization
                     ReadDelegateCompiler.SetEdgeDefault(edge);
 
                     // Read data
-                    while (subReader.Read())
+                    while (reader.Read())
                     {
                         if (_reader.NodeType == XmlNodeType.Element
                             && _reader.Name == DataTag
                             && _reader.NamespaceURI == _graphMLNamespace)
                         {
-                            ReadDelegateCompiler.EdgeAttributesReader(subReader, _graphMLNamespace, edge);
+                            ReadDelegateCompiler.EdgeAttributesReader(reader, _graphMLNamespace, edge);
                         }
                     }
 
@@ -513,7 +527,8 @@ namespace QuikGraph.Serialization
         }
 
         [Pure]
-        public static bool TryGetReadContentMethod([NotNull] Type type, out MethodInfo method)
+        [ContractAnnotation("=> true, method:notnull;=> false, method:null")]
+        public static bool TryGetReadContentMethod([NotNull] Type type, [CanBeNull] out MethodInfo method)
         {
             Debug.Assert(type != null);
 

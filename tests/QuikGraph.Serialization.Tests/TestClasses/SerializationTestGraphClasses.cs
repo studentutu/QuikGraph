@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
@@ -118,6 +118,10 @@ namespace QuikGraph.Serialization.Tests
                 return ((String != null ? String.GetHashCode() : 0) * 397) ^ Int;
             }
         }
+    }
+
+    public sealed class TestGraphTaggedEdge : AdjacencyGraph<TestVertex, TaggedEdge<TestVertex, TestData>>
+    {
     }
 
     public sealed class TestGraphArrayDefaultValue : AdjacencyGraph<TestVertex, TestEdge>

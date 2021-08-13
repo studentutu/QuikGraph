@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection.Emit;
 #if SUPPORTS_XML_DTD_PROCESSING
-using System.Linq;
 using System.Xml.Schema;
 #endif
 using System.Xml;
 using System.Xml.XPath;
 using JetBrains.Annotations;
 using NUnit.Framework;
+using NUnit.Framework.Internal;
 using QuikGraph.Tests;
 using static QuikGraph.Tests.QuikGraphUnitTestsHelpers;
 
@@ -21,7 +22,150 @@ namespace QuikGraph.Serialization.Tests
     [TestFixture]
     internal sealed class GraphMLSerializerTests
     {
+        #region Test class
+
+        private class TestClass
+        {
+            [UsedImplicitly]
+            public char Char { get; }
+        }
+
+        #endregion
+
+        #region Test data
+
+        [NotNull]
+        private static readonly bool[] Bools = { true, false, true, true };
+
+        [NotNull]
+        private static readonly int[] Ints = { 2, 3, 45, 3, 44, -2, 3, 5, 99999999 };
+
+        [NotNull]
+        private static readonly long[] Longs = { 3, 4, 43, 999999999999999999L, 445, 55, 3, 98, 49789238740598170, 987459, 97239, 234245, 0, -2232 };
+
+        [NotNull]
+        private static readonly float[] Floats = { 3.14159265F, 1.1F, 1, 23, -2, 987459, 97239, 234245, 0, -2232, 234.55345F };
+
+        [NotNull]
+        private static readonly double[] Doubles = { 3.14159265, 1.1, 1, 23, -2, 987459, 97239, 234245, 0, -2232, 234.55345 };
+
+        [NotNull, ItemNotNull]
+        private static readonly string[] Strings = { "", "Quick", "", "brown", "fox", "jumps", "over", "the", "lazy", "dog", ".", "" };
+
+
+        [NotNull]
+        private static readonly IList<bool> BoolsList = new[] { true, false, true, true };
+
+        [NotNull]
+        private static readonly IList<int> IntsList = new[] { 2, 3, 45, 3, 44, -2, 3, 5, 99999999 };
+
+        [NotNull]
+        private static readonly IList<long> LongsList = new[] { 3, 4, 43, 999999999999999999L, 445, 55, 3, 98, 49789238740598170, 987459, 97239, 234245, 0, -2232 };
+
+        [NotNull]
+        private static readonly IList<float> FloatsList = new[] { 3.14159265F, 1.1F, 1, 23, -2, 987459, 97239, 234245, 0, -2232, 234.55345F };
+
+        [NotNull]
+        private static readonly IList<double> DoublesList = new[] { 3.14159265, 1.1, 1, 23, -2, 987459, 97239, 234245, 0, -2232, 234.55345 };
+
+        [NotNull, ItemNotNull]
+        private static readonly IList<string> StringsList = new[] { "", "Quick", "", "brown", "fox", "jumps", "over", "the", "lazy", "dog", ".", "" };
+
+        #endregion
+
         #region Test helpers
+
+        [Pure]
+        [NotNull]
+        private static string SerializeGraph1([NotNull] TestGraph graph)
+        {
+            string filePath = Path.Combine(
+                GetTemporaryTestDirectory(),
+                $"serialization_to_graphml_test_{Guid.NewGuid()}.graphml");
+
+            graph.SerializeToGraphML<TestVertex, TestEdge, TestGraph>(filePath);
+            Assert.IsTrue(File.Exists(filePath));
+            return File.ReadAllText(filePath);
+        }
+
+        [Pure]
+        [NotNull]
+        private static string SerializeGraph2([NotNull] TestGraph graph)
+        {
+            string filePath = Path.Combine(
+                GetTemporaryTestDirectory(),
+                $"serialization_to_graphml_test_{Guid.NewGuid()}.graphml");
+
+            graph.SerializeToGraphML<TestVertex, TestEdge, TestGraph>(
+                filePath,
+                vertex => vertex.ID,
+                edge => edge.ID);
+            Assert.IsTrue(File.Exists(filePath));
+            return File.ReadAllText(filePath);
+        }
+
+        [Pure]
+        [NotNull]
+        private static string SerializeGraph3([NotNull] TestGraph graph)
+        {
+            using (var writer = new StringWriter())
+            {
+                var settings = new XmlWriterSettings { Indent = true };
+                using (var xmlWriter = XmlWriter.Create(writer, settings))
+                {
+                    graph.SerializeToGraphML<TestVertex, TestEdge, TestGraph>(xmlWriter);
+                }
+
+                return writer.ToString();
+            }
+        }
+
+        [Pure]
+        [NotNull]
+        private static string SerializeGraph4([NotNull] TestGraph graph)
+        {
+            using (var writer = new StringWriter())
+            {
+                var settings = new XmlWriterSettings { Indent = true };
+                using (var xmlWriter = XmlWriter.Create(writer, settings))
+                {
+                    graph.SerializeToGraphML<TestVertex, TestEdge, TestGraph>(
+                        xmlWriter,
+                        vertex => vertex.ID,
+                        edge => edge.ID);
+                }
+
+                return writer.ToString();
+            }
+        }
+
+        [Pure]
+        [NotNull]
+        private static TestGraph DeserializeGraph([NotNull] string xml)
+        {
+            using (var reader = new StringReader(xml))
+            {
+                var serializedGraph = new TestGraph();
+#if SUPPORTS_XML_DTD_PROCESSING
+                serializedGraph.DeserializeAndValidateFromGraphML(
+#else
+                serializedGraph.DeserializeFromGraphML(
+#endif
+                    reader,
+                    id => new TestVertex(id),
+                    (source, target, id) => new TestEdge(source, target, id));
+                return serializedGraph;
+            }
+        }
+
+        [Pure]
+        [NotNull]
+        private static TestGraph VerifySerialization(
+            [NotNull] TestGraph graph,
+            [NotNull, InstantHandle] Func<TestGraph, string> serializeGraph)
+        {
+            return VerifySerialization(graph, serializeGraph, DeserializeGraph);
+        }
 
         [Pure]
         [NotNull]
@@ -48,6 +192,18 @@ namespace QuikGraph.Serialization.Tests
         }
 
         #endregion
+
+        [Test]
+        public void EmitValue_Throws()
+        {
+            var method = new DynamicMethod("TestMethod", typeof(void), Type.EmptyTypes);
+            ILGenerator generator = method.GetILGenerator();
+            Assert.Throws<NotSupportedException>(
+                () => ILHelpers.EmitValue(
+                    generator,
+                    typeof(TestClass).GetProperty(nameof(TestClass.Char)) ?? throw new AssertionException("Property must exist."),
+                    'a'));
+        }
 
         [TestCase(false, false)]
         [TestCase(false, true)]
@@ -105,7 +261,7 @@ namespace QuikGraph.Serialization.Tests
                     using (var writer = new StringWriter())
                     {
                         var settings = new XmlWriterSettings { Indent = true };
-                        using (XmlWriter xmlWriter = XmlWriter.Create(writer, settings))
+                        using (var xmlWriter = XmlWriter.Create(writer, settings))
                         {
                             var serializer = new GraphMLSerializer<EquatableTestVertex, EquatableTestEdge, EquatableTestGraph>
                             {
@@ -139,7 +295,7 @@ namespace QuikGraph.Serialization.Tests
                             DtdProcessing = DtdProcessing.Ignore
                         };
 
-                        using (XmlReader xmlReader = XmlReader.Create(reader, settings))
+                        using (var xmlReader = XmlReader.Create(reader, settings))
                         {
 #else
                         var xmlReader = new XmlTextReader(reader);
@@ -222,7 +378,7 @@ namespace QuikGraph.Serialization.Tests
                     vertex => vertex.ID,
                     edge => edge.ID));
 
-            using (XmlWriter writer = XmlWriter.Create(WriteThrowsTestFilePath))
+            using (var writer = XmlWriter.Create(WriteThrowsTestFilePath))
             {
                 Assert.Throws<ArgumentNullException>(
                     () => ((AdjacencyGraph<TestVertex, TestEdge>) null).SerializeToGraphML<TestVertex, TestEdge, AdjacencyGraph<TestVertex, TestEdge>>(writer));
@@ -278,368 +434,6 @@ namespace QuikGraph.Serialization.Tests
             #endregion
         }
 
-        #endregion
-
-        #region Deserialization
-
-        [NotNull]
-        private const string TestGraphFileName = "DCT8.graphml";
-
-        [NotNull]
-        private const string MissingAttributeTestGraphFileName = "DCT8_with_missing_attribute.graphml";
-
-        [NotNull]
-        private const string MissingSourceTestGraphFileName = "DCT8_with_missing_source_id.graphml";
-
-        [NotNull]
-        private const string MissingTargetTestGraphFileName = "DCT8_with_missing_target_id.graphml";
-
-        [NotNull]
-        private const string InvalidTagTestGraphFileName = "DCT8_invalid_tag.graphml";
-
-        [NotNull]
-        private const string MissingGraphMLTestGraphFileName = "DCT8_missing_graphml_tag.graphml";
-
-        [NotNull]
-        private const string MissingGraphTestGraphFileName = "DCT8_missing_graph_tag.graphml";
-
-        [Test]
-        public void DeserializeFromGraphML()
-        {
-            foreach (string graphMLFilePath in TestGraphFactory.GetGraphMLFilePaths())
-            {
-                var graph = new AdjacencyGraph<string, Edge<string>>();
-                using (var reader = new StreamReader(graphMLFilePath))
-                {
-                    graph.DeserializeFromGraphML(
-                        reader,
-                        id => id,
-                        (source, target, _) => new Edge<string>(source, target));
-                }
-
-                var vertices = new Dictionary<string, string>();
-                foreach (string vertex in graph.Vertices)
-                    vertices.Add(vertex, vertex);
-
-                // Check all nodes are loaded
-#if SUPPORTS_XML_DTD_PROCESSING
-                var settings = new XmlReaderSettings
-                {
-                    DtdProcessing = DtdProcessing.Ignore,
-                    XmlResolver = new GraphMLXmlResolver(),
-                    ValidationFlags = XmlSchemaValidationFlags.ReportValidationWarnings
-                };
-
-                using (XmlReader reader = XmlReader.Create(graphMLFilePath, settings))
-                {
-#else
-                using (var reader = new XmlTextReader(graphMLFilePath))
-                {
-                    reader.ProhibitDtd = false;
-                    reader.XmlResolver = null;
-#endif
-                    var document = new XPathDocument(reader);
-
-                    foreach (XPathNavigator node in document.CreateNavigator().Select("/graphml/graph/node"))
-                    {
-                        string id = node.GetAttribute("id", "");
-                        Assert.IsTrue(vertices.ContainsKey(id));
-                    }
-
-                    // Check all edges are loaded
-                    foreach (XPathNavigator node in document.CreateNavigator().Select("/graphml/graph/edge"))
-                    {
-                        string source = node.GetAttribute("source", "");
-                        string target = node.GetAttribute("target", "");
-                        Assert.IsTrue(graph.ContainsEdge(vertices[source], vertices[target]));
-                    }
-                }
-            }
-        }
-
-        [Test]
-        public void DeserializeFromGraphML_Throws()
-        {
-            // ReSharper disable AssignNullToNotNullAttribute
-            // Filepath
-            Assert.Throws<ArgumentNullException>(
-                () => ((AdjacencyGraph<string, Edge<string>>) null).DeserializeFromGraphML(
-                    GetGraphFilePath(TestGraphFileName),
-                    id => id,
-                    (source, target, _) => new Edge<string>(source, target)));
-
-            var graph = new AdjacencyGraph<string, Edge<string>>();
-            Assert.Throws<ArgumentException>(
-                () => graph.DeserializeFromGraphML(
-                    (string)null,
-                    id => id,
-                    (source, target, _) => new Edge<string>(source, target)));
-
-            Assert.Throws<ArgumentException>(
-                () => graph.DeserializeFromGraphML(
-                    "",
-                    id => id,
-                    (source, target, _) => new Edge<string>(source, target)));
-
-            Assert.Throws<ArgumentNullException>(
-                () => graph.DeserializeFromGraphML<string, Edge<string>, AdjacencyGraph<string, Edge<string>>>(
-                    GetGraphFilePath(TestGraphFileName),
-                    null,
-                    (source, target, _) => new Edge<string>(source, target)));
-
-            Assert.Throws<ArgumentNullException>(
-                () => graph.DeserializeFromGraphML<string, Edge<string>, AdjacencyGraph<string, Edge<string>>>(
-                    GetGraphFilePath(TestGraphFileName),
-                    id => id,
-                    null));
-
-            // Text reader
-            Assert.Throws<ArgumentNullException>(
-                () => graph.DeserializeFromGraphML(
-                    (TextReader)null,
-                    id => id,
-                    (source, target, _) => new Edge<string>(source, target)));
-
-            using (var reader = new StreamReader(GetGraphFilePath(TestGraphFileName)))
-            {
-                Assert.Throws<ArgumentNullException>(
-                    () => ((AdjacencyGraph<string, Edge<string>>)null).DeserializeFromGraphML(
-                        reader,
-                        id => id,
-                        (source, target, _) => new Edge<string>(source, target)));
-
-                Assert.Throws<ArgumentNullException>(
-                    () => graph.DeserializeFromGraphML<string, Edge<string>, AdjacencyGraph<string, Edge<string>>>(
-                        reader,
-                        null,
-                        (source, target, _) => new Edge<string>(source, target)));
-
-                Assert.Throws<ArgumentNullException>(
-                    () => graph.DeserializeFromGraphML<string, Edge<string>, AdjacencyGraph<string, Edge<string>>>(
-                        reader,
-                        id => id,
-                        null));
-            }
-
-            // XML reader
-            Assert.Throws<ArgumentNullException>(
-                () => graph.DeserializeFromGraphML(
-                    (XmlReader)null,
-                    id => id,
-                    (source, target, _) => new Edge<string>(source, target)));
-
-            using (var reader = XmlReader.Create(GetGraphFilePath(TestGraphFileName)))
-            {
-                Assert.Throws<ArgumentNullException>(
-                    () => ((AdjacencyGraph<string, Edge<string>>) null).DeserializeFromGraphML(
-                        reader,
-                        id => id,
-                        (source, target, _) => new Edge<string>(source, target)));
-
-                Assert.Throws<ArgumentNullException>(
-                    () => graph.DeserializeFromGraphML<string, Edge<string>, AdjacencyGraph<string, Edge<string>>>(
-                        reader,
-                        null,
-                        (source, target, _) => new Edge<string>(source, target)));
-
-                Assert.Throws<ArgumentNullException>(
-                    () => graph.DeserializeFromGraphML<string, Edge<string>, AdjacencyGraph<string, Edge<string>>>(
-                        reader,
-                        id => id,
-                        null));
-            }
-            // ReSharper restore AssignNullToNotNullAttribute
-        }
-
-        [Test]
-        public void DeserializeFromGraphML_Throws_InvalidData()
-        {
-            AssertDeserializationFail<TestGraphArrayDefaultValue, TypeInitializationException>(new TestGraphArrayDefaultValue());
-            AssertDeserializationFail<TestGraphNoSetter, TypeInitializationException>(new TestGraphNoSetter());
-            AssertDeserializationFail<TestGraphNullDefaultValue, TypeInitializationException>(new TestGraphNullDefaultValue());
-            AssertDeserializationFail<TestGraphWrongDefaultValue, TypeInitializationException>(new TestGraphWrongDefaultValue());
-            AssertDeserializationFail<TestGraphNotSupportedType, TypeInitializationException>(new TestGraphNotSupportedType());
-
-            var graph = new TestGraph();
-            AssertDeserializationFail<TestGraph, ArgumentException>(graph, MissingAttributeTestGraphFileName);
-            AssertDeserializationFail<TestGraph, ArgumentException>(graph, MissingSourceTestGraphFileName);
-            AssertDeserializationFail<TestGraph, ArgumentException>(graph, MissingTargetTestGraphFileName);
-            AssertDeserializationFail<TestGraph, InvalidOperationException>(graph, InvalidTagTestGraphFileName);
-            AssertDeserializationFail<TestGraph, InvalidOperationException>(graph, MissingGraphTestGraphFileName);
-            AssertDeserializationFail<TestGraph, InvalidOperationException>(graph, MissingGraphMLTestGraphFileName);
-
-            #region Local function
-
-            void AssertDeserializationFail<TGraph, TException>(TGraph g, string fileName = TestGraphFileName)
-                where TGraph : IMutableVertexAndEdgeListGraph<TestVertex, TestEdge>
-                where TException : Exception
-            {
-                Assert.Throws<TException>(
-                    () => g.DeserializeFromGraphML(
-                        GetGraphFilePath(fileName),
-                        id => new TestVertex(id),
-                        (source, target, id) => new TestEdge(source, target, id)));
-            }
-
-            #endregion
-        }
-
-        #region Test class
-
-        private class TestClass
-        {
-            [UsedImplicitly]
-            public char Char { get; }
-        }
-
-        #endregion
-
-        [Test]
-        public void EmitValue_Throws()
-        {
-            var method = new DynamicMethod("TestMethod", typeof(void), Type.EmptyTypes);
-            ILGenerator generator = method.GetILGenerator();
-            Assert.Throws<NotSupportedException>(
-                () => ILHelpers.EmitValue(
-                    generator,
-                    typeof(TestClass).GetProperty(nameof(TestClass.Char)) ?? throw new AssertionException("Property must exist."),
-                    'a'));
-        }
-
-#if SUPPORTS_XML_DTD_PROCESSING
-        #region Test data
-
-        [NotNull]
-        private static readonly bool[] Bools = { true, false, true, true };
-
-        [NotNull]
-        private static readonly int[] Ints = { 2, 3, 45, 3, 44, -2, 3, 5, 99999999 };
-
-        [NotNull]
-        private static readonly long[] Longs = { 3, 4, 43, 999999999999999999L, 445, 55, 3, 98, 49789238740598170, 987459, 97239, 234245, 0, -2232 };
-
-        [NotNull]
-        private static readonly float[] Floats = { 3.14159265F, 1.1F, 1, 23, -2, 987459, 97239, 234245, 0, -2232, 234.55345F };
-
-        [NotNull]
-        private static readonly double[] Doubles = { 3.14159265, 1.1, 1, 23, -2, 987459, 97239, 234245, 0, -2232, 234.55345 };
-
-        [NotNull, ItemNotNull]
-        private static readonly string[] Strings = { "", "Quick", "", "brown", "fox", "jumps", "over", "the", "lazy", "dog", ".", "" };
-
-
-        [NotNull]
-        private static readonly IList<bool> BoolsList = new[] { true, false, true, true };
-
-        [NotNull]
-        private static readonly IList<int> IntsList = new[] { 2, 3, 45, 3, 44, -2, 3, 5, 99999999 };
-
-        [NotNull]
-        private static readonly IList<long> LongsList = new[] { 3, 4, 43, 999999999999999999L, 445, 55, 3, 98, 49789238740598170, 987459, 97239, 234245, 0, -2232 };
-
-        [NotNull]
-        private static readonly IList<float> FloatsList = new[] { 3.14159265F, 1.1F, 1, 23, -2, 987459, 97239, 234245, 0, -2232, 234.55345F };
-
-        [NotNull]
-        private static readonly IList<double> DoublesList = new[] { 3.14159265, 1.1, 1, 23, -2, 987459, 97239, 234245, 0, -2232, 234.55345 };
-
-        [NotNull, ItemNotNull]
-        private static readonly IList<string> StringsList = new[] { "", "Quick", "", "brown", "fox", "jumps", "over", "the", "lazy", "dog", ".", "" };
-
-        #endregion
-
-        #region Test helpers
-
-        [Pure]
-        [NotNull]
-        private static string SerializeGraph1([NotNull] TestGraph graph)
-        {
-            string filePath = Path.Combine(
-                GetTemporaryTestDirectory(),
-                $"serialization_to_graphml_test_{Guid.NewGuid().ToString()}.graphml");
-
-            graph.SerializeToGraphML<TestVertex, TestEdge, TestGraph>(filePath);
-            Assert.IsTrue(File.Exists(filePath));
-            return File.ReadAllText(filePath);
-        }
-
-        [Pure]
-        [NotNull]
-        private static string SerializeGraph2([NotNull] TestGraph graph)
-        {
-            string filePath = Path.Combine(
-                GetTemporaryTestDirectory(),
-                $"serialization_to_graphml_test_{Guid.NewGuid().ToString()}.graphml");
-
-            graph.SerializeToGraphML<TestVertex, TestEdge, TestGraph>(
-                filePath,
-                vertex => vertex.ID,
-                edge => edge.ID);
-            Assert.IsTrue(File.Exists(filePath));
-            return File.ReadAllText(filePath);
-        }
-
-        [Pure]
-        [NotNull]
-        private static string SerializeGraph3([NotNull] TestGraph graph)
-        {
-            using (var writer = new StringWriter())
-            {
-                var settings = new XmlWriterSettings { Indent = true };
-                using (XmlWriter xmlWriter = XmlWriter.Create(writer, settings))
-                {
-                    graph.SerializeToGraphML<TestVertex, TestEdge, TestGraph>(xmlWriter);
-                }
-
-                return writer.ToString();
-            }
-        }
-
-        [Pure]
-        [NotNull]
-        private static string SerializeGraph4([NotNull] TestGraph graph)
-        {
-            using (var writer = new StringWriter())
-            {
-                var settings = new XmlWriterSettings { Indent = true };
-                using (XmlWriter xmlWriter = XmlWriter.Create(writer, settings))
-                {
-                    graph.SerializeToGraphML<TestVertex, TestEdge, TestGraph>(
-                        xmlWriter,
-                        vertex => vertex.ID,
-                        edge => edge.ID);
-                }
-
-                return writer.ToString();
-            }
-        }
-
-        [Pure]
-        [NotNull]
-        private static TestGraph DeserializeGraph([NotNull] string xml)
-        {
-            using (var reader = new StringReader(xml))
-            {
-                var serializedGraph = new TestGraph();
-                serializedGraph.DeserializeAndValidateFromGraphML(
-                    reader,
-                    id => new TestVertex(id),
-                    (source, target, id) => new TestEdge(source, target, id));
-                return serializedGraph;
-            }
-        }
-
-        [Pure]
-        [NotNull]
-        private static TestGraph VerifySerialization(
-            [NotNull] TestGraph graph,
-            [NotNull, InstantHandle] Func<TestGraph, string> serializeGraph)
-        {
-            return VerifySerialization(graph, serializeGraph, DeserializeGraph);
-        }
-
-        #endregion
-
         [NotNull, ItemNotNull]
         private static IEnumerable<TestCaseData> GraphSerializationTestCases
         {
@@ -664,7 +458,7 @@ namespace QuikGraph.Serialization.Tests
         }
 
         [TestCaseSource(nameof(GraphSerializationTestCases))]
-        public void GraphMLSerializationWithValidation_WriteVertex(
+        public void GraphMLSerialization_WriteVertex(
             [NotNull, InstantHandle] Func<TestGraph, string> serializeGraph,
             bool _)
         {
@@ -740,7 +534,7 @@ namespace QuikGraph.Serialization.Tests
         }
 
         [TestCaseSource(nameof(GraphSerializationTestCases))]
-        public void GraphMLSerializationWithValidation_WriteEdge(
+        public void GraphMLSerialization_WriteEdge(
             [NotNull, InstantHandle] Func<TestGraph, string> serializeGraph,
             bool keepIds)
         {
@@ -805,6 +599,226 @@ namespace QuikGraph.Serialization.Tests
         }
 
         [Test]
+        //[TestCaseSource(nameof(GraphSerializationTestCases))]//TODO test array on edges
+        public void GraphMLSerialization_WriteTaggedEdge()
+            //[NotNull, InstantHandle] Func<TestGraph, string> serializeGraph,
+            //bool _)
+        {
+            var graph = new TestGraphTaggedEdge();
+
+            var vertex1 = new TestVertex("v1");
+            var vertex2 = new TestVertex("v2");
+
+            graph.AddVertex(vertex1);
+            graph.AddVertex(vertex2);
+
+            var edge = new TaggedEdge<TestVertex, TestData>(vertex1, vertex2, new TestData());
+            graph.AddEdge(edge);
+
+
+            string filePath = Path.Combine(
+                GetTemporaryTestDirectory(),
+                $"serialization_to_graphml_test_{Guid.NewGuid()}.graphml");
+
+            //graph.SerializeToGraphML<TestVertex, TaggedEdge<TestVertex, TestData>, TestGraphTaggedEdge>(filePath);
+            //Assert.IsTrue(File.Exists(filePath));
+            //return File.ReadAllText(filePath);
+            TestGraphTaggedEdge serializedGraph = VerifySerialization<TestGraphTaggedEdge>(graph, SerializeGraph1, DeserializeGraph);
+            //TestGraph serializedGraph = VerifySerialization(graph, serializeGraph);
+
+            //TestEdge serializedEdge = serializedGraph.Edges.First();
+            //if (keepIds)
+            //    Assert.AreEqual(edge.ID, serializedEdge.ID);
+            //Assert.AreEqual(edge.String, serializedEdge.String);
+            //Assert.AreEqual(edge.Int, serializedEdge.Int);
+            //Assert.AreEqual(edge.Long, serializedEdge.Long);
+            //Assert.AreEqual(edge.Float, serializedEdge.Float);
+            //Assert.AreEqual(edge.Double, serializedEdge.Double);
+            //Assert.AreEqual(edge.Bool, serializedEdge.Bool);
+
+            string SerializeGraph1([NotNull] TestGraphTaggedEdge graph)
+            {
+                string filePath = Path.Combine(
+                    GetTemporaryTestDirectory(),
+                    $"serialization_to_graphml_test_{Guid.NewGuid()}.graphml");
+
+                graph.SerializeToGraphML<TestVertex, TaggedEdge<TestVertex, TestData>, TestGraphTaggedEdge>(filePath);
+                Assert.IsTrue(File.Exists(filePath));
+                return File.ReadAllText(filePath);
+            }
+
+            TestGraphTaggedEdge DeserializeGraph(string xml)
+            {
+                using (var reader = new StringReader(xml))
+                {
+                    var serializedGraph = new TestGraphTaggedEdge();
+#if SUPPORTS_XML_DTD_PROCESSING
+                    serializedGraph.DeserializeAndValidateFromGraphML(
+#else
+                    serializedGraph.DeserializeFromGraphML(
+#endif
+                        reader,
+                        id => new TestVertex(id),
+                        (source, target, id) => new TaggedEdge<TestVertex, TestData>(source, target, null));
+                    return serializedGraph;
+                }
+            }
+        }
+
+        #endregion
+
+        #region Deserialization
+
+        [NotNull]
+        private const string TestGraphFileName = "DCT8.graphml";
+
+        [NotNull]
+        private const string MissingAttributeTestGraphFileName = "DCT8_with_missing_attribute.graphml";
+
+        [NotNull]
+        private const string MissingSourceTestGraphFileName = "DCT8_with_missing_source_id.graphml";
+
+        [NotNull]
+        private const string MissingTargetTestGraphFileName = "DCT8_with_missing_target_id.graphml";
+
+        [NotNull]
+        private const string InvalidTagTestGraphFileName = "DCT8_invalid_tag.graphml";
+
+        [NotNull]
+        private const string MissingGraphMLTestGraphFileName = "DCT8_missing_graphml_tag.graphml";
+
+        [NotNull]
+        private const string MissingGraphTestGraphFileName = "DCT8_missing_graph_tag.graphml";
+
+        [Test]
+        public void DeserializeFromGraphML_Throws()
+        {
+            // ReSharper disable AssignNullToNotNullAttribute
+            // Filepath
+            Assert.Throws<ArgumentNullException>(
+                () => ((AdjacencyGraph<string, Edge<string>>)null).DeserializeFromGraphML(
+                    GetGraphFilePath(TestGraphFileName),
+                    id => id,
+                    (source, target, _) => new Edge<string>(source, target)));
+
+            var graph = new AdjacencyGraph<string, Edge<string>>();
+            Assert.Throws<ArgumentException>(
+                () => graph.DeserializeFromGraphML(
+                    (string)null,
+                    id => id,
+                    (source, target, _) => new Edge<string>(source, target)));
+
+            Assert.Throws<ArgumentException>(
+                () => graph.DeserializeFromGraphML(
+                    "",
+                    id => id,
+                    (source, target, _) => new Edge<string>(source, target)));
+
+            Assert.Throws<ArgumentNullException>(
+                () => graph.DeserializeFromGraphML<string, Edge<string>, AdjacencyGraph<string, Edge<string>>>(
+                    GetGraphFilePath(TestGraphFileName),
+                    null,
+                    (source, target, _) => new Edge<string>(source, target)));
+
+            Assert.Throws<ArgumentNullException>(
+                () => graph.DeserializeFromGraphML<string, Edge<string>, AdjacencyGraph<string, Edge<string>>>(
+                    GetGraphFilePath(TestGraphFileName),
+                    id => id,
+                    null));
+
+            // Text reader
+            Assert.Throws<ArgumentNullException>(
+                () => graph.DeserializeFromGraphML(
+                    (TextReader)null,
+                    id => id,
+                    (source, target, _) => new Edge<string>(source, target)));
+
+            using (var reader = new StreamReader(GetGraphFilePath(TestGraphFileName)))
+            {
+                Assert.Throws<ArgumentNullException>(
+                    () => ((AdjacencyGraph<string, Edge<string>>)null).DeserializeFromGraphML(
+                        reader,
+                        id => id,
+                        (source, target, _) => new Edge<string>(source, target)));
+
+                Assert.Throws<ArgumentNullException>(
+                    () => graph.DeserializeFromGraphML<string, Edge<string>, AdjacencyGraph<string, Edge<string>>>(
+                        reader,
+                        null,
+                        (source, target, _) => new Edge<string>(source, target)));
+
+                Assert.Throws<ArgumentNullException>(
+                    () => graph.DeserializeFromGraphML<string, Edge<string>, AdjacencyGraph<string, Edge<string>>>(
+                        reader,
+                        id => id,
+                        null));
+            }
+
+            // XML reader
+            Assert.Throws<ArgumentNullException>(
+                () => graph.DeserializeFromGraphML(
+                    (XmlReader)null,
+                    id => id,
+                    (source, target, _) => new Edge<string>(source, target)));
+
+            using (var reader = XmlReader.Create(GetGraphFilePath(TestGraphFileName)))
+            {
+                Assert.Throws<ArgumentNullException>(
+                    () => ((AdjacencyGraph<string, Edge<string>>)null).DeserializeFromGraphML(
+                        reader,
+                        id => id,
+                        (source, target, _) => new Edge<string>(source, target)));
+
+                Assert.Throws<ArgumentNullException>(
+                    () => graph.DeserializeFromGraphML<string, Edge<string>, AdjacencyGraph<string, Edge<string>>>(
+                        reader,
+                        null,
+                        (source, target, _) => new Edge<string>(source, target)));
+
+                Assert.Throws<ArgumentNullException>(
+                    () => graph.DeserializeFromGraphML<string, Edge<string>, AdjacencyGraph<string, Edge<string>>>(
+                        reader,
+                        id => id,
+                        null));
+            }
+            // ReSharper restore AssignNullToNotNullAttribute
+        }
+
+        [Test]
+        public void DeserializeFromGraphML_Throws_InvalidData()
+        {
+            AssertDeserializationFail<TestGraphArrayDefaultValue, TypeInitializationException>(new TestGraphArrayDefaultValue());
+            AssertDeserializationFail<TestGraphNoSetter, TypeInitializationException>(new TestGraphNoSetter());
+            AssertDeserializationFail<TestGraphNullDefaultValue, TypeInitializationException>(new TestGraphNullDefaultValue());
+            AssertDeserializationFail<TestGraphWrongDefaultValue, TypeInitializationException>(new TestGraphWrongDefaultValue());
+            AssertDeserializationFail<TestGraphNotSupportedType, TypeInitializationException>(new TestGraphNotSupportedType());
+
+            var graph = new TestGraph();
+            AssertDeserializationFail<TestGraph, ArgumentException>(graph, MissingAttributeTestGraphFileName);
+            AssertDeserializationFail<TestGraph, ArgumentException>(graph, MissingSourceTestGraphFileName);
+            AssertDeserializationFail<TestGraph, ArgumentException>(graph, MissingTargetTestGraphFileName);
+            AssertDeserializationFail<TestGraph, InvalidOperationException>(graph, InvalidTagTestGraphFileName);
+            AssertDeserializationFail<TestGraph, InvalidOperationException>(graph, MissingGraphTestGraphFileName);
+            AssertDeserializationFail<TestGraph, InvalidOperationException>(graph, MissingGraphMLTestGraphFileName);
+
+            #region Local function
+
+            void AssertDeserializationFail<TGraph, TException>(TGraph g, string fileName = TestGraphFileName)
+                where TGraph : IMutableVertexAndEdgeListGraph<TestVertex, TestEdge>
+                where TException : Exception
+            {
+                Assert.Throws<TException>(
+                    () => g.DeserializeFromGraphML(
+                        GetGraphFilePath(fileName),
+                        id => new TestVertex(id),
+                        (source, target, id) => new TestEdge(source, target, id)));
+            }
+
+            #endregion
+        }
+
+#if SUPPORTS_XML_DTD_PROCESSING
+        [Test]
         public void DeserializeAndValidateFromGraphML_Throws()
         {
             // ReSharper disable AssignNullToNotNullAttribute
@@ -840,6 +854,62 @@ namespace QuikGraph.Serialization.Tests
             // ReSharper restore AssignNullToNotNullAttribute
         }
 #endif
+
+        [Test]
+        public void DeserializeFromGraphML()
+        {
+            foreach (string graphMLFilePath in TestGraphFactory.GetGraphMLFilePaths())
+            {
+                var graph = new AdjacencyGraph<string, Edge<string>>();
+                using (var reader = new StreamReader(graphMLFilePath))
+                {
+                    graph.DeserializeFromGraphML(
+                        reader,
+                        id => id,
+                        (source, target, _) => new Edge<string>(source, target));
+                }
+
+                var vertices = new Dictionary<string, string>();
+                foreach (string vertex in graph.Vertices)
+                {
+                    vertices.Add(vertex, vertex);
+                }
+
+                // Check all nodes are loaded
+#if SUPPORTS_XML_DTD_PROCESSING
+                var settings = new XmlReaderSettings
+                {
+                    DtdProcessing = DtdProcessing.Ignore,
+                    XmlResolver = new GraphMLXmlResolver(),
+                    ValidationFlags = XmlSchemaValidationFlags.ReportValidationWarnings
+                };
+
+                using (var reader = XmlReader.Create(graphMLFilePath, settings))
+                {
+#else
+                using (var reader = new XmlTextReader(graphMLFilePath))
+                {
+                    reader.ProhibitDtd = false;
+                    reader.XmlResolver = null;
+#endif
+                    var document = new XPathDocument(reader);
+
+                    foreach (XPathNavigator node in document.CreateNavigator().Select("/graphml/graph/node"))
+                    {
+                        string id = node.GetAttribute("id", "");
+                        Assert.IsTrue(vertices.ContainsKey(id));
+                    }
+
+                    // Check all edges are loaded
+                    foreach (XPathNavigator node in document.CreateNavigator().Select("/graphml/graph/edge"))
+                    {
+                        string source = node.GetAttribute("source", "");
+                        string target = node.GetAttribute("target", "");
+                        Assert.IsTrue(graph.ContainsEdge(vertices[source], vertices[target]));
+                    }
+                }
+            }
+        }
 
         #endregion
     }
