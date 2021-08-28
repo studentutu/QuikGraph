@@ -25093,6 +25093,19 @@ references:
   isSpec: "True"
   fullName: QuikGraph.Graphviz.Dot.GraphvizEdgeExtremity.IsHead
   nameWithType: GraphvizEdgeExtremity.IsHead
+- uid: QuikGraph.Graphviz.Dot.GraphvizEdgeExtremity.IsHtmlLabel
+  name: IsHtmlLabel
+  href: api/QuikGraph.Graphviz.Dot.GraphvizEdgeExtremity.html#QuikGraph_Graphviz_Dot_GraphvizEdgeExtremity_IsHtmlLabel
+  commentId: P:QuikGraph.Graphviz.Dot.GraphvizEdgeExtremity.IsHtmlLabel
+  fullName: QuikGraph.Graphviz.Dot.GraphvizEdgeExtremity.IsHtmlLabel
+  nameWithType: GraphvizEdgeExtremity.IsHtmlLabel
+- uid: QuikGraph.Graphviz.Dot.GraphvizEdgeExtremity.IsHtmlLabel*
+  name: IsHtmlLabel
+  href: api/QuikGraph.Graphviz.Dot.GraphvizEdgeExtremity.html#QuikGraph_Graphviz_Dot_GraphvizEdgeExtremity_IsHtmlLabel_
+  commentId: Overload:QuikGraph.Graphviz.Dot.GraphvizEdgeExtremity.IsHtmlLabel
+  isSpec: "True"
+  fullName: QuikGraph.Graphviz.Dot.GraphvizEdgeExtremity.IsHtmlLabel
+  nameWithType: GraphvizEdgeExtremity.IsHtmlLabel
 - uid: QuikGraph.Graphviz.Dot.GraphvizEdgeExtremity.Label
   name: Label
   href: api/QuikGraph.Graphviz.Dot.GraphvizEdgeExtremity.html#QuikGraph_Graphviz_Dot_GraphvizEdgeExtremity_Label
@@ -25242,6 +25255,19 @@ references:
   isSpec: "True"
   fullName: QuikGraph.Graphviz.Dot.GraphvizEdgeLabel.FontColor
   nameWithType: GraphvizEdgeLabel.FontColor
+- uid: QuikGraph.Graphviz.Dot.GraphvizEdgeLabel.IsHtmlLabel
+  name: IsHtmlLabel
+  href: api/QuikGraph.Graphviz.Dot.GraphvizEdgeLabel.html#QuikGraph_Graphviz_Dot_GraphvizEdgeLabel_IsHtmlLabel
+  commentId: P:QuikGraph.Graphviz.Dot.GraphvizEdgeLabel.IsHtmlLabel
+  fullName: QuikGraph.Graphviz.Dot.GraphvizEdgeLabel.IsHtmlLabel
+  nameWithType: GraphvizEdgeLabel.IsHtmlLabel
+- uid: QuikGraph.Graphviz.Dot.GraphvizEdgeLabel.IsHtmlLabel*
+  name: IsHtmlLabel
+  href: api/QuikGraph.Graphviz.Dot.GraphvizEdgeLabel.html#QuikGraph_Graphviz_Dot_GraphvizEdgeLabel_IsHtmlLabel_
+  commentId: Overload:QuikGraph.Graphviz.Dot.GraphvizEdgeLabel.IsHtmlLabel
+  isSpec: "True"
+  fullName: QuikGraph.Graphviz.Dot.GraphvizEdgeLabel.IsHtmlLabel
+  nameWithType: GraphvizEdgeLabel.IsHtmlLabel
 - uid: QuikGraph.Graphviz.Dot.GraphvizEdgeLabel.Value
   name: Value
   href: api/QuikGraph.Graphviz.Dot.GraphvizEdgeLabel.html#QuikGraph_Graphviz_Dot_GraphvizEdgeLabel_Value
@@ -25452,6 +25478,19 @@ references:
   isSpec: "True"
   fullName: QuikGraph.Graphviz.Dot.GraphvizGraph.IsConcentrated
   nameWithType: GraphvizGraph.IsConcentrated
+- uid: QuikGraph.Graphviz.Dot.GraphvizGraph.IsHtmlLabel
+  name: IsHtmlLabel
+  href: api/QuikGraph.Graphviz.Dot.GraphvizGraph.html#QuikGraph_Graphviz_Dot_GraphvizGraph_IsHtmlLabel
+  commentId: P:QuikGraph.Graphviz.Dot.GraphvizGraph.IsHtmlLabel
+  fullName: QuikGraph.Graphviz.Dot.GraphvizGraph.IsHtmlLabel
+  nameWithType: GraphvizGraph.IsHtmlLabel
+- uid: QuikGraph.Graphviz.Dot.GraphvizGraph.IsHtmlLabel*
+  name: IsHtmlLabel
+  href: api/QuikGraph.Graphviz.Dot.GraphvizGraph.html#QuikGraph_Graphviz_Dot_GraphvizGraph_IsHtmlLabel_
+  commentId: Overload:QuikGraph.Graphviz.Dot.GraphvizGraph.IsHtmlLabel
+  isSpec: "True"
+  fullName: QuikGraph.Graphviz.Dot.GraphvizGraph.IsHtmlLabel
+  nameWithType: GraphvizGraph.IsHtmlLabel
 - uid: QuikGraph.Graphviz.Dot.GraphvizGraph.IsLandscape
   name: IsLandscape
   href: api/QuikGraph.Graphviz.Dot.GraphvizGraph.html#QuikGraph_Graphviz_Dot_GraphvizGraph_IsLandscape
@@ -26764,6 +26803,19 @@ references:
   isSpec: "True"
   fullName: QuikGraph.Graphviz.Dot.GraphvizVertex.Group
   nameWithType: GraphvizVertex.Group
+- uid: QuikGraph.Graphviz.Dot.GraphvizVertex.IsHtmlLabel
+  name: IsHtmlLabel
+  href: api/QuikGraph.Graphviz.Dot.GraphvizVertex.html#QuikGraph_Graphviz_Dot_GraphvizVertex_IsHtmlLabel
+  commentId: P:QuikGraph.Graphviz.Dot.GraphvizVertex.IsHtmlLabel
+  fullName: QuikGraph.Graphviz.Dot.GraphvizVertex.IsHtmlLabel
+  nameWithType: GraphvizVertex.IsHtmlLabel
+- uid: QuikGraph.Graphviz.Dot.GraphvizVertex.IsHtmlLabel*
+  name: IsHtmlLabel
+  href: api/QuikGraph.Graphviz.Dot.GraphvizVertex.html#QuikGraph_Graphviz_Dot_GraphvizVertex_IsHtmlLabel_
+  commentId: Overload:QuikGraph.Graphviz.Dot.GraphvizVertex.IsHtmlLabel
+  isSpec: "True"
+  fullName: QuikGraph.Graphviz.Dot.GraphvizVertex.IsHtmlLabel
+  nameWithType: GraphvizVertex.IsHtmlLabel
 - uid: QuikGraph.Graphviz.Dot.GraphvizVertex.Label
   name: Label
   href: api/QuikGraph.Graphviz.Dot.GraphvizVertex.html#QuikGraph_Graphviz_Dot_GraphvizVertex_Label
