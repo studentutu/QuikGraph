@@ -8,7 +8,7 @@ namespace QuikGraph.Algorithms
     /// </summary>
     /// <typeparam name="TVertex">Vertex type.</typeparam>
     /// <typeparam name="TEdge">Edge type.</typeparam>
-    public class TransitiveReductionAlgorithm<TVertex, TEdge> : AlgorithmBase<BidirectionalGraph<TVertex, TEdge>>
+    public class TransitiveReductionAlgorithm<TVertex, TEdge> : AlgorithmBase<IEdgeListGraph<TVertex, TEdge>>
         where TEdge : IEdge<TVertex>
     {
         /// <summary>
@@ -17,7 +17,7 @@ namespace QuikGraph.Algorithms
         /// <param name="visitedGraph">Graph to visit.</param>
         /// <exception cref="T:System.ArgumentNullException"><paramref name="visitedGraph"/> is <see langword="null"/>.</exception>
         public TransitiveReductionAlgorithm(
-            [NotNull] BidirectionalGraph<TVertex, TEdge> visitedGraph)
+            [NotNull] IEdgeListGraph<TVertex, TEdge> visitedGraph)
             : base(visitedGraph)
         {
             TransitiveReduction = new BidirectionalGraph<TVertex, TEdge>();

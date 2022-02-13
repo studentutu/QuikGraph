@@ -9,7 +9,7 @@ namespace QuikGraph.Algorithms
     /// </summary>
     /// <typeparam name="TVertex">Vertex type.</typeparam>
     /// <typeparam name="TEdge">Edge type.</typeparam>
-    public class TransitiveClosureAlgorithm<TVertex, TEdge> : AlgorithmBase<BidirectionalGraph<TVertex, TEdge>>
+    public class TransitiveClosureAlgorithm<TVertex, TEdge> : AlgorithmBase<IEdgeListGraph<TVertex, TEdge>>
         where TEdge : IEdge<TVertex>
     {
         /// <summary>
@@ -20,7 +20,7 @@ namespace QuikGraph.Algorithms
         /// <exception cref="T:System.ArgumentNullException"><paramref name="visitedGraph"/> is <see langword="null"/>.</exception>
         /// <exception cref="T:System.ArgumentNullException"><paramref name="edgeFactory"/> is <see langword="null"/>.</exception>
         public TransitiveClosureAlgorithm(
-            [NotNull] BidirectionalGraph<TVertex, TEdge> visitedGraph,
+            [NotNull] IEdgeListGraph<TVertex, TEdge> visitedGraph,
             [NotNull] Func<TVertex, TVertex, TEdge> edgeFactory)
             : base(visitedGraph)
         {

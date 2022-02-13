@@ -1191,7 +1191,7 @@ namespace QuikGraph.Algorithms
         [Pure]
         [NotNull]
         public static BidirectionalGraph<TVertex, TEdge> ComputeTransitiveReduction<TVertex, TEdge>(
-            [NotNull] this BidirectionalGraph<TVertex, TEdge> graph)
+            [NotNull] this IEdgeListGraph<TVertex, TEdge> graph)
             where TEdge : IEdge<TVertex>
         {
             var algorithm = new TransitiveReductionAlgorithm<TVertex, TEdge>(graph);
@@ -1212,7 +1212,7 @@ namespace QuikGraph.Algorithms
         [Pure]
         [NotNull]
         public static BidirectionalGraph<TVertex, TEdge> ComputeTransitiveClosure<TVertex, TEdge>(
-            [NotNull] this BidirectionalGraph<TVertex, TEdge> graph,
+            [NotNull] this IEdgeListGraph<TVertex, TEdge> graph,
             [NotNull] Func<TVertex, TVertex, TEdge> edgeFactory)
             where TEdge : IEdge<TVertex>
         {

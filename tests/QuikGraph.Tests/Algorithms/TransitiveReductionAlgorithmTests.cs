@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NUnit.Framework;
 using QuikGraph.Algorithms;
 using static QuikGraph.Tests.Algorithms.AlgorithmTestHelpers;
@@ -15,7 +15,7 @@ namespace QuikGraph.Tests.Algorithms
         [Test]
         public void Constructor()
         {
-            var graph = new BidirectionalGraph<int, Edge<int>>();
+            var graph = new AdjacencyGraph<int, Edge<int>>();
             var algorithm = new TransitiveReductionAlgorithm<int, Edge<int>>(graph);
             AssertAlgorithmState(algorithm, graph);
             Assert.IsNotNull(algorithm.TransitiveReduction);
@@ -42,7 +42,7 @@ namespace QuikGraph.Tests.Algorithms
             var edge34 = new SEdge<int>(3, 4);
             var edge35 = new SEdge<int>(3, 5);
             var edge45 = new SEdge<int>(4, 5);
-            var graph = new BidirectionalGraph<int, SEdge<int>>();
+            var graph = new AdjacencyGraph<int, SEdge<int>>();
             graph.AddVerticesAndEdgeRange(new[]
             {
                 edge12, edge13, edge14, edge15,
@@ -65,7 +65,7 @@ namespace QuikGraph.Tests.Algorithms
             var edge65 = new SEdge<int>(6, 5);
             var edge67 = new SEdge<int>(6, 7);
             var edge74 = new SEdge<int>(7, 4);
-            graph = new BidirectionalGraph<int, SEdge<int>>();
+            graph = new AdjacencyGraph<int, SEdge<int>>();
             graph.AddVerticesAndEdgeRange(new[]
             {
                 edge01, edge02, edge03, edge23,
@@ -92,7 +92,7 @@ namespace QuikGraph.Tests.Algorithms
             var edge34 = new Edge<int>(3, 4);
             var edge35 = new Edge<int>(3, 5);
             var edge45 = new Edge<int>(4, 5);
-            var graph = new BidirectionalGraph<int, Edge<int>>();
+            var graph = new AdjacencyGraph<int, Edge<int>>();
             graph.AddVerticesAndEdgeRange(new[]
             {
                 edge12, edge13, edge14, edge15,
@@ -114,7 +114,7 @@ namespace QuikGraph.Tests.Algorithms
             var edge65 = new Edge<int>(6, 5);
             var edge67 = new Edge<int>(6, 7);
             var edge74 = new Edge<int>(7, 4);
-            graph = new BidirectionalGraph<int, Edge<int>>();
+            graph = new AdjacencyGraph<int, Edge<int>>();
             graph.AddVerticesAndEdgeRange(new[]
             {
                 edge01, edge02, edge03, edge23,
@@ -137,7 +137,7 @@ namespace QuikGraph.Tests.Algorithms
             const string vertex3 = "/test/notlinked";
             var edge12 = new Edge<string>(vertex1, vertex2);
 
-            var graph = new BidirectionalGraph<string, Edge<string>>();
+            var graph = new AdjacencyGraph<string, Edge<string>>();
             graph.AddVertexRange(new[] { vertex1, vertex2, vertex3 });
             graph.AddEdge(edge12);
 
