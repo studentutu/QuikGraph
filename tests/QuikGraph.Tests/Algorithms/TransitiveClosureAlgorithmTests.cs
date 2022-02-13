@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NUnit.Framework;
 using QuikGraph.Algorithms;
 using static QuikGraph.Tests.Algorithms.AlgorithmTestHelpers;
@@ -15,7 +15,7 @@ namespace QuikGraph.Tests.Algorithms
         [Test]
         public void Constructor()
         {
-            var graph = new BidirectionalGraph<int, Edge<int>>();
+            var graph = new AdjacencyGraph<int, Edge<int>>();
             var algorithm = new TransitiveClosureAlgorithm<int, Edge<int>>(graph, (v1, v2) => new Edge<int>(v1, v2));
             AssertAlgorithmState(algorithm, graph);
             Assert.IsNotNull(algorithm.TransitiveClosure);
@@ -24,7 +24,7 @@ namespace QuikGraph.Tests.Algorithms
         [Test]
         public void Constructor_Throws()
         {
-            var graph = new BidirectionalGraph<int, Edge<int>>();
+            var graph = new AdjacencyGraph<int, Edge<int>>();
             // ReSharper disable ObjectCreationAsStatement
             // ReSharper disable AssignNullToNotNullAttribute
             Assert.Throws<ArgumentNullException>(
@@ -41,7 +41,7 @@ namespace QuikGraph.Tests.Algorithms
         public void TransitiveClosure_ValueType()
         {
             // Test 1
-            var graph = new BidirectionalGraph<int, SEquatableEdge<int>>();
+            var graph = new AdjacencyGraph<int, SEquatableEdge<int>>();
             graph.AddVerticesAndEdgeRange(new[]
             {
                 new SEquatableEdge<int>(1, 2),
@@ -60,7 +60,7 @@ namespace QuikGraph.Tests.Algorithms
                 });
 
             // Test 2
-            graph = new BidirectionalGraph<int, SEquatableEdge<int>>();
+            graph = new AdjacencyGraph<int, SEquatableEdge<int>>();
             graph.AddVerticesAndEdgeRange(new[]
             {
                 new SEquatableEdge<int>(1, 2),
@@ -91,7 +91,7 @@ namespace QuikGraph.Tests.Algorithms
         public void TransitiveClosure_ReferenceType()
         {
             // Test 1
-            var graph = new BidirectionalGraph<int, EquatableEdge<int>>();
+            var graph = new AdjacencyGraph<int, EquatableEdge<int>>();
             graph.AddVerticesAndEdgeRange(new[]
             {
                 new EquatableEdge<int>(1, 2),
@@ -110,7 +110,7 @@ namespace QuikGraph.Tests.Algorithms
                 });
 
             // Test 2
-            graph = new BidirectionalGraph<int, EquatableEdge<int>>();
+            graph = new AdjacencyGraph<int, EquatableEdge<int>>();
             graph.AddVerticesAndEdgeRange(new[]
             {
                 new EquatableEdge<int>(1, 2),
@@ -147,7 +147,7 @@ namespace QuikGraph.Tests.Algorithms
             var edge12 = new EquatableEdge<string>(vertex1, vertex2);
             var edge23 = new EquatableEdge<string>(vertex2, vertex3);
 
-            var graph = new BidirectionalGraph<string, EquatableEdge<string>>();
+            var graph = new AdjacencyGraph<string, EquatableEdge<string>>();
             graph.AddVertexRange(new[] { vertex1, vertex2, vertex3, vertex4 });
             graph.AddEdgeRange(new[] { edge12, edge23 });
 
