@@ -524,7 +524,9 @@ namespace QuikGraph.Graphviz.Tests
 
             AdjacencyGraph<int, Edge<int>> graph = CreateTestGraph();
 
+#pragma warning disable CS0618
             Assert.AreEqual(expectedSvg, graph.ToSvg());
+#pragma warning restore CS0618
         }
 
         [Test]
@@ -537,7 +539,9 @@ namespace QuikGraph.Graphviz.Tests
 
             AdjacencyGraph<int, Edge<int>> graph = CreateTestGraph();
 
+#pragma warning disable CS0618
             Assert.IsEmpty(graph.ToSvg());
+#pragma warning restore CS0618
         }
 
         [Test]
@@ -551,12 +555,14 @@ namespace QuikGraph.Graphviz.Tests
 
             AdjacencyGraph<int, Edge<int>> graph = CreateTestGraph();
 
+#pragma warning disable CS0618
             Assert.AreEqual(
                 expectedSvg,
                 graph.ToSvg(algorithm =>
                 {
                     algorithm.CommonVertexFormat.ToolTip = "Test vertex";
                 }));
+#pragma warning restore CS0618
         }
 
         [Test]
@@ -564,9 +570,11 @@ namespace QuikGraph.Graphviz.Tests
         {
             var graph = new AdjacencyGraph<int, Edge<int>>();
 
+#pragma warning disable CS0618
             // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
             // ReSharper disable once AssignNullToNotNullAttribute
             Assert.Throws<ArgumentNullException>(() => graph.ToSvg(null));
+#pragma warning restore CS0618
         }
 
         [Test]
@@ -579,20 +587,24 @@ namespace QuikGraph.Graphviz.Tests
 
             AdjacencyGraph<int, Edge<int>> graph = CreateTestGraph();
 
+#pragma warning disable CS0618
             Assert.IsEmpty(
                 graph.ToSvg(
                     algorithm =>
                     {
                         algorithm.CommonVertexFormat.ToolTip = "Test vertex";
                     }));
+#pragma warning restore CS0618
         }
 
         [Test]
         public void DotToSvg_Throws()
         {
+#pragma warning disable CS0618
             // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
             // ReSharper disable once AssignNullToNotNullAttribute
             Assert.Throws<ArgumentNullException>(() => GraphvizExtensions.ToSvg(null));
+#pragma warning restore CS0618
         }
     }
 }

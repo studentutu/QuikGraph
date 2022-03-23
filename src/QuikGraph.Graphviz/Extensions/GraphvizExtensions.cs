@@ -73,6 +73,7 @@ namespace QuikGraph.Graphviz
         /// <exception cref="T:System.ArgumentNullException"><paramref name="graph"/> is <see langword="null"/>.</exception>
         [Pure]
         [NotNull]
+        [Obsolete("Conversion is using an external web service that is no longer available.")]
         public static string ToSvg<TVertex, TEdge>([NotNull] this IEdgeListGraph<TVertex, TEdge> graph)
             where TEdge : IEdge<TVertex>
         {
@@ -93,6 +94,7 @@ namespace QuikGraph.Graphviz
         /// <exception cref="T:System.ArgumentNullException"><paramref name="initAlgorithm"/> is <see langword="null"/>.</exception>
         [Pure]
         [NotNull]
+        [Obsolete("Conversion is using an external web service that is no longer available.")]
         public static string ToSvg<TVertex, TEdge>(
             [NotNull] this IEdgeListGraph<TVertex, TEdge> graph,
             [NotNull, InstantHandle] Action<GraphvizAlgorithm<TVertex, TEdge>> initAlgorithm)
@@ -110,6 +112,7 @@ namespace QuikGraph.Graphviz
         /// <exception cref="T:System.ArgumentNullException"><paramref name="dot"/> is <see langword="null"/>.</exception>
         [Pure]
         [NotNull]
+        [Obsolete("Conversion is using an external web service that is no longer available.")]
         public static string ToSvg([NotNull] string dot)
         {
             if (dot is null)
