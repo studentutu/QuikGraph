@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
-#if SUPPORTS_CRYPTO_RANDOM
 using QuikGraph.Utils;
-#endif
 
 namespace QuikGraph.Algorithms.RandomWalks
 {
@@ -18,12 +16,7 @@ namespace QuikGraph.Algorithms.RandomWalks
         where TEdge : IEdge<TVertex>
     {
         /// <inheritdoc />
-        public Random Rand { get; set; } =
-#if SUPPORTS_CRYPTO_RANDOM
-            new CryptoRandom();
-#else
-            new Random();
-#endif
+        public Random Rand { get; set; } = new CryptoRandom();
 
         /// <inheritdoc />
         public abstract bool TryGetSuccessor(IImplicitGraph<TVertex, TEdge> graph, TVertex vertex, out TEdge successor);

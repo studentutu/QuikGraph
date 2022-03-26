@@ -1,5 +1,4 @@
-﻿#if SUPPORTS_CRYPTO_RANDOM
-using System;
+﻿using System;
 using NUnit.Framework;
 using QuikGraph.Utils;
 
@@ -114,4 +113,3 @@ namespace QuikGraph.Tests.Utils
         }
     }
 }
-#endif

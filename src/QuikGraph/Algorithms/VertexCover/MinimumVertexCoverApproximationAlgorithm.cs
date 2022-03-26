@@ -2,9 +2,7 @@
 using System.Linq;
 using JetBrains.Annotations;
 using QuikGraph.Collections;
-#if SUPPORTS_CRYPTO_RANDOM
 using QuikGraph.Utils;
-#endif
 
 namespace QuikGraph.Algorithms.VertexCover
 {
@@ -24,7 +22,6 @@ namespace QuikGraph.Algorithms.VertexCover
         [NotNull]
         private readonly Random _rng;
 
-#if SUPPORTS_CRYPTO_RANDOM
         /// <summary>
         /// Initializes a new instance of the <see cref="MinimumVertexCoverApproximationAlgorithm{TVertex,TEdge}"/> class.
         /// </summary>
@@ -36,18 +33,6 @@ namespace QuikGraph.Algorithms.VertexCover
             : this(graph, new CryptoRandom())
         {
         }
-#else
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MinimumVertexCoverApproximationAlgorithm{TVertex,TEdge}"/> class.
-        /// </summary>
-        /// <param name="graph">Graph to compute the cover.</param>
-        /// <exception cref="T:System.ArgumentNullException"><paramref name="graph"/> is <see langword="null"/>.</exception>
-        public MinimumVertexCoverApproximationAlgorithm(
-            [NotNull] IUndirectedGraph<TVertex, TEdge> graph)
-            : this(graph, new Random())
-        {
-        }
-#endif
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MinimumVertexCoverApproximationAlgorithm{TVertex,TEdge}"/> class.

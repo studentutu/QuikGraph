@@ -1,5 +1,4 @@
-﻿#if SUPPORTS_CRYPTO_RANDOM
-using System;
+﻿using System;
 using System.Security.Cryptography;
 using JetBrains.Annotations;
 
@@ -90,4 +89,3 @@ namespace QuikGraph.Utils
         }
     }
 }
-#endif

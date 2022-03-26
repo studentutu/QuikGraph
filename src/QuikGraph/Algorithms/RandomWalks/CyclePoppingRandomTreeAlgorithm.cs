@@ -4,9 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using JetBrains.Annotations;
 using QuikGraph.Algorithms.Services;
-#if SUPPORTS_CRYPTO_RANDOM
 using QuikGraph.Utils;
-#endif
 
 namespace QuikGraph.Algorithms.RandomWalks
 {
@@ -87,12 +85,7 @@ namespace QuikGraph.Algorithms.RandomWalks
         public IMarkovEdgeChain<TVertex, TEdge> EdgeChain { get; }
 
         [NotNull]
-        private Random _rand =
-#if SUPPORTS_CRYPTO_RANDOM
-            new CryptoRandom((int)DateTime.Now.Ticks);
-#else
-            new Random((int)DateTime.Now.Ticks);
-#endif
+        private Random _rand = new CryptoRandom((int)DateTime.Now.Ticks);
 
         /// <summary>
         /// Gets or sets the random number generator used in <see cref="RandomTree"/>.
