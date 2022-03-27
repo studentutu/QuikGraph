@@ -7,6 +7,9 @@ using System.Reflection;
 #else
 using QuikGraph.Utils;
 #endif
+#if SUPPORTS_AGGRESSIVE_INLINING
+using System.Runtime.CompilerServices;
+#endif
 using JetBrains.Annotations;
 using QuikGraph.Algorithms.Condensation;
 using QuikGraph.Algorithms.ConnectedComponents;
@@ -898,28 +901,7 @@ namespace QuikGraph.Algorithms
                 .Select(pair => pair.Key);
         }
 
-        /// <summary>
-        /// Checks whether the graph is acyclic or not.
-        /// </summary>
-        /// <remarks>
-        /// Performs a depth first search to look for cycles.
-        /// </remarks>
-        /// <typeparam name="TVertex">Vertex type.</typeparam>
-        /// <typeparam name="TEdge">Edge type.</typeparam>
-        /// <param name="graph">Graph to visit.</param>
-        /// <returns>True if the graph contains a cycle, false otherwise.</returns>
-        /// <exception cref="T:System.ArgumentNullException"><paramref name="graph"/> is <see langword="null"/>.</exception>
-        [Pure]
-        public static bool IsDirectedAcyclicGraph<TVertex, TEdge>(
-            [NotNull] this IVertexListGraph<TVertex, TEdge> graph)
-            where TEdge : IEdge<TVertex>
-        {
-            if (graph is null)
-                throw new ArgumentNullException(nameof(graph));
-            return new DagTester<TVertex, TEdge>().IsDag(graph);
-        }
-
-        private sealed class DagTester<TVertex, TEdge>
+        private sealed class DirectedCycleTester<TVertex, TEdge>
             where TEdge : IEdge<TVertex>
         {
             private bool _isDag = true;
@@ -947,6 +929,144 @@ namespace QuikGraph.Algorithms
             {
                 _isDag = false;
             }
+        }
+
+        [Pure]
+#if SUPPORTS_AGGRESSIVE_INLINING
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+#endif
+        private static bool IsDirectedAcyclicGraphInternal<TVertex, TEdge>(
+            [NotNull] this IVertexListGraph<TVertex, TEdge> graph)
+            where TEdge : IEdge<TVertex>
+        {
+            return new DirectedCycleTester<TVertex, TEdge>().IsDag(graph);
+        }
+
+        /// <summary>
+        /// Checks whether the graph is acyclic or not.
+        /// </summary>
+        /// <remarks>
+        /// Builds an <see cref="AdjacencyGraph{TVertex,TEdge}"/> from <paramref name="edges"/>
+        /// and performs a depth first search to look for cycles.
+        /// </remarks>
+        /// <typeparam name="TVertex">Vertex type.</typeparam>
+        /// <typeparam name="TEdge">Edge type.</typeparam>
+        /// <param name="edges">Edges of forming the graph to visit.</param>
+        /// <returns>True if the graph contains a cycle, false otherwise.</returns>
+        /// <exception cref="T:System.ArgumentNullException">
+        /// <paramref name="edges"/> is <see langword="null"/> or at least one of them is <see langword="null"/>.
+        /// </exception>
+        [Pure]
+        public static bool IsDirectedAcyclicGraph<TVertex, TEdge>(
+            [NotNull, ItemNotNull] this IEnumerable<TEdge> edges)
+            where TEdge : IEdge<TVertex>
+        {
+            var graph = new AdjacencyGraph<TVertex, TEdge>();
+            graph.AddVerticesAndEdgeRange(edges);
+            return IsDirectedAcyclicGraphInternal(graph);
+        }
+
+        /// <summary>
+        /// Checks whether the <paramref name="graph"/> is acyclic or not.
+        /// </summary>
+        /// <remarks>
+        /// Performs a depth first search to look for cycles.
+        /// </remarks>
+        /// <typeparam name="TVertex">Vertex type.</typeparam>
+        /// <typeparam name="TEdge">Edge type.</typeparam>
+        /// <param name="graph">Graph to visit.</param>
+        /// <returns>True if the graph contains a cycle, false otherwise.</returns>
+        /// <exception cref="T:System.ArgumentNullException"><paramref name="graph"/> is <see langword="null"/>.</exception>
+        [Pure]
+        public static bool IsDirectedAcyclicGraph<TVertex, TEdge>(
+            [NotNull] this IVertexListGraph<TVertex, TEdge> graph)
+            where TEdge : IEdge<TVertex>
+        {
+            if (graph is null)
+                throw new ArgumentNullException(nameof(graph));
+            return IsDirectedAcyclicGraphInternal(graph);
+        }
+
+        private sealed class UndirectedCycleTester<TVertex, TEdge>
+            where TEdge : IEdge<TVertex>
+        {
+            private bool _hasCycle;
+
+            [Pure]
+            public bool HasCycle([NotNull] IUndirectedGraph<TVertex, TEdge> graph)
+            {
+                Debug.Assert(graph != null);
+
+                var dfs = new UndirectedDepthFirstSearchAlgorithm<TVertex, TEdge>(graph);
+                try
+                {
+                    dfs.BackEdge += DfsBackEdge;
+                    dfs.Compute();
+                    return _hasCycle;
+                }
+                finally
+                {
+                    dfs.BackEdge -= DfsBackEdge;
+                }
+            }
+
+            private void DfsBackEdge([NotNull] object sender, [NotNull] UndirectedEdgeEventArgs<TVertex, TEdge> args)
+            {
+                _hasCycle = true;
+            }
+        }
+
+        [Pure]
+#if SUPPORTS_AGGRESSIVE_INLINING
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+#endif
+        private static bool IsUndirectedAcyclicGraphInternal<TVertex, TEdge>(
+            [NotNull] this IUndirectedGraph<TVertex, TEdge> graph)
+            where TEdge : IEdge<TVertex>
+        {
+            return !new UndirectedCycleTester<TVertex, TEdge>().HasCycle(graph);
+        }
+
+        /// <summary>
+        /// Checks whether the graph is acyclic or not.
+        /// </summary>
+        /// <remarks>
+        /// Builds an <see cref="UndirectedGraph{TVertex,TEdge}"/> from <paramref name="edges"/>
+        /// and performs a depth first search to look for cycles.
+        /// </remarks>
+        /// <typeparam name="TVertex">Vertex type.</typeparam>
+        /// <typeparam name="TEdge">Edge type.</typeparam>
+        /// <param name="edges">Edges of forming the graph to visit.</param>
+        /// <returns>True if the graph contains a cycle, false otherwise.</returns>
+        /// <exception cref="T:System.ArgumentNullException">
+        /// <paramref name="edges"/> is <see langword="null"/> or at least one of them is <see langword="null"/>.
+        /// </exception>
+        [Pure]
+        public static bool IsUndirectedAcyclicGraph<TVertex, TEdge>(
+            [NotNull, ItemNotNull] this IEnumerable<TEdge> edges)
+            where TEdge : IEdge<TVertex>
+        {
+            var graph = new UndirectedGraph<TVertex, TEdge>();
+            graph.AddVerticesAndEdgeRange(edges);
+            return IsUndirectedAcyclicGraphInternal(graph);
+        }
+
+        /// <summary>
+        /// Checks whether the <paramref name="graph"/> is acyclic or not.
+        /// </summary>
+        /// <typeparam name="TVertex">Vertex type.</typeparam>
+        /// <typeparam name="TEdge">Edge type.</typeparam>
+        /// <param name="graph">Graph to visit.</param>
+        /// <returns>True if the graph contains a cycle, false otherwise.</returns>
+        /// <exception cref="T:System.ArgumentNullException"><paramref name="graph"/> is <see langword="null"/>.</exception>
+        [Pure]
+        public static bool IsUndirectedAcyclicGraph<TVertex, TEdge>(
+            [NotNull] this IUndirectedGraph<TVertex, TEdge> graph)
+            where TEdge : IEdge<TVertex>
+        {
+            if (graph is null)
+                throw new ArgumentNullException(nameof(graph));
+            return IsUndirectedAcyclicGraphInternal(graph);
         }
 
         /// <summary>

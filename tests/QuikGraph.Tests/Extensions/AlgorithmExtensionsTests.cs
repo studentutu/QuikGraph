@@ -1457,23 +1457,51 @@ namespace QuikGraph.Tests.Extensions
             };
 
             var edge12 = new Edge<int>(1, 2);
+            var edge13 = new Edge<int>(1, 3);
             var edge14 = new Edge<int>(1, 4);
+            var edge16 = new Edge<int>(1, 6);
+            var edge22 = new Edge<int>(2, 2);
             var edge23 = new Edge<int>(2, 3);
             var edge24 = new Edge<int>(2, 4);
+            var edge25 = new Edge<int>(2, 5);
+            var edge31 = new Edge<int>(3, 1);
+            var edge34 = new Edge<int>(3, 4);
+            var edge35 = new Edge<int>(3, 5);
+            var edge41 = new Edge<int>(4, 1);
+            var edge44 = new Edge<int>(4, 4);
+            var edge52 = new Edge<int>(5, 2);
+            var edge56 = new Edge<int>(5, 6);
 
             // Not empty acyclic
-            var adjacencyGraph = createGraph();
-            adjacencyGraph.AddVerticesAndEdgeRange(new[]
+            var adjacencyGraph1 = createGraph();
+            adjacencyGraph1.AddVertexRange(new[] { 1, 2, 3 });
+            yield return new TestCaseData(adjacencyGraph1)
+            {
+                ExpectedResult = true
+            };
+
+            var adjacencyGraph2 = createGraph();
+            adjacencyGraph2.AddVerticesAndEdgeRange(new[]
             {
                 edge12, edge14, edge23, edge24
             });
-            yield return new TestCaseData(adjacencyGraph)
+            yield return new TestCaseData(adjacencyGraph2)
+            {
+                ExpectedResult = true
+            };
+
+            var adjacencyGraph3 = createGraph();
+            adjacencyGraph3.AddVertex(0);
+            adjacencyGraph3.AddVerticesAndEdgeRange(new[]
+            {
+                edge12, edge14, edge23, edge56
+            });
+            yield return new TestCaseData(adjacencyGraph3)
             {
                 ExpectedResult = true
             };
 
             // Not acyclic
-            var edge22 = new Edge<int>(2, 2);
             var cyclicGraph1 = createGraph();
             cyclicGraph1.AddVerticesAndEdge(edge22);
             yield return new TestCaseData(cyclicGraph1)
@@ -1491,13 +1519,33 @@ namespace QuikGraph.Tests.Extensions
                 ExpectedResult = false
             };
 
-            var edge41 = new Edge<int>(4, 1);
             var cyclicGraph3 = createGraph();
             cyclicGraph3.AddVerticesAndEdgeRange(new[]
             {
                 edge12, edge14, edge23, edge24, edge41
             });
             yield return new TestCaseData(cyclicGraph3)
+            {
+                ExpectedResult = false
+            };
+
+            var cyclicGraph4 = createGraph();
+            cyclicGraph4.AddVerticesAndEdgeRange(new[]
+            {
+                edge12, edge13, edge23, edge31, edge34, edge44
+            });
+            yield return new TestCaseData(cyclicGraph4)
+            {
+                ExpectedResult = false
+            };
+
+            var cyclicGraph5 = createGraph();
+            cyclicGraph5.AddVertex(0);
+            cyclicGraph5.AddVerticesAndEdgeRange(new[]
+            {
+                edge16, edge23, edge25, edge34, edge35, edge52
+            });
+            yield return new TestCaseData(cyclicGraph5)
             {
                 ExpectedResult = false
             };
@@ -1519,18 +1567,153 @@ namespace QuikGraph.Tests.Extensions
         }
 
         [TestCaseSource(nameof(IsDirectedAcyclicGraphTestCases))]
-        public bool IsDirectedAcyclicGraph([NotNull] IVertexListGraph<int, Edge<int>> graph)
+        public bool IsDirectedAcyclicGraph([NotNull] IVertexAndEdgeListGraph<int, Edge<int>> graph)
         {
             return graph.IsDirectedAcyclicGraph();
+        }
+
+        [TestCaseSource(nameof(IsDirectedAcyclicGraphTestCases))]
+        public bool IsDirectedAcyclicGraph_FromEdges([NotNull] IVertexAndEdgeListGraph<int, Edge<int>> graph)
+        {
+            return graph.Edges.IsDirectedAcyclicGraph<int, Edge<int>>();
         }
 
         [Test]
         public void IsDirectedAcyclicGraph_Throws()
         {
-            // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
-            // ReSharper disable once AssignNullToNotNullAttribute
+            // ReSharper disable ReturnValueOfPureMethodIsNotUsed
+            // ReSharper disable AssignNullToNotNullAttribute
             Assert.Throws<ArgumentNullException>(
                 () => ((AdjacencyGraph<int, Edge<int>>)null).IsDirectedAcyclicGraph());
+
+            Assert.Throws<ArgumentNullException>(
+                () => ((IEnumerable<Edge<int>>)null).IsDirectedAcyclicGraph<int, Edge<int>>());
+            var edges = new[] { new Edge<int>(1, 2), null, new Edge<int>(1, 3) };
+            Assert.Throws<ArgumentNullException>(
+                () => edges.IsDirectedAcyclicGraph<int, Edge<int>>());
+            // ReSharper restore AssignNullToNotNullAttribute
+            // ReSharper restore ReturnValueOfPureMethodIsNotUsed
+        }
+
+        [NotNull, ItemNotNull]
+        private static IEnumerable<TestCaseData> IsUndirectedAcyclicGraphTestCases
+        {
+            [UsedImplicitly]
+            get
+            {
+                // Empty graph
+                yield return new TestCaseData(new UndirectedGraph<int, Edge<int>>())
+                {
+                    ExpectedResult = true
+                };
+
+                var edge12 = new Edge<int>(1, 2);
+                var edge14 = new Edge<int>(1, 4);
+                var edge16 = new Edge<int>(1, 6);
+                var edge22 = new Edge<int>(2, 2);
+                var edge23 = new Edge<int>(2, 3);
+                var edge24 = new Edge<int>(2, 4);
+                var edge25 = new Edge<int>(2, 5);
+                var edge35 = new Edge<int>(3, 5);
+                var edge56 = new Edge<int>(5, 6);
+
+                // Not empty acyclic
+                var undirectedGraph1 = new UndirectedGraph<int, Edge<int>>();
+                undirectedGraph1.AddVertexRange(new[] { 1, 2, 3 });
+                yield return new TestCaseData(undirectedGraph1)
+                {
+                    ExpectedResult = true
+                };
+
+                var undirectedGraph2 = new UndirectedGraph<int, Edge<int>>();
+                undirectedGraph2.AddVerticesAndEdgeRange(new[]
+                {
+                    edge12, edge23, edge24
+                });
+                yield return new TestCaseData(undirectedGraph2)
+                {
+                    ExpectedResult = true
+                };
+
+                var undirectedGraph3 = new UndirectedGraph<int, Edge<int>>();
+                undirectedGraph3.AddVertex(0);
+                undirectedGraph3.AddVerticesAndEdgeRange(new[]
+                {
+                    edge12, edge14, edge23, edge56
+                });
+                yield return new TestCaseData(undirectedGraph3)
+                {
+                    ExpectedResult = true
+                };
+
+                // Not acyclic
+                var cyclicGraph1 = new UndirectedGraph<int, Edge<int>>();
+                cyclicGraph1.AddVerticesAndEdge(edge22);
+                yield return new TestCaseData(cyclicGraph1)
+                {
+                    ExpectedResult = false
+                };
+
+                var cyclicGraph2 = new UndirectedGraph<int, Edge<int>>();
+                cyclicGraph2.AddVerticesAndEdgeRange(new[]
+                {
+                    edge12, edge14, edge22, edge23, edge24
+                });
+                yield return new TestCaseData(cyclicGraph2)
+                {
+                    ExpectedResult = false
+                };
+
+                var cyclicGraph3 = new UndirectedGraph<int, Edge<int>>();
+                cyclicGraph3.AddVerticesAndEdgeRange(new[]
+                {
+                    edge12, edge14, edge23, edge24
+                });
+                yield return new TestCaseData(cyclicGraph3)
+                {
+                    ExpectedResult = false
+                };
+
+                var cyclicGraph4 = new UndirectedGraph<int, Edge<int>>();
+                cyclicGraph4.AddVertex(0);
+                cyclicGraph4.AddVerticesAndEdgeRange(new[]
+                {
+                    edge16, edge23, edge25, edge35
+                });
+                yield return new TestCaseData(cyclicGraph4)
+                {
+                    ExpectedResult = false
+                };
+            }
+        }
+
+        [TestCaseSource(nameof(IsUndirectedAcyclicGraphTestCases))]
+        public bool IsUndirectedAcyclicGraph([NotNull] IUndirectedGraph<int, Edge<int>> graph)
+        {
+            return graph.IsUndirectedAcyclicGraph();
+        }
+
+        [TestCaseSource(nameof(IsUndirectedAcyclicGraphTestCases))]
+        public bool IsUndirectedAcyclicGraph_FromEdges([NotNull] IUndirectedGraph<int, Edge<int>> graph)
+        {
+            return graph.Edges.IsUndirectedAcyclicGraph<int, Edge<int>>();
+        }
+
+        [Test]
+        public void IsUndirectedAcyclicGraph_Throws()
+        {
+            // ReSharper disable ReturnValueOfPureMethodIsNotUsed
+            // ReSharper disable AssignNullToNotNullAttribute
+            Assert.Throws<ArgumentNullException>(
+                () => ((UndirectedGraph<int, Edge<int>>)null).IsUndirectedAcyclicGraph());
+
+            Assert.Throws<ArgumentNullException>(
+                () => ((IEnumerable<Edge<int>>)null).IsUndirectedAcyclicGraph<int, Edge<int>>());
+            var edges = new[] { new Edge<int>(1, 2), null, new Edge<int>(1, 3) };
+            Assert.Throws<ArgumentNullException>(
+                () => edges.IsUndirectedAcyclicGraph<int, Edge<int>>());
+            // ReSharper restore AssignNullToNotNullAttribute
+            // ReSharper restore ReturnValueOfPureMethodIsNotUsed
         }
 
         [Test]

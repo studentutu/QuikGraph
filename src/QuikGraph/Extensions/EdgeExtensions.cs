@@ -114,7 +114,7 @@ namespace QuikGraph
         /// <remarks>Note that this function only work when given a path.</remarks>
         /// <typeparam name="TVertex">Vertex type.</typeparam>
         /// <typeparam name="TEdge">Edge type.</typeparam>
-        /// <param name="path">Sequence of edges.</param>
+        /// <param name="path">Sequence of edges that forms a path.</param>
         /// <returns>True if the set makes a cycle, false otherwise.</returns>
         /// <exception cref="T:System.ArgumentNullException"><paramref name="path"/> is <see langword="null"/>.</exception>
         [Pure]
