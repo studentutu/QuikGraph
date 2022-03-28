@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Xml.Serialization;
-using JetBrains.Annotations;
+using NotNullAttribute = JetBrains.Annotations.NotNullAttribute;
 
 namespace QuikGraph.Serialization.Tests
 {

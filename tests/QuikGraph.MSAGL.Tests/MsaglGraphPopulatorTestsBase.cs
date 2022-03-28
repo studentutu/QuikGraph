@@ -4,6 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 using JetBrains.Annotations;
 using NUnit.Framework;
 using static QuikGraph.MSAGL.Tests.MsaglGraphTestHelpers;
+using NotNullAttribute = JetBrains.Annotations.NotNullAttribute;
 
 namespace QuikGraph.MSAGL.Tests
 {
