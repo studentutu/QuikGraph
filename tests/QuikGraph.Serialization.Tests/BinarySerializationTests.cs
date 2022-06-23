@@ -41,7 +41,7 @@ namespace QuikGraph.Serialization.Tests
         #endregion
 
         [TestCaseSource(typeof(SerializationTestCaseSources), nameof(SerializationAdjacencyGraphTestCases))]
-        public void BinarySerialization_AdjacencyGraph([NotNull] AdjacencyGraph<int, EquatableEdge<int>> graph)
+        public void BinarySerialization_AdjacencyGraph_Simple([NotNull] AdjacencyGraph<int, EquatableEdge<int>> graph)
         {
             AdjacencyGraph<int, EquatableEdge<int>> deserializedGraph1 =
                 SerializeDeserialize<int, EquatableEdge<int>, AdjacencyGraph<int, EquatableEdge<int>>>(graph);
@@ -53,8 +53,21 @@ namespace QuikGraph.Serialization.Tests
             Assert.IsTrue(EquateGraphs.Equate(arrayGraph, deserializedGraph2));
         }
 
+        [TestCaseSource(typeof(SerializationTestCaseSources), nameof(SerializationAdjacencyGraphComplexTestCases))]
+        public void BinarySerialization_AdjacencyGraph_Complex([NotNull] AdjacencyGraph<EquatableTestVertex, EquatableTestEdge> graph)
+        {
+            AdjacencyGraph<EquatableTestVertex, EquatableTestEdge> deserializedGraph1 =
+                SerializeDeserialize<EquatableTestVertex, EquatableTestEdge, AdjacencyGraph<EquatableTestVertex, EquatableTestEdge>>(graph);
+            Assert.IsTrue(EquateGraphs.Equate(graph, deserializedGraph1));
+
+            var arrayGraph = new ArrayAdjacencyGraph<EquatableTestVertex, EquatableTestEdge>(graph);
+            ArrayAdjacencyGraph<EquatableTestVertex, EquatableTestEdge> deserializedGraph2 =
+                SerializeDeserialize<EquatableTestVertex, EquatableTestEdge, ArrayAdjacencyGraph<EquatableTestVertex, EquatableTestEdge>>(arrayGraph);
+            Assert.IsTrue(EquateGraphs.Equate(arrayGraph, deserializedGraph2));
+        }
+
         [TestCaseSource(typeof(SerializationTestCaseSources), nameof(SerializationAdjacencyGraphTestCases))]
-        public void BinarySerialization_AdapterGraph([NotNull] AdjacencyGraph<int, EquatableEdge<int>> graph)
+        public void BinarySerialization_AdapterGraph_Simple([NotNull] AdjacencyGraph<int, EquatableEdge<int>> graph)
         {
             var bidirectionalAdapterGraph = new BidirectionalAdapterGraph<int, EquatableEdge<int>>(graph);
             BidirectionalAdapterGraph<int, EquatableEdge<int>> deserializedGraph =
@@ -62,24 +75,49 @@ namespace QuikGraph.Serialization.Tests
             Assert.IsTrue(EquateGraphs.Equate(graph, deserializedGraph));
         }
 
+        [TestCaseSource(typeof(SerializationTestCaseSources), nameof(SerializationAdjacencyGraphComplexTestCases))]
+        public void BinarySerialization_AdapterGraph_Complex([NotNull] AdjacencyGraph<EquatableTestVertex, EquatableTestEdge> graph)
+        {
+            var bidirectionalAdapterGraph = new BidirectionalAdapterGraph<EquatableTestVertex, EquatableTestEdge>(graph);
+            BidirectionalAdapterGraph<EquatableTestVertex, EquatableTestEdge> deserializedGraph =
+                SerializeDeserialize<EquatableTestVertex, EquatableTestEdge, BidirectionalAdapterGraph<EquatableTestVertex, EquatableTestEdge>>(bidirectionalAdapterGraph);
+            Assert.IsTrue(EquateGraphs.Equate(graph, deserializedGraph));
+        }
+
         [TestCaseSource(typeof(SerializationTestCaseSources), nameof(SerializationClusteredAdjacencyGraphTestCases))]
-        public void BinarySerialization_ClusteredGraph([NotNull] ClusteredAdjacencyGraph<int, EquatableEdge<int>> graph)
+        public void BinarySerialization_ClusteredGraph_Simple([NotNull] ClusteredAdjacencyGraph<int, EquatableEdge<int>> graph)
         {
             ClusteredAdjacencyGraph<int, EquatableEdge<int>> deserializedGraph =
                 SerializeDeserialize<int, EquatableEdge<int>, ClusteredAdjacencyGraph<int, EquatableEdge<int>>>(graph);
             Assert.IsTrue(EquateGraphs.Equate(graph, deserializedGraph));
         }
 
+        [TestCaseSource(typeof(SerializationTestCaseSources), nameof(SerializationClusteredAdjacencyGraphComplexTestCases))]
+        public void BinarySerialization_ClusteredGraph_Complex([NotNull] ClusteredAdjacencyGraph<EquatableTestVertex, EquatableTestEdge> graph)
+        {
+            ClusteredAdjacencyGraph<EquatableTestVertex, EquatableTestEdge> deserializedGraph =
+                SerializeDeserialize<EquatableTestVertex, EquatableTestEdge, ClusteredAdjacencyGraph<EquatableTestVertex, EquatableTestEdge>>(graph);
+            Assert.IsTrue(EquateGraphs.Equate(graph, deserializedGraph));
+        }
+
         [TestCaseSource(typeof(SerializationTestCaseSources), nameof(SerializationCompressedGraphTestCases))]
-        public void BinarySerialization_CompressedGraph([NotNull] CompressedSparseRowGraph<int> graph)
+        public void BinarySerialization_CompressedGraph_Simple([NotNull] CompressedSparseRowGraph<int> graph)
         {
             CompressedSparseRowGraph<int> deserializedGraph =
                 SerializeDeserialize<int, SEquatableEdge<int>, CompressedSparseRowGraph<int>>(graph);
             Assert.IsTrue(EquateGraphs.Equate(graph, deserializedGraph));
         }
 
+        [TestCaseSource(typeof(SerializationTestCaseSources), nameof(SerializationCompressedGraphComplexTestCases))]
+        public void BinarySerialization_CompressedGraph_Complex([NotNull] CompressedSparseRowGraph<EquatableTestVertex> graph)
+        {
+            CompressedSparseRowGraph<EquatableTestVertex> deserializedGraph =
+                SerializeDeserialize<EquatableTestVertex, SEquatableEdge<EquatableTestVertex>, CompressedSparseRowGraph<EquatableTestVertex>>(graph);
+            Assert.IsTrue(EquateGraphs.Equate(graph, deserializedGraph));
+        }
+
         [TestCaseSource(typeof(SerializationTestCaseSources), nameof(SerializationBidirectionalGraphTestCases))]
-        public void BinarySerialization_BidirectionalGraph([NotNull] BidirectionalGraph<int, EquatableEdge<int>> graph)
+        public void BinarySerialization_BidirectionalGraph_Simple([NotNull] BidirectionalGraph<int, EquatableEdge<int>> graph)
         {
             BidirectionalGraph<int, EquatableEdge<int>> deserializedGraph =
                 SerializeDeserialize<int, EquatableEdge<int>, BidirectionalGraph<int, EquatableEdge<int>>>(graph);
@@ -101,6 +139,29 @@ namespace QuikGraph.Serialization.Tests
             Assert.IsTrue(EquateGraphs.Equate(undirectedBidirectionalGraph, deserializedGraph4));
         }
 
+        [TestCaseSource(typeof(SerializationTestCaseSources), nameof(SerializationBidirectionalGraphComplexTestCases))]
+        public void BinarySerialization_BidirectionalGraph_Complex([NotNull] BidirectionalGraph<EquatableTestVertex, EquatableTestEdge> graph)
+        {
+            BidirectionalGraph<EquatableTestVertex, EquatableTestEdge> deserializedGraph =
+                SerializeDeserialize<EquatableTestVertex, EquatableTestEdge, BidirectionalGraph<EquatableTestVertex, EquatableTestEdge>>(graph);
+            Assert.IsTrue(EquateGraphs.Equate(graph, deserializedGraph));
+
+            var arrayGraph = new ArrayBidirectionalGraph<EquatableTestVertex, EquatableTestEdge>(graph);
+            ArrayBidirectionalGraph<EquatableTestVertex, EquatableTestEdge> deserializedGraph2 =
+                SerializeDeserialize<EquatableTestVertex, EquatableTestEdge, ArrayBidirectionalGraph<EquatableTestVertex, EquatableTestEdge>>(arrayGraph);
+            Assert.IsTrue(EquateGraphs.Equate(arrayGraph, deserializedGraph2));
+
+            var reversedGraph = new ReversedBidirectionalGraph<EquatableTestVertex, EquatableTestEdge>(graph);
+            ReversedBidirectionalGraph<EquatableTestVertex, EquatableTestEdge> deserializedGraph3 =
+                SerializeDeserialize<EquatableTestVertex, SReversedEdge<EquatableTestVertex, EquatableTestEdge>, ReversedBidirectionalGraph<EquatableTestVertex, EquatableTestEdge>>(reversedGraph);
+            Assert.IsTrue(EquateGraphs.Equate(reversedGraph, deserializedGraph3));
+
+            var undirectedBidirectionalGraph = new UndirectedBidirectionalGraph<EquatableTestVertex, EquatableTestEdge>(graph);
+            UndirectedBidirectionalGraph<EquatableTestVertex, EquatableTestEdge> deserializedGraph4 =
+                SerializeDeserialize<EquatableTestVertex, EquatableTestEdge, UndirectedBidirectionalGraph<EquatableTestVertex, EquatableTestEdge>>(undirectedBidirectionalGraph);
+            Assert.IsTrue(EquateGraphs.Equate(undirectedBidirectionalGraph, deserializedGraph4));
+        }
+
         [TestCaseSource(typeof(SerializationTestCaseSources), nameof(SerializationBidirectionalMatrixGraphTestCases))]
         public void BinarySerialization_BidirectionalMatrixGraph([NotNull] BidirectionalMatrixGraph<EquatableEdge<int>> graph)
         {
@@ -110,7 +171,7 @@ namespace QuikGraph.Serialization.Tests
         }
 
         [TestCaseSource(typeof(SerializationTestCaseSources), nameof(SerializationUndirectedGraphTestCases))]
-        public void BinarySerialization_UndirectedGraph([NotNull] UndirectedGraph<int, EquatableEdge<int>> graph)
+        public void BinarySerialization_UndirectedGraph_Simple([NotNull] UndirectedGraph<int, EquatableEdge<int>> graph)
         {
             UndirectedGraph<int, EquatableEdge<int>> deserializedGraph1 =
                 SerializeDeserialize<int, EquatableEdge<int>, UndirectedGraph<int, EquatableEdge<int>>>(graph);
@@ -122,11 +183,32 @@ namespace QuikGraph.Serialization.Tests
             Assert.IsTrue(EquateGraphs.Equate(graph, deserializedGraph2));
         }
 
+        [TestCaseSource(typeof(SerializationTestCaseSources), nameof(SerializationUndirectedGraphComplexTestCases))]
+        public void BinarySerialization_UndirectedGraph_Complex([NotNull] UndirectedGraph<EquatableTestVertex, EquatableTestEdge> graph)
+        {
+            UndirectedGraph<EquatableTestVertex, EquatableTestEdge> deserializedGraph1 =
+                SerializeDeserialize<EquatableTestVertex, EquatableTestEdge, UndirectedGraph<EquatableTestVertex, EquatableTestEdge>>(graph);
+            Assert.IsTrue(EquateGraphs.Equate(graph, deserializedGraph1));
+
+            var arrayGraph = new ArrayUndirectedGraph<EquatableTestVertex, EquatableTestEdge>(graph);
+            ArrayUndirectedGraph<EquatableTestVertex, EquatableTestEdge> deserializedGraph2 =
+                SerializeDeserialize<EquatableTestVertex, EquatableTestEdge, ArrayUndirectedGraph<EquatableTestVertex, EquatableTestEdge>>(arrayGraph);
+            Assert.IsTrue(EquateGraphs.Equate(graph, deserializedGraph2));
+        }
+
         [TestCaseSource(typeof(SerializationTestCaseSources), nameof(SerializationEdgeListGraphTestCases))]
-        public void BinarySerialization_EdgeListGraph([NotNull] EdgeListGraph<int, EquatableEdge<int>> graph)
+        public void BinarySerialization_EdgeListGraph_Simple([NotNull] EdgeListGraph<int, EquatableEdge<int>> graph)
         {
             EdgeListGraph<int, EquatableEdge<int>> deserializedGraph =
                 SerializeDeserialize<int, EquatableEdge<int>, EdgeListGraph<int, EquatableEdge<int>>>(graph);
+            Assert.IsTrue(EquateGraphs.Equate(graph, deserializedGraph));
+        }
+
+        [TestCaseSource(typeof(SerializationTestCaseSources), nameof(SerializationEdgeListGraphComplexTestCases))]
+        public void BinarySerialization_EdgeListGraph_Complex([NotNull] EdgeListGraph<EquatableTestVertex, EquatableTestEdge> graph)
+        {
+            EdgeListGraph<EquatableTestVertex, EquatableTestEdge> deserializedGraph =
+                SerializeDeserialize<EquatableTestVertex, EquatableTestEdge, EdgeListGraph<EquatableTestVertex, EquatableTestEdge>>(graph);
             Assert.IsTrue(EquateGraphs.Equate(graph, deserializedGraph));
         }
 

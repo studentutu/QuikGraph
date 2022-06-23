@@ -9,6 +9,9 @@ namespace QuikGraph.Serialization.Tests
 {
     #region Test classes
 
+#if SUPPORTS_SERIALIZATION
+    [Serializable]
+#endif
     public class TestVertex
     {
         public TestVertex([NotNull] string id)
@@ -21,7 +24,7 @@ namespace QuikGraph.Serialization.Tests
 
         [XmlAttribute("v_stringDefault")]
         [DefaultValue("defaultDefaultString")]
-        public string StringDefault { get; set; }
+        public string StringDefault { get; set; } = string.Empty;
 
         [XmlAttribute("v_string")]
         [DefaultValue("defaultString")]
@@ -51,7 +54,10 @@ namespace QuikGraph.Serialization.Tests
         public IList<int> IntIList { get; set; }
     }
 
-    public sealed class EquatableTestVertex : TestVertex, IEquatable<EquatableTestVertex>
+#if SUPPORTS_SERIALIZATION
+    [Serializable]
+#endif
+    public class EquatableTestVertex : TestVertex, IEquatable<EquatableTestVertex>
     {
         public EquatableTestVertex([NotNull] string id)
             : base(id)
@@ -64,6 +70,8 @@ namespace QuikGraph.Serialization.Tests
                 return false;
             if (ReferenceEquals(this, other))
                 return true;
+            if (GetType() != other.GetType())
+                return false;
             return string.Equals(ID, other.ID)
                    && string.Equals(StringDefault, other.StringDefault)
                    && string.Equals(String, other.String)
@@ -96,6 +104,41 @@ namespace QuikGraph.Serialization.Tests
                 hashCode = (hashCode * 397) ^ Double.GetHashCode();
                 hashCode = (hashCode * 397) ^ (IntArray != null ? IntArray.GetHashCode() : 0);
                 hashCode = (hashCode * 397) ^ (IntIList != null ? IntIList.GetHashCode() : 0);
+                return hashCode;
+            }
+        }
+    }
+
+#if SUPPORTS_SERIALIZATION
+    [Serializable]
+#endif
+    public sealed class EquatableAdditionalDataTestVertex : EquatableTestVertex, IEquatable<EquatableAdditionalDataTestVertex>
+    {
+        public EquatableAdditionalDataTestVertex([NotNull] string id, double data)
+            : base(id)
+        {
+            Data = data;
+        }
+
+        public double Data { get; }
+
+        public bool Equals(EquatableAdditionalDataTestVertex other)
+        {
+            // ReSharper disable once PossibleNullReferenceException
+            return base.Equals(other) && Data.Equals(other.Data);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as EquatableAdditionalDataTestVertex);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hashCode = ID.GetHashCode();
+                hashCode = (hashCode * 397) ^ (Data.GetHashCode());
                 return hashCode;
             }
         }

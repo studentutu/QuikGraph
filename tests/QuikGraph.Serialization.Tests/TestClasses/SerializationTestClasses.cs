@@ -68,7 +68,7 @@ namespace QuikGraph.Serialization.Tests
 #if SUPPORTS_SERIALIZATION
     [Serializable]
 #endif
-    public class Person : INotifyPropertyChanged, IEquatable<Person>, IDataErrorInfo
+    public sealed class Person : INotifyPropertyChanged, IEquatable<Person>, IDataErrorInfo
     {
         #region Fields and Constants
 
@@ -519,7 +519,7 @@ namespace QuikGraph.Serialization.Tests
         [XmlIgnore]
         public string BirthMonthAndDay =>
             _birthDate?.ToString(
-                DateTimeFormatInfo.CurrentInfo?.MonthDayPattern,
+                DateTimeFormatInfo.CurrentInfo.MonthDayPattern,
                 CultureInfo.CurrentCulture);
 
         /// <summary>
@@ -538,7 +538,7 @@ namespace QuikGraph.Serialization.Tests
                 returnValue.Append("Born ");
                 returnValue.Append(
                     _birthDate.Value.ToString(
-                        DateTimeFormatInfo.CurrentInfo?.ShortDatePattern,
+                        DateTimeFormatInfo.CurrentInfo.ShortDatePattern,
                         CultureInfo.CurrentCulture));
 
                 if (!string.IsNullOrEmpty(_birthPlace))
@@ -649,7 +649,7 @@ namespace QuikGraph.Serialization.Tests
         /// Fires the event for the property when it changes.
         /// </summary>
         /// <param name="propertyName">Property name.</param>
-        protected virtual void OnPropertyChanged([NotNull] string propertyName)
+        private void OnPropertyChanged([NotNull] string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

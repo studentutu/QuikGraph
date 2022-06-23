@@ -64,7 +64,10 @@ namespace QuikGraph.Serialization.Tests
         public float Float { get; set; }
     }
 
-    public sealed class EquatableTestEdge : Edge<EquatableTestVertex>, IEquatable<EquatableTestEdge>
+#if SUPPORTS_SERIALIZATION
+    [Serializable]
+#endif
+    public class EquatableTestEdge : EquatableEdge<EquatableTestVertex>, IEquatable<EquatableTestEdge>
     {
         public EquatableTestEdge(
             [NotNull] EquatableTestVertex source,
@@ -99,19 +102,25 @@ namespace QuikGraph.Serialization.Tests
         [XmlAttribute("e_float")]
         public float Float { get; set; }
 
-        public bool Equals(EquatableTestEdge other)
+        public virtual bool DataContentEquals([NotNull] EquatableTestEdge other)
         {
-            if (other is null)
-                return false;
-            if (ReferenceEquals(this, other))
-                return true;
-            return string.Equals(ID, other.ID)
+            return GetType() == other.GetType()
+                   && string.Equals(ID, other.ID)
                    && string.Equals(String, other.String)
                    && Int == other.Int
                    && Long == other.Long
                    && Double.Equals(other.Double)
                    && Bool == other.Bool
                    && Float.Equals(other.Float);
+        }
+
+        public bool Equals(EquatableTestEdge other)
+        {
+            if (other is null)
+                return false;
+            if (ReferenceEquals(this, other))
+                return true;
+            return base.Equals(other) && DataContentEquals(other);
         }
 
         public override bool Equals(object obj)
@@ -131,6 +140,49 @@ namespace QuikGraph.Serialization.Tests
                 hashCode = (hashCode * 397) ^ Double.GetHashCode();
                 hashCode = (hashCode * 397) ^ Bool.GetHashCode();
                 hashCode = (hashCode * 397) ^ Float.GetHashCode();
+                return hashCode;
+            }
+        }
+    }
+
+#if SUPPORTS_SERIALIZATION
+    [Serializable]
+#endif
+    public sealed class EquatableAdditionalDataTestEdge : EquatableTestEdge, IEquatable<EquatableAdditionalDataTestEdge>
+    {
+        public EquatableAdditionalDataTestEdge(
+            [NotNull] EquatableTestVertex source,
+            [NotNull] EquatableTestVertex target,
+            [NotNull] string id,
+            double data)
+            : base(source, target, id)
+        {
+            Data = data;
+        }
+
+        public double Data { get; }
+
+        public override bool DataContentEquals(EquatableTestEdge other)
+        {
+            return base.DataContentEquals(other) && Data.Equals(((EquatableAdditionalDataTestEdge)other).Data);
+        }
+
+        public bool Equals(EquatableAdditionalDataTestEdge other)
+        {
+            return base.Equals(other);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as EquatableAdditionalDataTestEdge);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hashCode = ID.GetHashCode();
+                hashCode = (hashCode * 397) ^ (Data.GetHashCode());
                 return hashCode;
             }
         }
