@@ -1,10 +1,9 @@
 ﻿#if SUPPORTS_GRAPHS_SERIALIZATION
 using System;
-using System.Diagnostics;
-using System.IO;
 using System.Net;
 using System.Xml;
 using JetBrains.Annotations;
+using static QuikGraph.Serialization.GraphMLResourceResolver;
 
 namespace QuikGraph.Serialization
 {
@@ -71,23 +70,8 @@ namespace QuikGraph.Serialization
 
             if (absoluteUri.AbsoluteUri.EndsWith("xlink.xsd"))
                 return GetResource("xlink.xsd");
-            
+
             return _baseResolver.GetEntity(absoluteUri, role, ofObjectToReturn);
-
-            #region Local function
-
-            Stream GetResource(string resourceName)
-            {
-                Stream resourceStream = typeof(GraphMLExtensions).Assembly
-                    .GetManifestResourceStream(
-                        typeof(GraphMLExtensions),
-                        resourceName);
-                
-                Debug.Assert(resourceStream != null);
-                return resourceStream;
-            }
-
-            #endregion
         }
     }
 }

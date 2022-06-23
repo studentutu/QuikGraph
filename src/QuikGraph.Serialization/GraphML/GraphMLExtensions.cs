@@ -1,7 +1,6 @@
 ﻿#if SUPPORTS_GRAPHS_SERIALIZATION
 using System;
 #if SUPPORTS_XML_DTD_PROCESSING
-using System.Diagnostics;
 using System.Xml.Schema;
 #endif
 using System.IO;
@@ -324,10 +323,8 @@ namespace QuikGraph.Serialization
 
         private static void AddGraphMLSchema([NotNull] XmlReaderSettings settings, [NotNull] XmlResolver resolver)
         {
-            using (Stream xsdStream = typeof(GraphMLExtensions).Assembly.GetManifestResourceStream(typeof(GraphMLExtensions), "graphml.xsd"))
+            using (Stream xsdStream = GraphMLResourceResolver.GetResource("graphml.xsd"))
             {
-                Debug.Assert(xsdStream != null, "GraphML schema resource not found.");
-
                 settings.Schemas.XmlResolver = resolver;
                 // ReSharper disable once AssignNullToNotNullAttribute, Justification: assert above
                 using (XmlReader xsdReader = XmlReader.Create(xsdStream, settings))
