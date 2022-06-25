@@ -50,7 +50,7 @@ namespace QuikGraph.Serialization
             {
                 // Iterate through properties that must have a get, and are not indexed property
                 IEnumerable<PropertyInfo> properties = currentType
-                    .GetProperties(BindingFlags.Public | BindingFlags.Instance)
+                    .GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly)
                     .Where(ValidProperty);
                 foreach (PropertyInfo property in properties)
                 {
