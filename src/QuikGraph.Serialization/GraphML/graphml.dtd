@@ -3,17 +3,16 @@
 <!-- file: graphml.dtd 
 
             SYSTEM "http://graphml.graphdrawing.org/dtds/graphml.dtd"
- 
+
             xmlns="http://graphml.graphdrawing.org/xmlns/graphml"
             (consider these urls as examples)
 
-    ====================================================================== -->
+     ====================================================================== -->
 
 
 <!--============================================================-->
-<!--elements of GRAPHML-->
+<!-- elements of GRAPHML -->
 <!--============================================================-->
-
 
 <!ELEMENT graphml  ((desc)?,(key)*,((data)|(graph))*)>
 
@@ -25,6 +24,7 @@
           xlink:type    (simple) #FIXED    "simple"
 >
 
+
 <!ELEMENT desc (#PCDATA)>
 
 
@@ -32,13 +32,15 @@
 <!ATTLIST graph    
           id          ID                    #IMPLIED
           edgedefault (directed|undirected) #REQUIRED
->   
+>
+
 
 <!ELEMENT node   (desc?,(((data|port)*,graph?)|locator))>
 <!ATTLIST node   
           id        ID      #REQUIRED
 >
-  
+
+
 <!ELEMENT port ((desc)?,((data)|(port))*)>
 <!ATTLIST port
           name    NMTOKEN  #REQUIRED
@@ -61,6 +63,7 @@
           id     ID      #IMPLIED
 >
 
+
 <!ELEMENT endpoint ((desc)?)>
 <!ATTLIST endpoint 
           id    ID             #IMPLIED
@@ -74,7 +77,8 @@
 <!ATTLIST key 
           id  ID                                            #REQUIRED
           for (graphml|graph|node|edge|hyperedge|port|endpoint|all) "all"
->   
+>
+
 
 <!ELEMENT data  (#PCDATA)>
 <!ATTLIST data 
