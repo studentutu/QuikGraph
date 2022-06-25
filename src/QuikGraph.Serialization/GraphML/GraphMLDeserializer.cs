@@ -177,7 +177,7 @@ namespace QuikGraph.Serialization
 
                 generator.Emit(OpCodes.Ldarg_0);
                 generator.Emit(OpCodes.Ldstr, "key");
-                generator.EmitCall(OpCodes.Callvirt, Metadata.GetAttributeMethod, null);
+                EmitCall(generator, Metadata.GetAttributeMethod);
                 generator.Emit(OpCodes.Stloc_0);
 
                 // We need to create the switch for each property
@@ -196,7 +196,7 @@ namespace QuikGraph.Serialization
 
                     generator.Emit(OpCodes.Ldloc_0);
                     generator.Emit(OpCodes.Ldstr, info.Name);
-                    generator.EmitCall(OpCodes.Call, Metadata.StringEqualsMethod, null);
+                    EmitCall(generator, Metadata.StringEqualsMethod);
 
                     // If false jump to next
                     generator.Emit(OpCodes.Brfalse, next);
@@ -210,21 +210,13 @@ namespace QuikGraph.Serialization
                     if (setMethod is null)
                         throw new InvalidOperationException($"Property {property.DeclaringType}.{property.Name} has no setter.");
 
-                    // reader.ReadXXX
+                    // reader.ReadXXX + SetField
                     generator.Emit(OpCodes.Ldarg_2); // element
                     generator.Emit(OpCodes.Ldarg_0); // reader
                     generator.Emit(OpCodes.Ldstr, "data");
                     generator.Emit(OpCodes.Ldarg_1); // namespace URI
-
-                    // When writing scalar values we call member methods of XmlReader, while for array values 
-                    // we call our own static methods. These two types of methods seem to need different OpCode.
-                    generator.EmitCall(
-                        readMethod.DeclaringType == typeof(XmlReaderExtensions)
-                            ? OpCodes.Call
-                            : OpCodes.Callvirt,
-                        readMethod,
-                        null);
-                    generator.EmitCall(OpCodes.Callvirt, setMethod, null);
+                    EmitCall(generator, readMethod);
+                    EmitCall(generator, setMethod);
 
                     // Jump to do while
                     generator.Emit(OpCodes.Br, @return);

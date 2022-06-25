@@ -81,18 +81,6 @@ namespace QuikGraph.Serialization
                         typeof(WriteGraphAttributesDelegate));
             }
 
-            private static void EmitCallWriter([NotNull] ILGenerator generator, [NotNull] MethodInfo writer)
-            {
-                // When reading scalar values we call member methods of XmlReader, while for array values 
-                // we call our own static methods.  These two types of methods seem to need different OpCode.
-                generator.EmitCall(
-                    writer.DeclaringType == typeof(XmlWriterExtensions)
-                        ? OpCodes.Call
-                        : OpCodes.Callvirt,
-                    writer,
-                    null);
-            }
-
             private static void EmitWriteProperty(PropertySerializationInfo info, [NotNull] ILGenerator generator)
             {
                 var @default = default(Label);
@@ -117,7 +105,7 @@ namespace QuikGraph.Serialization
 
                     EmitValue(generator, property, value);
                     generator.Emit(OpCodes.Ldarg_1);
-                    generator.EmitCall(OpCodes.Callvirt, getMethod, null);
+                    EmitCall(generator, getMethod);
                     generator.Emit(OpCodes.Ceq);
                     generator.Emit(OpCodes.Brtrue, @default);
                 }
@@ -128,23 +116,23 @@ namespace QuikGraph.Serialization
                 generator.Emit(OpCodes.Ldarg_0);
                 generator.Emit(OpCodes.Ldstr, "data");
                 generator.Emit(OpCodes.Ldstr, GraphMLXmlResolver.GraphMLNamespace);
-                generator.EmitCall(OpCodes.Callvirt, Metadata.WriteStartElementMethod, null);
+                EmitCall(generator, Metadata.WriteStartElementMethod);
 
                 // writer.WriteStartAttribute("key");
                 generator.Emit(OpCodes.Ldarg_0);
                 generator.Emit(OpCodes.Ldstr, "key");
                 generator.Emit(OpCodes.Ldstr, info.Name);
-                generator.EmitCall(OpCodes.Callvirt, Metadata.WriteAttributeStringMethod, null);
+                EmitCall(generator, Metadata.WriteAttributeStringMethod);
 
                 // writer.WriteValue(v.xxx);
                 generator.Emit(OpCodes.Ldarg_0);
                 generator.Emit(OpCodes.Ldarg_1);
-                generator.EmitCall(OpCodes.Callvirt, getMethod, null);
-                EmitCallWriter(generator, writeMethod);
+                EmitCall(generator, getMethod);
+                EmitCall(generator, writeMethod);
 
                 // writer.WriteEndElement()
                 generator.Emit(OpCodes.Ldarg_0);
-                generator.EmitCall(OpCodes.Callvirt, Metadata.WriteEndElementMethod, null);
+                EmitCall(generator, Metadata.WriteEndElementMethod);
 
                 if (defaultValueAttribute != null)
                 {

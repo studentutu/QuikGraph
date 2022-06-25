@@ -1,4 +1,4 @@
-#if SUPPORTS_GRAPHS_SERIALIZATION
+﻿#if SUPPORTS_GRAPHS_SERIALIZATION
 using System;
 using System.Diagnostics;
 using System.Reflection;
@@ -44,12 +44,12 @@ namespace QuikGraph.Serialization
 
         public static void EmitCall([NotNull] ILGenerator generator, [NotNull] MethodInfo method)
         {
-            generator.EmitCall(
-                method.IsVirtual
-                    ? OpCodes.Callvirt
-                    : OpCodes.Call,
-                method,
-                null);
+            // Call the method passing the object on the stack (only virtual if needed)
+            generator.Emit(
+                method.IsFinal || !method.IsVirtual
+                    ? OpCodes.Call
+                    : OpCodes.Callvirt,
+                method);
         }
     }
 }
