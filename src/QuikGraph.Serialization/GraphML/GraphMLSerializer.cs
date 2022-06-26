@@ -92,8 +92,12 @@ namespace QuikGraph.Serialization
                 if (!Metadata.TryGetWriteValueMethod(property.PropertyType, out MethodInfo writeMethod))
                     throw new NotSupportedException($"Property {property.DeclaringType}.{property.Name} type is not supported.");
 
-                var defaultValueAttribute =
-                    Attribute.GetCustomAttribute(property, typeof(DefaultValueAttribute)) as DefaultValueAttribute;
+                // Ldarg_0 = writer
+                // Ldarg_1 = element
+
+                var defaultValueAttribute = Attribute.GetCustomAttribute(
+                    property,
+                    typeof(DefaultValueAttribute)) as DefaultValueAttribute;
                 if (defaultValueAttribute != null)
                 {
                     @default = generator.DefineLabel();
@@ -119,15 +123,11 @@ namespace QuikGraph.Serialization
                 EmitCall(generator, Metadata.WriteStartElementMethod);
 
                 // writer.WriteStartAttribute("key");
-                generator.Emit(OpCodes.Ldarg_0);
-                generator.Emit(OpCodes.Ldstr, "key");
-                generator.Emit(OpCodes.Ldstr, info.Name);
-                EmitCall(generator, Metadata.WriteAttributeStringMethod);
+                WriteXmlAttribute("key", info.Name);
 
-                // writer.WriteValue(v.xxx);
+                // writer.WriteValue(element.xxx);
                 generator.Emit(OpCodes.Ldarg_0);
-                generator.Emit(OpCodes.Ldarg_1);
-                EmitCall(generator, getMethod);
+                GetFieldValue();
                 EmitCall(generator, writeMethod);
 
                 // writer.WriteEndElement()
@@ -138,6 +138,28 @@ namespace QuikGraph.Serialization
                 {
                     generator.MarkLabel(@default);
                 }
+
+                #region Local functions
+
+                void GetFieldValue()
+                {
+                    generator.Emit(OpCodes.Ldarg_1);
+                    EmitCall(generator, getMethod);
+                }
+
+                void WriteXmlAttribute(string attributeName, string attributeValue)
+                {
+                    Debug.Assert(generator != null);
+                    Debug.Assert(attributeName != null);
+                    Debug.Assert(attributeValue != null);
+
+                    generator.Emit(OpCodes.Ldarg_0);
+                    generator.Emit(OpCodes.Ldstr, attributeName);
+                    generator.Emit(OpCodes.Ldstr, attributeValue);
+                    EmitCall(generator, Metadata.WriteAttributeStringMethod);
+                }
+
+                #endregion
             }
 
             [NotNull]

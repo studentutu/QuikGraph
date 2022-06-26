@@ -168,16 +168,17 @@ namespace QuikGraph.Serialization
                 var method = new DynamicMethod(
                     $"{DynamicMethodPrefix}Read{elementType.Name}",
                     typeof(void),
-                    // reader, namespaceUri
                     new[] { typeof(XmlReader), typeof(string), elementType },
                     elementType.Module);
                 ILGenerator generator = method.GetILGenerator();
 
+                // Ldarg_0 = reader
+                // Ldarg_1 = namespace URI
+                // Ldarg_2 = element
+
                 generator.DeclareLocal(typeof(string));
 
-                generator.Emit(OpCodes.Ldarg_0);
-                generator.Emit(OpCodes.Ldstr, "key");
-                EmitCall(generator, Metadata.GetAttributeMethod);
+                GetXmlAttribute("key");
                 generator.Emit(OpCodes.Stloc_0);
 
                 // We need to create the switch for each property
@@ -210,7 +211,7 @@ namespace QuikGraph.Serialization
                     if (setMethod is null)
                         throw new InvalidOperationException($"Property {property.DeclaringType}.{property.Name} has no setter.");
 
-                    // reader.ReadXXX + SetField
+                    // element.xxx = reader.ReadXXX
                     generator.Emit(OpCodes.Ldarg_2); // element
                     generator.Emit(OpCodes.Ldarg_0); // reader
                     generator.Emit(OpCodes.Ldstr, "data");
@@ -233,6 +234,17 @@ namespace QuikGraph.Serialization
 
                 // Let's bake the method
                 return method.CreateDelegate(delegateType);
+
+                #region Local function
+
+                void GetXmlAttribute(string attributeName)
+                {
+                    generator.Emit(OpCodes.Ldarg_0);
+                    generator.Emit(OpCodes.Ldstr, attributeName);
+                    EmitCall(generator, Metadata.GetAttributeMethod);
+                }
+
+                #endregion
             }
         }
 
@@ -368,6 +380,41 @@ namespace QuikGraph.Serialization
                 }
             }
 
+            private void ReadVertex([NotNull] IDictionary<string, TVertex> vertices)
+            {
+                Debug.Assert(vertices != null);
+                Debug.Assert(
+                    _reader.NodeType == XmlNodeType.Element
+                    && _reader.Name == NodeTag
+                    && _reader.NamespaceURI == _graphMLNamespace);
+
+                // Get subtree
+                using (XmlReader subReader = _reader.ReadSubtree())
+                {
+                    // Read id
+                    string id = ReadAttributeValue(_reader, IdAttribute);
+                    // Create new vertex
+                    TVertex vertex = _vertexFactory(id);
+                    // Apply defaults
+                    ReadDelegateCompiler.SetVertexDefault(vertex);
+
+                    // Read data
+                    while (subReader.Read())
+                    {
+                        while (subReader.NodeType == XmlNodeType.Element
+                            && subReader.Name == DataTag
+                            && subReader.NamespaceURI == _graphMLNamespace)
+                        {
+                            ReadDelegateCompiler.VertexAttributesReader(subReader, _graphMLNamespace, vertex);
+                        }
+                    }
+
+                    // Add to graph
+                    _graph.AddVertex(vertex);
+                    vertices.Add(id, vertex);
+                }
+            }
+
             private void ReadEdge([NotNull] IDictionary<string, TVertex> vertices)
             {
                 Debug.Assert(vertices != null);
@@ -403,41 +450,6 @@ namespace QuikGraph.Serialization
                     }
 
                     _graph.AddEdge(edge);
-                }
-            }
-
-            private void ReadVertex([NotNull] IDictionary<string, TVertex> vertices)
-            {
-                Debug.Assert(vertices != null);
-                Debug.Assert(
-                    _reader.NodeType == XmlNodeType.Element
-                    && _reader.Name == NodeTag
-                    && _reader.NamespaceURI == _graphMLNamespace);
-
-                // Get subtree
-                using (XmlReader subReader = _reader.ReadSubtree())
-                {
-                    // Read id
-                    string id = ReadAttributeValue(_reader, IdAttribute);
-                    // Create new vertex
-                    TVertex vertex = _vertexFactory(id);
-                    // Apply defaults
-                    ReadDelegateCompiler.SetVertexDefault(vertex);
-
-                    // Read data
-                    while (subReader.Read())
-                    {
-                        while (subReader.NodeType == XmlNodeType.Element
-                            && subReader.Name == DataTag
-                            && subReader.NamespaceURI == _graphMLNamespace)
-                        {
-                            ReadDelegateCompiler.VertexAttributesReader(subReader, _graphMLNamespace, vertex);
-                        }
-                    }
-
-                    // Add to graph
-                    _graph.AddVertex(vertex);
-                    vertices.Add(id, vertex);
                 }
             }
 
@@ -495,7 +507,7 @@ namespace QuikGraph.Serialization
                 [typeof(long)] = readerType.GetMethod(nameof(XmlReader.ReadElementContentAsLong), new[] { typeof(string), typeof(string) }),
                 [typeof(float)] = readerType.GetMethod(nameof(XmlReader.ReadElementContentAsFloat), new[] { typeof(string), typeof(string) }),
                 [typeof(double)] = readerType.GetMethod(nameof(XmlReader.ReadElementContentAsDouble), new[] { typeof(string), typeof(string) }),
-                [typeof(string)] = readerType.GetMethod(nameof(XmlReader.ReadElementContentAsString), new[] { typeof(string), typeof(string) }),
+                [typeof(string)] = readerExtensionsType.GetMethod(nameof(XmlReaderExtensions.ReadElementAsNullableString)),
 
                 // Extensions
                 [typeof(bool[])] = readerExtensionsType.GetMethod(nameof(XmlReaderExtensions.ReadElementContentAsBooleanArray)),

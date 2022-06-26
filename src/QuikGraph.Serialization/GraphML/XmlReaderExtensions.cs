@@ -10,6 +10,32 @@ namespace QuikGraph.Serialization
     public static class XmlReaderExtensions
     {
         /// <summary>
+        /// Reads a named element as a string.
+        /// </summary>
+        /// <param name="xmlReader">XML reader.</param>
+        /// <param name="localName">Node name.</param>
+        /// <param name="namespaceURI">XML namespace.</param>
+        /// <returns>Boolean array.</returns>
+        /// <exception cref="T:System.ArgumentNullException"><paramref name="localName"/> is <see langword="null"/>.</exception>
+        /// <exception cref="T:System.ArgumentNullException"><paramref name="namespaceURI"/> is <see langword="null"/>.</exception>
+        /// <exception cref="T:System.ArgumentException"><paramref name="localName"/> is empty.</exception>
+        [Pure]
+        [CanBeNull]
+        public static string ReadElementAsNullableString(
+            [NotNull] XmlReader xmlReader,
+            [NotNull] string localName,
+            [NotNull] string namespaceURI)
+        {
+            bool isNull = xmlReader.IsEmptyElement;
+            string str = xmlReader.ReadElementContentAsString(localName, namespaceURI);
+            if (isNull)
+            {
+                str = null;
+            }
+            return str;
+        }
+
+        /// <summary>
         /// Reads the content of a named element as an array of booleans.
         /// </summary>
         /// <param name="xmlReader">XML reader.</param>
