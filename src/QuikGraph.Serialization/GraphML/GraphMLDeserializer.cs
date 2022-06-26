@@ -394,9 +394,9 @@ namespace QuikGraph.Serialization
                     // Read data
                     while (subReader.Read())
                     {
-                        if (_reader.NodeType == XmlNodeType.Element
-                            && _reader.Name == DataTag
-                            && _reader.NamespaceURI == _graphMLNamespace)
+                        while (subReader.NodeType == XmlNodeType.Element
+                            && subReader.Name == DataTag
+                            && subReader.NamespaceURI == _graphMLNamespace)
                         {
                             ReadDelegateCompiler.EdgeAttributesReader(subReader, _graphMLNamespace, edge);
                         }
@@ -423,12 +423,13 @@ namespace QuikGraph.Serialization
                     TVertex vertex = _vertexFactory(id);
                     // Apply defaults
                     ReadDelegateCompiler.SetVertexDefault(vertex);
+
                     // Read data
                     while (subReader.Read())
                     {
-                        if (_reader.NodeType == XmlNodeType.Element
-                            && _reader.Name == DataTag
-                            && _reader.NamespaceURI == _graphMLNamespace)
+                        while (subReader.NodeType == XmlNodeType.Element
+                            && subReader.Name == DataTag
+                            && subReader.NamespaceURI == _graphMLNamespace)
                         {
                             ReadDelegateCompiler.VertexAttributesReader(subReader, _graphMLNamespace, vertex);
                         }
