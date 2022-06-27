@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NUnit.Framework;
 using QuikGraph.Algorithms.Condensation;
 using QuikGraph.Tests.Structures;
@@ -99,7 +99,7 @@ namespace QuikGraph.Tests.Algorithms.Condensation
             Assert.AreNotEqual(edge1, edge3);
             Assert.AreNotEqual(edge1, edge4);
 
-            Assert.AreNotEqual(edge1, null);
+            Assert.AreNotEqual(null, edge1);
         }
     }
 }

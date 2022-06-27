@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NUnit.Framework;
 
 namespace QuikGraph.Tests.Structures
@@ -59,7 +59,7 @@ namespace QuikGraph.Tests.Structures
             Assert.IsFalse(edge1.Equals(edge2));
             Assert.IsFalse(edge2.Equals(edge1));
 
-            Assert.AreNotEqual(edge1, null);
+            Assert.AreNotEqual(null, edge1);
             Assert.IsFalse(edge1.Equals(null));
         }
 

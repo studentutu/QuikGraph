@@ -82,7 +82,7 @@ namespace QuikGraph.Tests.Structures
             Assert.IsFalse(edge1.Equals(edge4));
             Assert.IsFalse(edge4.Equals(edge1));
 
-            Assert.AreNotEqual(edge1, null);
+            Assert.AreNotEqual(null, edge1);
             Assert.IsFalse(edge1.Equals(null));
         }
 
@@ -110,8 +110,8 @@ namespace QuikGraph.Tests.Structures
             Assert.IsTrue(edge1.Equals((object)edge2));
             Assert.AreNotEqual(edge1, edge3);
 
+            Assert.AreNotEqual(null, edge1);
             Assert.IsFalse(edge1.Equals(null));
-            Assert.AreNotEqual(edge1, null);
         }
 
         [Test]

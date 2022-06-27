@@ -85,7 +85,9 @@ namespace QuikGraph.Graphviz.Tests
             Assert.IsTrue(color1 != color6);
             Assert.AreNotEqual(color1, color6);
 
-            Assert.AreNotEqual(color1, null);
+            Assert.AreNotEqual(null, color1);
+            Assert.IsFalse(color1.Equals(null));
+            Assert.AreNotEqual(new TestClass(), color1);
             Assert.AreNotEqual(color1, new TestClass());
         }
 

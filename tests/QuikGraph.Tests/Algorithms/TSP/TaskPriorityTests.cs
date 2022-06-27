@@ -1,4 +1,4 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using QuikGraph.Algorithms.TSP;
 
 namespace QuikGraph.Tests.Algorithms.TSP
@@ -50,7 +50,7 @@ namespace QuikGraph.Tests.Algorithms.TSP
             Assert.IsTrue(priority1 != priority5);
             Assert.IsTrue(priority5 != priority1);
 
-            Assert.AreNotEqual(priority1, null);
+            Assert.AreNotEqual(null, priority1);
             Assert.IsFalse(priority1.Equals(null));
             Assert.IsFalse(priority1 == null);
             Assert.IsFalse(null == priority1);

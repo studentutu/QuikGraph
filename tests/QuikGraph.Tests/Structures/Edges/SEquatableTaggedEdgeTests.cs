@@ -109,7 +109,7 @@ namespace QuikGraph.Tests.Structures
             Assert.IsTrue(edge6.Equals(edge8));  // Tag is not taken into account for equality
             Assert.IsTrue(edge8.Equals(edge6));  // Tag is not taken into account for equality
 
-            Assert.AreNotEqual(edge1, null);
+            Assert.AreNotEqual(null, edge1);
             Assert.IsFalse(edge1.Equals(null));
         }
 

@@ -79,7 +79,7 @@ namespace QuikGraph.Data.Tests
             Assert.IsFalse(relation1.Equals(relation3));
             Assert.IsFalse(relation3.Equals(relation1));
 
-            Assert.AreNotEqual(relation1, null);
+            Assert.AreNotEqual(null, relation1);
             Assert.IsFalse(relation1.Equals(null));
 
             #region Local function
