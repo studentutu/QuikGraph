@@ -104,7 +104,7 @@ namespace QuikGraph.Graphviz
         }
 
         /// <summary>
-        /// Performs a layout from DOT to  an SVG (Scalable Vector Graphics) file
+        /// Performs a layout from DOT to a SVG (Scalable Vector Graphics) file
         /// by calling Agl through the https://rise4fun.com/ REST services.
         /// </summary>
         /// <param name="dot">The dot graph</param>

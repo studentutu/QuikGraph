@@ -4,6 +4,8 @@ using JetBrains.Annotations;
 using NUnit.Framework;
 using static QuikGraph.Serialization.Tests.SerializationTestCaseSources;
 
+#pragma warning disable 618 // Obsolete API usage
+
 namespace QuikGraph.Serialization.Tests
 {
     /// <summary>

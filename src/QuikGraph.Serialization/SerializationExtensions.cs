@@ -26,6 +26,11 @@ namespace QuikGraph.Serialization
         /// <exception cref="T:System.ArgumentNullException"><paramref name="graph"/> is <see langword="null"/>.</exception>
         /// <exception cref="T:System.ArgumentNullException"><paramref name="stream"/> is <see langword="null"/>.</exception>
         /// <exception cref="T:System.ArgumentException"><paramref name="stream"/> is not writable.</exception>
+#if DEPRECATE_BINARY_SERIALIZATION
+        [Obsolete(
+            "Binary serialization on old .NET targets is deprecated.\n" +
+            "Consider using another kind of serialization or updating to at least .NET Framework 4.6.1+, .NET Standard 2.0+ or .NET 5.0+.")]
+#endif
         public static void SerializeToBinary<TVertex, TEdge>(
             [NotNull] this IGraph<TVertex, TEdge> graph,
             [NotNull] Stream stream)
@@ -61,6 +66,11 @@ namespace QuikGraph.Serialization
         /// <exception cref="T:System.ArgumentNullException"><paramref name="stream"/> is <see langword="null"/>.</exception>
         /// <exception cref="T:System.ArgumentException"><paramref name="stream"/> is not readable.</exception>
         [Pure]
+#if DEPRECATE_BINARY_SERIALIZATION
+        [Obsolete(
+            "Binary deserialization on old .NET targets is deprecated.\n" +
+            "Consider using another kind of serialization or updating to at least .NET Framework 4.6.1+, .NET Standard 2.0+ or .NET 5.0+.")]
+#endif
         public static TGraph DeserializeFromBinary<TVertex, TEdge, TGraph>(
             [NotNull] this Stream stream,
             [CanBeNull] SerializationBinder binder = null)
